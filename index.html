@@ -400,6 +400,28 @@
 
     .source a:hover { text-decoration: underline; }
 
+    .method-note {
+      margin-top: 8px;
+      max-width: 360px;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .method-note summary {
+      width: fit-content;
+      cursor: pointer;
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .method-note div {
+      margin-top: 6px;
+      border-left: 2px solid rgba(15, 118, 110, 0.28);
+      padding-left: 8px;
+      color: var(--muted);
+    }
+
     .detail-panel {
       position: sticky;
       top: 18px;
@@ -706,7 +728,13 @@
                     <span class="badge warn">${esc(row.comparability_label)}</span>
                     ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
                   </div>
-                  ${row.protocol_note ? `<div class="source">${esc(row.protocol_note)}</div>` : ""}
+                  ${row.protocol_short ? `<div class="source">${esc(row.protocol_short)}</div>` : ""}
+                  ${row.protocol_full ? `
+                    <details class="method-note">
+                      <summary>Method notes</summary>
+                      <div>${esc(row.protocol_full)}</div>
+                    </details>
+                  ` : ""}
                 </td>
                 <td>
                   <div class="source">
