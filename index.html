@@ -422,6 +422,22 @@
       color: var(--muted);
     }
 
+    .method-summary {
+      margin-top: 7px;
+      max-width: 390px;
+      border-left: 2px solid rgba(15, 118, 110, 0.36);
+      padding-left: 8px;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .method-summary b {
+      color: var(--accent);
+      font-weight: 900;
+    }
+
     .detail-panel {
       position: sticky;
       top: 18px;
@@ -728,10 +744,10 @@
                     <span class="badge warn">${esc(row.comparability_label)}</span>
                     ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
                   </div>
-                  ${row.protocol_short ? `<div class="source">${esc(row.protocol_short)}</div>` : ""}
+                  ${row.protocol_short ? `<div class="method-summary"><b>Method notes:</b> ${esc(row.protocol_short)}</div>` : ""}
                   ${row.protocol_full ? `
                     <details class="method-note">
-                      <summary>Method notes</summary>
+                      <summary>Show full method notes</summary>
                       <div>${esc(row.protocol_full)}</div>
                     </details>
                   ` : ""}
