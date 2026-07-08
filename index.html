@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BenchAtlas - AI Benchmark Landscape</title>
+  <style>
+    :root {
+      --ink: #17140f;
+      --muted: #6f695f;
+      --line: #ddd7ca;
+      --paper: #f7f3e8;
+      --panel: #fffdf7;
+      --panel-2: #eee7d8;
+      --accent: #0f766e;
+      --accent-2: #b42318;
+      --blue: #27548a;
+      --green: #4f7d35;
+      --shadow: 0 18px 50px rgba(31, 24, 12, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      background:
+        linear-gradient(90deg, rgba(23, 20, 15, 0.045) 1px, transparent 1px) 0 0 / 36px 36px,
+        linear-gradient(rgba(23, 20, 15, 0.04) 1px, transparent 1px) 0 0 / 36px 36px,
+        radial-gradient(circle at 14% 12%, rgba(15, 118, 110, 0.16), transparent 24rem),
+        radial-gradient(circle at 82% 18%, rgba(180, 35, 24, 0.10), transparent 22rem),
+        var(--paper);
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      border-right: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.82);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand {
+      padding: 22px 20px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .count-pill {
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .controls {
+      display: grid;
+      gap: 10px;
+      padding: 14px 14px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search {
+      width: 100%;
+      height: 42px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 6px;
+      padding: 0 12px;
+      outline: none;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .search:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 8px;
+    }
+
+    select {
+      width: 100%;
+      min-width: 0;
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      padding: 0 8px;
+      color: var(--ink);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    .bench-list {
+      overflow: auto;
+      padding: 8px;
+    }
+
+    .bench-button {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      text-align: left;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--ink);
+      padding: 10px 10px;
+      cursor: pointer;
+    }
+
+    .bench-button:hover {
+      background: rgba(255, 253, 247, 0.8);
+      border-color: rgba(23, 20, 15, 0.12);
+    }
+
+    .bench-button.active {
+      background: var(--ink);
+      color: var(--panel);
+      border-color: var(--ink);
+    }
+
+    .bench-name {
+      min-width: 0;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .bench-meta {
+      margin-top: 5px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .active .bench-meta { color: rgba(255, 253, 247, 0.72); }
+
+    .bench-score {
+      align-self: start;
+      border-left: 1px solid currentColor;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    main {
+      min-width: 0;
+      padding: 26px 30px 38px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 22px;
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 7px 0 0;
+      font-size: clamp(34px, 5vw, 72px);
+      line-height: 0.94;
+      letter-spacing: 0;
+      max-width: 980px;
+    }
+
+    .variant {
+      color: var(--muted);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(98px, 1fr));
+      gap: 10px;
+      min-width: min(520px, 100%);
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.74);
+      border-radius: 6px;
+      padding: 11px 12px;
+      box-shadow: 0 1px 0 rgba(23, 20, 15, 0.04);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .ranking-panel, .detail-panel {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.86);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #rankingTable {
+      overflow-x: auto;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(238, 231, 216, 0.66);
+    }
+
+    .panel-title {
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .panel-note {
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--panel);
+      color: var(--muted);
+      text-align: left;
+      padding: 10px 12px;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--line);
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(221, 215, 202, 0.75);
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .rank {
+      width: 50px;
+      color: var(--accent-2);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .model {
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .vendor {
+      margin-top: 4px;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    .score {
+      white-space: nowrap;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--blue);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      border: 1px solid rgba(15, 118, 110, 0.28);
+      border-radius: 999px;
+      padding: 2px 7px;
+      background: rgba(15, 118, 110, 0.08);
+      color: #075e59;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .badge.warn {
+      border-color: rgba(180, 35, 24, 0.24);
+      background: rgba(180, 35, 24, 0.08);
+      color: #8b1d14;
+    }
+
+    .source {
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.35;
+      max-width: 360px;
+    }
+
+    .source a {
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .source a:hover { text-decoration: underline; }
+
+    .detail-panel {
+      position: sticky;
+      top: 18px;
+    }
+
+    .detail-body {
+      padding: 16px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .detail-section h3 {
+      margin: 0 0 8px;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .detail-section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mini-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 8px;
+      align-items: baseline;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+    }
+
+    .mini-item b { color: var(--accent-2); }
+    .mini-item span { font-weight: 800; }
+    .mini-item em { color: var(--muted); font-style: normal; }
+
+    .empty {
+      padding: 32px;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+    }
+
+    @media (max-width: 1080px) {
+      .shell { grid-template-columns: 1fr; }
+      aside {
+        position: relative;
+        height: auto;
+        max-height: 56vh;
+      }
+      .content-grid { grid-template-columns: 1fr; }
+      .detail-panel { position: relative; top: auto; }
+      .topbar { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      main { padding: 18px 14px 28px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      td:nth-child(4), th:nth-child(4) { display: none; }
+      table { min-width: 560px; }
+      .score { font-size: 20px; }
+      .source { max-width: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">
+        <div class="brand-row">
+          <h1>BenchAtlas</h1>
+          <span class="count-pill" id="totalCount">0 rows</span>
+        </div>
+        <p class="subtitle">Explore the landscape of AI benchmarks</p>
+      </div>
+      <div class="controls">
+        <input class="search" id="search" type="search" placeholder="Search benchmark, domain, model">
+        <div class="filters">
+          <select id="domainFilter" aria-label="Domain filter"></select>
+          <select id="sortMode" aria-label="Sort mode">
+            <option value="coverage">Sort by coverage</option>
+            <option value="name">Sort by name</option>
+            <option value="best">Sort by best score</option>
+          </select>
+        </div>
+      </div>
+      <div class="bench-list" id="benchList"></div>
+    </aside>
+
+    <main>
+      <section class="topbar">
+        <div>
+          <div class="kicker" id="domainLabel">Benchmark</div>
+          <h2 id="benchmarkTitle">Loading</h2>
+        </div>
+        <div class="stats">
+          <div class="stat"><b id="statModels">0</b><span>models</span></div>
+          <div class="stat"><b id="statRows">0</b><span>reported rows</span></div>
+          <div class="stat"><b id="statVendors">0</b><span>vendors</span></div>
+          <div class="stat"><b id="statReports">0</b><span>reports</span></div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="ranking-panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Reported Ranking</div>
+              <div class="panel-note">Protocol variants are shown, not strict normalized leaderboards.</div>
+            </div>
+            <div class="badges" id="panelBadges"></div>
+          </div>
+          <div id="rankingTable"></div>
+        </div>
+
+        <div class="detail-panel">
+          <div class="panel-head">
+            <div class="panel-title">Context</div>
+            <div class="panel-note" id="metricLabel">metric</div>
+          </div>
+          <div class="detail-body">
+            <div class="detail-section">
+              <h3>Best reported</h3>
+              <div class="mini-list" id="topModels"></div>
+            </div>
+            <div class="detail-section">
+              <h3>Protocol signals</h3>
+              <div class="badges" id="contextBadges"></div>
+            </div>
+            <div class="detail-section">
+              <h3>Evidence policy</h3>
+              <p>Every row keeps source report id, evidence location, and a short quote. Current comparability is conservative: all imported rows remain protocol_variant until exact harness and methodology normalization is complete.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="site_data.bundle.js"></script>
+  <script>
+    const data = window.BENCHATLAS_DATA;
+    const catalog = data.benchmark_catalog;
+    const pages = data.benchmark_pages;
+    const state = {
+      selected: catalog[0]?.rank_group_key,
+      query: "",
+      domain: "all",
+      sort: "coverage"
+    };
+
+    const el = (id) => document.getElementById(id);
+    const fmt = (value) => Number.isFinite(Number(value)) ? Number(value).toLocaleString("en-US") : value;
+    const esc = (value) => String(value ?? "").replace(/[&<>"']/g, ch => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[ch]));
+
+    function init() {
+      el("totalCount").textContent = `${data.summary.result_count} rows`;
+      const domains = ["all", ...Array.from(new Set(catalog.map(item => item.domain))).sort()];
+      el("domainFilter").innerHTML = domains.map(domain => (
+        `<option value="${esc(domain)}">${domain === "all" ? "All domains" : domain}</option>`
+      )).join("");
+      el("search").addEventListener("input", event => {
+        state.query = event.target.value.toLowerCase().trim();
+        renderList();
+      });
+      el("domainFilter").addEventListener("change", event => {
+        state.domain = event.target.value;
+        renderList();
+      });
+      el("sortMode").addEventListener("change", event => {
+        state.sort = event.target.value;
+        renderList();
+      });
+      renderList();
+      renderPage();
+    }
+
+    function filteredCatalog() {
+      const query = state.query;
+      let rows = catalog.filter(item => {
+        const text = [
+          item.benchmark_name,
+          item.benchmark_variant,
+          item.domain,
+          item.best_model,
+          item.best_vendor,
+          item.protocol_badges
+        ].join(" ").toLowerCase();
+        const domainOk = state.domain === "all" || item.domain === state.domain;
+        return domainOk && (!query || text.includes(query));
+      });
+      rows = rows.slice();
+      if (state.sort === "name") {
+        rows.sort((a, b) => `${a.benchmark_name} ${a.benchmark_variant}`.localeCompare(`${b.benchmark_name} ${b.benchmark_variant}`));
+      } else if (state.sort === "best") {
+        rows.sort((a, b) => Number(b.best_score || -Infinity) - Number(a.best_score || -Infinity));
+      } else {
+        rows.sort((a, b) => Number(b.display_result_count) - Number(a.display_result_count));
+      }
+      return rows;
+    }
+
+    function renderList() {
+      const rows = filteredCatalog();
+      if (!rows.some(item => item.rank_group_key === state.selected)) {
+        state.selected = rows[0]?.rank_group_key || catalog[0]?.rank_group_key;
+      }
+      el("benchList").innerHTML = rows.map(item => `
+        <button class="bench-button ${item.rank_group_key === state.selected ? "active" : ""}" data-key="${esc(item.rank_group_key)}">
+          <span>
+            <span class="bench-name">${esc(item.benchmark_name)}</span>
+            <span class="bench-meta">
+              <span>${esc(item.domain)}</span>
+              <span>${esc(item.display_result_count)} models</span>
+              <span>${esc(item.metric_name)}</span>
+            </span>
+          </span>
+          <span class="bench-score">${esc(item.best_score)}${item.score_unit === "%" ? "%" : ""}</span>
+        </button>
+      `).join("") || `<div class="empty">No matching benchmarks.</div>`;
+      el("benchList").querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => {
+          state.selected = button.dataset.key;
+          renderList();
+          renderPage();
+        });
+      });
+      renderPage();
+    }
+
+    function renderBadges(target, badges, includeWarning = false) {
+      const all = includeWarning ? ["protocol_variant", ...badges] : badges;
+      target.innerHTML = all.length
+        ? all.map((badge, index) => `<span class="badge ${index === 0 && includeWarning ? "warn" : ""}">${esc(badge)}</span>`).join("")
+        : `<span class="badge warn">protocol details sparse</span>`;
+    }
+
+    function renderPage() {
+      const page = pages[state.selected];
+      if (!page) return;
+      const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
+      el("domainLabel").textContent = page.domain || "benchmark";
+      el("benchmarkTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
+      el("statModels").textContent = page.display_result_count || page.rows.length;
+      el("statRows").textContent = page.result_count;
+      el("statVendors").textContent = new Set(page.rows.map(row => row.vendor)).size;
+      el("statReports").textContent = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
+      el("metricLabel").textContent = `${page.metric_name} · ${page.score_unit || "score"}`;
+      renderBadges(el("panelBadges"), page.protocol_badges || [], true);
+      renderBadges(el("contextBadges"), page.protocol_badges || [], false);
+      renderTopModels(page.rows);
+      renderRanking(page.rows);
+    }
+
+    function renderTopModels(rows) {
+      el("topModels").innerHTML = rows.slice(0, 5).map(row => `
+        <div class="mini-item">
+          <b>#${esc(row.rank)}</b>
+          <span>${esc(row.model_name)}</span>
+          <em>${esc(row.score)}${row.score_unit === "%" ? "%" : " " + esc(row.score_unit)}</em>
+        </div>
+      `).join("");
+    }
+
+    function renderRanking(rows) {
+      if (!rows.length) {
+        el("rankingTable").innerHTML = `<div class="empty">No scored rows for this benchmark.</div>`;
+        return;
+      }
+      el("rankingTable").innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Model</th>
+              <th>Score</th>
+              <th>Protocol</th>
+              <th>Source evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(row => `
+              <tr>
+                <td class="rank">#${esc(row.rank)}</td>
+                <td>
+                  <div class="model">${esc(row.model_name)}</div>
+                  <div class="vendor">${esc(row.vendor)}</div>
+                </td>
+                <td><div class="score">${esc(fmt(row.score))}${row.score_unit === "%" ? "%" : ""}</div></td>
+                <td>
+                  <div class="badges">
+                    <span class="badge warn">${esc(row.comparability_label)}</span>
+                    ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
+                  </div>
+                  ${row.protocol_note ? `<div class="source">${esc(row.protocol_note)}</div>` : ""}
+                </td>
+                <td>
+                  <div class="source">
+                    ${row.source_url ? `<a href="${esc(row.source_url)}" target="_blank" rel="noreferrer">source</a><br>` : ""}
+                    ${esc(row.source_report_id)}<br>
+                    ${esc(row.evidence_location)}
+                  </div>
+                </td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
+    }
+
+    init();
+  </script>
+</body>
+</html>
