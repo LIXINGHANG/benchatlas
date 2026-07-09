@@ -4,7 +4,7 @@ window.BENCHATLAS_DATA = {
     "model_count": 47,
     "benchmark_group_count": 312,
     "report_count": 8,
-    "protocol_count": 157
+    "protocol_count": 186
   },
   "model_catalog": [
     {
@@ -448,7 +448,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "80.3",
       "comparability": "protocol_variant:20",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "gpqa_diamond_score",
@@ -466,7 +466,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "94.3",
       "comparability": "protocol_variant:19",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; tools"
     },
     {
       "rank_group_key": "humanitys_last_exam_with_tools_score",
@@ -484,7 +484,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "64.7",
       "comparability": "protocol_variant:17",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "osworld_verified_score",
@@ -502,7 +502,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "85.4",
       "comparability": "protocol_variant:16",
-      "protocol_badges": "multi-run"
+      "protocol_badges": "agent harness; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "critpt_score",
@@ -556,7 +556,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "99.2",
       "comparability": "protocol_variant:12",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; tools"
     },
     {
       "rank_group_key": "imoanswerbench_score",
@@ -610,7 +610,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "ByteDance Seed",
       "best_score": "59.8",
       "comparability": "protocol_variant:12",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "hmmt_2026_feb_score",
@@ -628,7 +628,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "97.7",
       "comparability": "protocol_variant:11",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; tools"
     },
     {
       "rank_group_key": "apex_agents_score",
@@ -646,7 +646,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "35.4",
       "comparability": "protocol_variant:10",
-      "protocol_badges": "agent harness; public leaderboard"
+      "protocol_badges": "agent harness; long context; model judge; public leaderboard; tools"
     },
     {
       "rank_group_key": "claw_eval_pass_3_score",
@@ -664,7 +664,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "82.9",
       "comparability": "protocol_variant:10",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "charxiv_reasoning_no_tools_score",
@@ -754,7 +754,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "95.5",
       "comparability": "protocol_variant:9",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "deepswe_score",
@@ -880,7 +880,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "56.5",
       "comparability": "protocol_variant:8",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "arc_agi_2_score",
@@ -1600,7 +1600,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "51.6",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "babyvision_w_python_score",
@@ -1618,7 +1618,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "80.2",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "browsecomp_score",
@@ -1636,7 +1636,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "85.9",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "browsecomp_single_agent_score",
@@ -1672,7 +1672,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "82.8",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "charxiv_rq_w_python_score",
@@ -1690,7 +1690,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "90.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "claw_eval_multimodal_pass3",
@@ -1798,7 +1798,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Moonshot Kimi",
       "best_score": "83.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "deepsearchqa_f1_score",
@@ -1816,7 +1816,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Moonshot Kimi",
       "best_score": "92.5",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "doubao_multi_turn_bench_pass_1",
@@ -1996,7 +1996,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "44.4",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "humanitys_last_exam_no_tools_score",
@@ -2032,7 +2032,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "91.4",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; tools"
     },
     {
       "rank_group_key": "image2floorplan_avg_score",
@@ -2104,7 +2104,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "62.5",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "mmmu_pro_score",
@@ -2122,7 +2122,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "83.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "mmmu_pro_w_python_score",
@@ -2140,7 +2140,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "85.3",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "mathvision_score",
@@ -2158,7 +2158,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "92.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "mathvision_w_python_score",
@@ -2176,7 +2176,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "96.1",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "mobileworld_score",
@@ -2572,7 +2572,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "68.5",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "terminal_bench_2_1_open_benchmarks_score",
@@ -2644,7 +2644,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "98.4",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "vitabench_score",
@@ -3004,7 +3004,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "91.7",
       "comparability": "protocol_variant:4",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "ojbench_python_score",
@@ -3022,7 +3022,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "70.7",
       "comparability": "protocol_variant:4",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "swe_bench_multilingual_score",
@@ -3040,7 +3040,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "77.8",
       "comparability": "protocol_variant:4",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "seedkernelbench_trae_average_speedup_ratio",
@@ -3292,7 +3292,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Moonshot Kimi",
       "best_score": "86.3",
       "comparability": "protocol_variant:2",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "charxiv_dq_pass_1",
@@ -4174,7 +4174,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Moonshot Kimi",
       "best_score": "80.8",
       "comparability": "protocol_variant:2",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; model judge; tools"
     },
     {
       "rank_group_key": "worldbench_pass_1",
@@ -6399,7 +6399,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 12,
       "display_result_count": 12,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -6408,10 +6412,14 @@ window.BENCHATLAS_DATA = {
           "score": "99.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6440,10 +6448,14 @@ window.BENCHATLAS_DATA = {
           "score": "98.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6504,10 +6516,14 @@ window.BENCHATLAS_DATA = {
           "score": "96.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6520,10 +6536,14 @@ window.BENCHATLAS_DATA = {
           "score": "96.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6536,10 +6556,14 @@ window.BENCHATLAS_DATA = {
           "score": "95.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6606,7 +6630,10 @@ window.BENCHATLAS_DATA = {
       "display_result_count": 10,
       "protocol_badges": [
         "agent harness",
-        "public leaderboard"
+        "long context",
+        "model judge",
+        "public leaderboard",
+        "tools"
       ],
       "rows": [
         {
@@ -6692,10 +6719,15 @@ window.BENCHATLAS_DATA = {
           "score": "33.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Dataset: 452 tasks from public 480-task release; excludes Investment Banking Worlds 244 and 246 due to external runtime dependencies.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6708,10 +6740,15 @@ window.BENCHATLAS_DATA = {
           "score": "33.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Dataset: 452 tasks from public 480-task release; excludes Investment Banking Worlds 244 and 246 due to external runtime dependencies.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6724,10 +6761,15 @@ window.BENCHATLAS_DATA = {
           "score": "32.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Dataset: 452 tasks from public 480-task release; excludes Investment Banking Worlds 244 and 246 due to external runtime dependencies.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6759,10 +6801,15 @@ window.BENCHATLAS_DATA = {
           "score": "27.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Dataset: 452 tasks from public 480-task release; excludes Investment Banking Worlds 244 and 246 due to external runtime dependencies.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -6775,10 +6822,15 @@ window.BENCHATLAS_DATA = {
           "score": "11.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Dataset: 452 tasks from public 480-task release; excludes Investment Banking Worlds 244 and 246 due to external runtime dependencies.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7202,7 +7254,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -7211,10 +7268,15 @@ window.BENCHATLAS_DATA = {
           "score": "51.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7227,10 +7289,15 @@ window.BENCHATLAS_DATA = {
           "score": "49.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7243,10 +7310,15 @@ window.BENCHATLAS_DATA = {
           "score": "39.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7259,10 +7331,15 @@ window.BENCHATLAS_DATA = {
           "score": "36.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7275,10 +7352,15 @@ window.BENCHATLAS_DATA = {
           "score": "14.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7295,7 +7377,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -7304,10 +7391,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7320,10 +7412,15 @@ window.BENCHATLAS_DATA = {
           "score": "68.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7336,10 +7433,15 @@ window.BENCHATLAS_DATA = {
           "score": "68.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7352,10 +7454,15 @@ window.BENCHATLAS_DATA = {
           "score": "40.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7368,10 +7475,15 @@ window.BENCHATLAS_DATA = {
           "score": "38.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7702,7 +7814,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 2,
       "display_result_count": 2,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -7711,10 +7828,15 @@ window.BENCHATLAS_DATA = {
           "score": "86.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7727,10 +7849,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7792,7 +7919,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -7801,10 +7933,15 @@ window.BENCHATLAS_DATA = {
           "score": "85.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7817,10 +7954,15 @@ window.BENCHATLAS_DATA = {
           "score": "83.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7833,10 +7975,15 @@ window.BENCHATLAS_DATA = {
           "score": "83.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7849,10 +7996,15 @@ window.BENCHATLAS_DATA = {
           "score": "82.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -7865,10 +8017,15 @@ window.BENCHATLAS_DATA = {
           "score": "74.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8394,7 +8551,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -8403,10 +8565,15 @@ window.BENCHATLAS_DATA = {
           "score": "82.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8419,10 +8586,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8435,10 +8607,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8451,10 +8628,15 @@ window.BENCHATLAS_DATA = {
           "score": "77.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8467,10 +8649,15 @@ window.BENCHATLAS_DATA = {
           "score": "69.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8487,7 +8674,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -8496,10 +8688,15 @@ window.BENCHATLAS_DATA = {
           "score": "90.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8512,10 +8709,15 @@ window.BENCHATLAS_DATA = {
           "score": "89.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8528,10 +8730,15 @@ window.BENCHATLAS_DATA = {
           "score": "86.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8544,10 +8751,15 @@ window.BENCHATLAS_DATA = {
           "score": "84.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8560,10 +8772,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8954,7 +9171,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 10,
       "display_result_count": 10,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -8963,10 +9185,15 @@ window.BENCHATLAS_DATA = {
           "score": "82.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8979,10 +9206,15 @@ window.BENCHATLAS_DATA = {
           "score": "82.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -8995,10 +9227,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9011,10 +9248,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9027,10 +9269,15 @@ window.BENCHATLAS_DATA = {
           "score": "75.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9043,10 +9290,15 @@ window.BENCHATLAS_DATA = {
           "score": "70.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9059,10 +9311,15 @@ window.BENCHATLAS_DATA = {
           "score": "62.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9075,10 +9332,15 @@ window.BENCHATLAS_DATA = {
           "score": "60.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9091,10 +9353,15 @@ window.BENCHATLAS_DATA = {
           "score": "57.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -9107,10 +9374,15 @@ window.BENCHATLAS_DATA = {
           "score": "52.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Max tokens: 16,384 max-tokens-per-step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10618,7 +10890,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -10627,10 +10904,15 @@ window.BENCHATLAS_DATA = {
           "score": "83.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10643,10 +10925,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10659,10 +10946,15 @@ window.BENCHATLAS_DATA = {
           "score": "77.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10675,10 +10967,15 @@ window.BENCHATLAS_DATA = {
           "score": "63.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10691,10 +10988,15 @@ window.BENCHATLAS_DATA = {
           "score": "60.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10711,7 +11013,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -10720,10 +11027,15 @@ window.BENCHATLAS_DATA = {
           "score": "92.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10736,10 +11048,15 @@ window.BENCHATLAS_DATA = {
           "score": "91.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10752,10 +11069,15 @@ window.BENCHATLAS_DATA = {
           "score": "89.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10768,10 +11090,15 @@ window.BENCHATLAS_DATA = {
           "score": "81.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -10784,10 +11111,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -13226,7 +13558,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 19,
       "display_result_count": 19,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -13235,10 +13571,14 @@ window.BENCHATLAS_DATA = {
           "score": "94.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -13315,10 +13655,14 @@ window.BENCHATLAS_DATA = {
           "score": "92.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -13347,10 +13691,14 @@ window.BENCHATLAS_DATA = {
           "score": "91.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -13395,10 +13743,14 @@ window.BENCHATLAS_DATA = {
           "score": "90.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -13491,10 +13843,14 @@ window.BENCHATLAS_DATA = {
           "score": "87.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -13996,7 +14352,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 11,
       "display_result_count": 11,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -14005,10 +14365,14 @@ window.BENCHATLAS_DATA = {
           "score": "97.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14037,10 +14401,14 @@ window.BENCHATLAS_DATA = {
           "score": "96.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14085,10 +14453,14 @@ window.BENCHATLAS_DATA = {
           "score": "94.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14101,10 +14473,14 @@ window.BENCHATLAS_DATA = {
           "score": "92.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14165,10 +14541,14 @@ window.BENCHATLAS_DATA = {
           "score": "87.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14560,7 +14940,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -14569,10 +14954,15 @@ window.BENCHATLAS_DATA = {
           "score": "44.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14585,10 +14975,15 @@ window.BENCHATLAS_DATA = {
           "score": "40.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14601,10 +14996,15 @@ window.BENCHATLAS_DATA = {
           "score": "39.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14617,10 +15017,15 @@ window.BENCHATLAS_DATA = {
           "score": "34.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14633,10 +15038,15 @@ window.BENCHATLAS_DATA = {
           "score": "30.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -14996,7 +15406,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 17,
       "display_result_count": 14,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -15069,10 +15484,15 @@ window.BENCHATLAS_DATA = {
           "score": "54.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15101,10 +15521,15 @@ window.BENCHATLAS_DATA = {
           "score": "53.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15149,10 +15574,15 @@ window.BENCHATLAS_DATA = {
           "score": "52.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15181,10 +15611,15 @@ window.BENCHATLAS_DATA = {
           "score": "51.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15197,10 +15632,15 @@ window.BENCHATLAS_DATA = {
           "score": "50.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15641,7 +16081,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -15650,10 +16094,14 @@ window.BENCHATLAS_DATA = {
           "score": "91.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15666,10 +16114,14 @@ window.BENCHATLAS_DATA = {
           "score": "91.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15682,10 +16134,14 @@ window.BENCHATLAS_DATA = {
           "score": "86.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15698,10 +16154,14 @@ window.BENCHATLAS_DATA = {
           "score": "81.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -15714,10 +16174,14 @@ window.BENCHATLAS_DATA = {
           "score": "75.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Reasoning Benchmarks - HLE and other reasoning tasks use max generation length 98,304 tokens by default. - HLE default result is the full set. Text-only subset: Kimi K2.6 reports 36.4% without tools and 55.5% with tools. - IMO-AnswerBench scores for GPT-5.4 and Claude 4.6 are cited from https://z.ai/blog/glm-5.1. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16370,7 +16834,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 4,
       "display_result_count": 4,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -16379,10 +16850,17 @@ window.BENCHATLAS_DATA = {
           "score": "91.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16395,10 +16873,17 @@ window.BENCHATLAS_DATA = {
           "score": "89.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16411,10 +16896,17 @@ window.BENCHATLAS_DATA = {
           "score": "88.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16427,10 +16919,17 @@ window.BENCHATLAS_DATA = {
           "score": "85.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16774,7 +17273,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -16783,10 +17287,15 @@ window.BENCHATLAS_DATA = {
           "score": "92.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16799,10 +17308,15 @@ window.BENCHATLAS_DATA = {
           "score": "89.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16815,10 +17329,15 @@ window.BENCHATLAS_DATA = {
           "score": "87.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16831,10 +17350,15 @@ window.BENCHATLAS_DATA = {
           "score": "84.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16847,10 +17371,15 @@ window.BENCHATLAS_DATA = {
           "score": "71.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16867,7 +17396,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -16876,10 +17410,15 @@ window.BENCHATLAS_DATA = {
           "score": "96.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16892,10 +17431,15 @@ window.BENCHATLAS_DATA = {
           "score": "95.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16908,10 +17452,15 @@ window.BENCHATLAS_DATA = {
           "score": "93.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16924,10 +17473,15 @@ window.BENCHATLAS_DATA = {
           "score": "85.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -16940,10 +17494,15 @@ window.BENCHATLAS_DATA = {
           "score": "84.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -17767,7 +18326,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -17776,10 +18340,15 @@ window.BENCHATLAS_DATA = {
           "score": "62.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -17792,10 +18361,15 @@ window.BENCHATLAS_DATA = {
           "score": "56.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -17808,10 +18382,15 @@ window.BENCHATLAS_DATA = {
           "score": "55.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -17824,10 +18403,15 @@ window.BENCHATLAS_DATA = {
           "score": "55.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -17840,10 +18424,15 @@ window.BENCHATLAS_DATA = {
           "score": "29.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18632,7 +19221,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -18641,10 +19235,15 @@ window.BENCHATLAS_DATA = {
           "score": "83.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18657,10 +19256,15 @@ window.BENCHATLAS_DATA = {
           "score": "81.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18673,10 +19277,15 @@ window.BENCHATLAS_DATA = {
           "score": "79.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18689,10 +19298,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18705,10 +19319,15 @@ window.BENCHATLAS_DATA = {
           "score": "73.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18725,7 +19344,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -18734,10 +19358,15 @@ window.BENCHATLAS_DATA = {
           "score": "85.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18750,10 +19379,15 @@ window.BENCHATLAS_DATA = {
           "score": "82.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18766,10 +19400,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18782,10 +19421,15 @@ window.BENCHATLAS_DATA = {
           "score": "77.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -18798,10 +19442,15 @@ window.BENCHATLAS_DATA = {
           "score": "77.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20250,7 +20899,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 4,
       "display_result_count": 4,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -20259,10 +20915,17 @@ window.BENCHATLAS_DATA = {
           "score": "70.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20275,10 +20938,17 @@ window.BENCHATLAS_DATA = {
           "score": "60.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20291,10 +20961,17 @@ window.BENCHATLAS_DATA = {
           "score": "60.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20307,10 +20984,17 @@ window.BENCHATLAS_DATA = {
           "score": "54.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20550,7 +21234,11 @@ window.BENCHATLAS_DATA = {
       "result_count": 16,
       "display_result_count": 14,
       "protocol_badges": [
-        "multi-run"
+        "agent harness",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
       ],
       "rows": [
         {
@@ -20700,10 +21388,15 @@ window.BENCHATLAS_DATA = {
           "score": "75.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20716,10 +21409,15 @@ window.BENCHATLAS_DATA = {
           "score": "73.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20732,10 +21430,15 @@ window.BENCHATLAS_DATA = {
           "score": "72.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -20780,10 +21483,15 @@ window.BENCHATLAS_DATA = {
           "score": "63.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -23782,7 +24490,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 12,
       "display_result_count": 12,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -23807,10 +24522,17 @@ window.BENCHATLAS_DATA = {
           "score": "58.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -23839,10 +24561,17 @@ window.BENCHATLAS_DATA = {
           "score": "56.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -23871,10 +24600,17 @@ window.BENCHATLAS_DATA = {
           "score": "52.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -23903,10 +24639,17 @@ window.BENCHATLAS_DATA = {
           "score": "51.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -23935,10 +24678,17 @@ window.BENCHATLAS_DATA = {
           "score": "48.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -24957,7 +25707,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 4,
       "display_result_count": 4,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -24966,10 +25723,17 @@ window.BENCHATLAS_DATA = {
           "score": "77.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -24982,10 +25746,17 @@ window.BENCHATLAS_DATA = {
           "score": "76.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -24998,10 +25769,17 @@ window.BENCHATLAS_DATA = {
           "score": "76.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25014,10 +25792,17 @@ window.BENCHATLAS_DATA = {
           "score": "73.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25143,7 +25928,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 20,
       "display_result_count": 16,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -25280,10 +26072,17 @@ window.BENCHATLAS_DATA = {
           "score": "58.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25312,10 +26111,17 @@ window.BENCHATLAS_DATA = {
           "score": "57.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25360,10 +26166,17 @@ window.BENCHATLAS_DATA = {
           "score": "54.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25376,10 +26189,17 @@ window.BENCHATLAS_DATA = {
           "score": "53.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25392,10 +26212,17 @@ window.BENCHATLAS_DATA = {
           "score": "50.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25441,7 +26268,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 9,
       "display_result_count": 9,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -25514,10 +26348,17 @@ window.BENCHATLAS_DATA = {
           "score": "80.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25546,10 +26387,17 @@ window.BENCHATLAS_DATA = {
           "score": "80.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25562,10 +26410,17 @@ window.BENCHATLAS_DATA = {
           "score": "80.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -25578,10 +26433,17 @@ window.BENCHATLAS_DATA = {
           "score": "76.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -26108,7 +26970,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -26117,10 +26986,17 @@ window.BENCHATLAS_DATA = {
           "score": "68.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -26133,10 +27009,17 @@ window.BENCHATLAS_DATA = {
           "score": "66.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -26149,10 +27032,17 @@ window.BENCHATLAS_DATA = {
           "score": "65.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -26165,10 +27055,17 @@ window.BENCHATLAS_DATA = {
           "score": "65.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -26181,10 +27078,17 @@ window.BENCHATLAS_DATA = {
           "score": "50.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Coding Tasks - Terminal-Bench 2.0 uses the default Terminus-2 agent framework and provided JSON parser, in preserve-thinking mode. - SWE-Bench Verified, Multilingual, and Pro use an in-house framework adapted from SWE-agent with minimal tools: bash, createfile, insert, view, strreplace, submit. - Coding task scores are averaged over 10 independent runs. | Harness: Terminus-2 / in-house SWE-agent adapted framework; Tools enabled: bash; createfile; insert; view; strreplace; submit; Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg of 10 independent runs; Dataset: SWE-Bench includes Verified, Multilingual, and Pro.",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27114,7 +28018,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 8,
       "display_result_count": 8,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -27155,10 +28064,15 @@ window.BENCHATLAS_DATA = {
           "score": "54.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27171,10 +28085,15 @@ window.BENCHATLAS_DATA = {
           "score": "50.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27203,10 +28122,15 @@ window.BENCHATLAS_DATA = {
           "score": "48.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27219,10 +28143,15 @@ window.BENCHATLAS_DATA = {
           "score": "47.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27235,10 +28164,15 @@ window.BENCHATLAS_DATA = {
           "score": "27.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Context: 262,144 tokens; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27351,7 +28285,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -27360,10 +28299,15 @@ window.BENCHATLAS_DATA = {
           "score": "98.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27376,10 +28320,15 @@ window.BENCHATLAS_DATA = {
           "score": "96.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27392,10 +28341,15 @@ window.BENCHATLAS_DATA = {
           "score": "96.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27408,10 +28362,15 @@ window.BENCHATLAS_DATA = {
           "score": "86.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27424,10 +28383,15 @@ window.BENCHATLAS_DATA = {
           "score": "86.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "asterisked in source",
-          "protocol_short": "asterisked in source",
-          "protocol_full": "asterisked in source",
+          "protocol_short": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort;...",
+          "protocol_full": "asterisked in source | General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Vision Benchmarks - Max-tokens=98,304, averaged over three runs (avg@3). - Python-tool settings use max-tokens-per-step=65,536 and max-steps=50 for multi-step reasoning. - MMMU-Pro follows the official protocol, preserving input order and prepending images. | Context: 262,144 tokens; Max tokens: 98,304; Python-tool settings use 65,536 per step and max-steps=50; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled; Runs: avg@3",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27918,7 +28882,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 2,
       "display_result_count": 2,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "model judge",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -27927,10 +28896,15 @@ window.BENCHATLAS_DATA = {
           "score": "80.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
@@ -27943,10 +28917,15 @@ window.BENCHATLAS_DATA = {
           "score": "72.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "model judge",
+            "long context"
+          ],
           "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_short": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reas...",
+          "protocol_full": "General Testing Details - Kimi K2.6 and Kimi K2.5 are reported with thinking mode enabled; Claude Opus 4.6 uses max effort; GPT-5.4 uses xhigh reasoning effort; Gemini 3.1 Pro uses high thinking level. - Unless otherwise specified, Kimi K2.6 experiments use temperature=1.0, top-p=1.0, and 262,144-token context length. - Benchmarks without publicly available scores were re-evaluated under the same conditions used for Kimi K2.6 and are marked with an asterisk (*). Other results are cited from official reports. Tool-Augmented / Agentic Tasks - Kimi K2.6 uses search, code-interpreter, and web-browsing tools for HLE with tools, BrowseComp, DeepSearchQA, and WideSearch. - HLE-Full with tools uses max generation length 262,144 and per-step limit 49,152 tokens; when context exceeds threshold, only the most recent round of tool messages is retained. - BrowseComp uses context management with the same discard-all strategy as Kimi K2.5 and DeepSeek-V3.2. - DeepSearchQA applies no context management for Kimi K2.6; tasks exceeding supported context length are counted as failed. Claude/GPT/Gemini DeepSearchQA scores are cited from the Claude Opus 4.7 System Card. - WideSearch uses the hide-tool-result context management setting. - Claw Eval uses version 1.1 with max-tokens-per-step=16384. - APEX-Agents evaluates 452 tasks from the public 480-task release, excluding Investment Banking Worlds 244 and 246 due to external runtime dependencies. | Tools enabled: search; code-interpreter; web-browsing; Context: 262,144 tokens; Max tokens: 262,144 max generation for HLE tools; 49,152 per step; Temperature: 1.0; Top p: 1.0; Reasoning: thinking mode enabled",
           "source_report_id": "kimi_k2_6_2026_04",
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
