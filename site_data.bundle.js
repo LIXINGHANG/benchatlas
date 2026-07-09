@@ -6861,7 +6861,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -6877,7 +6877,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -6893,7 +6893,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -6909,7 +6909,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -6925,7 +6925,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -6941,7 +6941,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -7559,7 +7559,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -7575,7 +7575,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -7591,7 +7591,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -7607,7 +7607,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -7623,7 +7623,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -7639,7 +7639,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -8868,7 +8868,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol tex...",
           "protocol_full": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=actava/chi-bench task=care_management; value=4; HF rank=3; source=CHI-Bench"
         }
@@ -8903,7 +8903,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol tex...",
           "protocol_full": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=actava/chi-bench task=chi_bench; value=14.2; HF rank=3; source=CHI-Bench"
         }
@@ -8938,7 +8938,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol tex...",
           "protocol_full": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=actava/chi-bench task=prior_authorization; value=10.7; HF rank=3; source=CHI-Bench"
         }
@@ -8973,7 +8973,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol tex...",
           "protocol_full": "Harness: OpenAI Agents SDK; Protocol: 75 tasks x 3 trials; Metric: pass@1 (%) | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=actava/chi-bench task=utilization_management; value=28; HF rank=2; source=CHI-Bench"
         }
@@ -9006,7 +9006,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "Pass³% | N=3 | 161 tasks | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face e...",
           "protocol_full": "Pass³% | N=3 | 161 tasks | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=claw-eval/Claw-Eval task=general; value=58.4; HF rank=11; source=Claw-Eval Leaderboard"
         }
@@ -9039,7 +9039,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "Pass³% | N=3 | 38 tasks | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face ev...",
           "protocol_full": "Pass³% | N=3 | 38 tasks | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=claw-eval/Claw-Eval task=multi_turn; value=65.8; HF rank=2; source=Claw-Eval Leaderboard"
         }
@@ -9413,7 +9413,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -9429,7 +9429,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -9445,7 +9445,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -9461,7 +9461,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -9477,7 +9477,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -9493,7 +9493,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -10248,7 +10248,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10264,7 +10264,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10280,7 +10280,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10296,7 +10296,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10312,7 +10312,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10328,7 +10328,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -10625,7 +10625,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10657,7 +10657,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10673,7 +10673,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10689,7 +10689,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10705,7 +10705,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -10753,7 +10753,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -13434,7 +13434,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13450,7 +13450,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13466,7 +13466,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13482,7 +13482,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13498,7 +13498,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13514,7 +13514,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -13543,7 +13543,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=Idavidrein/gpqa task=diamond; value=90.1; HF rank=5; source=Model Card"
         }
@@ -13680,7 +13680,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13716,7 +13716,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13768,7 +13768,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13784,7 +13784,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13800,7 +13800,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13868,7 +13868,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -13913,7 +13913,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=openai/gsm8k task=gsm8k; value=92.6; HF rank=5; source=Model Card"
         }
@@ -14058,7 +14058,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14074,7 +14074,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14090,7 +14090,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14106,7 +14106,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14122,7 +14122,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14138,7 +14138,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -14257,7 +14257,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14273,7 +14273,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14289,7 +14289,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14305,7 +14305,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14321,7 +14321,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14337,7 +14337,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -14390,7 +14390,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14426,7 +14426,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14442,7 +14442,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14498,7 +14498,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14514,7 +14514,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -14530,7 +14530,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15359,7 +15359,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22; zai_glm_5_2_2026_06_17",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "HF evalResults dataset=cais/hle task=hle; value=37.7; HF rank=15; source=Model Card"
         },
@@ -15687,7 +15687,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15703,7 +15703,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15719,7 +15719,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15735,7 +15735,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15751,7 +15751,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15767,7 +15767,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -15796,7 +15796,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15812,7 +15812,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15828,7 +15828,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15844,7 +15844,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15860,7 +15860,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -15876,7 +15876,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -16228,7 +16228,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16260,7 +16260,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16292,7 +16292,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16308,7 +16308,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16324,7 +16324,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16388,7 +16388,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -16509,7 +16509,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16525,7 +16525,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16541,7 +16541,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16557,7 +16557,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16573,7 +16573,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16589,7 +16589,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -16755,7 +16755,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16771,7 +16771,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16787,7 +16787,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16803,7 +16803,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -16819,7 +16819,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -17635,7 +17635,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -17651,7 +17651,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -17667,7 +17667,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -17683,7 +17683,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -17699,7 +17699,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -17715,7 +17715,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -18074,7 +18074,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18090,7 +18090,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18122,7 +18122,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18138,7 +18138,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18154,7 +18154,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18186,7 +18186,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18231,7 +18231,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18247,7 +18247,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18263,7 +18263,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18279,7 +18279,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18295,7 +18295,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18311,7 +18311,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -18610,7 +18610,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=TIGER-Lab/MMLU-Pro task=mmlu_pro; value=87.5; HF rank=4; source=Model Card"
         }
@@ -18639,7 +18639,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18655,7 +18655,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18671,7 +18671,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18687,7 +18687,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18703,7 +18703,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18719,7 +18719,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -18748,7 +18748,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18764,7 +18764,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18780,7 +18780,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18796,7 +18796,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18812,7 +18812,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18828,7 +18828,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -18857,7 +18857,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18873,7 +18873,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18889,7 +18889,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18905,7 +18905,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18921,7 +18921,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18937,7 +18937,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -18966,7 +18966,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18982,7 +18982,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -18998,7 +18998,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19014,7 +19014,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19030,7 +19030,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19046,7 +19046,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -19739,7 +19739,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19755,7 +19755,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19771,7 +19771,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19787,7 +19787,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19803,7 +19803,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -19819,7 +19819,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -20204,7 +20204,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20220,7 +20220,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20; zai_glm_5_2_2026_06_17",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "glm-5.2-D418TmAz.js:42; qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20236,7 +20236,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20284,7 +20284,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20300,7 +20300,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20332,7 +20332,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20377,7 +20377,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20393,7 +20393,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20409,7 +20409,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20425,7 +20425,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20441,7 +20441,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -20457,7 +20457,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -22272,7 +22272,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -22288,7 +22288,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -22304,7 +22304,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -22320,7 +22320,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -22336,7 +22336,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -22352,7 +22352,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -23907,7 +23907,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -23923,7 +23923,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -23939,7 +23939,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -23955,7 +23955,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -23971,7 +23971,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -23987,7 +23987,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -24016,7 +24016,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24032,7 +24032,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24048,7 +24048,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24064,7 +24064,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24080,7 +24080,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24096,7 +24096,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -24125,7 +24125,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24141,7 +24141,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24157,7 +24157,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24173,7 +24173,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24189,7 +24189,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -24218,7 +24218,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24234,7 +24234,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24250,7 +24250,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24266,7 +24266,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24282,7 +24282,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24298,7 +24298,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -24475,7 +24475,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "ResearchHarness evaluation with tools enabled, code execution, and a file-system workspace; completed 39/40 ResearchClawBench tasks. | Harness: see...",
           "protocol_full": "ResearchHarness evaluation with tools enabled, code execution, and a file-system workspace; completed 39/40 ResearchClawBench tasks. | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=InternScience/ResearchClawBench task=overall; value=17.12; HF rank=4; source=Model Card"
         }
@@ -24589,7 +24589,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24628,7 +24628,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24667,7 +24667,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24706,7 +24706,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -24722,7 +24722,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -25205,7 +25205,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25221,7 +25221,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25237,7 +25237,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25253,7 +25253,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25269,7 +25269,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -25304,7 +25304,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "with-skills; BenchFlow harness; OpenHands agent; 87 tasks x 3 trials; full 261/261 coverage | Harness: see raw protocol text; Tools enabled: see ra...",
           "protocol_full": "with-skills; BenchFlow harness; OpenHands agent; 87 tasks x 3 trials; full 261/261 coverage | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=benchflow/skillsbench task=skillsbench_v1_1; value=50.1; HF rank=5; source=SkillsBench v1.1 official leaderboard"
         }
@@ -25333,7 +25333,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25349,7 +25349,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25365,7 +25365,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25381,7 +25381,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25397,7 +25397,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25413,7 +25413,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -25487,7 +25487,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25503,7 +25503,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25519,7 +25519,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25535,7 +25535,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25567,7 +25567,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -25583,7 +25583,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26139,7 +26139,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22; zai_glm_5_2_2026_06_17",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "HF evalResults dataset=ScaleAI/SWE-bench_Pro task=SWE_Bench_Pro; value=55.4; HF rank=13; source=Model Card"
         },
@@ -26253,7 +26253,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=SWE-bench/SWE-bench_Verified task=swe_bench_%_resolved; value=80.6; HF rank=2; source=Model Card"
         }
@@ -26567,7 +26567,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26583,7 +26583,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26599,7 +26599,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26615,7 +26615,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26631,7 +26631,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -26753,7 +26753,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26769,7 +26769,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26785,7 +26785,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26801,7 +26801,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26817,7 +26817,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26833,7 +26833,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -26862,7 +26862,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26878,7 +26878,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26894,7 +26894,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26910,7 +26910,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -26926,7 +26926,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -26955,7 +26955,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=harborframework/terminal-bench-2.0 task=terminalbench_2; value=67.9; HF rank=3; source=Model Card"
         }
@@ -27119,7 +27119,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -27135,7 +27135,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -27151,7 +27151,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -27167,7 +27167,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -27183,7 +27183,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -27199,7 +27199,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -28659,7 +28659,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -28675,7 +28675,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -28691,7 +28691,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -28707,7 +28707,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -28723,7 +28723,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -28956,7 +28956,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=internlm/WildClawBench task=avg_cost; value=12; HF rank=4; source=WildClawBench"
         }
@@ -29102,7 +29102,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=internlm/WildClawBench task=avg_time; value=605; HF rank=1; source=WildClawBench"
         }
@@ -29131,7 +29131,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=internlm/WildClawBench task=overall; value=43.7; HF rank=4; source=WildClawBench"
         }
@@ -29160,7 +29160,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -29176,7 +29176,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -29192,7 +29192,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -29208,7 +29208,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -29224,7 +29224,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -29240,7 +29240,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "",
           "protocol_full": "",
           "source_report_id": "qwen_qwen3_7_2026_05_20",
-          "source_url": "",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7",
           "evidence_location": "qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         }
@@ -30160,7 +30160,7 @@ window.BENCHATLAS_DATA = {
           "protocol_short": "medium preset, avg final funds (USD) across seeds 1,2,3 | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-sp...",
           "protocol_full": "medium preset, avg final funds (USD) across seeds 1,2,3 | Harness: see raw protocol text; Tools enabled: see raw protocol text; Judge: benchmark-specific; Dataset: Hugging Face evalResults notes field.",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22",
-          "source_url": "",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults",
           "evidence_quote": "HF evalResults dataset=collinear-ai/yc-bench task=medium; value=1066426; HF rank=5; source=YC-Bench eval"
         }
