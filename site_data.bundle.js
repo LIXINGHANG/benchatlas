@@ -4,7 +4,7 @@ window.BENCHATLAS_DATA = {
     "model_count": 47,
     "benchmark_group_count": 312,
     "report_count": 8,
-    "protocol_count": 253
+    "protocol_count": 263
   },
   "model_catalog": [
     {
@@ -448,7 +448,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "80.3",
       "comparability": "protocol_variant:20",
-      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "gpqa_diamond_score",
@@ -484,7 +484,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "64.7",
       "comparability": "protocol_variant:17",
-      "protocol_badges": "agent harness; long context; model judge; tools"
+      "protocol_badges": "agent harness; long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "osworld_verified_score",
@@ -502,7 +502,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "85.4",
       "comparability": "protocol_variant:16",
-      "protocol_badges": "agent harness; long context; model judge; multi-run; tools"
+      "protocol_badges": "agent harness; long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "critpt_score",
@@ -682,7 +682,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "88.9",
       "comparability": "protocol_variant:9",
-      "protocol_badges": "model judge; multi-run"
+      "protocol_badges": "long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "frontierscience_research_score",
@@ -754,7 +754,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "95.5",
       "comparability": "protocol_variant:9",
-      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; tools"
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "deepswe_score",
@@ -1654,7 +1654,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "88.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "charxiv_rq_score",
@@ -2014,7 +2014,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "59.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "imo_answerbench_score",
@@ -2554,7 +2554,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "88.0",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "terminal_bench_2_0_terminus_2_score",
@@ -2878,7 +2878,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "28.6",
       "comparability": "protocol_variant:4",
-      "protocol_badges": ""
+      "protocol_badges": "long context; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "cybergym_open_benchmarks_score",
@@ -3076,7 +3076,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "93.5",
       "comparability": "protocol_variant:3",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "imo_2025_score",
@@ -3256,7 +3256,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "93.3",
       "comparability": "protocol_variant:2",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; long context; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "browsecomp_with_search_score",
@@ -7958,7 +7958,13 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 2,
       "display_result_count": 2,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "multi-run",
+        "public leaderboard",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -7967,10 +7973,16 @@ window.BENCHATLAS_DATA = {
           "score": "93.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Multi-agent BrowseComp uses the Section 8.15 multi-agent harnesses. The async subagent setup gives subagents task tools and communication tools; the lead can create/delete/check subagents. For BrowseComp there is no cap on the number of subagents; only the lead agent's final answer is graded. Token usage sums input and output tokens across agents, and latency is normalized using fixed reference prefill/decode rates plus measured tool time.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Multi-agent BrowseComp uses the Section 8.15 multi-agent harnesses. The async subagent setup gives subagents task tools and communication tools; the lead can create/delete/check subagents. For BrowseComp there is no cap on the number of subagents; only the lead agent's final answer is graded. Token usage sums input and output tokens across agents, and latency is normalized using fixed reference prefill/decode rates plus measured tool time. | Tools enabled: web search tools plus multi-agent communication and subagent management tools; Context: 1M-token limit per lead/subagent without compaction for async subagents; Reasoning: adaptive thinking at max effort; Dataset: Multi-agent BrowseComp uses harnesses from Section 8.15.3 and methodology from Section 8.15.4; only the lead agent's final submission is graded.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -7983,10 +7995,16 @@ window.BENCHATLAS_DATA = {
           "score": "88.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Multi-agent BrowseComp uses the Section 8.15 multi-agent harnesses. The async subagent setup gives subagents task tools and communication tools; the lead can create/delete/check subagents. For BrowseComp there is no cap on the number of subagents; only the lead agent's final answer is graded. Token usage sums input and output tokens across agents, and latency is normalized using fixed reference prefill/decode rates plus measured tool time.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Multi-agent BrowseComp uses the Section 8.15 multi-agent harnesses. The async subagent setup gives subagents task tools and communication tools; the lead can create/delete/check subagents. For BrowseComp there is no cap on the number of subagents; only the lead agent's final answer is graded. Token usage sums input and output tokens across agents, and latency is normalized using fixed reference prefill/decode rates plus measured tool time. | Tools enabled: web search tools plus multi-agent communication and subagent management tools; Context: 1M-token limit per lead/subagent without compaction for async subagents; Reasoning: adaptive thinking at max effort; Dataset: Multi-agent BrowseComp uses harnesses from Section 8.15.3 and methodology from Section 8.15.4; only the lead agent's final submission is graded.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8126,7 +8144,13 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "long context",
+        "multi-run",
+        "public leaderboard",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -8135,10 +8159,16 @@ window.BENCHATLAS_DATA = {
           "score": "88.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: 1M context with 10M-token task limit via context compaction; Reasoning: adaptive thinking at max effort; Dataset: Hard-to-locate open-web information retrieval benchmark.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8151,10 +8181,16 @@ window.BENCHATLAS_DATA = {
           "score": "87.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: 1M context with 10M-token task limit via context compaction; Reasoning: adaptive thinking at max effort; Dataset: Hard-to-locate open-web information retrieval benchmark.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8167,10 +8203,16 @@ window.BENCHATLAS_DATA = {
           "score": "85.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: 1M context with 10M-token task limit via context compaction; Reasoning: adaptive thinking at max effort; Dataset: Hard-to-locate open-web information retrieval benchmark.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8183,10 +8225,16 @@ window.BENCHATLAS_DATA = {
           "score": "84.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: 1M context with 10M-token task limit via context compaction; Reasoning: adaptive thinking at max effort; Dataset: Hard-to-locate open-web information retrieval benchmark.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8199,10 +8247,16 @@ window.BENCHATLAS_DATA = {
           "score": "84.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "agent harness",
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Single-agent BrowseComp uses web search, web fetch, programmatic tool calling, and code execution. Mythos 5 used adaptive thinking at maximum effort with a 10M-token limit; context compaction is triggered at 200k tokens to extend beyond the 1M context window. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: 1M context with 10M-token task limit via context compaction; Reasoning: adaptive thinking at max effort; Dataset: Hard-to-locate open-web information retrieval benchmark.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8367,8 +8421,11 @@ window.BENCHATLAS_DATA = {
       "result_count": 9,
       "display_result_count": 9,
       "protocol_badges": [
+        "long context",
         "model judge",
-        "multi-run"
+        "multi-run",
+        "public leaderboard",
+        "tools"
       ],
       "rows": [
         {
@@ -8378,10 +8435,16 @@ window.BENCHATLAS_DATA = {
           "score": "88.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning no-tools uses adaptive thinking and max effort. The model is evaluated on 1,000 validation questions, graded with the reference prompts, using Claude Sonnet 4.6 instead of GPT-4o, and scores are averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning no-tools uses adaptive thinking and max effort. The model is evaluated on 1,000 validation questions, graded with the reference prompts, using Claude Sonnet 4.6 instead of GPT-4o, and scores are averaged over five runs. | Tools disabled: Python tools disabled; Reasoning: adaptive thinking at max effort; Runs: avg over 5 runs; Judge model: Claude Sonnet 4.6; Dataset: 1,000 questions from validation split; reference prompts used, but grader changed from GPT-4o to Claude Sonnet 4.6.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8394,10 +8457,16 @@ window.BENCHATLAS_DATA = {
           "score": "86.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning no-tools uses adaptive thinking and max effort. The model is evaluated on 1,000 validation questions, graded with the reference prompts, using Claude Sonnet 4.6 instead of GPT-4o, and scores are averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning no-tools uses adaptive thinking and max effort. The model is evaluated on 1,000 validation questions, graded with the reference prompts, using Claude Sonnet 4.6 instead of GPT-4o, and scores are averaged over five runs. | Tools disabled: Python tools disabled; Reasoning: adaptive thinking at max effort; Runs: avg over 5 runs; Judge model: Claude Sonnet 4.6; Dataset: 1,000 questions from validation split; reference prompts used, but grader changed from GPT-4o to Claude Sonnet 4.6.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8486,10 +8555,16 @@ window.BENCHATLAS_DATA = {
           "score": "80.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning no-tools uses adaptive thinking and max effort. The model is evaluated on 1,000 validation questions, graded with the reference prompts, using Claude Sonnet 4.6 instead of GPT-4o, and scores are averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning no-tools uses adaptive thinking and max effort. The model is evaluated on 1,000 validation questions, graded with the reference prompts, using Claude Sonnet 4.6 instead of GPT-4o, and scores are averaged over five runs. | Tools disabled: Python tools disabled; Reasoning: adaptive thinking at max effort; Runs: avg over 5 runs; Judge model: Claude Sonnet 4.6; Dataset: 1,000 questions from validation split; reference prompts used, but grader changed from GPT-4o to Claude Sonnet 4.6.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8544,7 +8619,13 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 3,
       "display_result_count": 3,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "public leaderboard",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -8553,10 +8634,16 @@ window.BENCHATLAS_DATA = {
           "score": "93.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning with tools provides a container containing the image file, standard Python libraries, and an image cropping tool. The model uses adaptive thinking and max effort; scores are averaged over five runs and graded with Claude Sonnet 4.6.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning with tools provides a container containing the image file, standard Python libraries, and an image cropping tool. The model uses adaptive thinking and max effort; scores are averaged over five runs and graded with Claude Sonnet 4.6. | Tools enabled: Python container with image file, standard Python libraries, and image cropping tool; Reasoning: adaptive thinking at max effort; Runs: avg over 5 runs; Judge model: Claude Sonnet 4.6; Dataset: 1,000 questions from validation split; reference prompts used, but grader changed from GPT-4o to Claude Sonnet 4.6.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8569,10 +8656,16 @@ window.BENCHATLAS_DATA = {
           "score": "92.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning with tools provides a container containing the image file, standard Python libraries, and an image cropping tool. The model uses adaptive thinking and max effort; scores are averaged over five runs and graded with Claude Sonnet 4.6.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning with tools provides a container containing the image file, standard Python libraries, and an image cropping tool. The model uses adaptive thinking and max effort; scores are averaged over five runs and graded with Claude Sonnet 4.6. | Tools enabled: Python container with image file, standard Python libraries, and image cropping tool; Reasoning: adaptive thinking at max effort; Runs: avg over 5 runs; Judge model: Claude Sonnet 4.6; Dataset: 1,000 questions from validation split; reference prompts used, but grader changed from GPT-4o to Claude Sonnet 4.6.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -8585,10 +8678,16 @@ window.BENCHATLAS_DATA = {
           "score": "89.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning with tools provides a container containing the image file, standard Python libraries, and an image cropping tool. The model uses adaptive thinking and max effort; scores are averaged over five runs and graded with Claude Sonnet 4.6.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CharXiv Reasoning with tools provides a container containing the image file, standard Python libraries, and an image cropping tool. The model uses adaptive thinking and max effort; scores are averaged over five runs and graded with Claude Sonnet 4.6. | Tools enabled: Python container with image file, standard Python libraries, and image cropping tool; Reasoning: adaptive thinking at max effort; Runs: avg over 5 runs; Judge model: Claude Sonnet 4.6; Dataset: 1,000 questions from validation split; reference prompts used, but grader changed from GPT-4o to Claude Sonnet 4.6.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -10573,7 +10672,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 4,
       "display_result_count": 4,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -10582,10 +10685,14 @@ window.BENCHATLAS_DATA = {
           "score": "28.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API. | Judge: Artificial Analysis CritPt grading API; Dataset: 70 research-level physics composite challenges across 11 subfields; automated physics-specific grading pipeline.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -10598,10 +10705,14 @@ window.BENCHATLAS_DATA = {
           "score": "27.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API. | Judge: Artificial Analysis CritPt grading API; Dataset: 70 research-level physics composite challenges across 11 subfields; automated physics-specific grading pipeline.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -10614,10 +10725,14 @@ window.BENCHATLAS_DATA = {
           "score": "20.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API. | Judge: Artificial Analysis CritPt grading API; Dataset: 70 research-level physics composite challenges across 11 subfields; automated physics-specific grading pipeline.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -10630,10 +10745,14 @@ window.BENCHATLAS_DATA = {
           "score": "17.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. CritPt comprises 70 research-level physics composite challenges with machine-verifiable answer formats and an automated physics-specific grading pipeline. Anthropic uses the independent Artificial Analysis evaluation run via the CritPt grading API. | Judge: Artificial Analysis CritPt grading API; Dataset: 70 research-level physics composite challenges across 11 subfields; automated physics-specific grading pipeline.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15565,7 +15684,13 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run",
+        "public leaderboard",
+        "tools"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -15574,10 +15699,16 @@ window.BENCHATLAS_DATA = {
           "score": "59.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader. | Tools disabled: no web/code tools; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader; Dataset: No-tools results may not be reproducible via Public API because some problems exceed the 1-hour sampling limit.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15590,10 +15721,16 @@ window.BENCHATLAS_DATA = {
           "score": "56.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader. | Tools disabled: no web/code tools; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader; Dataset: No-tools results may not be reproducible via Public API because some problems exceed the 1-hour sampling limit.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15606,10 +15743,16 @@ window.BENCHATLAS_DATA = {
           "score": "49.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader. | Tools disabled: no web/code tools; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader; Dataset: No-tools results may not be reproducible via Public API because some problems exceed the 1-hour sampling limit.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15622,10 +15765,16 @@ window.BENCHATLAS_DATA = {
           "score": "44.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader. | Tools disabled: no web/code tools; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader; Dataset: No-tools results may not be reproducible via Public API because some problems exceed the 1-hour sampling limit.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15638,10 +15787,16 @@ window.BENCHATLAS_DATA = {
           "score": "41.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE no-tools is a reasoning-only configuration. Thinking is set to auto, total tokens across contexts are capped at 1M, and context compaction is not used. Claude Opus 4.6 serves as grader. | Tools disabled: no web/code tools; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader; Dataset: No-tools results may not be reproducible via Public API because some problems exceed the 1-hour sampling limit.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15839,6 +15994,8 @@ window.BENCHATLAS_DATA = {
         "agent harness",
         "long context",
         "model judge",
+        "multi-run",
+        "public leaderboard",
         "tools"
       ],
       "rows": [
@@ -15849,10 +16006,16 @@ window.BENCHATLAS_DATA = {
           "score": "64.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader and transcript reviewer; Dataset: Known HLE-discussing sources are blocklisted; transcripts flagged as retrieving HLE-specific answers are re-graded as incorrect.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15865,10 +16028,16 @@ window.BENCHATLAS_DATA = {
           "score": "64.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader and transcript reviewer; Dataset: Known HLE-discussing sources are blocklisted; transcripts flagged as retrieving HLE-specific answers are re-graded as incorrect.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -15883,12 +16052,14 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "tools",
+            "multi-run",
             "model judge",
-            "long context"
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader and transcript reviewer; Dataset: Known HLE-discussing sources are blocklisted; transcripts flagged as retrieving HLE-specific answers are re-graded as incorrect. | Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
@@ -16005,12 +16176,14 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "tools",
+            "multi-run",
             "model judge",
-            "long context"
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader and transcript reviewer; Dataset: Known HLE-discussing sources are blocklisted; transcripts flagged as retrieving HLE-specific answers are re-graded as incorrect. | Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
@@ -16046,12 +16219,14 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "tools",
+            "multi-run",
             "model judge",
-            "long context"
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. HLE with tools uses web search, web fetch, programmatic tool calling, and code execution. Thinking is auto, total tokens are capped at 1M, and context compaction is not used. Known HLE-discussing sources are blocklisted for search/fetch, and Claude Opus 4.6 reviews transcripts for contamination; confirmed cases are re-graded as incorrect. | Tools enabled: web search; web fetch; programmatic tool calling; code execution; Context: up to 1M total tokens across contexts; Reasoning: auto thinking; Judge: Claude Opus 4.6 grader and transcript reviewer; Dataset: Known HLE-discussing sources are blocklisted; transcripts flagged as retrieving HLE-specific answers are re-graded as incorrect. | Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
@@ -21929,6 +22104,7 @@ window.BENCHATLAS_DATA = {
         "long context",
         "model judge",
         "multi-run",
+        "public leaderboard",
         "tools"
       ],
       "rows": [
@@ -21940,11 +22116,14 @@ window.BENCHATLAS_DATA = {
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "multi-run"
+            "tools",
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harnes...",
-          "protocol_full": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score.",
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 action steps; Context: 128K max tokens per turn after Anthropic bug-fix change; Reasoning: auto-thinking at max effort; Runs: pass@1 averaged over five runs; Dataset: 361 tasks; default 1080p resolution; zoom-tool bug fix for batched actions.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -21958,11 +22137,14 @@ window.BENCHATLAS_DATA = {
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "multi-run"
+            "tools",
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harnes...",
-          "protocol_full": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score.",
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 action steps; Context: 128K max tokens per turn after Anthropic bug-fix change; Reasoning: auto-thinking at max effort; Runs: pass@1 averaged over five runs; Dataset: 361 tasks; default 1080p resolution; zoom-tool bug fix for batched actions.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -21976,11 +22158,14 @@ window.BENCHATLAS_DATA = {
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "multi-run"
+            "tools",
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harnes...",
-          "protocol_full": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score.",
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 action steps; Context: 128K max tokens per turn after Anthropic bug-fix change; Reasoning: auto-thinking at max effort; Runs: pass@1 averaged over five runs; Dataset: 361 tasks; default 1080p resolution; zoom-tool bug fix for batched actions.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -21994,11 +22179,14 @@ window.BENCHATLAS_DATA = {
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "multi-run"
+            "tools",
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harnes...",
-          "protocol_full": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score.",
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 action steps; Context: 128K max tokens per turn after Anthropic bug-fix change; Reasoning: auto-thinking at max effort; Runs: pass@1 averaged over five runs; Dataset: 361 tasks; default 1080p resolution; zoom-tool bug fix for batched actions.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -22014,11 +22202,13 @@ window.BENCHATLAS_DATA = {
           "protocol_badges": [
             "tools",
             "multi-run",
-            "model judge"
+            "model judge",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs.",
           "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
-          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 action steps; Context: 128K max tokens per turn after Anthropic bug-fix change; Reasoning: auto-thinking at max effort; Runs: pass@1 averaged over five runs; Dataset: 361 tasks; default 1080p resolution; zoom-tool bug fix for batched actions. | All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf; https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453; google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -22074,11 +22264,13 @@ window.BENCHATLAS_DATA = {
           "protocol_badges": [
             "tools",
             "multi-run",
-            "model judge"
+            "model judge",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs.",
           "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
-          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. OSWorld-Verified follows default 1080p settings with a maximum of 100 action steps per task. Anthropic changed the evaluation with a zoom-tool bug fix for batched actions and increased per-turn token limit from 16K to 128K. Scores are first-attempt success rate/pass@1 averaged over five runs. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 action steps; Context: 128K max tokens per turn after Anthropic bug-fix change; Reasoning: auto-thinking at max effort; Runs: pass@1 averaged over five runs; Dataset: 361 tasks; default 1080p resolution; zoom-tool bug fix for batched actions. | All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf; https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453; google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26805,6 +26997,7 @@ window.BENCHATLAS_DATA = {
         "long context",
         "model judge",
         "multi-run",
+        "public leaderboard",
         "tools"
       ],
       "rows": [
@@ -26815,10 +27008,14 @@ window.BENCHATLAS_DATA = {
           "score": "80.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -26831,10 +27028,14 @@ window.BENCHATLAS_DATA = {
           "score": "80",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -26847,10 +27048,14 @@ window.BENCHATLAS_DATA = {
           "score": "77.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -26865,11 +27070,13 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "agent harness",
-            "long context"
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
@@ -26941,11 +27148,13 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "agent harness",
-            "long context"
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
@@ -27044,11 +27253,13 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "agent harness",
-            "long context"
+            "multi-run",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
@@ -27169,6 +27380,7 @@ window.BENCHATLAS_DATA = {
         "long context",
         "model judge",
         "multi-run",
+        "public leaderboard",
         "tools"
       ],
       "rows": [
@@ -27179,10 +27391,14 @@ window.BENCHATLAS_DATA = {
           "score": "95.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: 500-problem SWE-bench subset verified by human engineers as solvable.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -27195,10 +27411,14 @@ window.BENCHATLAS_DATA = {
           "score": "95",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: 500-problem SWE-bench subset verified by human engineers as solvable.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -27211,10 +27431,14 @@ window.BENCHATLAS_DATA = {
           "score": "93.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: 500-problem SWE-bench subset verified by human engineers as solvable.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -27227,10 +27451,14 @@ window.BENCHATLAS_DATA = {
           "score": "88.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: 500-problem SWE-bench subset verified by human engineers as solvable.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -27266,10 +27494,14 @@ window.BENCHATLAS_DATA = {
           "score": "80.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "long context",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Verified is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: 500-problem SWE-bench subset verified by human engineers as solvable.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -28460,7 +28692,14 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "internal",
+        "long context",
+        "model judge",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -28469,10 +28708,17 @@ window.BENCHATLAS_DATA = {
           "score": "88.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -28485,10 +28731,17 @@ window.BENCHATLAS_DATA = {
           "score": "84.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -28501,10 +28754,17 @@ window.BENCHATLAS_DATA = {
           "score": "83.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -28517,10 +28777,17 @@ window.BENCHATLAS_DATA = {
           "score": "82.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
@@ -28533,10 +28800,17 @@ window.BENCHATLAS_DATA = {
           "score": "70.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "long context",
+            "internal",
+            "public leaderboard"
+          ],
+          "protocol_note": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent.",
+          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
+          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
           "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453",
