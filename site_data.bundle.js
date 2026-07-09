@@ -4,7 +4,7 @@ window.BENCHATLAS_DATA = {
     "model_count": 47,
     "benchmark_group_count": 312,
     "report_count": 8,
-    "protocol_count": 240
+    "protocol_count": 253
   },
   "model_catalog": [
     {
@@ -592,7 +592,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "83.6",
       "comparability": "protocol_variant:12",
-      "protocol_badges": "model judge; tools"
+      "protocol_badges": "model judge; multi-run; public leaderboard; tools"
     },
     {
       "rank_group_key": "scicode_score",
@@ -682,7 +682,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "88.9",
       "comparability": "protocol_variant:9",
-      "protocol_badges": ""
+      "protocol_badges": "model judge; multi-run"
     },
     {
       "rank_group_key": "frontierscience_research_score",
@@ -880,7 +880,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "56.5",
       "comparability": "protocol_variant:8",
-      "protocol_badges": "agent harness; long context; model judge; tools"
+      "protocol_badges": "agent harness; long context; model judge; multi-run; tools"
     },
     {
       "rank_group_key": "arc_agi_2_score",
@@ -898,7 +898,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "85.0",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "apex_score",
@@ -952,7 +952,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "36.2",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "claweval_score",
@@ -1006,7 +1006,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "57.9",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "frontierswe_dominance_as_of_26_6_16_score",
@@ -1042,7 +1042,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "1773",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "global_piqa_score",
@@ -1114,7 +1114,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "46.9",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "model judge; multi-run"
     },
     {
       "rank_group_key": "ifbench_score",
@@ -1294,7 +1294,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "83.6",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "model judge; multi-run"
     },
     {
       "rank_group_key": "mrcr_v2_8_needle_128k_average_score",
@@ -1312,7 +1312,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "94.8",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run"
     },
     {
       "rank_group_key": "mrcr_v2_128k_score",
@@ -1456,7 +1456,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Anthropic",
       "best_score": "64.3",
       "comparability": "protocol_variant:6",
-      "protocol_badges": ""
+      "protocol_badges": "internal; model judge; multi-run"
     },
     {
       "rank_group_key": "swe_pro_score",
@@ -2608,7 +2608,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "OpenAI",
       "best_score": "78.2",
       "comparability": "protocol_variant:5",
-      "protocol_badges": ""
+      "protocol_badges": "agent harness; model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "toolathlon_pass_1",
@@ -3112,7 +3112,7 @@ window.BENCHATLAS_DATA = {
       "best_vendor": "Google DeepMind",
       "best_score": "26.6",
       "comparability": "protocol_variant:3",
-      "protocol_badges": ""
+      "protocol_badges": "long context; model judge; multi-run"
     },
     {
       "rank_group_key": "dirtyfilter_validation_pre_training_corpus_cleaning_final_valid_recall",
@@ -6984,7 +6984,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "model judge",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -6993,10 +6997,14 @@ window.BENCHATLAS_DATA = {
           "score": "85.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private. | Harness: benchmark-specific; Dataset: ARC Prize leaderboard; ARC Prize Verified; semi-private set.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7009,10 +7017,14 @@ window.BENCHATLAS_DATA = {
           "score": "77.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private. | Harness: benchmark-specific; Dataset: ARC Prize leaderboard; ARC Prize Verified; semi-private set.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7025,10 +7037,14 @@ window.BENCHATLAS_DATA = {
           "score": "75.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private. | Harness: benchmark-specific; Dataset: ARC Prize leaderboard; ARC Prize Verified; semi-private set.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7041,10 +7057,14 @@ window.BENCHATLAS_DATA = {
           "score": "72.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private. | Harness: benchmark-specific; Dataset: ARC Prize leaderboard; ARC Prize Verified; semi-private set.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7057,10 +7077,14 @@ window.BENCHATLAS_DATA = {
           "score": "58.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private. | Harness: benchmark-specific; Dataset: ARC Prize leaderboard; ARC Prize Verified; semi-private set.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7073,10 +7097,14 @@ window.BENCHATLAS_DATA = {
           "score": "33.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. ARC-AGI-2 results are sourced from the ARC Prize leaderboard and are ARC Prize Verified. The reported set is semi-private. | Harness: benchmark-specific; Dataset: ARC Prize leaderboard; ARC Prize Verified; semi-private set.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7733,7 +7761,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "model judge",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -7742,10 +7774,14 @@ window.BENCHATLAS_DATA = {
           "score": "36.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison. | Harness: benchmark-specific; Dataset: Andon Labs public leaderboard; normalized 0-100 score.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7758,10 +7794,14 @@ window.BENCHATLAS_DATA = {
           "score": "33.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison. | Harness: benchmark-specific; Dataset: Andon Labs public leaderboard; normalized 0-100 score.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7774,10 +7814,14 @@ window.BENCHATLAS_DATA = {
           "score": "26.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison. | Harness: benchmark-specific; Dataset: Andon Labs public leaderboard; normalized 0-100 score.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7790,10 +7834,14 @@ window.BENCHATLAS_DATA = {
           "score": "24.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison. | Harness: benchmark-specific; Dataset: Andon Labs public leaderboard; normalized 0-100 score.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7806,10 +7854,14 @@ window.BENCHATLAS_DATA = {
           "score": "6.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison. | Harness: benchmark-specific; Dataset: Andon Labs public leaderboard; normalized 0-100 score.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -7822,10 +7874,14 @@ window.BENCHATLAS_DATA = {
           "score": "0.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Blueprint Bench 2 results are sourced from the Andon Labs Blueprint-Bench 2 public leaderboard. Leaderboard scores are normalized to a 0-100 scale for comparison. | Harness: benchmark-specific; Dataset: Andon Labs public leaderboard; normalized 0-100 score.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -8310,7 +8366,10 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 9,
       "display_result_count": 9,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "model judge",
+        "multi-run"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -8351,10 +8410,13 @@ window.BENCHATLAS_DATA = {
           "score": "84.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Dataset: Gemini and GPT-5.5 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -8367,10 +8429,13 @@ window.BENCHATLAS_DATA = {
           "score": "84.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Dataset: Gemini and GPT-5.5 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -8383,10 +8448,13 @@ window.BENCHATLAS_DATA = {
           "score": "83.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Dataset: Gemini and GPT-5.5 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -8399,10 +8467,13 @@ window.BENCHATLAS_DATA = {
           "score": "82.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Dataset: Gemini and GPT-5.5 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -8431,10 +8502,13 @@ window.BENCHATLAS_DATA = {
           "score": "80.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Dataset: Gemini and GPT-5.5 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -8447,10 +8521,13 @@ window.BENCHATLAS_DATA = {
           "score": "70.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. CharXiv Reasoning results for Gemini models and GPT-5.5 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Dataset: Gemini and GPT-5.5 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -12467,7 +12544,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "model judge",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -12476,10 +12558,15 @@ window.BENCHATLAS_DATA = {
           "score": "57.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard. | Harness: benchmark-specific; Dataset: vals.ai public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -12492,10 +12579,15 @@ window.BENCHATLAS_DATA = {
           "score": "51.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard. | Harness: benchmark-specific; Dataset: vals.ai public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -12508,10 +12600,15 @@ window.BENCHATLAS_DATA = {
           "score": "51.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard. | Harness: benchmark-specific; Dataset: vals.ai public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -12524,10 +12621,15 @@ window.BENCHATLAS_DATA = {
           "score": "51.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard. | Harness: benchmark-specific; Dataset: vals.ai public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -12540,10 +12642,15 @@ window.BENCHATLAS_DATA = {
           "score": "43.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard. | Harness: benchmark-specific; Dataset: vals.ai public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -12556,10 +12663,15 @@ window.BENCHATLAS_DATA = {
           "score": "42.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Finance Agent v2 results are sourced from the vals.ai public leaderboard. | Harness: benchmark-specific; Dataset: vals.ai public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -13328,7 +13440,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "Elo",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "model judge",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -13337,10 +13453,14 @@ window.BENCHATLAS_DATA = {
           "score": "1773",
           "score_unit": "Elo",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard. | Harness: benchmark-specific; Dataset: Artificial Analysis public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -13353,10 +13473,14 @@ window.BENCHATLAS_DATA = {
           "score": "1753",
           "score_unit": "Elo",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard. | Harness: benchmark-specific; Dataset: Artificial Analysis public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -13369,10 +13493,14 @@ window.BENCHATLAS_DATA = {
           "score": "1674",
           "score_unit": "Elo",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard. | Harness: benchmark-specific; Dataset: Artificial Analysis public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -13385,10 +13513,14 @@ window.BENCHATLAS_DATA = {
           "score": "1656",
           "score_unit": "Elo",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard. | Harness: benchmark-specific; Dataset: Artificial Analysis public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -13401,10 +13533,14 @@ window.BENCHATLAS_DATA = {
           "score": "1314",
           "score_unit": "Elo",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard. | Harness: benchmark-specific; Dataset: Artificial Analysis public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -13417,10 +13553,14 @@ window.BENCHATLAS_DATA = {
           "score": "1204",
           "score_unit": "Elo",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. GDPval-AA results are sourced from the Artificial Analysis public leaderboard. | Harness: benchmark-specific; Dataset: Artificial Analysis public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15295,7 +15435,10 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "model judge",
+        "multi-run"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -15304,10 +15447,13 @@ window.BENCHATLAS_DATA = {
           "score": "46.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed. | Harness: benchmark-specific; Dataset: Gemini results self-computed; table reports full set, text + multimodal.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15320,10 +15466,13 @@ window.BENCHATLAS_DATA = {
           "score": "44.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed. | Harness: benchmark-specific; Dataset: Gemini results self-computed; table reports full set, text + multimodal.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15336,10 +15485,13 @@ window.BENCHATLAS_DATA = {
           "score": "41.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed. | Harness: benchmark-specific; Dataset: Gemini results self-computed; table reports full set, text + multimodal.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15352,10 +15504,13 @@ window.BENCHATLAS_DATA = {
           "score": "40.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed. | Harness: benchmark-specific; Dataset: Gemini results self-computed; table reports full set, text + multimodal.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15368,10 +15523,13 @@ window.BENCHATLAS_DATA = {
           "score": "33.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed. | Harness: benchmark-specific; Dataset: Gemini results self-computed; table reports full set, text + multimodal.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15384,10 +15542,13 @@ window.BENCHATLAS_DATA = {
           "score": "33.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Humanity's Last Exam results for Gemini models are self-computed. | Harness: benchmark-specific; Dataset: Gemini results self-computed; table reports full set, text + multimodal.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -15617,9 +15778,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium)",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22; zai_glm_5_2_2026_06_17",
-          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro; https://z.ai/blog/glm-5.2",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "HF evalResults dataset=cais/hle task=hle; value=37.7; HF rank=15; source=Model Card"
         },
@@ -15727,9 +15888,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -15849,9 +16010,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -15890,9 +16051,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
           "protocol_short": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE res...",
-          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy.",
+          "protocol_full": "Humanity's Last Exam (HLE) and other reasoning tasks use temperature=1.0, top_p=0.95, and maximum generation length 163,840 tokens. Default HLE result is text-only; results marked * are from the full set. AIME, HMMT, and IMOAnswerBench use a structured answer prompt requiring Explanation, Exact Answer, and Confidence. GPT-5.5 (medium) is used as judge model. HLE-with-tools uses maximum context length 300,000 tokens with no context management strategy. | Tools enabled: tools; Context: 300,000 tokens; Max tokens: 163,840; Temperature: 1.0; Top p: 0.95; Judge model: GPT-5.5 (medium); Dataset: HLE-with-tools uses no context management strategy.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -18347,6 +18508,8 @@ window.BENCHATLAS_DATA = {
       "display_result_count": 12,
       "protocol_badges": [
         "model judge",
+        "multi-run",
+        "public leaderboard",
         "tools"
       ],
       "rows": [
@@ -18357,10 +18520,15 @@ window.BENCHATLAS_DATA = {
           "score": "83.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard. | Harness: benchmark-specific; Dataset: ScaleAI official leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -18373,10 +18541,15 @@ window.BENCHATLAS_DATA = {
           "score": "79.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard. | Harness: benchmark-specific; Dataset: ScaleAI official leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -18389,10 +18562,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard. | Harness: benchmark-specific; Dataset: ScaleAI official leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -18443,10 +18621,15 @@ window.BENCHATLAS_DATA = {
           "score": "75.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard. | Harness: benchmark-specific; Dataset: ScaleAI official leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -18516,10 +18699,15 @@ window.BENCHATLAS_DATA = {
           "score": "69.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard. | Harness: benchmark-specific; Dataset: ScaleAI official leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -18551,10 +18739,15 @@ window.BENCHATLAS_DATA = {
           "score": "62.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MCP Atlas results are reported from the ScaleAI official leaderboard. | Harness: benchmark-specific; Dataset: ScaleAI official leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -19480,7 +19673,10 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "model judge",
+        "multi-run"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -19489,10 +19685,13 @@ window.BENCHATLAS_DATA = {
           "score": "83.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Runs: average across Standard (10 options) and Vision settings; Dataset: Gemini and Opus 4.7 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -19505,10 +19704,13 @@ window.BENCHATLAS_DATA = {
           "score": "81.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Runs: average across Standard (10 options) and Vision settings; Dataset: Gemini and Opus 4.7 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -19521,10 +19723,13 @@ window.BENCHATLAS_DATA = {
           "score": "81.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Runs: average across Standard (10 options) and Vision settings; Dataset: Gemini and Opus 4.7 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -19537,10 +19742,13 @@ window.BENCHATLAS_DATA = {
           "score": "80.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Runs: average across Standard (10 options) and Vision settings; Dataset: Gemini and Opus 4.7 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -19553,10 +19761,13 @@ window.BENCHATLAS_DATA = {
           "score": "75.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Runs: average across Standard (10 options) and Vision settings; Dataset: Gemini and Opus 4.7 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -19569,10 +19780,13 @@ window.BENCHATLAS_DATA = {
           "score": "74.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MMMU-Pro scores are averaged across the Standard 10-option and Vision settings. Results for Gemini models and Claude Opus 4.7 are self-computed. | Harness: benchmark-specific; Tools disabled: no tools; Runs: average across Standard (10 options) and Vision settings; Dataset: Gemini and Opus 4.7 self-computed.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20216,7 +20430,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -20225,10 +20443,14 @@ window.BENCHATLAS_DATA = {
           "score": "94.8",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20241,10 +20463,14 @@ window.BENCHATLAS_DATA = {
           "score": "84.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20257,10 +20483,14 @@ window.BENCHATLAS_DATA = {
           "score": "84.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20273,10 +20503,14 @@ window.BENCHATLAS_DATA = {
           "score": "77.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20289,10 +20523,14 @@ window.BENCHATLAS_DATA = {
           "score": "67.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20305,10 +20543,14 @@ window.BENCHATLAS_DATA = {
           "score": "59.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20325,7 +20567,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 3,
       "display_result_count": 3,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "long context",
+        "model judge",
+        "multi-run"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -20334,10 +20580,14 @@ window.BENCHATLAS_DATA = {
           "score": "26.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20350,10 +20600,14 @@ window.BENCHATLAS_DATA = {
           "score": "26.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20366,10 +20620,14 @@ window.BENCHATLAS_DATA = {
           "score": "22.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "long context"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. MRCR v2 includes 128K results as a cumulative score for comparability and a pointwise value for 1M context to show full-length capability. The full dataset is available in Google's repository. Results for all models are self-computed. The 1M version does not fit into non-Gemini models' context windows. | Harness: benchmark-specific; Context: 128K cumulative / 1M pointwise; Dataset: All models self-computed; 1M eval does not fit non-Gemini context windows.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -20623,9 +20881,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "NL2Repo is evaluated via Claude-code. Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone, are disabled. | NL2Repo is evaluated with temperature=1.0, top_p=1.0, max_new_tokens=48k, under 400K context. Rule-based and LLM-based judgement are used to prevent malicious behaviors such as unauthorized pip or curl operations.",
           "protocol_short": "NL2Repo is evaluated via Claude-code. Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clon...",
-          "protocol_full": "NL2Repo is evaluated via Claude-code. Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone, are disabled. | NL2Repo is evaluated with temperature=1.0, top_p=1.0, max_new_tokens=48k, under 400K context. Rule-based and LLM-based judgement are used to prevent malicious behaviors such as unauthorized pip or curl operations. | NL2Repo is evaluated via Claude-code. Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone, are disabled. | Harness: Claude-code; Tools enabled: Claude-code; Tools disabled: repo access via pip download, pip install, git clone",
+          "protocol_full": "NL2Repo is evaluated via Claude-code. Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone, are disabled. | NL2Repo is evaluated with temperature=1.0, top_p=1.0, max_new_tokens=48k, under 400K context. Rule-based and LLM-based judgement are used to prevent malicious behaviors such as unauthorized pip or curl operations. | NL2Repo is evaluated via Claude-code. Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone, are disabled. | Harness: Claude-code; Tools enabled: Claude-code; Tools disabled: repo access via pip download, pip install, git clone | NL2Repo is evaluated with temperature=1.0, top_p=1.0, max_new_tokens=48k, under 400K context. Rule-based and LLM-based judgement are used to prevent malicious behaviors such as unauthorized pip or curl operations. | Context: 400K; Max tokens: 48K; Temperature: 1.0; Top p: 1.0; Judge: rule-based and LLM-based hacking prevention",
           "source_report_id": "qwen_qwen3_7_2026_05_20; zai_glm_5_2_2026_06_17",
-          "source_url": "https://qwen.ai/blog?id=qwen3.7",
+          "source_url": "https://qwen.ai/blog?id=qwen3.7; https://z.ai/blog/glm-5.2",
           "evidence_location": "glm-5.2-D418TmAz.js:42; qwen-qwen3-7-fullpage.png:model performance rendered table",
           "evidence_quote": "Qwen3.7 rendered article model performance table."
         },
@@ -21754,13 +22012,15 @@ window.BENCHATLAS_DATA = {
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "multi-run"
+            "tools",
+            "multi-run",
+            "model judge"
           ],
-          "protocol_note": "",
-          "protocol_short": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harnes...",
-          "protocol_full": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score.",
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; google_gemini_3_5_flash_2026_05",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf; https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453; google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -21771,10 +22031,14 @@ window.BENCHATLAS_DATA = {
           "score": "78.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -21787,10 +22051,14 @@ window.BENCHATLAS_DATA = {
           "score": "78.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -21804,13 +22072,15 @@ window.BENCHATLAS_DATA = {
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "multi-run"
+            "tools",
+            "multi-run",
+            "model judge"
           ],
-          "protocol_note": "",
-          "protocol_short": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harnes...",
-          "protocol_full": "Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score.",
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Models evaluated on OSWorld-Verified (361 tasks, 100 steps) with auto-thinking at max effort. Scores are pass@1 averaged over five trials. | Harness: external OSWorld-Verified; Tools enabled: computer-use agent tools; Timeout: 100 steps; Reasoning: auto-thinking at max effort; Runs: avg over 5 trials; Judge: pass@1; Dataset: 361 tasks; zoom-tool bug fix affected Mythos score. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; google_gemini_3_5_flash_2026_05",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf; https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
           "evidence_location": "anthropic-latest.txt:8411-8453; google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -21884,10 +22154,14 @@ window.BENCHATLAS_DATA = {
           "score": "72.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -21900,10 +22174,14 @@ window.BENCHATLAS_DATA = {
           "score": "65.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. OSWorld-Verified scores for Gemini models are self-computed, averaged over 5 runs with a single attempt per run. The evaluation uses the GitHub OSWorld Docker, official methodology, default 1080p resolution, max step length 100, pyautogui for actuation, and UI-specific function declarations for tools. | Harness: GitHub OSWorld Docker; pyautogui actuation; Tools enabled: UI-specific function declarations; Runs: avg over 5 runs; single attempt per run; Dataset: Official methodology; default 1080p resolution; max step length 100.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26384,7 +26662,11 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 6,
       "display_result_count": 6,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "internal",
+        "model judge",
+        "multi-run"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -26393,10 +26675,14 @@ window.BENCHATLAS_DATA = {
           "score": "64.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "internal"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness. | Harness: internal Antigravity harness; Runs: avg over 5 runs; Dataset: Gemini self-computed; official provider methodology; public single attempt in model-card table.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26409,10 +26695,14 @@ window.BENCHATLAS_DATA = {
           "score": "58.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "internal"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness. | Harness: internal Antigravity harness; Runs: avg over 5 runs; Dataset: Gemini self-computed; official provider methodology; public single attempt in model-card table.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26425,10 +26715,14 @@ window.BENCHATLAS_DATA = {
           "score": "54.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "internal"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness. | Harness: internal Antigravity harness; Runs: avg over 5 runs; Dataset: Gemini self-computed; official provider methodology; public single attempt in model-card table.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26441,10 +26735,14 @@ window.BENCHATLAS_DATA = {
           "score": "53.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "internal"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness. | Harness: internal Antigravity harness; Runs: avg over 5 runs; Dataset: Gemini self-computed; official provider methodology; public single attempt in model-card table.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26457,10 +26755,14 @@ window.BENCHATLAS_DATA = {
           "score": "53.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "internal"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness. | Harness: internal Antigravity harness; Runs: avg over 5 runs; Dataset: Gemini self-computed; official provider methodology; public single attempt in model-card table.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26473,10 +26775,14 @@ window.BENCHATLAS_DATA = {
           "score": "48.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "multi-run",
+            "model judge",
+            "internal"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. SWE-Bench Pro results for Gemini models are self-computed. Scores are averaged over 5 runs, follow official provider methodology, and use an internal version of the Antigravity harness. Full results are reported for completeness. | Harness: internal Antigravity harness; Runs: avg over 5 runs; Dataset: Gemini self-computed; official provider methodology; public single attempt in model-card table.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -26563,9 +26869,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -26639,9 +26945,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -26723,9 +27029,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "deepseek_v4_pro_hf_2026_06_22; zai_glm_5_2_2026_06_17",
-          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+          "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro; https://z.ai/blog/glm-5.2",
           "evidence_location": "deepseek-v4-pro-hf.html:evalResults; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "HF evalResults dataset=ScaleAI/SWE-bench_Pro task=SWE_Bench_Pro; value=55.4; HF rank=13; source=Model Card"
         },
@@ -26742,9 +27048,9 @@ window.BENCHATLAS_DATA = {
           ],
           "protocol_note": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
           "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window.",
+          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
           "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
           "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
@@ -28247,7 +28553,12 @@ window.BENCHATLAS_DATA = {
       "score_unit": "%",
       "result_count": 5,
       "display_result_count": 5,
-      "protocol_badges": [],
+      "protocol_badges": [
+        "agent harness",
+        "model judge",
+        "multi-run",
+        "public leaderboard"
+      ],
       "rows": [
         {
           "rank": 1,
@@ -28256,10 +28567,15 @@ window.BENCHATLAS_DATA = {
           "score": "78.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only. | Harness: Terminus 2 default agent harness; Dataset: Gemini results self-computed; non-Gemini from public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28272,10 +28588,15 @@ window.BENCHATLAS_DATA = {
           "score": "76.2",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only. | Harness: Terminus 2 default agent harness; Dataset: Gemini results self-computed; non-Gemini from public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28288,10 +28609,15 @@ window.BENCHATLAS_DATA = {
           "score": "70.3",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only. | Harness: Terminus 2 default agent harness; Dataset: Gemini results self-computed; non-Gemini from public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28304,10 +28630,15 @@ window.BENCHATLAS_DATA = {
           "score": "66.1",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only. | Harness: Terminus 2 default agent harness; Dataset: Gemini results self-computed; non-Gemini from public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28320,10 +28651,15 @@ window.BENCHATLAS_DATA = {
           "score": "58.0",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "agent harness",
+            "multi-run",
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Terminal-Bench 2.1 results for Gemini 3.5 Flash and Gemini 3 Flash are self-computed; other models use public leaderboard results. Results report the default agent harness, Terminus 2, only. | Harness: Terminus 2 default agent harness; Dataset: Gemini results self-computed; non-Gemini from public leaderboard.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28810,6 +29146,7 @@ window.BENCHATLAS_DATA = {
         "agent harness",
         "long context",
         "model judge",
+        "multi-run",
         "tools"
       ],
       "rows": [
@@ -28820,10 +29157,14 @@ window.BENCHATLAS_DATA = {
           "score": "56.5",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Toolathlon results for Gemini models are provided by the benchmark authors at HKUST.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Toolathlon results for Gemini models are provided by the benchmark authors at HKUST. | Harness: benchmark-specific; Dataset: Gemini results provided by HKUST benchmark authors.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28836,10 +29177,14 @@ window.BENCHATLAS_DATA = {
           "score": "55.6",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Toolathlon results for Gemini models are provided by the benchmark authors at HKUST.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Toolathlon results for Gemini models are provided by the benchmark authors at HKUST. | Harness: benchmark-specific; Dataset: Gemini results provided by HKUST benchmark authors.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -28894,10 +29239,14 @@ window.BENCHATLAS_DATA = {
           "score": "49.4",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
-          "protocol_badges": [],
-          "protocol_note": "",
-          "protocol_short": "",
-          "protocol_full": "",
+          "protocol_badges": [
+            "tools",
+            "multi-run",
+            "model judge"
+          ],
+          "protocol_note": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Toolathlon results for Gemini models are provided by the benchmark authors at HKUST.",
+          "protocol_short": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini r...",
+          "protocol_full": "All Gemini scores are pass@1 except where otherwise noted. Single-attempt settings allow no majority voting or parallel test-time compute. Gemini results use the Gemini API model-id gemini-3.5-flash with default sampling settings unless indicated otherwise. Smaller benchmarks are averaged over multiple trials. Non-Gemini results are sourced from providers' self-reported numbers unless otherwise mentioned; Claude Opus 4.7, Sonnet 4.6, and GPT-5.5 default to maximum thinking/reasoning settings when available. Toolathlon results for Gemini models are provided by the benchmark authors at HKUST. | Harness: benchmark-specific; Dataset: Gemini results provided by HKUST benchmark authors.",
           "source_report_id": "google_gemini_3_5_flash_2026_05",
           "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
           "evidence_location": "google-gemini-3-5-flash-model-card.pdf:page 4 visual table",
@@ -31171,4 +31520,5 @@ window.BENCHATLAS_DATA = {
       ]
     }
   }
-};
+}
+;
