@@ -119,7 +119,7 @@ function writePage(relativePath, html) {
 
 function main() {
   const data = loadData();
-  const template = fs.readFileSync(path.join(root, "legacy", "index.html"), "utf8");
+  const template = fs.readFileSync(path.join(root, "scripts", "detail-page-template.html.inc"), "utf8");
   const modelSlugs = createSlugIndexes(data.model_catalog, item => item.model_name, "model");
   const benchmarkSlugs = createSlugIndexes(data.benchmark_catalog, item => item.rank_group_key, "benchmark");
 

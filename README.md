@@ -97,7 +97,6 @@ node scripts/generate-seo-pages.js
 | --- | --- |
 | `index.html` | Spatial Atlas homepage, Registry, Matrix, and evidence inspector |
 | `app.js` | Legacy detail views, filtering, routing, and ranking logic |
-| `legacy/` | Preserved previous explorer for fallback and comparison |
 | `site_data.bundle.js` | Bundled normalized benchmark dataset |
 | `scripts/generate-seo-pages.js` | Generates clean, indexable detail URLs |
 | `models/` | Generated model pages |
