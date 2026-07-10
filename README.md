@@ -55,6 +55,19 @@ The Reported Performance Index (RPI) is a coverage-adjusted summary of published
 
 Because the index uses vendor-published reports, it may inherit benchmark-selection and reporting bias. Always inspect the underlying rows before drawing strong conclusions.
 
+## Map taxonomy
+
+The Spatial Atlas groups report-native domain labels into six stable capability regions:
+
+1. Reasoning & Knowledge
+2. Coding & Software Engineering
+3. Agents & Computer Use
+4. Multimodal & Perception
+5. Language & Long Context
+6. Expert & Frontier Domains
+
+Safety is an orthogonal layer rather than a separate capability region. A vision-safety benchmark remains in Multimodal & Perception, for example, while receiving a visible safety marker and participating in the Safety layer filter. Original report-native domain labels remain preserved in the dataset and evidence views.
+
 ## Data policy
 
 - Reported numbers are preserved rather than silently normalized.

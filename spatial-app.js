@@ -2,19 +2,28 @@ const data = window.BENCHATLAS_DATA;
     const catalog = [...data.benchmark_catalog].sort((a,b)=>b.model_count-a.model_count || b.result_count-a.result_count);
     const pages = data.benchmark_pages;
     const macroRules = [
-      {id:'code',label:'Code & Agents',color:'#0f766e',center:[290,280],domains:['coding','agent','computer_use','business_simulation','healthcare_agent']},
-      {id:'reason',label:'Reasoning & Knowledge',color:'#27548a',center:[820,230],domains:['reasoning','math','general','general_capability','self_improvement']},
-      {id:'multi',label:'Vision & Multimodal',color:'#a96812',center:[1350,275],domains:['multimodal','vision','video','document']},
-      {id:'science',label:'Science & Expert',color:'#67528d',center:[390,770],domains:['science','health','research','professional','expert_tasks']},
-      {id:'safety',label:'Safety & Security',color:'#b42318',center:[950,760],domains:['safety','security','cybersecurity','agent_safety','bio_safety','computer_use_safety','cyber_safety','health_safety','safety_bias','safety_health','vision_safety']},
-      {id:'language',label:'Language & Context',color:'#4f7d35',center:[1450,760],domains:['language','multilingual','long_context']}
+      {id:'reason',label:'Reasoning & Knowledge',color:'#27548a',center:[280,270],domains:['reasoning','math','general','general_capability']},
+      {id:'code',label:'Coding & Software Engineering',color:'#0f766e',center:[900,270],domains:['coding']},
+      {id:'agent',label:'Agents & Computer Use',color:'#a96812',center:[1520,270],domains:['agent','computer_use','business_simulation','healthcare_agent']},
+      {id:'multi',label:'Multimodal & Perception',color:'#67528d',center:[280,800],domains:['multimodal','vision','video','document']},
+      {id:'language',label:'Language & Long Context',color:'#4f7d35',center:[900,800],domains:['language','multilingual','long_context']},
+      {id:'expert',label:'Expert & Frontier Domains',color:'#8b4b36',center:[1520,800],domains:['science','health','research','professional','expert_tasks','cybersecurity','security','self_improvement']}
     ];
-    const getMacro = domain => macroRules.find(rule=>rule.domains.includes(domain)) || macroRules[1];
+    const safetyDomains = new Set(['safety','agent_safety','bio_safety','computer_use_safety','cyber_safety','health_safety','safety_bias','safety_health','vision_safety']);
+    const isSafety = item => safetyDomains.has(item.domain);
+    const getMacro = domain => {
+      const direct = macroRules.find(rule=>rule.domains.includes(domain));
+      if (direct) return direct;
+      if (domain === 'vision_safety') return macroRules.find(rule=>rule.id === 'multi');
+      if (domain === 'computer_use_safety' || domain === 'agent_safety') return macroRules.find(rule=>rule.id === 'agent');
+      if (['health_safety','safety_health','bio_safety','cyber_safety'].includes(domain)) return macroRules.find(rule=>rule.id === 'expert');
+      return macroRules.find(rule=>rule.id === 'reason');
+    };
     const hash = value => [...value].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,2166136261);
     const slugify = value => String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'item';
     const featured = catalog.slice(0,42);
     const positions = new Map();
-    const state = {scale:.72,x:40,y:18,drag:false,startX:0,startY:0,baseX:0,baseY:0,domain:'all',query:'',selected:null,mode:'map'};
+    const state = {scale:.72,x:40,y:18,drag:false,startX:0,startY:0,baseX:0,baseY:0,domain:'all',safetyOnly:false,query:'',selected:null,mode:'map'};
     const $ = id => document.getElementById(id);
     const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const formatScore = (score,unit) => score == null || score === '' ? '—' : `${score}${unit==='%'?'%':''}`;
@@ -22,14 +31,14 @@ const data = window.BENCHATLAS_DATA;
     function positionNodes(){
       const groups = new Map(macroRules.map(r=>[r.id,[]]));
       featured.forEach(item=>groups.get(getMacro(item.domain).id).push(item));
-      groups.forEach((items,id)=>{const rule=macroRules.find(r=>r.id===id);items.forEach((item,index)=>{const angle=(Math.PI*2*index/Math.max(items.length,1))+(hash(item.rank_group_key)%100)/180;const ring=85+Math.floor(index/6)*92+(hash(item.benchmark_name)%34);positions.set(item.rank_group_key,{x:rule.center[0]+Math.cos(angle)*ring,y:rule.center[1]+Math.sin(angle)*ring,macro:rule});});});
+      groups.forEach((items,id)=>{const rule=macroRules.find(r=>r.id===id);const rows=Math.ceil(items.length/3);items.forEach((item,index)=>{const column=index%3;const row=Math.floor(index/3);const jitterX=(hash(item.rank_group_key)%7)-3;const jitterY=(hash(item.benchmark_name)%5)-2;positions.set(item.rank_group_key,{x:rule.center[0]+(column-1)*190+jitterX,y:rule.center[1]+(row-(rows-1)/2)*96+jitterY,macro:rule});});});
     }
 
     function renderMap(){
       positionNodes();
       $('clusterLabels').innerHTML=macroRules.map(rule=>`<div class="cluster-label" style="left:${rule.center[0]-95}px;top:${rule.center[1]-150}px;color:${rule.color}66">${rule.label}</div>`).join('');
       $('mapSvg').innerHTML=macroRules.map(rule=>`<circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="185"/><circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="125"/>`).join('') + featured.map(item=>{const p=positions.get(item.rank_group_key);return `<path class="connection" d="M${p.macro.center[0]} ${p.macro.center[1]} Q ${(p.x+p.macro.center[0])/2+25} ${(p.y+p.macro.center[1])/2-20} ${p.x} ${p.y}"/>`}).join('');
-      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);return `<button class="node" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" style="left:${p.x-86}px;top:${p.y-34}px;--node-color:${p.macro.color};transform:scale(${Math.min(1.08,.84+item.model_count/80)})"><span class="coverage">${item.model_count}M</span><b>${esc(item.benchmark_name)}</b><small>${esc(item.domain.replaceAll('_',' '))} · ${esc(item.metric_name)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
+      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" style="left:${p.x-86}px;top:${p.y-34}px;--node-color:${p.macro.color};transform:scale(${Math.min(1.08,.84+item.model_count/80)})"><span class="coverage">${item.model_count}M</span><b>${esc(item.benchmark_name)}</b><small>${esc(item.domain.replaceAll('_',' '))} · ${esc(item.metric_name)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
       document.querySelectorAll('.node').forEach(node=>node.addEventListener('click',e=>{e.stopPropagation();selectBenchmark(node.dataset.key);}))
       renderMiniMap(); applyTransform();
     }
@@ -51,21 +60,21 @@ const data = window.BENCHATLAS_DATA;
     function selectBenchmark(key){
       const item=catalog.find(x=>x.rank_group_key===key);const page=pages[key];if(!item||!page)return;state.selected=key;
       document.querySelectorAll('.node').forEach(n=>n.classList.toggle('selected',n.dataset.key===key));
-      $('inspectorDomain').textContent=`Selected landmark / ${item.domain.replaceAll('_',' ')}`;$('inspectorTitle').textContent=item.benchmark_name;$('inspectorSub').textContent=`${item.metric_name} · ${item.score_unit||'score'} · ${item.comparability}`;$('modelCount').textContent=item.model_count;$('vendorCount').textContent=item.vendor_count;$('reportCount').textContent=item.report_count;$('metricLabel').textContent=`${item.metric_name} · ${item.score_unit}`;
+      const macro=getMacro(item.domain);$('inspectorDomain').textContent=`Selected landmark / ${macro.label}`;$('inspectorTitle').textContent=item.benchmark_name;$('inspectorSub').textContent=`${item.domain.replaceAll('_',' ')} · ${item.metric_name} · ${item.score_unit||'score'} · ${item.comparability}`;$('modelCount').textContent=item.model_count;$('vendorCount').textContent=item.vendor_count;$('reportCount').textContent=item.report_count;$('metricLabel').textContent=`${item.metric_name} · ${item.score_unit}`;
       const rows=page.rows.slice(0,6);$('ranking').innerHTML=rows.map(row=>`<div class="rank-row" data-row="${row.rank}"><span class="num">${String(row.rank).padStart(2,'0')}</span><span><b>${esc(row.model_name)}</b><small>${esc(row.vendor)}</small></span><span class="score">${esc(formatScore(row.score,row.score_unit))}</span></div>`).join('')||'<p class="method">No reported rows.</p>';
-      updateEvidence(rows[0]);$('inspector').classList.add('open');
+      updateEvidence(rows[0],item);$('inspector').classList.add('open');
       $('benchmarkLink').href=`/benchmarks/${slugify(item.rank_group_key)}/`;
-      document.querySelectorAll('.rank-row').forEach((row,index)=>row.addEventListener('click',()=>updateEvidence(rows[index])));
+      document.querySelectorAll('.rank-row').forEach((row,index)=>row.addEventListener('click',()=>updateEvidence(rows[index],item)));
       showToast(`${item.benchmark_name} · ${item.model_count} models`);
     }
 
-    function updateEvidence(row){if(!row)return;$('methodNote').textContent=row.protocol_full||row.protocol_note||'No benchmark-specific method note was reported.';const badgeList=[row.comparability_label,...(row.protocol_badges||[])].filter(Boolean);$('badges').innerHTML=badgeList.map((b,i)=>`<span class="badge ${i===0?'red':''}">${esc(b)}</span>`).join('');$('sourceLocation').textContent=row.evidence_location||'source located';$('evidenceQuote').textContent=row.evidence_quote||'No short evidence quote available.';$('sourceLink').href=row.source_url||'#';}
+    function updateEvidence(row,item){if(!row)return;$('methodNote').textContent=row.protocol_full||row.protocol_note||'No benchmark-specific method note was reported.';const badgeList=[row.comparability_label,...(isSafety(item)?['safety layer']:[]),...(row.protocol_badges||[])].filter(Boolean);$('badges').innerHTML=badgeList.map((b,i)=>`<span class="badge ${i===0||b==='safety layer'?'red':''}">${esc(b)}</span>`).join('');$('sourceLocation').textContent=row.evidence_location||'source located';$('evidenceQuote').textContent=row.evidence_quote||'No short evidence quote available.';$('sourceLink').href=row.source_url||'#';}
 
-    function applyFilters(){const q=state.query.toLowerCase();document.querySelectorAll('.node').forEach(node=>{const item=catalog.find(x=>x.rank_group_key===node.dataset.key);const domainOk=state.domain==='all'||node.dataset.domain===state.domain;const queryOk=!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q);node.classList.toggle('hidden',!domainOk);node.classList.toggle('dimmed',domainOk&&!queryOk);});renderRegistry();renderMatrix();}
+    function applyFilters(){const q=state.query.toLowerCase();document.querySelectorAll('.node').forEach(node=>{const item=catalog.find(x=>x.rank_group_key===node.dataset.key);const domainOk=state.domain==='all'||node.dataset.domain===state.domain;const safetyOk=!state.safetyOnly||node.dataset.risk==='true';const queryOk=!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q);node.classList.toggle('hidden',!domainOk||!safetyOk);node.classList.toggle('dimmed',domainOk&&safetyOk&&!queryOk);});renderRegistry();renderMatrix();}
 
-    function renderFilters(){$('filters').innerHTML=`<button class="filter active" data-domain="all">All</button>`+macroRules.map(r=>`<button class="filter" data-domain="${r.id}">${r.label}</button>`).join('');document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{state.domain=btn.dataset.domain;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===btn));applyFilters();}));}
-    function filteredCatalog(){const q=state.query.toLowerCase();return catalog.filter(item=>(state.domain==='all'||getMacro(item.domain).id===state.domain)&&(!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q)));}
-    function renderRegistry(){$('registryBody').innerHTML=filteredCatalog().slice(0,100).map(item=>`<tr data-key="${esc(item.rank_group_key)}"><td><b>${esc(item.benchmark_name)}</b><small>${esc(item.metric_name)} · ${esc(item.score_unit)}</small></td><td>${esc(item.domain.replaceAll('_',' '))}</td><td>${item.model_count}</td><td>${item.vendor_count}</td><td class="score">${esc(formatScore(item.best_score,item.score_unit))}<small>${esc(item.best_model)}</small></td><td>${esc(item.protocol_badges||'—')}</td></tr>`).join('');document.querySelectorAll('#registryBody tr').forEach(row=>row.addEventListener('click',()=>selectBenchmark(row.dataset.key)));}
+    function renderFilters(){$('filters').innerHTML=`<button class="filter active" data-domain="all">All</button>`+macroRules.map(r=>`<button class="filter" data-domain="${r.id}">${r.label}</button>`).join('')+`<button class="filter risk-filter" data-layer="safety">Safety layer</button>`;document.querySelectorAll('[data-domain]').forEach(btn=>btn.addEventListener('click',()=>{state.domain=btn.dataset.domain;document.querySelectorAll('[data-domain]').forEach(b=>b.classList.toggle('active',b===btn));applyFilters();}));document.querySelector('[data-layer="safety"]').addEventListener('click',event=>{state.safetyOnly=!state.safetyOnly;event.currentTarget.classList.toggle('active',state.safetyOnly);applyFilters();});}
+    function filteredCatalog(){const q=state.query.toLowerCase();return catalog.filter(item=>(state.domain==='all'||getMacro(item.domain).id===state.domain)&&(!state.safetyOnly||isSafety(item))&&(!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q)));}
+    function renderRegistry(){$('registryBody').innerHTML=filteredCatalog().slice(0,100).map(item=>{const macro=getMacro(item.domain);return `<tr data-key="${esc(item.rank_group_key)}"><td><b>${esc(item.benchmark_name)}</b><small>${esc(item.metric_name)} · ${esc(item.score_unit)}</small></td><td>${esc(macro.label)}<small>${esc(item.domain.replaceAll('_',' '))}${isSafety(item)?' · safety':''}</small></td><td>${item.model_count}</td><td>${item.vendor_count}</td><td class="score">${esc(formatScore(item.best_score,item.score_unit))}<small>${esc(item.best_model)}</small></td><td>${esc(item.protocol_badges||'—')}</td></tr>`}).join('');document.querySelectorAll('#registryBody tr').forEach(row=>row.addEventListener('click',()=>selectBenchmark(row.dataset.key)));}
 
     function renderMatrix(){
       const items=filteredCatalog().slice(0,10);const modelCounts=new Map();items.forEach(item=>(pages[item.rank_group_key]?.rows||[]).forEach(r=>modelCounts.set(r.model_name,(modelCounts.get(r.model_name)||0)+1)));const models=[...modelCounts].sort((a,b)=>b[1]-a[1]).slice(0,7).map(x=>x[0]);
