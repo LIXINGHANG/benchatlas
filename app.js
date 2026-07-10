@@ -74,6 +74,10 @@
     return state.mode === "models" ? item.model_name : item.rank_group_key;
   }
 
+  function modelDisplayRowCount(modelName) {
+    return (modelRows.get(modelName) || []).length;
+  }
+
   function updateHash() {
     const prefix = state.mode === "models" ? "model" : "benchmark";
     history.replaceState(null, "", `#${prefix}=${encodeURIComponent(state.selected)}`);
@@ -167,7 +171,7 @@
     } else if (state.sort === "reports") {
       rows.sort((a, b) => Number(b.report_count) - Number(a.report_count) || Number(b.benchmark_count || b.model_count) - Number(a.benchmark_count || a.model_count));
     } else if (state.sort === "results") {
-      rows.sort((a, b) => Number(b.result_count) - Number(a.result_count) || Number(b.benchmark_count) - Number(a.benchmark_count));
+      rows.sort((a, b) => modelDisplayRowCount(b.model_name) - modelDisplayRowCount(a.model_name) || Number(b.benchmark_count) - Number(a.benchmark_count));
     } else if (state.mode === "models") {
       rows.sort((a, b) => Number(b.benchmark_count) - Number(a.benchmark_count) || Number(b.result_count) - Number(a.result_count));
     } else {
@@ -227,7 +231,7 @@
             <span>${esc(item.report_count)} ${plural(item.report_count, "report")}</span>
           </span>
         </span>
-        <span class="bench-score">${esc(item.result_count)} rows</span>
+        <span class="bench-score">${esc(modelDisplayRowCount(item.model_name))} rows</span>
       </button>
     `;
   }
