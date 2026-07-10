@@ -16,10 +16,10 @@ const data = window.BENCHATLAS_DATA;
       return request;
     };
     const macroRules = [
-      {id:'reason',label:'Reasoning & Knowledge',color:'#27548a',center:[280,270],domains:['reasoning','math','general','general_capability']},
+      {id:'reason',label:'Reasoning & Knowledge',color:'#27548a',center:[300,270],domains:['reasoning','math','general','general_capability']},
       {id:'code',label:'Coding & Software Engineering',color:'#0f766e',center:[900,270],domains:['coding']},
       {id:'agent',label:'Agents & Computer Use',color:'#a96812',center:[1520,270],domains:['agent','computer_use','business_simulation','healthcare_agent']},
-      {id:'multi',label:'Multimodal & Perception',color:'#67528d',center:[280,800],domains:['multimodal','vision','video','document']},
+      {id:'multi',label:'Multimodal & Perception',color:'#67528d',center:[300,800],domains:['multimodal','vision','video','document']},
       {id:'language',label:'Language & Long Context',color:'#4f7d35',center:[900,800],domains:['language','multilingual','long_context']},
       {id:'expert',label:'Expert & Frontier Domains',color:'#8b4b36',center:[1520,800],domains:['science','health','research','professional','expert_tasks','cybersecurity','security','self_improvement']}
     ];
@@ -33,10 +33,27 @@ const data = window.BENCHATLAS_DATA;
       if (['health_safety','safety_health','bio_safety','cyber_safety'].includes(domain)) return macroRules.find(rule=>rule.id === 'expert');
       return macroRules.find(rule=>rule.id === 'reason');
     };
+    const subfieldRules = {
+      reason:[['Mathematics',/aime|hmmt|imo|math|olympiad/i],['Knowledge',/gpqa|mmlu|supergpqa|knowledge|hle|humanity/i],['General reasoning',/.*/]],
+      code:[['Software engineering',/swe|repo|patch|issue|deepswe/i],['Terminal & systems',/terminal|kernel|cuda|cyber|shell/i],['Code generation',/code|program|scicode|artificial analysis/i],['Repository reasoning',/.*/]],
+      agent:[['Computer use',/osworld|computer|benchcad|android|browser/i],['Tools & MCP',/tool|mcp|api|function/i],['Web & search',/browse|search|web/i],['Workflows',/.*/]],
+      multi:[['Visual reasoning',/mmmu|vision|image|chart|charxiv|visual/i],['Video',/video|tvbench|crossvid/i],['Documents',/document|doc|pdf|dude/i],['Spatial perception',/.*/]],
+      language:[['Long context',/long|context|needle|mrcr|graphwalk|memory/i],['Multilingual',/multi|language|mmlu-prox|global/i],['Translation',/wmt|translation|xcomet/i],['Language understanding',/.*/]],
+      expert:[['Health & biology',/health|medical|bio|gene|protein|virology/i],['Science & research',/science|research|frontier|chem|physics/i],['Cybersecurity',/cyber|exploit|security|ctf/i],['Professional work',/.*/]]
+    };
+    const getSubfield = item => {
+      const macro=getMacro(item.domain);const text=`${item.benchmark_name} ${item.benchmark_family_id||''} ${item.domain}`;
+      const match=(subfieldRules[macro.id]||[]).find(([,pattern])=>pattern.test(text));
+      return {id:slugify(match?.[0]||'General'),label:match?.[0]||'General'};
+    };
     const hash = value => [...value].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,2166136261);
     const slugify = value => String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'item';
-    const featured = catalog.slice(0,42);
+    const selectFieldLandmarks = rule => {const familyCounts=new Map();const selected=[];for(const item of catalog){if(getMacro(item.domain).id!==rule.id)continue;const family=item.benchmark_family_id||item.rank_group_key;const count=familyCounts.get(family)||0;if(count>=2)continue;familyCounts.set(family,count+1);selected.push(item);if(selected.length===7)break;}return selected;};
+    const featured = macroRules.flatMap(selectFieldLandmarks);
+    const featuredPriority = new Map();
+    macroRules.forEach(rule=>featured.filter(item=>getMacro(item.domain).id===rule.id).forEach((item,index)=>featuredPriority.set(item.rank_group_key,index<3?'core':'support')));
     const positions = new Map();
+    let relationEdges = [];
     const initialHash = new URLSearchParams(location.hash.replace(/^#/,''));
     const initialMode = ['map','registry','matrix'].includes(initialHash.get('view'))?initialHash.get('view'):'map';
     const state = {scale:.72,x:40,y:18,drag:false,startX:0,startY:0,baseX:0,baseY:0,domain:initialHash.get('domain')||'all',safetyOnly:initialHash.get('safety')==='1',query:'',selected:null,mode:initialMode,activeVariants:[],activeItem:null,matrixModelIds:new Set((initialHash.get('models')||'').split(',').filter(Boolean)),initialProtocol:initialHash.get('protocol')||''};
@@ -66,22 +83,50 @@ const data = window.BENCHATLAS_DATA;
     const structuredMethodHtml = row => {const sections=row.method_sections||{};const blocks=Object.entries(methodSectionLabels).flatMap(([key,label])=>{const values=Array.isArray(sections[key])?sections[key].filter(Boolean):[];return values.length?[`<div class="method-block"><b>${esc(label)}</b>${values.map(value=>`<p>${esc(value)}</p>`).join('')}</div>`]:[];});return blocks.join('')||methodHtml(row.protocol_full||row.protocol_note);};
     const sourceLabel = row => {const url=String(row.source_url||'').split(/;\s*/)[0];try{return new URL(url).hostname.replace(/^www\./,'');}catch{return String(row.source_report_id||'reported source').split(/;\s*/)[0].replaceAll('_',' ');}};
 
+    const subgroupSlots = count => ({
+      1:[[0,0]],2:[[-160,0],[160,0]],3:[[-195,0],[0,0],[195,0]],
+      4:[[-155,-105],[155,-105],[-155,110],[155,110]]
+    }[Math.min(4,count)]||[[0,0]]);
     function positionNodes(){
+      positions.clear();
       const groups = new Map(macroRules.map(r=>[r.id,[]]));
       featured.forEach(item=>groups.get(getMacro(item.domain).id).push(item));
-      groups.forEach((items,id)=>{const rule=macroRules.find(r=>r.id===id);const rows=Math.ceil(items.length/3);items.forEach((item,index)=>{const column=index%3;const row=Math.floor(index/3);const jitterX=(hash(item.rank_group_key)%7)-3;const jitterY=(hash(item.benchmark_name)%5)-2;positions.set(item.rank_group_key,{x:rule.center[0]+(column-1)*190+jitterX,y:rule.center[1]+(row-(rows-1)/2)*96+jitterY,macro:rule});});});
+      groups.forEach((items,id)=>{
+        const rule=macroRules.find(r=>r.id===id);const subgroups=new Map();
+        items.forEach(item=>{const subfield=getSubfield(item);if(!subgroups.has(subfield.id))subgroups.set(subfield.id,{...subfield,items:[]});subgroups.get(subfield.id).items.push(item);});
+        const entries=[...subgroups.values()].slice(0,4);const slots=subgroupSlots(entries.length);
+        entries.forEach((group,groupIndex)=>{const [offsetX,offsetY]=slots[groupIndex];const anchor={x:rule.center[0]+offsetX,y:rule.center[1]+offsetY};const spacing=entries.length===4?78:92;
+          group.items.forEach((item,index)=>{const jitterX=(hash(item.rank_group_key)%5)-2;const jitterY=(hash(item.benchmark_name)%3)-1;positions.set(item.rank_group_key,{x:anchor.x+jitterX,y:anchor.y+(index-(group.items.length-1)/2)*spacing+jitterY,macro:rule,subfield:group,subfieldAnchor:anchor,layoutSpacing:spacing});});
+        });
+      });
+    }
+
+    const modelOverlap = (a,b) => {const left=new Set(a.search_models||[]),right=new Set(b.search_models||[]);let shared=0;left.forEach(model=>{if(right.has(model))shared+=1;});return {shared,ratio:shared/Math.max(1,Math.min(left.size,right.size))};};
+    function buildRelationEdges(){
+      const familyEdges=[];const candidates=[];
+      for(let i=0;i<featured.length;i+=1)for(let j=i+1;j<featured.length;j+=1){const a=featured[i],b=featured[j];
+        if(a.benchmark_family_id&&a.benchmark_family_id===b.benchmark_family_id){familyEdges.push({from:a.rank_group_key,to:b.rank_group_key,type:'family',label:'Same benchmark family'});continue;}
+        const overlap=modelOverlap(a,b);if(overlap.shared>=4&&overlap.ratio>=.55)candidates.push({from:a.rank_group_key,to:b.rank_group_key,type:'overlap',label:`${overlap.shared} shared models`,score:overlap.ratio+overlap.shared/100});
+      }
+      const degree=new Map();const overlapEdges=[];candidates.sort((a,b)=>b.score-a.score).forEach(edge=>{if((degree.get(edge.from)||0)>=1||(degree.get(edge.to)||0)>=1)return;degree.set(edge.from,1);degree.set(edge.to,1);overlapEdges.push(edge);});
+      relationEdges=[...familyEdges,...overlapEdges];
     }
 
     function renderMap(){
       positionNodes();
-      $('clusterLabels').innerHTML=macroRules.map(rule=>`<div class="cluster-label" style="left:${rule.center[0]-95}px;top:${rule.center[1]-150}px;color:${rule.color}66">${rule.label}</div>`).join('');
+      buildRelationEdges();
+      const subfieldLabels=[];const seenSubfields=new Set();positions.forEach(p=>{const key=`${p.macro.id}:${p.subfield.id}`;if(seenSubfields.has(key))return;seenSubfields.add(key);const labelY=p.subfieldAnchor.y-((p.subfield.items.length-1)/2)*p.layoutSpacing-64;subfieldLabels.push(`<div class="subfield-label" style="left:${p.subfieldAnchor.x-82}px;top:${labelY}px;color:${p.macro.color}">${esc(p.subfield.label)}</div>`);});
+      $('clusterLabels').innerHTML=macroRules.map(rule=>`<div class="cluster-label" style="left:${rule.center[0]-220}px;top:${rule.center[1]-218}px;color:${rule.color}88">${rule.label}</div>`).join('')+subfieldLabels.join('');
       const macroById=new Map(macroRules.map(rule=>[rule.id,rule]));
       const routePairs=[['reason','code'],['code','agent'],['multi','language'],['language','expert'],['reason','multi'],['code','language'],['agent','expert'],['code','multi'],['agent','language']];
       const globalRoutes=routePairs.map(([fromId,toId],index)=>{const from=macroById.get(fromId),to=macroById.get(toId);const bend=index%2===0?42:-42;const midX=(from.center[0]+to.center[0])/2;const midY=(from.center[1]+to.center[1])/2+bend;return `<path class="global-route" d="M${from.center[0]} ${from.center[1]} Q${midX} ${midY} ${to.center[0]} ${to.center[1]}"/>`;}).join('');
       const contours=macroRules.map(rule=>`<circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="190"/><circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="125"/><circle class="route-hub" cx="${rule.center[0]}" cy="${rule.center[1]}" r="8" fill="${rule.color}"/>`).join('');
-      const domainRoutes=featured.map(item=>{const p=positions.get(item.rank_group_key);return `<path class="connection" data-route-key="${esc(item.rank_group_key)}" style="stroke:${p.macro.color}88" d="M${p.macro.center[0]} ${p.macro.center[1]} Q ${(p.x+p.macro.center[0])/2+22} ${(p.y+p.macro.center[1])/2-18} ${p.x} ${p.y}"/>`}).join('');
-      $('mapSvg').innerHTML=globalRoutes+contours+domainRoutes;
-      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" style="left:${p.x-90}px;top:${p.y-35}px;--node-color:${p.macro.color};transform:scale(${Math.min(1.08,.84+item.model_count/80)})"><span class="coverage">${item.model_count} models</span><b>${esc(displayName(item))}</b><small>${esc(item.domain.replaceAll('_',' '))} · ${esc(item.metric_name)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
+      const subfieldAnchors=new Map();positions.forEach(p=>subfieldAnchors.set(`${p.macro.id}:${p.subfield.id}`,p));
+      const macroRoutes=[...subfieldAnchors.values()].map(p=>`<path class="macro-route" style="stroke:${p.macro.color}55" d="M${p.macro.center[0]} ${p.macro.center[1]} Q ${(p.subfieldAnchor.x+p.macro.center[0])/2} ${(p.subfieldAnchor.y+p.macro.center[1])/2-18} ${p.subfieldAnchor.x} ${p.subfieldAnchor.y}"/>`).join('');
+      const subfieldRoutes=featured.map(item=>{const p=positions.get(item.rank_group_key);return `<path class="connection subfield-route" data-route-key="${esc(item.rank_group_key)}" style="stroke:${p.macro.color}77" d="M${p.subfieldAnchor.x} ${p.subfieldAnchor.y} Q ${(p.x+p.subfieldAnchor.x)/2+15} ${(p.y+p.subfieldAnchor.y)/2-10} ${p.x} ${p.y}"/>`}).join('');
+      const semanticRoutes=relationEdges.map((edge,index)=>{const from=positions.get(edge.from),to=positions.get(edge.to);const midX=(from.x+to.x)/2,midY=(from.y+to.y)/2+(index%2?18:-18);return `<path class="semantic-edge ${edge.type}" data-from="${esc(edge.from)}" data-to="${esc(edge.to)}" d="M${from.x} ${from.y} Q${midX} ${midY} ${to.x} ${to.y}"/>`;}).join('');
+      $('mapSvg').innerHTML=globalRoutes+contours+macroRoutes+subfieldRoutes+semanticRoutes;
+      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" data-tier="${featuredPriority.get(item.rank_group_key)}" style="left:${p.x-90}px;top:${p.y-35}px;--node-color:${p.macro.color};--node-scale:${Math.min(1.08,.84+item.model_count/80)}"><span class="coverage">${item.model_count} models</span><b>${esc(displayName(item))}</b><small>${esc(p.subfield.label)} · ${esc(item.metric_name)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
       document.querySelectorAll('.node').forEach(node=>node.addEventListener('click',e=>{e.stopPropagation();selectBenchmark(node.dataset.key);}))
       renderMiniMap(); applyTransform();
     }
@@ -94,14 +139,22 @@ const data = window.BENCHATLAS_DATA;
     function applyTransform(){
       $('world').style.transform=`translate(${state.x}px,${state.y}px) scale(${state.scale})`;
       const zoomLabel=`${Math.round(state.scale*100)}%`;
+      const depth=state.scale<.58?'overview':state.scale<.95?'field':'detail';const viewport=$('viewport');viewport.classList.remove('zoom-overview','zoom-field','zoom-detail');viewport.classList.add(`zoom-${depth}`);$('mapDepth').textContent=`${depth} level`;
       $('resetView').textContent=zoomLabel;
       $('statusZoom').textContent=zoomLabel;
       const vp=$('viewport').getBoundingClientRect();const mini=$('miniViewport');mini.style.left=`${Math.max(0,-state.x/state.scale/1800*150)}px`;mini.style.top=`${Math.max(0,-state.y/state.scale/1100*94)}px`;mini.style.width=`${Math.min(150,vp.width/state.scale/1800*150)}px`;mini.style.height=`${Math.min(94,vp.height/state.scale/1100*94)}px`;
     }
 
-    function fitView(){const vp=$('viewport').getBoundingClientRect();state.scale=Math.min(.86,Math.max(.42,Math.min(vp.width/1800,vp.height/1100)*1.45));state.x=(vp.width-1800*state.scale)/2;state.y=(vp.height-1100*state.scale)/2;applyTransform();}
+    function fitView(){const vp=$('viewport').getBoundingClientRect();state.scale=Math.min(.82,Math.max(.4,Math.min(vp.width/1800,vp.height/1100)*.96));state.x=(vp.width-1800*state.scale)/2;state.y=(vp.height-1100*state.scale)/2;applyTransform();}
     function zoom(delta,cx=$('viewport').clientWidth/2,cy=$('viewport').clientHeight/2){const old=state.scale;state.scale=Math.max(.35,Math.min(1.35,state.scale+delta));state.x=cx-(cx-state.x)*(state.scale/old);state.y=cy-(cy-state.y)*(state.scale/old);applyTransform();}
     function centerOn(key){const p=positions.get(key);if(!p)return;const vp=$('viewport').getBoundingClientRect();state.scale=Math.max(state.scale,.76);state.x=vp.width/2-p.x*state.scale;state.y=vp.height/2-p.y*state.scale;applyTransform();}
+
+    function highlightRelations(key){
+      const related=new Set();relationEdges.forEach(edge=>{if(edge.from===key)related.add(edge.to);if(edge.to===key)related.add(edge.from);});
+      document.querySelectorAll('.semantic-edge').forEach(edge=>{const active=edge.dataset.from===key||edge.dataset.to===key;edge.classList.toggle('selected',active);edge.classList.toggle('muted',!active);});
+      document.querySelectorAll('.node').forEach(node=>{node.classList.toggle('related',related.has(node.dataset.key));node.classList.toggle('context-muted',node.dataset.key!==key&&!related.has(node.dataset.key));});
+      return related;
+    }
 
     async function selectBenchmark(key,preferredProtocolId){
       const item=catalog.find(x=>x.rank_group_key===key);if(!item)return;state.selected=key;state.activeItem=item;
@@ -110,8 +163,10 @@ const data = window.BENCHATLAS_DATA;
       try{page=await loadPage(key);}catch(error){if(state.selected!==key)return;$('inspectorSub').textContent='Benchmark details could not be loaded.';$('ranking').innerHTML='<p class="method">Refresh the page to retry this benchmark.</p>';showToast('Could not load benchmark details');return;}if(state.selected!==key)return;
       document.querySelectorAll('.node').forEach(n=>n.classList.toggle('selected',n.dataset.key===key));
       document.querySelectorAll('.connection').forEach(route=>route.classList.toggle('selected',route.dataset.routeKey===key));
-      const groupedRows=groupRowsByModel(page.rows);const comparisonGroups=comparisonGroupsForRows(page.rows);const macro=getMacro(item.domain);
-      $('inspectorDomain').textContent=`Selected landmark / ${macro.label}`;$('inspectorTitle').textContent=displayName(item);$('inspectorSub').textContent=`${item.domain.replaceAll('_',' ')} · ${item.metric_name} ${item.score_unit||''} · ${page.rows.length} reported rows · ${comparisonGroups.length} protocol groups`;$('modelCount').textContent=groupedRows.length;$('vendorCount').textContent=item.vendor_count;$('reportCount').textContent=item.report_count;$('metricLabel').textContent=`${item.metric_name} · ${item.score_unit}`;
+      const related=highlightRelations(key);const groupedRows=groupRowsByModel(page.rows);const comparisonGroups=comparisonGroupsForRows(page.rows);const macro=getMacro(item.domain);const subfield=getSubfield(item);
+      $('inspectorDomain').textContent=`${macro.label} / ${subfield.label}`;$('inspectorTitle').textContent=displayName(item);$('inspectorSub').textContent=`${item.domain.replaceAll('_',' ')} · ${item.metric_name} ${item.score_unit||''} · ${page.rows.length} reported rows · ${comparisonGroups.length} protocol groups`;$('modelCount').textContent=groupedRows.length;$('vendorCount').textContent=item.vendor_count;$('reportCount').textContent=item.report_count;$('metricLabel').textContent=`${item.metric_name} · ${item.score_unit}`;
+      $('relatedLandmarks').innerHTML=[...related].map(relatedKey=>{const relatedItem=catalog.find(entry=>entry.rank_group_key===relatedKey);const edge=relationEdges.find(entry=>(entry.from===key&&entry.to===relatedKey)||(entry.to===key&&entry.from===relatedKey));return `<button data-key="${esc(relatedKey)}"><b>${esc(displayName(relatedItem))}</b><span>${esc(edge.label)}</span></button>`;}).join('')||'<span class="related-empty">No direct map relation in the current landmark set.</span>';
+      $('relatedLandmarks').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{selectBenchmark(button.dataset.key);centerOn(button.dataset.key);}));
       $('statusDomain').textContent=state.domain==='all'?macro.label:macroRules.find(rule=>rule.id===state.domain)?.label||'All domains';$('statusSelection').textContent=displayName(item);
       $('comparisonSelect').innerHTML=comparisonGroups.map((group,index)=>`<option value="${esc(group.id)}">${index===0?'Preferred group · ':''}${group.modelGroups.length} model${group.modelGroups.length===1?'':'s'} · ${esc(group.label)}</option>`).join('');
       const renderComparison=(groupId,preferredModelId)=>{

@@ -75,6 +75,8 @@ The Spatial Atlas groups report-native domain labels into six stable capability 
 
 Safety is an orthogonal layer rather than a separate capability region. A vision-safety benchmark remains in Multimodal & Perception, for example, while receiving a visible safety marker and participating in the Safety layer filter. Original report-native domain labels remain preserved in the dataset and evidence views.
 
+The homepage map is a balanced landmark view rather than a rendering of every catalog row. It selects the seven most-covered benchmarks in each capability region, with no more than two variants from one benchmark family. Zoom controls expose three information levels: overview shows three core landmarks per region, field view reveals all 42 landmarks, and detail view adds benchmark metadata and semantic relationships. Solid red routes connect variants from the same benchmark family; dashed blue routes connect each landmark to its strongest peer by shared reported models. Subfield routes organize landmarks into task-level neighborhoods such as software engineering, terminal systems, computer use, long context, and health.
+
 ## Data policy
 
 - Reported numbers are preserved rather than silently normalized.
