@@ -361,6 +361,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-score/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-bench-pro-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -368,12 +374,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/gpqa-diamond-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -397,6 +397,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/benchmarks/benchcad-score/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/browsecomp-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -410,6 +416,12 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/nl2repo-score/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/benchmarks/deepswe-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -445,6 +457,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-score/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/agents-last-exam-pass-at-1/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -452,6 +470,12 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/hmmt-2026-feb-score/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/benchmarks/mcp-mark-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -523,12 +547,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/benchmarks/deepswe-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://benchatlas.cn/benchmarks/gdpval-aa-v2-elo/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -565,12 +583,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-terminus-2-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://benchatlas.cn/benchmarks/artificial-analysis-coding-agent-index-v1-1-index-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -578,18 +590,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/automationbench-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/benchcad-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/benchcad-python-tool-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -907,12 +907,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/benchmarks/mcp-mark-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://benchatlas.cn/benchmarks/mmlu-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1004,12 +998,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/spreadsheetbench-v1-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-terminus-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1112,12 +1100,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/creativework-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/deepswe-open-benchmarks-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1238,12 +1220,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/mcp-atlas-pass-at-1/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/mcpmark-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1394,30 +1370,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/skillsbench-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-terminus-2-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-best-reported-harness-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-open-benchmarks-score/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-terminus-2-harness-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2450,12 +2402,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/benchmarks/tacit-knowledge-and-troubleshooting-refusals-treated-as-successes-pass-at-1/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

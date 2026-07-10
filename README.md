@@ -26,7 +26,7 @@ BenchAtlas is designed to answer four questions:
 | Reported result rows | 1,681 |
 | Normalized models | 58 |
 | Raw model labels | 65 |
-| Benchmark groups | 410 |
+| Benchmark groups | 401 |
 | Source reports | 11 |
 | Protocol records | 386 |
 | Results in documented shared-protocol groups | 695 |
@@ -37,11 +37,11 @@ Coverage changes as new official reports are imported. The live site is the sour
 ## Features
 
 - **Spatial Atlas**: discover high-coverage benchmarks as domain-clustered, searchable map nodes.
-- **Registry and Matrix**: switch from spatial discovery to dense lookup or model-by-benchmark comparison.
+- **Registry and Matrix**: switch from spatial discovery to dense lookup or a selectable model-by-benchmark comparison.
 - **Benchmark view**: compare reported scores, protocols, and source evidence.
 - **Model view**: inspect every benchmark result associated with one model.
 - **Overall ranking**: explore the Reported Performance Index with coverage and confidence signals.
-- **Method notes**: preserve harnesses, tools, judges, run counts, context limits, and other evaluation settings.
+- **Structured Method notes**: separate setup, reasoning, agent/tools, dataset, aggregation, and source caveats.
 - **Shareable pages**: every model and benchmark has an indexable permalink.
 - **Evidence-first data**: each row remains linked to its originating report and evidence location.
 
@@ -86,6 +86,7 @@ Safety is an orthogonal layer rather than a separate capability region. A vision
 - Benchmark spelling aliases map to a stable `benchmark_family_id`; dataset subsets, harnesses, metrics, and tool variants remain separate.
 - Every reported row receives a `comparability_group_id` derived from benchmark variant, metric, score direction, harness, tools, timeout, compute, context, sampling, reasoning mode, runs, judge, and dataset notes.
 - Rows with a documented shared setup may rank together. Rows without enough methodology remain source-scoped and are never silently mixed into a strict comparison.
+- Harness/tool labels that were previously separate benchmark pages now remain protocol groups inside one canonical benchmark page; real benchmark versions remain separate.
 - The homepage defaults to the largest documented shared-protocol group and lets readers inspect alternative source groups explicitly.
 
 ## Contributing

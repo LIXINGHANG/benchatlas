@@ -10,3 +10,12 @@
 /models/minimax-m3-1onl2j/ /models/minimax-m3/ 301
 /models/minimax-m3-e2by5k/ /models/minimax-m3/ 301
 /models/qwen-3-7-max/ /models/qwen3-7-max/ 301
+/benchmarks/mcpmark-score/ /benchmarks/mcp-mark-score/ 301
+/benchmarks/terminal-bench-2-0-terminus-score/ /benchmarks/terminal-bench-2-0-score/ 301
+/benchmarks/terminal-bench-2-0-terminus-2-score/ /benchmarks/terminal-bench-2-0-score/ 301
+/benchmarks/terminal-bench-2-1-best-reported-harness-score/ /benchmarks/terminal-bench-2-1-score/ 301
+/benchmarks/terminal-bench-2-1-open-benchmarks-score/ /benchmarks/terminal-bench-2-1-score/ 301
+/benchmarks/terminal-bench-2-1-terminus-2-harness-score/ /benchmarks/terminal-bench-2-1-score/ 301
+/benchmarks/terminal-bench-2-1-terminus-2-score/ /benchmarks/terminal-bench-2-1-score/ 301
+/benchmarks/benchcad-python-tool-score/ /benchmarks/benchcad-score/ 301
+/benchmarks/deepswe-open-benchmarks-score/ /benchmarks/deepswe-score/ 301

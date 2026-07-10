@@ -662,16 +662,28 @@
 
   function protocolCell(row) {
     const comparisonLabel = row.comparability_status === "strict" ? "shared protocol" : "source scoped";
+    const sectionLabels = {
+      evaluation_setup: "Evaluation setup",
+      reasoning_configuration: "Reasoning configuration",
+      agent_tool_scaffold: "Agent / tool scaffold",
+      dataset_variant: "Dataset variant",
+      runs_aggregation: "Runs and aggregation",
+      source_caveat: "Source caveat",
+    };
+    const methodSections = Object.entries(sectionLabels).flatMap(([key, label]) => {
+      const values = Array.isArray(row.method_sections?.[key]) ? row.method_sections[key].filter(Boolean) : [];
+      return values.length ? [`<section><b>${esc(label)}</b>${values.map(value => `<p>${esc(value)}</p>`).join("")}</section>`] : [];
+    }).join("");
     return `
       <div class="badges">
         <span class="badge ${row.comparability_status === "strict" ? "" : "warn"}">${esc(comparisonLabel)}</span>
         ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
       </div>
-      ${row.protocol_short ? `<div class="method-summary"><b>Method notes:</b> ${esc(row.protocol_short)}</div>` : ""}
-      ${row.protocol_full ? `
+      ${!methodSections && row.protocol_short ? `<div class="method-summary"><b>Method notes:</b> ${esc(row.protocol_short)}</div>` : ""}
+      ${methodSections || row.protocol_full ? `
         <details class="method-note">
-          <summary>Show full method notes</summary>
-          <div>${esc(row.protocol_full)}</div>
+          <summary>Show structured method notes</summary>
+          <div>${methodSections || esc(row.protocol_full)}</div>
         </details>
       ` : ""}
     `;
@@ -680,6 +692,7 @@
   function sourceCell(row) {
     return `
       <div class="source">
+        <div><b>Reported by:</b> ${esc(row.vendor)} · ${esc(row.comparability_status === "strict" ? "shared protocol" : "source scoped")}</div>
         ${row.source_url ? `<div class="source-links">${renderSourceLinks(row.source_url)}</div>` : ""}
         <div>${esc(row.evidence_location)}</div>
         <details class="evidence-note">

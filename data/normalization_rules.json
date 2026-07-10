@@ -11,10 +11,79 @@
   "benchmark_aliases": {
     "GPQA-Diamond": "GPQA Diamond",
     "MCP-Atlas": "MCP Atlas",
+    "MCPMark": "MCP-Mark",
     "Terminal Bench 2.1": "Terminal-Bench 2.1",
     "Terminal-bench 2.1": "Terminal-Bench 2.1",
+    "Terminal Bench 2.0-Terminus": "Terminal-Bench 2.0",
     "SWE-bench Verified": "SWE-Bench Verified",
     "HMMT 2026 Feb": "HMMT Feb. 2026"
+  },
+  "benchmark_group_rules": {
+    "terminal_bench_2_0_score": {
+      "rank_group_key": "terminal_bench_2_0_score",
+      "display_name": "Terminal-Bench 2.0",
+      "variant": "",
+      "comparison_variant": ""
+    },
+    "terminal_bench_2_1_score": {
+      "rank_group_key": "terminal_bench_2_1_score",
+      "display_name": "Terminal-Bench 2.1",
+      "variant": "",
+      "comparison_variant": ""
+    },
+    "mcpmark_score": {
+      "rank_group_key": "mcp_mark_score",
+      "display_name": "MCP-Mark",
+      "variant": ""
+    },
+    "terminal_bench_2_0_terminus_score": {
+      "rank_group_key": "terminal_bench_2_0_score",
+      "display_name": "Terminal-Bench 2.0",
+      "variant": "",
+      "comparison_variant": "Terminus"
+    },
+    "terminal_bench_2_0_terminus_2_score": {
+      "rank_group_key": "terminal_bench_2_0_score",
+      "display_name": "Terminal-Bench 2.0",
+      "variant": "",
+      "comparison_variant": "Terminus-2"
+    },
+    "terminal_bench_2_1_best_reported_harness_score": {
+      "rank_group_key": "terminal_bench_2_1_score",
+      "display_name": "Terminal-Bench 2.1",
+      "variant": "",
+      "comparison_variant": "Best reported harness"
+    },
+    "terminal_bench_2_1_open_benchmarks_score": {
+      "rank_group_key": "terminal_bench_2_1_score",
+      "display_name": "Terminal-Bench 2.1",
+      "variant": "",
+      "comparison_variant": "Open benchmarks table"
+    },
+    "terminal_bench_2_1_terminus_2_harness_score": {
+      "rank_group_key": "terminal_bench_2_1_score",
+      "display_name": "Terminal-Bench 2.1",
+      "variant": "",
+      "comparison_variant": "Terminus-2 harness"
+    },
+    "terminal_bench_2_1_terminus_2_score": {
+      "rank_group_key": "terminal_bench_2_1_score",
+      "display_name": "Terminal-Bench 2.1",
+      "variant": "",
+      "comparison_variant": "Terminus-2"
+    },
+    "benchcad_python_tool_score": {
+      "rank_group_key": "benchcad_score",
+      "display_name": "BenchCAD",
+      "variant": "",
+      "comparison_variant": "Python tool"
+    },
+    "deepswe_open_benchmarks_score": {
+      "rank_group_key": "deepswe_score",
+      "display_name": "DeepSWE",
+      "variant": "",
+      "comparison_variant": "Open benchmarks table"
+    }
   },
   "configuration_patterns": [
     "thinking high",
