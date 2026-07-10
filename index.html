@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BenchAtlas - AI Benchmark Landscape</title>
+  <meta name="description" content="Compare reported AI benchmark scores with source evidence, evaluation protocols, and model-specific method notes.">
+  <link rel="canonical" href="https://benchatlas.cn/">
+  <meta property="og:title" content="BenchAtlas - AI Benchmark Landscape">
+  <meta property="og:description" content="Explore reported AI benchmark scores with source evidence and evaluation protocols.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benchatlas.cn/">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style>
     :root {
@@ -37,6 +44,11 @@
 
     button, input, select {
       font: inherit;
+    }
+
+    button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible {
+      outline: 3px solid rgba(15, 118, 110, 0.28);
+      outline-offset: 2px;
     }
 
     .shell {
@@ -140,6 +152,13 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 8px;
+    }
+
+    .result-meta {
+      color: var(--muted);
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.3;
     }
 
     select {
@@ -417,6 +436,30 @@
 
     .source a:hover { text-decoration: underline; }
 
+    .source-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 10px;
+      margin-bottom: 5px;
+    }
+
+    .evidence-note {
+      margin-top: 7px;
+    }
+
+    .evidence-note summary {
+      width: fit-content;
+      cursor: pointer;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .evidence-note div {
+      margin-top: 6px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
     .method-note {
       margin-top: 8px;
       max-width: 360px;
@@ -512,17 +555,39 @@
         max-height: 56vh;
       }
       .content-grid { grid-template-columns: 1fr; }
-      .detail-panel { position: relative; top: auto; }
+      .detail-panel { position: relative; top: auto; order: -1; }
       .topbar { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 680px) {
       main { padding: 18px 14px 28px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
-      td:nth-child(4), th:nth-child(4) { display: none; }
-      table { min-width: 560px; }
-      .score { font-size: 20px; }
-      .source { max-width: 220px; }
+      .panel-head { align-items: flex-start; flex-direction: column; }
+      #rankingTable { overflow: visible; }
+      table, tbody { display: block; width: 100%; min-width: 0; }
+      thead { display: none; }
+      tr {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr) auto;
+        gap: 10px 8px;
+        padding: 15px 14px;
+        border-bottom: 1px solid rgba(221, 215, 202, 0.9);
+      }
+      tr:last-child { border-bottom: 0; }
+      td { display: block; padding: 0; border: 0; min-width: 0; }
+      td:nth-child(1) { grid-column: 1; grid-row: 1; }
+      td:nth-child(2) { grid-column: 2; grid-row: 1; }
+      td:nth-child(3) { grid-column: 3; grid-row: 1; }
+      td:nth-child(4), td:nth-child(5) { grid-column: 1 / -1; }
+      td:nth-child(4) { grid-row: 2; }
+      td:nth-child(5) {
+        grid-row: 3;
+        border-top: 1px solid rgba(221, 215, 202, 0.72);
+        padding-top: 10px;
+      }
+      .score { font-size: 21px; }
+      .source, .method-note, .method-summary { max-width: none; }
+      .method-summary { margin-top: 8px; }
     }
   </style>
 </head>
@@ -540,15 +605,16 @@
         <p class="subtitle">Explore the landscape of AI benchmarks</p>
       </div>
       <div class="controls">
-        <input class="search" id="search" type="search" placeholder="Search benchmark, domain, model">
+        <input class="search" id="search" type="search" placeholder="Search benchmark, domain, model" aria-label="Search benchmarks and models">
         <div class="filters">
           <select id="domainFilter" aria-label="Domain filter"></select>
           <select id="sortMode" aria-label="Sort mode">
             <option value="coverage">Sort by coverage</option>
             <option value="name">Sort by name</option>
-            <option value="best">Sort by best score</option>
+            <option value="reports">Sort by reports</option>
           </select>
         </div>
+        <div class="result-meta" id="resultMeta" aria-live="polite"></div>
       </div>
       <div class="bench-list" id="benchList"></div>
     </aside>
@@ -595,7 +661,7 @@
             </div>
             <div class="detail-section">
               <h3>Evidence policy</h3>
-              <p>Every row keeps source report id, evidence location, and a short quote. Current comparability is conservative: all imported rows remain protocol_variant until exact harness and methodology normalization is complete.</p>
+              <p>Scores are kept with their original report, evidence location, and evaluation notes. Rows marked protocol variant may use different harnesses or settings, so treat the ranking as reported results rather than a strictly normalized leaderboard.</p>
             </div>
           </div>
         </div>
@@ -608,8 +674,16 @@
     const data = window.BENCHATLAS_DATA;
     const catalog = data.benchmark_catalog;
     const pages = data.benchmark_pages;
+    const keyFromHash = () => {
+      try {
+        return decodeURIComponent(location.hash.replace(/^#benchmark=/, ""));
+      } catch {
+        return "";
+      }
+    };
+    const initialKey = keyFromHash();
     const state = {
-      selected: catalog[0]?.rank_group_key,
+      selected: pages[initialKey] ? initialKey : catalog[0]?.rank_group_key,
       query: "",
       domain: "all",
       sort: "coverage"
@@ -617,6 +691,7 @@
 
     const el = (id) => document.getElementById(id);
     const fmt = (value) => Number.isFinite(Number(value)) ? Number(value).toLocaleString("en-US") : value;
+    const humanize = (value) => String(value || "").replace(/_/g, " ").replace(/\b\w/g, ch => ch.toUpperCase());
     const esc = (value) => String(value ?? "").replace(/[&<>"']/g, ch => ({
       "&": "&amp;",
       "<": "&lt;",
@@ -629,7 +704,7 @@
       el("totalCount").textContent = `${data.summary.result_count} rows`;
       const domains = ["all", ...Array.from(new Set(catalog.map(item => item.domain))).sort()];
       el("domainFilter").innerHTML = domains.map(domain => (
-        `<option value="${esc(domain)}">${domain === "all" ? "All domains" : domain}</option>`
+        `<option value="${esc(domain)}">${domain === "all" ? "All domains" : esc(humanize(domain))}</option>`
       )).join("");
       el("search").addEventListener("input", event => {
         state.query = event.target.value.toLowerCase().trim();
@@ -643,6 +718,13 @@
         state.sort = event.target.value;
         renderList();
       });
+      window.addEventListener("hashchange", () => {
+        const key = keyFromHash();
+        if (pages[key]) {
+          state.selected = key;
+          renderList();
+        }
+      });
       renderList();
       renderPage();
     }
@@ -650,13 +732,15 @@
     function filteredCatalog() {
       const query = state.query;
       let rows = catalog.filter(item => {
+        const pageModels = (pages[item.rank_group_key]?.rows || []).flatMap(row => [row.model_name, row.vendor]);
         const text = [
           item.benchmark_name,
           item.benchmark_variant,
           item.domain,
           item.best_model,
           item.best_vendor,
-          item.protocol_badges
+          item.protocol_badges,
+          ...pageModels
         ].join(" ").toLowerCase();
         const domainOk = state.domain === "all" || item.domain === state.domain;
         return domainOk && (!query || text.includes(query));
@@ -664,10 +748,10 @@
       rows = rows.slice();
       if (state.sort === "name") {
         rows.sort((a, b) => `${a.benchmark_name} ${a.benchmark_variant}`.localeCompare(`${b.benchmark_name} ${b.benchmark_variant}`));
-      } else if (state.sort === "best") {
-        rows.sort((a, b) => Number(b.best_score || -Infinity) - Number(a.best_score || -Infinity));
+      } else if (state.sort === "reports") {
+        rows.sort((a, b) => Number(b.report_count) - Number(a.report_count) || Number(b.model_count) - Number(a.model_count));
       } else {
-        rows.sort((a, b) => Number(b.display_result_count) - Number(a.display_result_count));
+        rows.sort((a, b) => Number(b.model_count) - Number(a.model_count) || Number(b.report_count) - Number(a.report_count));
       }
       return rows;
     }
@@ -677,13 +761,14 @@
       if (!rows.some(item => item.rank_group_key === state.selected)) {
         state.selected = rows[0]?.rank_group_key || catalog[0]?.rank_group_key;
       }
+      el("resultMeta").textContent = `${rows.length} benchmark group${rows.length === 1 ? "" : "s"}`;
       el("benchList").innerHTML = rows.map(item => `
         <button class="bench-button ${item.rank_group_key === state.selected ? "active" : ""}" data-key="${esc(item.rank_group_key)}">
           <span>
             <span class="bench-name">${esc(item.benchmark_name)}</span>
             <span class="bench-meta">
               <span>${esc(item.domain)}</span>
-              <span>${esc(item.display_result_count)} models</span>
+              <span>${esc(item.model_count)} models</span>
               <span>${esc(item.metric_name)}</span>
             </span>
           </span>
@@ -693,6 +778,7 @@
       el("benchList").querySelectorAll("button").forEach(button => {
         button.addEventListener("click", () => {
           state.selected = button.dataset.key;
+          history.replaceState(null, "", `#benchmark=${encodeURIComponent(state.selected)}`);
           renderList();
           renderPage();
         });
@@ -711,9 +797,9 @@
       const page = pages[state.selected];
       if (!page) return;
       const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
-      el("domainLabel").textContent = page.domain || "benchmark";
+      el("domainLabel").textContent = humanize(page.domain || "benchmark");
       el("benchmarkTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
-      el("statModels").textContent = page.display_result_count || page.rows.length;
+      el("statModels").textContent = new Set(page.rows.map(row => row.model_name)).size;
       el("statRows").textContent = page.result_count;
       el("statVendors").textContent = new Set(page.rows.map(row => row.vendor)).size;
       el("statReports").textContent = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
@@ -725,13 +811,28 @@
     }
 
     function renderTopModels(rows) {
-      el("topModels").innerHTML = rows.slice(0, 5).map(row => `
+      const uniqueModels = [];
+      const seen = new Set();
+      rows.forEach(row => {
+        if (!seen.has(row.model_name)) {
+          seen.add(row.model_name);
+          uniqueModels.push(row);
+        }
+      });
+      el("topModels").innerHTML = uniqueModels.slice(0, 5).map((row, index) => `
         <div class="mini-item">
-          <b>#${esc(row.rank)}</b>
+          <b>#${index + 1}</b>
           <span>${esc(row.model_name)}</span>
           <em>${esc(row.score)}${row.score_unit === "%" ? "%" : " " + esc(row.score_unit)}</em>
         </div>
       `).join("");
+    }
+
+    function renderSourceLinks(sourceUrls) {
+      const urls = String(sourceUrls || "").split("; ").filter(Boolean);
+      return urls.map((url, index) => (
+        `<a href="${esc(url)}" target="_blank" rel="noreferrer">Open source${urls.length > 1 ? ` ${index + 1}` : ""} ↗</a>`
+      )).join("");
     }
 
     function renderRanking(rows) {
@@ -774,9 +875,13 @@
                 </td>
                 <td>
                   <div class="source">
-                    ${row.source_url ? `<a href="${esc(row.source_url)}" target="_blank" rel="noreferrer">source</a><br>` : ""}
-                    ${esc(row.source_report_id)}<br>
-                    ${esc(row.evidence_location)}
+                    ${row.source_url ? `<div class="source-links">${renderSourceLinks(row.source_url)}</div>` : ""}
+                    <div>${esc(row.evidence_location)}</div>
+                    <details class="evidence-note">
+                      <summary>Evidence details</summary>
+                      <div><b>Report:</b> ${esc(row.source_report_id)}</div>
+                      ${row.evidence_quote ? `<div><b>Quote:</b> ${esc(row.evidence_quote)}</div>` : ""}
+                    </details>
                   </div>
                 </td>
               </tr>
