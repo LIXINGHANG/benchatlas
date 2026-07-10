@@ -131,6 +131,34 @@
       border-bottom: 1px solid var(--line);
     }
 
+    .view-switch {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel-2);
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .view-tab {
+      min-height: 32px;
+      border: 0;
+      border-radius: 4px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .view-tab.active {
+      background: var(--panel);
+      color: var(--ink);
+      box-shadow: 0 1px 3px rgba(23, 20, 15, 0.12);
+    }
+
     .search {
       width: 100%;
       height: 42px;
@@ -436,6 +464,25 @@
 
     .source a:hover { text-decoration: underline; }
 
+    .entity-link {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      font: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-color: rgba(15, 118, 110, 0.28);
+      text-underline-offset: 3px;
+    }
+
+    .entity-link:hover {
+      color: var(--accent);
+      text-decoration-color: currentColor;
+    }
+
     .source-links {
       display: flex;
       flex-wrap: wrap;
@@ -610,6 +657,10 @@
         <p class="subtitle">Explore the landscape of AI benchmarks</p>
       </div>
       <div class="controls">
+        <div class="view-switch" role="tablist" aria-label="Explore by">
+          <button class="view-tab active" id="benchmarkViewTab" type="button" role="tab" aria-selected="true">Benchmarks</button>
+          <button class="view-tab" id="modelViewTab" type="button" role="tab" aria-selected="false">Models</button>
+        </div>
         <input class="search" id="search" type="search" placeholder="Search benchmark, domain, model" aria-label="Search benchmarks and models">
         <div class="filters">
           <select id="domainFilter" aria-label="Domain filter"></select>
@@ -628,13 +679,13 @@
       <section class="topbar">
         <div>
           <div class="kicker" id="domainLabel">Benchmark</div>
-          <h2 id="benchmarkTitle">Loading</h2>
+          <h2 id="pageTitle">Loading</h2>
         </div>
         <div class="stats">
-          <div class="stat"><b id="statModels">0</b><span>models</span></div>
-          <div class="stat"><b id="statRows">0</b><span>reported rows</span></div>
-          <div class="stat"><b id="statVendors">0</b><span>vendors</span></div>
-          <div class="stat"><b id="statReports">0</b><span>reports</span></div>
+          <div class="stat"><b id="statModels">0</b><span id="statLabelModels">models</span></div>
+          <div class="stat"><b id="statRows">0</b><span id="statLabelRows">reported rows</span></div>
+          <div class="stat"><b id="statVendors">0</b><span id="statLabelVendors">vendors</span></div>
+          <div class="stat"><b id="statReports">0</b><span id="statLabelReports">reports</span></div>
         </div>
       </section>
 
@@ -642,8 +693,8 @@
         <div class="ranking-panel">
           <div class="panel-head">
             <div>
-              <div class="panel-title">Reported Ranking</div>
-              <div class="panel-note">Protocol variants are shown, not strict normalized leaderboards.</div>
+              <div class="panel-title" id="rankingTitle">Reported Ranking</div>
+              <div class="panel-note" id="rankingNote">Protocol variants are shown, not strict normalized leaderboards.</div>
             </div>
             <div class="badges" id="panelBadges"></div>
           </div>
@@ -657,16 +708,16 @@
           </div>
           <div class="detail-body">
             <div class="detail-section">
-              <h3>Best reported</h3>
+              <h3 id="summaryHeading">Best reported</h3>
               <div class="mini-list" id="topModels"></div>
             </div>
             <div class="detail-section">
-              <h3>Protocol signals</h3>
+              <h3 id="signalsHeading">Protocol signals</h3>
               <div class="badges" id="contextBadges"></div>
             </div>
             <div class="detail-section">
-              <h3>Evidence policy</h3>
-              <p>Scores are kept with their original report, evidence location, and evaluation notes. Rows marked protocol variant may use different harnesses or settings, so treat the ranking as reported results rather than a strictly normalized leaderboard.</p>
+              <h3 id="policyHeading">Evidence policy</h3>
+              <p id="policyText">Scores are kept with their original report, evidence location, and evaluation notes. Rows marked protocol variant may use different harnesses or settings, so treat the ranking as reported results rather than a strictly normalized leaderboard.</p>
             </div>
           </div>
         </div>
@@ -675,228 +726,6 @@
   </div>
 
   <script src="site_data.bundle.js?v=d9186ad"></script>
-  <script>
-    const data = window.BENCHATLAS_DATA;
-    const catalog = data.benchmark_catalog;
-    const pages = data.benchmark_pages;
-    const keyFromHash = () => {
-      try {
-        return decodeURIComponent(location.hash.replace(/^#benchmark=/, ""));
-      } catch {
-        return "";
-      }
-    };
-    const initialKey = keyFromHash();
-    const state = {
-      selected: pages[initialKey] ? initialKey : catalog[0]?.rank_group_key,
-      query: "",
-      domain: "all",
-      sort: "coverage"
-    };
-
-    const el = (id) => document.getElementById(id);
-    const fmt = (value) => Number.isFinite(Number(value)) ? Number(value).toLocaleString("en-US") : value;
-    const humanize = (value) => String(value || "").replace(/_/g, " ").replace(/\b\w/g, ch => ch.toUpperCase());
-    const esc = (value) => String(value ?? "").replace(/[&<>"']/g, ch => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    }[ch]));
-
-    function init() {
-      el("totalCount").textContent = `${data.summary.result_count} rows`;
-      const domains = ["all", ...Array.from(new Set(catalog.map(item => item.domain))).sort()];
-      el("domainFilter").innerHTML = domains.map(domain => (
-        `<option value="${esc(domain)}">${domain === "all" ? "All domains" : esc(humanize(domain))}</option>`
-      )).join("");
-      el("search").addEventListener("input", event => {
-        state.query = event.target.value.toLowerCase().trim();
-        renderList();
-      });
-      el("domainFilter").addEventListener("change", event => {
-        state.domain = event.target.value;
-        renderList();
-      });
-      el("sortMode").addEventListener("change", event => {
-        state.sort = event.target.value;
-        renderList();
-      });
-      window.addEventListener("hashchange", () => {
-        const key = keyFromHash();
-        if (pages[key]) {
-          state.selected = key;
-          renderList();
-        }
-      });
-      renderList();
-      renderPage();
-    }
-
-    function filteredCatalog() {
-      const query = state.query;
-      let rows = catalog.filter(item => {
-        const pageModels = (pages[item.rank_group_key]?.rows || []).flatMap(row => [row.model_name, row.vendor]);
-        const text = [
-          item.benchmark_name,
-          item.benchmark_variant,
-          item.domain,
-          item.best_model,
-          item.best_vendor,
-          item.protocol_badges,
-          ...pageModels
-        ].join(" ").toLowerCase();
-        const domainOk = state.domain === "all" || item.domain === state.domain;
-        return domainOk && (!query || text.includes(query));
-      });
-      rows = rows.slice();
-      if (state.sort === "name") {
-        rows.sort((a, b) => `${a.benchmark_name} ${a.benchmark_variant}`.localeCompare(`${b.benchmark_name} ${b.benchmark_variant}`));
-      } else if (state.sort === "reports") {
-        rows.sort((a, b) => Number(b.report_count) - Number(a.report_count) || Number(b.model_count) - Number(a.model_count));
-      } else {
-        rows.sort((a, b) => Number(b.model_count) - Number(a.model_count) || Number(b.report_count) - Number(a.report_count));
-      }
-      return rows;
-    }
-
-    function renderList() {
-      const rows = filteredCatalog();
-      if (!rows.some(item => item.rank_group_key === state.selected)) {
-        state.selected = rows[0]?.rank_group_key || catalog[0]?.rank_group_key;
-      }
-      el("resultMeta").textContent = `${rows.length} benchmark group${rows.length === 1 ? "" : "s"}`;
-      el("benchList").innerHTML = rows.map(item => `
-        <button class="bench-button ${item.rank_group_key === state.selected ? "active" : ""}" data-key="${esc(item.rank_group_key)}">
-          <span>
-            <span class="bench-name">${esc(item.benchmark_name)}</span>
-            <span class="bench-meta">
-              <span>${esc(item.domain)}</span>
-              <span>${esc(item.model_count)} models</span>
-              <span>${esc(item.metric_name)}</span>
-            </span>
-          </span>
-          <span class="bench-score">${esc(item.best_score)}${item.score_unit === "%" ? "%" : ""}</span>
-        </button>
-      `).join("") || `<div class="empty">No matching benchmarks.</div>`;
-      el("benchList").querySelectorAll("button").forEach(button => {
-        button.addEventListener("click", () => {
-          state.selected = button.dataset.key;
-          history.replaceState(null, "", `#benchmark=${encodeURIComponent(state.selected)}`);
-          renderList();
-          renderPage();
-        });
-      });
-      renderPage();
-    }
-
-    function renderBadges(target, badges, includeWarning = false) {
-      const all = includeWarning ? ["protocol_variant", ...badges] : badges;
-      target.innerHTML = all.length
-        ? all.map((badge, index) => `<span class="badge ${index === 0 && includeWarning ? "warn" : ""}">${esc(badge)}</span>`).join("")
-        : `<span class="badge warn">protocol details sparse</span>`;
-    }
-
-    function renderPage() {
-      const page = pages[state.selected];
-      if (!page) return;
-      const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
-      el("domainLabel").textContent = humanize(page.domain || "benchmark");
-      el("benchmarkTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
-      el("statModels").textContent = new Set(page.rows.map(row => row.model_name)).size;
-      el("statRows").textContent = page.result_count;
-      el("statVendors").textContent = new Set(page.rows.map(row => row.vendor)).size;
-      el("statReports").textContent = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
-      el("metricLabel").textContent = `${page.metric_name} · ${page.score_unit || "score"}`;
-      renderBadges(el("panelBadges"), page.protocol_badges || [], true);
-      renderBadges(el("contextBadges"), page.protocol_badges || [], false);
-      renderTopModels(page.rows);
-      renderRanking(page.rows);
-    }
-
-    function renderTopModels(rows) {
-      const uniqueModels = [];
-      const seen = new Set();
-      rows.forEach(row => {
-        if (!seen.has(row.model_name)) {
-          seen.add(row.model_name);
-          uniqueModels.push(row);
-        }
-      });
-      el("topModels").innerHTML = uniqueModels.slice(0, 5).map((row, index) => `
-        <div class="mini-item">
-          <b>#${index + 1}</b>
-          <span>${esc(row.model_name)}</span>
-          <em>${esc(row.score)}${row.score_unit === "%" ? "%" : " " + esc(row.score_unit)}</em>
-        </div>
-      `).join("");
-    }
-
-    function renderSourceLinks(sourceUrls) {
-      const urls = String(sourceUrls || "").split("; ").filter(Boolean);
-      return urls.map((url, index) => (
-        `<a href="${esc(url)}" target="_blank" rel="noreferrer">Open source${urls.length > 1 ? ` ${index + 1}` : ""} ↗</a>`
-      )).join("");
-    }
-
-    function renderRanking(rows) {
-      if (!rows.length) {
-        el("rankingTable").innerHTML = `<div class="empty">No scored rows for this benchmark.</div>`;
-        return;
-      }
-      el("rankingTable").innerHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Model</th>
-              <th>Score</th>
-              <th>Protocol</th>
-              <th>Source evidence</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${rows.map(row => `
-              <tr>
-                <td class="rank">#${esc(row.rank)}</td>
-                <td>
-                  <div class="model">${esc(row.model_name)}</div>
-                  <div class="vendor">${esc(row.vendor)}</div>
-                </td>
-                <td><div class="score">${esc(fmt(row.score))}${row.score_unit === "%" ? "%" : ""}</div></td>
-                <td>
-                  <div class="badges">
-                    <span class="badge warn">${esc(row.comparability_label)}</span>
-                    ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
-                  </div>
-                  ${row.protocol_short ? `<div class="method-summary"><b>Method notes:</b> ${esc(row.protocol_short)}</div>` : ""}
-                  ${row.protocol_full ? `
-                    <details class="method-note">
-                      <summary>Show full method notes</summary>
-                      <div>${esc(row.protocol_full)}</div>
-                    </details>
-                  ` : ""}
-                </td>
-                <td>
-                  <div class="source">
-                    ${row.source_url ? `<div class="source-links">${renderSourceLinks(row.source_url)}</div>` : ""}
-                    <div>${esc(row.evidence_location)}</div>
-                    <details class="evidence-note">
-                      <summary>Evidence details</summary>
-                      <div><b>Report:</b> ${esc(row.source_report_id)}</div>
-                      ${row.evidence_quote ? `<div><b>Quote:</b> ${esc(row.evidence_quote)}</div>` : ""}
-                    </details>
-                  </div>
-                </td>
-              </tr>
-            `).join("")}
-          </tbody>
-        </table>
-      `;
-    }
-
-    init();
-  </script>
+  <script src="app.js?v=model-view-1"></script>
 </body>
 </html>
