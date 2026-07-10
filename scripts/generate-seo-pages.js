@@ -108,6 +108,7 @@ function renderPage(template, page) {
   html = html.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${escapeHtml(page.title)}">`);
   html = html.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escapeHtml(page.description)}">`);
   html = html.replace(/<script type="application\/ld\+json" id="structuredData">[\s\S]*?<\/script>/, `<script type="application/ld+json" id="structuredData">\n${structuredData(page)}\n  </script>`);
+  html = html.replace("__DATA_BUNDLE__", page.dataBundle);
   html = html.replace('<div class="kicker" id="domainLabel">Benchmark</div>', `<div class="kicker" id="domainLabel">${escapeHtml(page.kicker)}</div>`);
   html = html.replace('<h2 id="pageTitle">Loading</h2>', `<h2 id="pageTitle">${escapeHtml(page.heading)}</h2>`);
   return html;
@@ -137,6 +138,7 @@ function main() {
     url: rankingUrl,
     kicker: "Reported Performance Index",
     heading: "Overall Model Ranking",
+    dataBundle: "/data/pages/ranking.bundle.js?v=scope-1",
     type: "WebPage"
   }));
   urls.push({ url: rankingUrl, priority: "0.9", changefreq: "daily" });
@@ -151,6 +153,7 @@ function main() {
       url,
       kicker: model.vendor || "AI model",
       heading: model.model_name,
+      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=scope-1`,
       type: "WebPage"
     }));
     urls.push({ url, priority: "0.8", changefreq: "weekly" });
@@ -167,6 +170,7 @@ function main() {
       url,
       kicker: String(benchmark.domain || "AI benchmark").replace(/_/g, " "),
       heading: `${benchmark.benchmark_name}${variant}`,
+      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=scope-1`,
       type: "WebPage"
     }));
     urls.push({ url, priority: "0.7", changefreq: "weekly" });

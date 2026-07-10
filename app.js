@@ -1,5 +1,6 @@
 (() => {
   const data = window.BENCHATLAS_DATA;
+  const isScoped = Boolean(data.scope && data.scope !== "full");
   const benchmarkCatalog = data.benchmark_catalog;
   const modelCatalog = data.model_catalog;
   const pages = data.benchmark_pages;
@@ -35,7 +36,7 @@
     || Number(a.rank) - Number(b.rank)
   )));
 
-  const overallData = buildOverallRankings();
+  const overallData = data.overall_data || buildOverallRankings();
   const overallRankings = overallData.rankings;
 
   const el = id => document.getElementById(id);
@@ -249,7 +250,8 @@
   }
 
   function modelDisplayRowCount(modelName) {
-    return (modelRows.get(modelName) || []).length;
+    if (!isScoped || modelName === data.scope_key) return (modelRows.get(modelName) || []).length;
+    return Number(modelByName.get(modelName)?.result_count || 0);
   }
 
   function updateHash() {
@@ -312,6 +314,12 @@
   }
 
   function switchView(mode, key, writeHash = true) {
+    if (isScoped) {
+      if (mode === "overall") location.href = "/ranking/";
+      else if (mode === "models") location.href = modelPath(key || defaultModel?.model_name);
+      else location.href = benchmarkPath(key || benchmarkCatalog[0]?.rank_group_key);
+      return;
+    }
     state.mode = mode;
     state.query = "";
     state.filter = "all";
@@ -352,7 +360,8 @@
         item.best_model,
         item.best_vendor,
         item.protocol_badges,
-        ...pageModels
+        ...pageModels,
+        ...(item.search_models || [])
       ].join(" ").toLowerCase();
       const filterOk = state.filter === "all" || item.domain === state.filter;
       return filterOk && (!query || text.includes(query));
@@ -399,6 +408,10 @@
 
     el("benchList").querySelectorAll("button[data-key]").forEach(button => {
       button.addEventListener("click", () => {
+        if (isScoped) {
+          location.href = state.mode === "models" ? modelPath(button.dataset.key) : benchmarkPath(button.dataset.key);
+          return;
+        }
         state.selected = button.dataset.key;
         updateHash();
         renderList();

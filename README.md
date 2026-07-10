@@ -45,6 +45,7 @@ Coverage changes as new official reports are imported. The live site is the sour
 - **Shareable pages**: every model and benchmark has an indexable permalink.
 - **Shareable exploration state**: benchmark, protocol, view, filters, and Matrix models are encoded in the URL.
 - **Lazy benchmark loading**: the homepage loads a compact catalog before fetching benchmark evidence on demand.
+- **Scoped detail bundles**: model, benchmark, and ranking pages load only the rows required for that route.
 - **Evidence-first data**: each row remains linked to its originating report and evidence location.
 
 ## Overall ranking methodology
@@ -128,6 +129,7 @@ node scripts/generate-seo-pages.js
 | `site_data.bundle.js` | Bundled normalized benchmark dataset |
 | `site_data.index.bundle.js` | Compact homepage catalog without benchmark detail rows |
 | `data/benchmarks/` | Per-benchmark JSON loaded on demand by the Spatial Atlas |
+| `data/pages/` | Route-scoped bundles for benchmark, model, and ranking pages |
 | `data/normalization_rules.json` | Auditable model and benchmark alias rules |
 | `scripts/generate-seo-pages.js` | Generates clean, indexable detail URLs |
 | `scripts/split-site-data.js` | Splits the full bundle into the homepage index and lazy benchmark files |
