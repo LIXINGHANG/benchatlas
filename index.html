@@ -133,7 +133,7 @@
 
     .view-switch {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       border: 1px solid var(--line);
       border-radius: 6px;
       background: var(--panel-2);
@@ -251,6 +251,19 @@
     }
 
     .active .bench-meta { color: rgba(255, 253, 247, 0.72); }
+
+    .overall-rank {
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .active .overall-rank { color: #ffb4aa; }
+
+    .bench-button.overall-item {
+      grid-template-columns: 30px minmax(0, 1fr) auto;
+      align-items: start;
+    }
 
     .bench-score {
       align-self: start;
@@ -660,6 +673,7 @@
         <div class="view-switch" role="tablist" aria-label="Explore by">
           <button class="view-tab active" id="benchmarkViewTab" type="button" role="tab" aria-selected="true">Benchmarks</button>
           <button class="view-tab" id="modelViewTab" type="button" role="tab" aria-selected="false">Models</button>
+          <button class="view-tab" id="overallViewTab" type="button" role="tab" aria-selected="false">Overall</button>
         </div>
         <input class="search" id="search" type="search" placeholder="Search benchmark, domain, model" aria-label="Search benchmarks and models">
         <div class="filters">
@@ -726,6 +740,6 @@
   </div>
 
   <script src="site_data.bundle.js?v=d9186ad"></script>
-  <script src="app.js?v=model-view-4"></script>
+  <script src="app.js?v=overall-ranking-1"></script>
 </body>
 </html>

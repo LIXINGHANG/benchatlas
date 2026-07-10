@@ -29,6 +29,9 @@
     || Number(a.rank) - Number(b.rank)
   )));
 
+  const overallData = buildOverallRankings();
+  const overallRankings = overallData.rankings;
+
   const el = id => document.getElementById(id);
   const fmt = value => Number.isFinite(Number(value)) ? Number(value).toLocaleString("en-US") : value;
   const plural = (count, singular, pluralForm = `${singular}s`) => Number(count) === 1 ? singular : pluralForm;
@@ -41,6 +44,86 @@
     "'": "&#39;"
   }[char]));
 
+  function buildOverallRankings() {
+    const observations = new Map();
+    let benchmarkGroupCount = 0;
+
+    Object.entries(pages).forEach(([benchmarkKey, page]) => {
+      const seenModels = new Set();
+      const uniqueRows = [];
+      page.rows.forEach(row => {
+        if (!seenModels.has(row.model_name)) {
+          seenModels.add(row.model_name);
+          uniqueRows.push(row);
+        }
+      });
+
+      const vendorCount = new Set(uniqueRows.map(row => row.vendor)).size;
+      if (uniqueRows.length < 3 || vendorCount < 2) return;
+      benchmarkGroupCount += 1;
+
+      let previousScore = null;
+      let competitionRank = 0;
+      uniqueRows.forEach((row, index) => {
+        if (previousScore === null || String(row.score) !== previousScore) {
+          competitionRank = index + 1;
+          previousScore = String(row.score);
+        }
+        const percentile = 100 * (uniqueRows.length - competitionRank) / (uniqueRows.length - 1);
+        if (!observations.has(row.model_name)) observations.set(row.model_name, []);
+        observations.get(row.model_name).push({
+          benchmark_key: benchmarkKey,
+          domain: page.domain,
+          percentile
+        });
+      });
+    });
+
+    const rankings = [];
+    observations.forEach((rows, modelName) => {
+      const domainScores = new Map();
+      rows.forEach(row => {
+        if (!domainScores.has(row.domain)) domainScores.set(row.domain, []);
+        domainScores.get(row.domain).push(row.percentile);
+      });
+      if (rows.length < 5 || domainScores.size < 2) return;
+
+      const domainMeans = Array.from(domainScores.values()).map(values => (
+        values.reduce((sum, value) => sum + value, 0) / values.length
+      ));
+      const rawScore = domainMeans.reduce((sum, value) => sum + value, 0) / domainMeans.length;
+      const coverageWeight = rows.length / (rows.length + 10);
+      const indexScore = 50 + (rawScore - 50) * coverageWeight;
+      const model = modelByName.get(modelName);
+      const confidence = rows.length >= 25 && domainScores.size >= 5
+        ? "high"
+        : rows.length >= 10 && domainScores.size >= 3 ? "medium" : "limited";
+
+      rankings.push({
+        model_name: modelName,
+        vendor: model?.vendor || "Unknown",
+        index_score: Number(indexScore.toFixed(1)),
+        raw_score: Number(rawScore.toFixed(1)),
+        benchmark_count: rows.length,
+        domain_count: domainScores.size,
+        report_count: Number(model?.report_count || 0),
+        confidence
+      });
+    });
+
+    rankings.sort((a, b) => b.index_score - a.index_score || b.benchmark_count - a.benchmark_count);
+    let previousIndex = null;
+    let rank = 0;
+    rankings.forEach((row, index) => {
+      if (previousIndex === null || row.index_score !== previousIndex) {
+        rank = index + 1;
+        previousIndex = row.index_score;
+      }
+      row.overall_rank = rank;
+    });
+    return { rankings, benchmarkGroupCount };
+  }
+
   function parseHash() {
     try {
       if (location.hash.startsWith("#model=")) {
@@ -51,6 +134,7 @@
         const benchmarkKey = decodeURIComponent(location.hash.slice(11));
         if (pages[benchmarkKey]) return { mode: "benchmarks", key: benchmarkKey };
       }
+      if (location.hash === "#overall") return { mode: "overall", key: "overall" };
     } catch {
       return null;
     }
@@ -63,15 +147,16 @@
     selected: initial?.key || benchmarkCatalog[0]?.rank_group_key,
     query: "",
     filter: "all",
-    sort: "coverage"
+    sort: initial?.mode === "overall" ? "index" : "coverage"
   };
 
   function currentCatalog() {
+    if (state.mode === "overall") return overallRankings;
     return state.mode === "models" ? modelCatalog : benchmarkCatalog;
   }
 
   function itemKey(item) {
-    return state.mode === "models" ? item.model_name : item.rank_group_key;
+    return state.mode === "models" || state.mode === "overall" ? item.model_name : item.rank_group_key;
   }
 
   function modelDisplayRowCount(modelName) {
@@ -79,34 +164,48 @@
   }
 
   function updateHash() {
+    if (state.mode === "overall") {
+      history.replaceState(null, "", "#overall");
+      return;
+    }
     const prefix = state.mode === "models" ? "model" : "benchmark";
     history.replaceState(null, "", `#${prefix}=${encodeURIComponent(state.selected)}`);
   }
 
   function configureControls() {
     const isModels = state.mode === "models";
-    el("benchmarkViewTab").classList.toggle("active", !isModels);
+    const isOverall = state.mode === "overall";
+    el("benchmarkViewTab").classList.toggle("active", !isModels && !isOverall);
     el("modelViewTab").classList.toggle("active", isModels);
-    el("benchmarkViewTab").setAttribute("aria-selected", String(!isModels));
+    el("overallViewTab").classList.toggle("active", isOverall);
+    el("benchmarkViewTab").setAttribute("aria-selected", String(!isModels && !isOverall));
     el("modelViewTab").setAttribute("aria-selected", String(isModels));
+    el("overallViewTab").setAttribute("aria-selected", String(isOverall));
 
-    el("search").placeholder = isModels
+    el("search").placeholder = isOverall
+      ? "Search ranked model or vendor"
+      : isModels
       ? "Search model, vendor, domain"
       : "Search benchmark, domain, model";
-    el("search").setAttribute("aria-label", isModels ? "Search models" : "Search benchmarks and models");
+    el("search").setAttribute("aria-label", isOverall ? "Search overall ranking" : isModels ? "Search models" : "Search benchmarks and models");
 
-    if (isModels) {
-      const vendors = ["all", ...Array.from(new Set(modelCatalog.map(item => item.vendor))).sort()];
+    if (isModels || isOverall) {
+      const vendorSource = isOverall ? overallRankings : modelCatalog;
+      const vendors = ["all", ...Array.from(new Set(vendorSource.map(item => item.vendor))).sort()];
       el("domainFilter").setAttribute("aria-label", "Vendor filter");
       el("domainFilter").innerHTML = vendors.map(vendor => (
         `<option value="${esc(vendor)}">${vendor === "all" ? "All vendors" : esc(vendor)}</option>`
       )).join("");
-      el("sortMode").innerHTML = `
+      el("sortMode").innerHTML = isOverall ? `
+        <option value="index">Sort by index</option>
         <option value="coverage">Sort by coverage</option>
         <option value="name">Sort by name</option>
-        <option value="results">Sort by results</option>
-        <option value="reports">Sort by reports</option>
-      `;
+      ` : `
+          <option value="coverage">Sort by coverage</option>
+          <option value="name">Sort by name</option>
+          <option value="results">Sort by results</option>
+          <option value="reports">Sort by reports</option>
+        `;
     } else {
       const domains = ["all", ...Array.from(new Set(benchmarkCatalog.map(item => item.domain))).sort()];
       el("domainFilter").setAttribute("aria-label", "Domain filter");
@@ -127,13 +226,17 @@
     state.mode = mode;
     state.query = "";
     state.filter = "all";
-    state.sort = "coverage";
+    state.sort = mode === "overall" ? "index" : "coverage";
     el("search").value = "";
     configureControls();
 
     const catalog = currentCatalog();
-    const valid = catalog.some(item => itemKey(item) === key);
-    state.selected = valid ? key : itemKey(catalog[0]);
+    if (mode === "overall") {
+      state.selected = "overall";
+    } else {
+      const valid = catalog.some(item => itemKey(item) === key);
+      state.selected = valid ? key : itemKey(catalog[0]);
+    }
     if (writeHash) updateHash();
     renderList();
   }
@@ -141,6 +244,11 @@
   function filteredCatalog() {
     const query = state.query;
     let rows = currentCatalog().filter(item => {
+      if (state.mode === "overall") {
+        const text = [item.model_name, item.vendor, item.confidence].join(" ").toLowerCase();
+        const filterOk = state.filter === "all" || item.vendor === state.filter;
+        return filterOk && (!query || text.includes(query));
+      }
       if (state.mode === "models") {
         const text = [item.model_name, item.vendor, item.top_domains, item.reports].join(" ").toLowerCase();
         const filterOk = state.filter === "all" || item.vendor === state.filter;
@@ -164,7 +272,7 @@
     rows = rows.slice();
     if (state.sort === "name") {
       rows.sort((a, b) => (
-        state.mode === "models"
+        state.mode === "models" || state.mode === "overall"
           ? a.model_name.localeCompare(b.model_name)
           : `${a.benchmark_name} ${a.benchmark_variant}`.localeCompare(`${b.benchmark_name} ${b.benchmark_variant}`)
       ));
@@ -172,6 +280,10 @@
       rows.sort((a, b) => Number(b.report_count) - Number(a.report_count) || Number(b.benchmark_count || b.model_count) - Number(a.benchmark_count || a.model_count));
     } else if (state.sort === "results") {
       rows.sort((a, b) => modelDisplayRowCount(b.model_name) - modelDisplayRowCount(a.model_name) || Number(b.benchmark_count) - Number(a.benchmark_count));
+    } else if (state.mode === "overall" && state.sort === "coverage") {
+      rows.sort((a, b) => Number(b.benchmark_count) - Number(a.benchmark_count) || Number(a.overall_rank) - Number(b.overall_rank));
+    } else if (state.mode === "overall") {
+      rows.sort((a, b) => Number(a.overall_rank) - Number(b.overall_rank));
     } else if (state.mode === "models") {
       rows.sort((a, b) => Number(b.benchmark_count) - Number(a.benchmark_count) || Number(b.result_count) - Number(a.result_count));
     } else {
@@ -182,17 +294,19 @@
 
   function renderList() {
     const rows = filteredCatalog();
-    const previousSelection = state.selected;
-    if (!rows.some(item => itemKey(item) === state.selected)) {
-      state.selected = rows[0] ? itemKey(rows[0]) : itemKey(currentCatalog()[0]);
+    if (state.mode !== "overall") {
+      const previousSelection = state.selected;
+      if (!rows.some(item => itemKey(item) === state.selected)) {
+        state.selected = rows[0] ? itemKey(rows[0]) : itemKey(currentCatalog()[0]);
+      }
+      if (state.selected !== previousSelection) updateHash();
     }
-    if (state.selected !== previousSelection) updateHash();
 
-    const noun = state.mode === "models" ? "model" : "benchmark group";
+    const noun = state.mode === "overall" ? "ranked model" : state.mode === "models" ? "model" : "benchmark group";
     el("resultMeta").textContent = `${rows.length} ${noun}${rows.length === 1 ? "" : "s"}`;
     el("benchList").innerHTML = rows.map(item => (
-      state.mode === "models" ? renderModelListItem(item) : renderBenchmarkListItem(item)
-    )).join("") || `<div class="empty">No matching ${state.mode === "models" ? "models" : "benchmarks"}.</div>`;
+      state.mode === "overall" ? renderOverallListItem(item) : state.mode === "models" ? renderModelListItem(item) : renderBenchmarkListItem(item)
+    )).join("") || `<div class="empty">No matching ${state.mode === "benchmarks" ? "benchmarks" : "models"}.</div>`;
 
     el("benchList").querySelectorAll("button[data-key]").forEach(button => {
       button.addEventListener("click", () => {
@@ -200,6 +314,9 @@
         updateHash();
         renderList();
       });
+    });
+    el("benchList").querySelectorAll("button[data-open-model]").forEach(button => {
+      button.addEventListener("click", () => switchView("models", button.dataset.openModel));
     });
     renderPage();
   }
@@ -236,6 +353,24 @@
     `;
   }
 
+  function renderOverallListItem(item) {
+    return `
+      <button class="bench-button overall-item" data-open-model="${esc(item.model_name)}">
+        <span class="overall-rank">#${esc(item.overall_rank)}</span>
+        <span>
+          <span class="bench-name">${esc(item.model_name)}</span>
+          <span class="bench-meta">
+            <span>${esc(item.vendor)}</span>
+            <span>${esc(item.benchmark_count)} groups</span>
+            <span>${esc(item.domain_count)} domains</span>
+            <span>${esc(humanize(item.confidence))} confidence</span>
+          </span>
+        </span>
+        <span class="bench-score">${esc(item.index_score)}</span>
+      </button>
+    `;
+  }
+
   function renderBadges(target, badges, includeWarning = false) {
     const all = includeWarning ? ["protocol_variant", ...badges] : badges;
     target.innerHTML = all.length
@@ -249,8 +384,32 @@
   }
 
   function renderPage() {
-    if (state.mode === "models") renderModelPage();
+    if (state.mode === "overall") renderOverallPage();
+    else if (state.mode === "models") renderModelPage();
     else renderBenchmarkPage();
+  }
+
+  function renderOverallPage() {
+    const rows = filteredCatalog();
+    const vendorCount = new Set(overallRankings.map(row => row.vendor)).size;
+    el("domainLabel").textContent = "Reported Performance Index";
+    el("pageTitle").textContent = "Overall Model Ranking";
+    document.title = "Overall Model Ranking - BenchAtlas";
+    setStat("statModels", "statLabelModels", overallRankings.length, "eligible models");
+    setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, "benchmark groups");
+    setStat("statVendors", "statLabelVendors", vendorCount, plural(vendorCount, "vendor"));
+    setStat("statReports", "statLabelReports", 5, "minimum groups");
+    el("metricLabel").textContent = "RPI · 0–100";
+    el("rankingTitle").textContent = "Reported Performance Index";
+    el("rankingNote").textContent = "A coverage-adjusted comparison of rankings reported across eligible benchmark groups.";
+    el("summaryHeading").textContent = "Leaders";
+    el("signalsHeading").textContent = "Eligibility";
+    el("policyHeading").textContent = "Methodology";
+    el("policyText").textContent = "Within each benchmark group, model ranks become 0–100 percentiles. Benchmark scores are averaged within each domain, then domains receive equal weight. Limited coverage is shrunk toward 50. Only groups with at least 3 models from 2 vendors and models covering at least 5 groups across 2 domains qualify. This index reflects published report coverage and may inherit vendor selection bias; it is not an absolute capability score.";
+    renderBadges(el("panelBadges"), ["reported index", "domain balanced", "coverage adjusted"], false);
+    renderBadges(el("contextBadges"), ["≥5 benchmark groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
+    renderOverallLeaders(rows);
+    renderOverallRanking(rows);
   }
 
   function renderBenchmarkPage() {
@@ -342,6 +501,16 @@
         <em>${Math.round((count / Math.max(total, 1)) * 100)}%</em>
       </div>
     `).join("");
+  }
+
+  function renderOverallLeaders(rows) {
+    el("topModels").innerHTML = rows.slice(0, 5).map(row => `
+      <div class="mini-item">
+        <b>#${esc(row.overall_rank)}</b>
+        <span>${esc(row.model_name)}</span>
+        <em>${esc(row.index_score)}</em>
+      </div>
+    `).join("") || `<div class="empty">No eligible models match these filters.</div>`;
   }
 
   function renderSourceLinks(sourceUrls) {
@@ -439,6 +608,44 @@
     attachEntityLinks();
   }
 
+  function renderOverallRanking(rows) {
+    if (!rows.length) {
+      el("rankingTable").innerHTML = `<div class="empty">No eligible models match these filters.</div>`;
+      return;
+    }
+    el("rankingTable").innerHTML = `
+      <table>
+        <thead><tr><th>Rank</th><th>Model</th><th>RPI</th><th>Coverage</th><th>Method</th></tr></thead>
+        <tbody>
+          ${rows.map(row => `
+            <tr>
+              <td class="rank">#${esc(row.overall_rank)}</td>
+              <td>
+                <div class="model"><button class="entity-link model-jump" data-model="${esc(row.model_name)}">${esc(row.model_name)}</button></div>
+                <div class="vendor">${esc(row.vendor)}</div>
+              </td>
+              <td>
+                <div class="score">${esc(row.index_score)}</div>
+                <div class="vendor">Raw domain score ${esc(row.raw_score)}</div>
+              </td>
+              <td>
+                <div class="badges">
+                  <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(row.confidence)} confidence</span>
+                </div>
+                <div class="method-summary">${esc(row.benchmark_count)} benchmark groups · ${esc(row.domain_count)} domains · ${esc(row.report_count)} ${plural(row.report_count, "report")}</div>
+              </td>
+              <td>
+                <div class="method-summary"><b>Coverage adjustment:</b> the domain-balanced score is shrunk toward 50 when fewer benchmark groups are available.</div>
+                <button class="entity-link model-jump" data-model="${esc(row.model_name)}">Open model details</button>
+              </td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    `;
+    attachEntityLinks();
+  }
+
   function attachEntityLinks() {
     el("rankingTable").querySelectorAll(".model-jump").forEach(button => {
       button.addEventListener("click", () => switchView("models", button.dataset.model));
@@ -452,6 +659,7 @@
     el("totalCount").textContent = `${data.summary.result_count} rows`;
     el("benchmarkViewTab").addEventListener("click", () => switchView("benchmarks", benchmarkCatalog[0]?.rank_group_key));
     el("modelViewTab").addEventListener("click", () => switchView("models", defaultModel?.model_name));
+    el("overallViewTab").addEventListener("click", () => switchView("overall", "overall"));
     el("search").addEventListener("input", event => {
       state.query = event.target.value.toLowerCase().trim();
       renderList();
