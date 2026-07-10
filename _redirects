@@ -1,1 +1,12 @@
 /legacy/* / 301
+/models/claude-4-7-opus/ /models/claude-opus-4-7/ 301
+/models/opus-4-6-max/ /models/claude-opus-4-6-max-effort/ 301
+/models/gemini-3-1-pro-14u7y1/ /models/gemini-3-1-pro/ 301
+/models/gemini-3-1-pro-n8agr5/ /models/gemini-3-1-pro/ 301
+/models/gemini-3-5-flash-1f33ig/ /models/gemini-3-5-flash/ 301
+/models/gemini-3-5-flash-3owzxs/ /models/gemini-3-5-flash/ 301
+/models/kimi-k2-6-18k6gv/ /models/kimi-k2-6/ 301
+/models/kimi-k2-6-1havwf/ /models/kimi-k2-6/ 301
+/models/minimax-m3-1onl2j/ /models/minimax-m3/ 301
+/models/minimax-m3-e2by5k/ /models/minimax-m3/ 301
+/models/qwen-3-7-max/ /models/qwen3-7-max/ 301

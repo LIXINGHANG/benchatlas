@@ -94,19 +94,48 @@
     return `/benchmarks/${benchmarkSlugByKey.get(benchmarkKey) || slugify(benchmarkKey)}/`;
   }
 
+  function comparisonGroups(rows) {
+    const groups = new Map();
+    rows.forEach(row => {
+      const id = row.comparability_group_id || `legacy--${row.source_report_id || "unknown"}`;
+      if (!groups.has(id)) groups.set(id, {
+        id,
+        label: row.comparability_group_label || "Source-scoped reported setup",
+        status: row.comparability_status || "source_scoped",
+        rows: []
+      });
+      groups.get(id).rows.push(row);
+    });
+    return Array.from(groups.values()).map(group => {
+      const models = new Set(group.rows.map(row => row.model_id || row.model_name));
+      group.model_count = models.size;
+      group.rows.sort((a, b) => Number(a.rank) - Number(b.rank));
+      return group;
+    }).sort((a, b) => (
+      Number(b.status === "strict") - Number(a.status === "strict")
+      || b.model_count - a.model_count
+      || b.rows.length - a.rows.length
+    ));
+  }
+
+  function preferredComparisonRows(rows) {
+    const group = comparisonGroups(rows)[0];
+    if (!group) return [];
+    const seen = new Set();
+    return group.rows.filter(row => {
+      const key = row.model_id || row.model_name;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+
   function buildOverallRankings() {
     const observations = new Map();
     let benchmarkGroupCount = 0;
 
     Object.entries(pages).forEach(([benchmarkKey, page]) => {
-      const seenModels = new Set();
-      const uniqueRows = [];
-      page.rows.forEach(row => {
-        if (!seenModels.has(row.model_name)) {
-          seenModels.add(row.model_name);
-          uniqueRows.push(row);
-        }
-      });
+      const uniqueRows = preferredComparisonRows(page.rows);
 
       const vendorCount = new Set(uniqueRows.map(row => row.vendor)).size;
       if (uniqueRows.length < 3 || vendorCount < 2) return;
@@ -432,7 +461,7 @@
   }
 
   function renderBadges(target, badges, includeWarning = false) {
-    const all = includeWarning ? ["protocol_variant", ...badges] : badges;
+    const all = includeWarning ? ["protocol aware", ...badges] : badges;
     target.innerHTML = all.length
       ? all.map((badge, index) => `<span class="badge ${index === 0 && includeWarning ? "warn" : ""}">${esc(badge)}</span>`).join("")
       : `<span class="badge warn">protocol details sparse</span>`;
@@ -502,12 +531,12 @@
     setStat("statReports", "statLabelReports", 5, "minimum groups");
     el("metricLabel").textContent = "RPI · 0–100";
     el("rankingTitle").textContent = "Reported Performance Index";
-    el("rankingNote").textContent = "A coverage-adjusted comparison of rankings reported across eligible benchmark groups.";
+    el("rankingNote").textContent = "A coverage-adjusted comparison using the preferred documented protocol group within each benchmark.";
     el("summaryHeading").textContent = "Leaders";
     el("signalsHeading").textContent = "Eligibility";
     el("policyHeading").textContent = "Methodology";
-    el("policyText").textContent = "Within each benchmark group, model ranks become 0–100 percentiles. Benchmark scores are averaged within each domain, then domains receive equal weight. Limited coverage is shrunk toward 50. Only groups with at least 3 models from 2 vendors and models covering at least 5 groups across 2 domains qualify. This index reflects published report coverage and may inherit vendor selection bias; it is not an absolute capability score.";
-    renderBadges(el("panelBadges"), ["reported index", "domain balanced", "coverage adjusted"], false);
+    el("policyText").textContent = "For each benchmark, BenchAtlas first selects a documented shared-protocol group when available; source-scoped groups are used only when no strict group exists. Model ranks become 0–100 percentiles, are averaged within each domain, and domains receive equal weight. Limited coverage is shrunk toward 50. This index still reflects published report coverage and is not an absolute capability score.";
+    renderBadges(el("panelBadges"), ["protocol grouped", "domain balanced", "coverage adjusted"], false);
     renderBadges(el("contextBadges"), ["≥5 benchmark groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
@@ -516,6 +545,8 @@
   function renderBenchmarkPage() {
     const page = pages[state.selected];
     if (!page) return;
+    const comparisonGroup = comparisonGroups(page.rows)[0];
+    const comparableRows = preferredComparisonRows(page.rows);
     const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
     el("domainLabel").textContent = humanize(page.domain || "benchmark");
     el("pageTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
@@ -531,16 +562,18 @@
     setStat("statVendors", "statLabelVendors", vendorCount, plural(vendorCount, "vendor"));
     setStat("statReports", "statLabelReports", reportCount, plural(reportCount, "report"));
     el("metricLabel").textContent = `${page.metric_name} · ${page.score_unit || "score"}`;
-    el("rankingTitle").textContent = "Reported Ranking";
-    el("rankingNote").textContent = "Protocol variants are shown, not strict normalized leaderboards.";
+    el("rankingTitle").textContent = "Comparable Ranking";
+    el("rankingNote").textContent = comparisonGroup
+      ? `Showing ${comparisonGroup.model_count} models from the preferred ${comparisonGroup.status === "strict" ? "documented shared-protocol" : "source-scoped"} group: ${comparisonGroup.label}.`
+      : "No comparable rows are available.";
     el("summaryHeading").textContent = "Best reported";
     el("signalsHeading").textContent = "Protocol signals";
     el("policyHeading").textContent = "Evidence policy";
-    el("policyText").textContent = "Scores are kept with their original report, evidence location, and evaluation notes. Rows marked protocol variant may use different harnesses or settings, so treat the ranking as reported results rather than a strictly normalized leaderboard.";
-    renderBadges(el("panelBadges"), page.protocol_badges || [], true);
+    el("policyText").textContent = "Only rows sharing the preferred comparability group are ranked together. Other reported protocols remain preserved in the dataset and model pages with source-scoped or shared-protocol labels.";
+    renderBadges(el("panelBadges"), [comparisonGroup?.status === "strict" ? "shared protocol" : "source scoped", ...(page.protocol_badges || [])], false);
     renderBadges(el("contextBadges"), page.protocol_badges || [], false);
-    renderTopModels(page.rows);
-    renderBenchmarkRanking(page.rows);
+    renderTopModels(comparableRows);
+    renderBenchmarkRanking(comparableRows);
   }
 
   function renderModelPage() {
@@ -628,9 +661,10 @@
   }
 
   function protocolCell(row) {
+    const comparisonLabel = row.comparability_status === "strict" ? "shared protocol" : "source scoped";
     return `
       <div class="badges">
-        <span class="badge warn">${esc(row.comparability_label)}</span>
+        <span class="badge ${row.comparability_status === "strict" ? "" : "warn"}">${esc(comparisonLabel)}</span>
         ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
       </div>
       ${row.protocol_short ? `<div class="method-summary"><b>Method notes:</b> ${esc(row.protocol_short)}</div>` : ""}
@@ -666,13 +700,22 @@
       el("rankingTable").innerHTML = `<div class="empty">No scored rows for this benchmark.</div>`;
       return;
     }
+    let previousScore = null;
+    let comparableRank = 0;
+    const rankedRows = rows.map((row, index) => {
+      if (previousScore === null || String(row.score) !== previousScore) {
+        comparableRank = index + 1;
+        previousScore = String(row.score);
+      }
+      return { ...row, comparable_rank: comparableRank };
+    });
     el("rankingTable").innerHTML = `
       <table>
         <thead><tr><th>Rank</th><th>Model</th><th>Score</th><th>Protocol</th><th>Source evidence</th></tr></thead>
         <tbody>
-          ${rows.map(row => `
+          ${rankedRows.map(row => `
             <tr>
-              <td class="rank">#${esc(row.rank)}</td>
+              <td class="rank">#${esc(row.comparable_rank)}</td>
               <td>
                 <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
                 <div class="vendor">${esc(row.vendor)}</div>

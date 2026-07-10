@@ -24,10 +24,13 @@ BenchAtlas is designed to answer four questions:
 | Data | Coverage |
 | --- | ---: |
 | Reported result rows | 1,681 |
-| Models | 65 |
+| Normalized models | 58 |
+| Raw model labels | 65 |
 | Benchmark groups | 410 |
 | Source reports | 11 |
-| Rows with protocol information | 386 |
+| Protocol records | 386 |
+| Results in documented shared-protocol groups | 695 |
+| Source-scoped results | 986 |
 
 Coverage changes as new official reports are imported. The live site is the source of truth for current totals.
 
@@ -46,12 +49,13 @@ Coverage changes as new official reports are imported. The live site is the sour
 
 The Reported Performance Index (RPI) is a coverage-adjusted summary of published benchmark rankings. It is not an absolute model capability score.
 
-1. Within each eligible benchmark group, model ranks are converted to a 0–100 percentile.
-2. Benchmark percentiles are averaged within each domain.
-3. Domains receive equal weight so one heavily reported domain does not dominate the result.
-4. Limited benchmark coverage is shrunk toward 50.
-5. A benchmark group needs at least three models from two vendors.
-6. A model needs at least five eligible benchmark groups across two domains.
+1. For each benchmark, select the largest documented shared-protocol group; use a source-scoped group only when no strict group exists.
+2. Within each eligible comparison group, model ranks are converted to a 0–100 percentile.
+3. Benchmark percentiles are averaged within each domain.
+4. Domains receive equal weight so one heavily reported domain does not dominate the result.
+5. Limited benchmark coverage is shrunk toward 50.
+6. A comparison group needs at least three models from two vendors.
+7. A model needs at least five eligible benchmark groups across two domains.
 
 Because the index uses vendor-published reports, it may inherit benchmark-selection and reporting bias. Always inspect the underlying rows before drawing strong conclusions.
 
@@ -75,6 +79,14 @@ Safety is an orthogonal layer rather than a separate capability region. A vision
 - Multiple reported results may be retained for the same model and benchmark.
 - Source evidence and short quotations are included for verification.
 - Corrections should cite an official report page, table, figure, footnote, or methodology section.
+
+## Normalization and comparability
+
+- Raw model labels are mapped to stable `model_id` values using the public rules in [`data/normalization_rules.json`](data/normalization_rules.json).
+- Benchmark spelling aliases map to a stable `benchmark_family_id`; dataset subsets, harnesses, metrics, and tool variants remain separate.
+- Every reported row receives a `comparability_group_id` derived from benchmark variant, metric, score direction, harness, tools, timeout, compute, context, sampling, reasoning mode, runs, judge, and dataset notes.
+- Rows with a documented shared setup may rank together. Rows without enough methodology remain source-scoped and are never silently mixed into a strict comparison.
+- The homepage defaults to the largest documented shared-protocol group and lets readers inspect alternative source groups explicitly.
 
 ## Contributing
 
@@ -111,6 +123,7 @@ node scripts/generate-seo-pages.js
 | `index.html` | Spatial Atlas homepage, Registry, Matrix, and evidence inspector |
 | `app.js` | Legacy detail views, filtering, routing, and ranking logic |
 | `site_data.bundle.js` | Bundled normalized benchmark dataset |
+| `data/normalization_rules.json` | Auditable model and benchmark alias rules |
 | `scripts/generate-seo-pages.js` | Generates clean, indexable detail URLs |
 | `models/` | Generated model pages |
 | `benchmarks/` | Generated benchmark pages |

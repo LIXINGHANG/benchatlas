@@ -1,0 +1,30 @@
+{
+  "model_aliases": {
+    "Qwen-3.7 Max": {"display_name": "Qwen3.7-Max", "vendor": "Qwen"},
+    "Claude-4.7 Opus": {"display_name": "Claude Opus 4.7", "vendor": "Anthropic"},
+    "Opus-4.6 Max": {"display_name": "Claude Opus 4.6 (max effort)", "vendor": "Anthropic"},
+    "Gemini-3.1-Pro": {"display_name": "Gemini 3.1 Pro", "vendor": "Google DeepMind"},
+    "Gemini-3.5 Flash": {"display_name": "Gemini 3.5 Flash", "vendor": "Google DeepMind"},
+    "MiniMax-M3": {"display_name": "MiniMax M3", "vendor": "MiniMax"},
+    "Kimi-K2.6": {"display_name": "Kimi K2.6", "vendor": "Moonshot Kimi"}
+  },
+  "benchmark_aliases": {
+    "GPQA-Diamond": "GPQA Diamond",
+    "MCP-Atlas": "MCP Atlas",
+    "Terminal Bench 2.1": "Terminal-Bench 2.1",
+    "Terminal-bench 2.1": "Terminal-Bench 2.1",
+    "SWE-bench Verified": "SWE-Bench Verified",
+    "HMMT 2026 Feb": "HMMT Feb. 2026"
+  },
+  "configuration_patterns": [
+    "thinking high",
+    "thinking",
+    "deep think",
+    "max effort",
+    "xhigh",
+    "high",
+    "preview",
+    "railfree",
+    "ultra"
+  ]
+}

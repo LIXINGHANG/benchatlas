@@ -13,12 +13,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/models/qwen-3-7-max/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://benchatlas.cn/models/claude-code-cli-opus-4-6/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -97,18 +91,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/models/claude-4-7-opus/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/models/opus-4-6-max/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://benchatlas.cn/models/seed-2-1-pro-preview/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -169,7 +151,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/models/gemini-3-1-pro-14u7y1/</loc>
+    <loc>https://benchatlas.cn/models/gemini-3-1-pro/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -187,7 +169,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/models/gemini-3-5-flash-3owzxs/</loc>
+    <loc>https://benchatlas.cn/models/gemini-3-5-flash/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -199,31 +181,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/models/gemini-3-1-pro-n8agr5/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/models/gemini-3-5-flash-1f33ig/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/models/minimax-m3-e2by5k/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/models/minimax-m3-1onl2j/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/models/kimi-k2-6-18k6gv/</loc>
+    <loc>https://benchatlas.cn/models/minimax-m3/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -241,7 +199,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/models/kimi-k2-6-1havwf/</loc>
+    <loc>https://benchatlas.cn/models/kimi-k2-6/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1441,13 +1399,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-best-reported-harness-score/</loc>
+    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-terminus-2-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-terminus-2-score/</loc>
+    <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-best-reported-harness-score/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
