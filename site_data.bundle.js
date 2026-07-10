@@ -1,10 +1,10 @@
 window.BENCHATLAS_DATA = {
   "summary": {
-    "result_count": 1656,
-    "model_count": 64,
-    "benchmark_group_count": 408,
-    "report_count": 10,
-    "protocol_count": 381
+    "result_count": 1681,
+    "model_count": 65,
+    "benchmark_group_count": 410,
+    "report_count": 11,
+    "protocol_count": 386
   },
   "model_catalog": [
     {
@@ -28,11 +28,11 @@ window.BENCHATLAS_DATA = {
     {
       "model_name": "Claude Fable 5",
       "vendor": "Anthropic",
-      "result_count": 19,
-      "benchmark_count": 17,
-      "report_count": 2,
-      "reports": "anthropic_fable_mythos_5_2026_06_09; openai_gpt_5_6_release_2026_07_09",
-      "top_domains": "coding:7; agent:4; reasoning:3; professional:2; general:1"
+      "result_count": 24,
+      "benchmark_count": 19,
+      "report_count": 3,
+      "reports": "anthropic_fable_mythos_5_2026_06_09; openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08",
+      "top_domains": "coding:12; agent:4; reasoning:3; professional:2; general:1"
     },
     {
       "model_name": "Claude Fable 5 (High)*",
@@ -91,11 +91,11 @@ window.BENCHATLAS_DATA = {
     {
       "model_name": "Claude Opus 4.7",
       "vendor": "Anthropic",
-      "result_count": 13,
-      "benchmark_count": 13,
-      "report_count": 2,
-      "reports": "bytedance_seed2_1_unknown; google_gemini_3_5_flash_2026_05",
-      "top_domains": "multimodal:3; coding:3; reasoning:2; expert_tasks:2; agent:1"
+      "result_count": 17,
+      "benchmark_count": 17,
+      "report_count": 3,
+      "reports": "bytedance_seed2_1_unknown; google_gemini_3_5_flash_2026_05; xai_grok_4_5_release_2026_07_08",
+      "top_domains": "coding:7; multimodal:3; reasoning:2; expert_tasks:2; agent:1"
     },
     {
       "model_name": "Claude Opus 4.7 (Thinking)",
@@ -109,11 +109,11 @@ window.BENCHATLAS_DATA = {
     {
       "model_name": "Claude Opus 4.8",
       "vendor": "Anthropic",
-      "result_count": 60,
-      "benchmark_count": 56,
-      "report_count": 4,
-      "reports": "anthropic_fable_mythos_5_2026_06_09; bytedance_seed2_1_unknown; openai_gpt_5_6_release_2026_07_09; zai_glm_5_2_2026_06_17",
-      "top_domains": "coding:17; reasoning:13; agent:12; professional:3; computer_use:3"
+      "result_count": 65,
+      "benchmark_count": 58,
+      "report_count": 5,
+      "reports": "anthropic_fable_mythos_5_2026_06_09; bytedance_seed2_1_unknown; openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08; zai_glm_5_2_2026_06_17",
+      "top_domains": "coding:22; reasoning:13; agent:12; professional:3; computer_use:3"
     },
     {
       "model_name": "Claude Opus 4.8 (Thinking)",
@@ -442,11 +442,11 @@ window.BENCHATLAS_DATA = {
     {
       "model_name": "GPT-5.5",
       "vendor": "OpenAI",
-      "result_count": 181,
-      "benchmark_count": 169,
-      "report_count": 7,
-      "reports": "anthropic_fable_mythos_5_2026_06_09; bytedance_seed2_1_unknown; google_gemini_3_5_flash_2026_05; openai_gpt_5_5_2026_04_23; openai_gpt_5_6_preview_system_card_2026_06_25; openai_gpt_5_6_release_2026_07_09; zai_glm_5_2_2026_06_17",
-      "top_domains": "agent:41; coding:35; reasoning:15; cybersecurity:13; science:8"
+      "result_count": 185,
+      "benchmark_count": 170,
+      "report_count": 8,
+      "reports": "anthropic_fable_mythos_5_2026_06_09; bytedance_seed2_1_unknown; google_gemini_3_5_flash_2026_05; openai_gpt_5_5_2026_04_23; openai_gpt_5_6_preview_system_card_2026_06_25; openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08; zai_glm_5_2_2026_06_17",
+      "top_domains": "agent:41; coding:39; reasoning:15; cybersecurity:13; science:8"
     },
     {
       "model_name": "GPT-5.5 Pro",
@@ -568,11 +568,11 @@ window.BENCHATLAS_DATA = {
     {
       "model_name": "GLM-5.2",
       "vendor": "Z.ai",
-      "result_count": 19,
-      "benchmark_count": 19,
-      "report_count": 1,
-      "reports": "zai_glm_5_2_2026_06_17",
-      "top_domains": "coding:9; reasoning:6; agent:3; unknown:1"
+      "result_count": 21,
+      "benchmark_count": 20,
+      "report_count": 2,
+      "reports": "xai_grok_4_5_release_2026_07_08; zai_glm_5_2_2026_06_17",
+      "top_domains": "coding:11; reasoning:6; agent:3; unknown:1"
     },
     {
       "model_name": "GLM-5.2 (Max)",
@@ -582,25 +582,34 @@ window.BENCHATLAS_DATA = {
       "report_count": 1,
       "reports": "bytedance_seed2_1_unknown",
       "top_domains": "coding:1"
+    },
+    {
+      "model_name": "Grok 4.5",
+      "vendor": "xAI",
+      "result_count": 5,
+      "benchmark_count": 5,
+      "report_count": 1,
+      "reports": "xai_grok_4_5_release_2026_07_08",
+      "top_domains": "coding:5"
     }
   ],
   "benchmark_catalog": [
     {
       "rank_group_key": "swe_bench_pro_score",
-      "benchmark_name": "SWE-bench Pro",
+      "benchmark_name": "SWE-Bench Pro",
       "benchmark_variant": "",
       "domain": "coding",
       "metric_name": "score",
       "score_unit": "%",
-      "result_count": 29,
-      "display_result_count": 21,
-      "model_count": 20,
-      "vendor_count": 8,
-      "report_count": 5,
-      "best_model": "Claude Mythos 5",
+      "result_count": 35,
+      "display_result_count": 24,
+      "model_count": 22,
+      "vendor_count": 9,
+      "report_count": 6,
+      "best_model": "Claude Fable 5",
       "best_vendor": "Anthropic",
-      "best_score": "80.3",
-      "comparability": "protocol_variant:29",
+      "best_score": "80.4",
+      "comparability": "protocol_variant:35",
       "protocol_badges": "agent harness; internal; long context; model judge; multi-run; public leaderboard; tools"
     },
     {
@@ -620,6 +629,24 @@ window.BENCHATLAS_DATA = {
       "best_score": "94.3",
       "comparability": "protocol_variant:19",
       "protocol_badges": "long context; model judge; tools"
+    },
+    {
+      "rank_group_key": "terminal_bench_2_1_score",
+      "benchmark_name": "Terminal-Bench 2.1",
+      "benchmark_variant": "2.1",
+      "domain": "coding",
+      "metric_name": "score",
+      "score_unit": "%",
+      "result_count": 19,
+      "display_result_count": 16,
+      "model_count": 12,
+      "vendor_count": 4,
+      "report_count": 3,
+      "best_model": "GPT-5.6 Sol Ultra",
+      "best_vendor": "OpenAI",
+      "best_score": "91.9",
+      "comparability": "protocol_variant:19",
+      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; public leaderboard"
     },
     {
       "rank_group_key": "humanitys_last_exam_with_tools_score",
@@ -730,24 +757,6 @@ window.BENCHATLAS_DATA = {
       "protocol_badges": "long context; model judge; restricted env; tools"
     },
     {
-      "rank_group_key": "terminal_bench_2_1_score",
-      "benchmark_name": "Terminal-Bench 2.1",
-      "benchmark_variant": "2.1",
-      "domain": "coding",
-      "metric_name": "score",
-      "score_unit": "%",
-      "result_count": 14,
-      "display_result_count": 14,
-      "model_count": 10,
-      "vendor_count": 3,
-      "report_count": 2,
-      "best_model": "GPT-5.6 Sol Ultra",
-      "best_vendor": "OpenAI",
-      "best_score": "91.9",
-      "comparability": "protocol_variant:14",
-      "protocol_badges": "agent harness; internal; long context; model judge; multi-run; public leaderboard"
-    },
-    {
       "rank_group_key": "aime_2026_score",
       "benchmark_name": "AIME 2026",
       "benchmark_variant": "",
@@ -764,6 +773,24 @@ window.BENCHATLAS_DATA = {
       "best_score": "99.2",
       "comparability": "protocol_variant:12",
       "protocol_badges": "long context; model judge; tools"
+    },
+    {
+      "rank_group_key": "deepswe_v1_1_score",
+      "benchmark_name": "DeepSWE v1.1",
+      "benchmark_variant": "",
+      "domain": "coding",
+      "metric_name": "score",
+      "score_unit": "%",
+      "result_count": 12,
+      "display_result_count": 10,
+      "model_count": 9,
+      "vendor_count": 5,
+      "report_count": 2,
+      "best_model": "GPT-5.6 Sol",
+      "best_vendor": "OpenAI",
+      "best_score": "72.7",
+      "comparability": "protocol_variant:12",
+      "protocol_badges": "agent harness; public leaderboard"
     },
     {
       "rank_group_key": "imoanswerbench_score",
@@ -1340,24 +1367,6 @@ window.BENCHATLAS_DATA = {
       "best_score": "84.5",
       "comparability": "protocol_variant:7",
       "protocol_badges": ""
-    },
-    {
-      "rank_group_key": "deepswe_v1_1_score",
-      "benchmark_name": "DeepSWE v1.1",
-      "benchmark_variant": "",
-      "domain": "coding",
-      "metric_name": "score",
-      "score_unit": "%",
-      "result_count": 7,
-      "display_result_count": 7,
-      "model_count": 7,
-      "vendor_count": 3,
-      "report_count": 1,
-      "best_model": "GPT-5.6 Sol",
-      "best_vendor": "OpenAI",
-      "best_score": "72.7",
-      "comparability": "protocol_variant:7",
-      "protocol_badges": "agent harness"
     },
     {
       "rank_group_key": "dynamic_mental_health_benchmarks_emotional_reliance_not_unsafe",
@@ -2870,6 +2879,24 @@ window.BENCHATLAS_DATA = {
       "best_score": "70.0",
       "comparability": "protocol_variant:5",
       "protocol_badges": ""
+    },
+    {
+      "rank_group_key": "deepswe_1_0_pass_at_1",
+      "benchmark_name": "DeepSWE 1.0",
+      "benchmark_variant": "",
+      "domain": "coding",
+      "metric_name": "pass@1",
+      "score_unit": "%",
+      "result_count": 5,
+      "display_result_count": 5,
+      "model_count": 5,
+      "vendor_count": 3,
+      "report_count": 1,
+      "best_model": "Claude Fable 5",
+      "best_vendor": "Anthropic",
+      "best_score": "66.1",
+      "comparability": "protocol_variant:5",
+      "protocol_badges": "public leaderboard"
     },
     {
       "rank_group_key": "deepsearchqa_accuracy",
@@ -4436,6 +4463,24 @@ window.BENCHATLAS_DATA = {
       "best_score": "57.9",
       "comparability": "protocol_variant:4",
       "protocol_badges": ""
+    },
+    {
+      "rank_group_key": "swe_marathon_pass_at_1",
+      "benchmark_name": "SWE Marathon",
+      "benchmark_variant": "",
+      "domain": "coding",
+      "metric_name": "pass@1",
+      "score_unit": "%",
+      "result_count": 4,
+      "display_result_count": 4,
+      "model_count": 4,
+      "vendor_count": 2,
+      "report_count": 1,
+      "best_model": "Grok 4.5",
+      "best_vendor": "xAI",
+      "best_score": "29.0",
+      "comparability": "protocol_variant:4",
+      "protocol_badges": "public leaderboard"
     },
     {
       "rank_group_key": "swe_bench_multilingual_score",
@@ -15970,6 +16015,111 @@ window.BENCHATLAS_DATA = {
         }
       ]
     },
+    "deepswe_1_0_pass_at_1": {
+      "rank_group_key": "deepswe_1_0_pass_at_1",
+      "benchmark_name": "DeepSWE 1.0",
+      "benchmark_variant": "",
+      "domain": "coding",
+      "metric_name": "pass@1",
+      "score_unit": "%",
+      "result_count": 5,
+      "display_result_count": 5,
+      "protocol_badges": [
+        "public leaderboard"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "model_name": "Claude Fable 5",
+          "vendor": "Anthropic",
+          "score": "66.1",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning).",
+          "protocol_short": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published sy...",
+          "protocol_full": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning). | eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: each model provider's harness; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: eval created by Datacurve, run with each model provider’s harnesses by AA",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.0",
+          "evidence_quote": "DeepSWE 1.0: Fable (max) 66.1%, GPT 5.5 (xhigh) 64.31%, Grok 4.5 62.0%, Opus 4.8 (max) 55.75%, Opus 4.7 (max) 40.12%."
+        },
+        {
+          "rank": 2,
+          "model_name": "GPT-5.5",
+          "vendor": "OpenAI",
+          "score": "64.31",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning).",
+          "protocol_short": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published sy...",
+          "protocol_full": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning). | eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: each model provider's harness; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: eval created by Datacurve, run with each model provider’s harnesses by AA",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.0",
+          "evidence_quote": "DeepSWE 1.0: Fable (max) 66.1%, GPT 5.5 (xhigh) 64.31%, Grok 4.5 62.0%, Opus 4.8 (max) 55.75%, Opus 4.7 (max) 40.12%."
+        },
+        {
+          "rank": 3,
+          "model_name": "Grok 4.5",
+          "vendor": "xAI",
+          "score": "62.0",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published sy...",
+          "protocol_full": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: each model provider's harness; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: eval created by Datacurve, run with each model provider’s harnesses by AA",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.0",
+          "evidence_quote": "DeepSWE 1.0: Fable (max) 66.1%, GPT 5.5 (xhigh) 64.31%, Grok 4.5 62.0%, Opus 4.8 (max) 55.75%, Opus 4.7 (max) 40.12%."
+        },
+        {
+          "rank": 4,
+          "model_name": "Claude Opus 4.8",
+          "vendor": "Anthropic",
+          "score": "55.75",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning).",
+          "protocol_short": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published sy...",
+          "protocol_full": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning). | eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: each model provider's harness; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: eval created by Datacurve, run with each model provider’s harnesses by AA",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.0",
+          "evidence_quote": "DeepSWE 1.0: Fable (max) 66.1%, GPT 5.5 (xhigh) 64.31%, Grok 4.5 62.0%, Opus 4.8 (max) 55.75%, Opus 4.7 (max) 40.12%."
+        },
+        {
+          "rank": 5,
+          "model_name": "Claude Opus 4.7",
+          "vendor": "Anthropic",
+          "score": "40.12",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning).",
+          "protocol_short": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published sy...",
+          "protocol_full": "eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning). | eval created by Datacurve, run with each model provider’s harnesses by AA Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: each model provider's harness; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: eval created by Datacurve, run with each model provider’s harnesses by AA",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.0",
+          "evidence_quote": "DeepSWE 1.0: Fable (max) 66.1%, GPT 5.5 (xhigh) 64.31%, Grok 4.5 62.0%, Opus 4.8 (max) 55.75%, Opus 4.7 (max) 40.12%."
+        }
+      ]
+    },
     "deepswe_open_benchmarks_score": {
       "rank_group_key": "deepswe_open_benchmarks_score",
       "benchmark_name": "DeepSWE",
@@ -16247,10 +16397,11 @@ window.BENCHATLAS_DATA = {
       "domain": "coding",
       "metric_name": "score",
       "score_unit": "%",
-      "result_count": 7,
-      "display_result_count": 7,
+      "result_count": 12,
+      "display_result_count": 10,
       "protocol_badges": [
-        "agent harness"
+        "agent harness",
+        "public leaderboard"
       ],
       "rows": [
         {
@@ -16275,6 +16426,25 @@ window.BENCHATLAS_DATA = {
           "rank": 2,
           "model_name": "Claude Fable 5",
           "vendor": "Anthropic",
+          "score": "70",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "agent harness",
+            "public leaderboard"
+          ],
+          "protocol_note": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning).",
+          "protocol_short": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboar...",
+          "protocol_full": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning). | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: mini-swe-agent; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: mini-swe-agent harness run by Datacurve",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.1",
+          "evidence_quote": "DeepSWE 1.1: Fable (max) 70%, GPT 5.5 (xhigh) 67%, Opus 4.8 (max) 59%, Grok 4.5 53%, GLM 5.2 44%."
+        },
+        {
+          "rank": 3,
+          "model_name": "Claude Fable 5",
+          "vendor": "Anthropic",
           "score": "69.7",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
@@ -16290,7 +16460,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "DeepSWE v1.1 (default): Claude Fable 5 = 69.7%."
         },
         {
-          "rank": 3,
+          "rank": 4,
           "model_name": "GPT-5.6 Terra",
           "vendor": "OpenAI",
           "score": "69.6",
@@ -16308,7 +16478,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "DeepSWE v1.1 (default): GPT-5.6 Terra = 69.6%."
         },
         {
-          "rank": 4,
+          "rank": 5,
           "model_name": "GPT-5.6 Luna",
           "vendor": "OpenAI",
           "score": "67.2",
@@ -16326,43 +16496,83 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "DeepSWE v1.1 (default): GPT-5.6 Luna = 67.2%."
         },
         {
-          "rank": 5,
+          "rank": 6,
           "model_name": "GPT-5.5",
           "vendor": "OpenAI",
           "score": "67",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "agent harness"
+            "agent harness",
+            "public leaderboard"
           ],
-          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
+          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning).",
           "protocol_short": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows...",
-          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Dataset: Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
-          "source_report_id": "openai_gpt_5_6_release_2026_07_09",
-          "source_url": "https://openai.com/index/gpt-5-6/",
-          "evidence_location": "official release page lines 262-267",
+          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning). | Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Dataset: Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: mini-swe-agent; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: mini-swe-agent harness run by Datacurve",
+          "source_report_id": "openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://openai.com/index/gpt-5-6/; https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.1; official release page lines 262-267",
           "evidence_quote": "DeepSWE v1.1 (default): GPT-5.5 = 67%."
         },
         {
-          "rank": 6,
+          "rank": 7,
           "model_name": "Claude Opus 4.8",
           "vendor": "Anthropic",
           "score": "59",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "agent harness"
+            "agent harness",
+            "public leaderboard"
           ],
-          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
+          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning).",
           "protocol_short": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows...",
-          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Dataset: Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
-          "source_report_id": "openai_gpt_5_6_release_2026_07_09",
-          "source_url": "https://openai.com/index/gpt-5-6/",
-          "evidence_location": "official release page lines 262-267",
+          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning). | Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Dataset: Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: mini-swe-agent; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: mini-swe-agent harness run by Datacurve",
+          "source_report_id": "openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://openai.com/index/gpt-5-6/; https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.1; official release page lines 262-267",
           "evidence_quote": "DeepSWE v1.1 (default): Claude Opus 4.8 = 59%."
         },
         {
-          "rank": 7,
+          "rank": 8,
+          "model_name": "Grok 4.5",
+          "vendor": "xAI",
+          "score": "53",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "agent harness",
+            "public leaderboard"
+          ],
+          "protocol_note": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboar...",
+          "protocol_full": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: mini-swe-agent; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: mini-swe-agent harness run by Datacurve",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.1",
+          "evidence_quote": "DeepSWE 1.1: Fable (max) 70%, GPT 5.5 (xhigh) 67%, Opus 4.8 (max) 59%, Grok 4.5 53%, GLM 5.2 44%."
+        },
+        {
+          "rank": 9,
+          "model_name": "GLM-5.2",
+          "vendor": "Z.ai",
+          "score": "44",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "agent harness",
+            "public leaderboard"
+          ],
+          "protocol_note": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboar...",
+          "protocol_full": "mini-swe-agent harness run by Datacurve Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Harness: mini-swe-agent; Tools enabled: agent tools; Reasoning: max reasoning; xhigh reasoning; Dataset: mini-swe-agent harness run by Datacurve",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: DeepSWE 1.1",
+          "evidence_quote": "DeepSWE 1.1: Fable (max) 70%, GPT 5.5 (xhigh) 67%, Opus 4.8 (max) 59%, Grok 4.5 53%, GLM 5.2 44%."
+        },
+        {
+          "rank": 10,
           "model_name": "Gemini 3.1 Pro Preview",
           "vendor": "Google DeepMind",
           "score": "11.8",
@@ -37740,13 +37950,13 @@ window.BENCHATLAS_DATA = {
     },
     "swe_bench_pro_score": {
       "rank_group_key": "swe_bench_pro_score",
-      "benchmark_name": "SWE-bench Pro",
+      "benchmark_name": "SWE-Bench Pro",
       "benchmark_variant": "",
       "domain": "coding",
       "metric_name": "score",
       "score_unit": "%",
-      "result_count": 29,
-      "display_result_count": 21,
+      "result_count": 35,
+      "display_result_count": 24,
       "protocol_badges": [
         "agent harness",
         "internal",
@@ -37759,6 +37969,25 @@ window.BENCHATLAS_DATA = {
       "rows": [
         {
           "rank": 1,
+          "model_name": "Claude Fable 5",
+          "vendor": "Anthropic",
+          "score": "80.4",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning).",
+          "protocol_short": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about...",
+          "protocol_full": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning). | Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning; xhigh reasoning; Dataset: Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more.",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Bench Pro",
+          "evidence_quote": "SWE Bench Pro: Fable (max) 80.4%, Opus 4.8 (max) 69.2%, Grok 4.5 64.7%, Opus 4.7 (max) 64.3%, GLM 5.2 62.1%, GPT 5.5 (xhigh) 58.6%."
+        },
+        {
+          "rank": 2,
           "model_name": "Claude Mythos 5",
           "vendor": "Anthropic",
           "score": "80.3",
@@ -37779,7 +38008,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 2,
+          "rank": 3,
           "model_name": "Claude Fable 5",
           "vendor": "Anthropic",
           "score": "80",
@@ -37800,7 +38029,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 3,
+          "rank": 4,
           "model_name": "Claude Mythos Preview",
           "vendor": "Anthropic",
           "score": "77.8",
@@ -37821,7 +38050,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 4,
+          "rank": 5,
           "model_name": "Claude Opus 4.8",
           "vendor": "Anthropic",
           "score": "69.2",
@@ -37830,19 +38059,39 @@ window.BENCHATLAS_DATA = {
           "protocol_badges": [
             "agent harness",
             "multi-run",
+            "model judge",
             "long context",
             "public leaderboard"
           ],
-          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
+          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning).",
           "protocol_short": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows...",
-          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
-          "source_report_id": "anthropic_fable_mythos_5_2026_06_09; openai_gpt_5_6_release_2026_07_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://openai.com/index/gpt-5-6/; https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
-          "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42; official release page lines 262-267",
+          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning). | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
+          "source_report_id": "anthropic_fable_mythos_5_2026_06_09; openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08; zai_glm_5_2_2026_06_17",
+          "source_url": "https://openai.com/index/gpt-5-6/; https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://x.ai/news/grok-4-5; https://z.ai/blog/glm-5.2",
+          "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42; official release page benchmark figure: SWE Bench Pro; official release page lines 262-267",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 5,
+          "rank": 6,
+          "model_name": "Grok 4.5",
+          "vendor": "xAI",
+          "score": "64.7",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about...",
+          "protocol_full": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning; xhigh reasoning; Dataset: Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more.",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Bench Pro",
+          "evidence_quote": "SWE Bench Pro: Fable (max) 80.4%, Opus 4.8 (max) 69.2%, Grok 4.5 64.7%, Opus 4.7 (max) 64.3%, GLM 5.2 62.1%, GPT 5.5 (xhigh) 58.6%."
+        },
+        {
+          "rank": 7,
           "model_name": "GPT-5.6 Sol",
           "vendor": "OpenAI",
           "score": "64.6",
@@ -37860,7 +38109,26 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "SWE-Bench Pro (default): GPT-5.6 Sol = 64.6%."
         },
         {
-          "rank": 6,
+          "rank": 8,
+          "model_name": "Claude Opus 4.7",
+          "vendor": "Anthropic",
+          "score": "64.3",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "model judge",
+            "public leaderboard"
+          ],
+          "protocol_note": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning).",
+          "protocol_short": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about...",
+          "protocol_full": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning). | Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning; xhigh reasoning; Dataset: Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more.",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Bench Pro",
+          "evidence_quote": "SWE Bench Pro: Fable (max) 80.4%, Opus 4.8 (max) 69.2%, Grok 4.5 64.7%, Opus 4.7 (max) 64.3%, GLM 5.2 62.1%, GPT 5.5 (xhigh) 58.6%."
+        },
+        {
+          "rank": 9,
           "model_name": "GPT-5.6 Terra",
           "vendor": "OpenAI",
           "score": "63.4",
@@ -37878,7 +38146,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "SWE-Bench Pro (default): GPT-5.6 Terra = 63.4%."
         },
         {
-          "rank": 7,
+          "rank": 10,
           "model_name": "GPT-5.6 Luna",
           "vendor": "OpenAI",
           "score": "62.7",
@@ -37896,7 +38164,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "SWE-Bench Pro (default): GPT-5.6 Luna = 62.7%."
         },
         {
-          "rank": 8,
+          "rank": 11,
           "model_name": "GLM-5.2",
           "vendor": "Z.ai",
           "score": "62.1",
@@ -37904,18 +38172,20 @@ window.BENCHATLAS_DATA = {
           "comparability_label": "protocol_variant",
           "protocol_badges": [
             "agent harness",
-            "long context"
+            "model judge",
+            "long context",
+            "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K co...",
-          "protocol_full": "SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
-          "source_report_id": "zai_glm_5_2_2026_06_17",
-          "source_url": "https://z.ai/blog/glm-5.2",
-          "evidence_location": "glm-5.2-D418TmAz.js:42",
+          "protocol_note": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about...",
+          "protocol_full": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08; zai_glm_5_2_2026_06_17",
+          "source_url": "https://x.ai/news/grok-4-5; https://z.ai/blog/glm-5.2",
+          "evidence_location": "glm-5.2-D418TmAz.js:42; official release page benchmark figure: SWE Bench Pro",
           "evidence_quote": "GLM benchmark table benchmark=SWE-bench Pro."
         },
         {
-          "rank": 9,
+          "rank": 12,
           "model_name": "Qwen3.7-Max",
           "vendor": "Qwen",
           "score": "60.6",
@@ -37934,7 +38204,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "GLM benchmark table benchmark=SWE-bench Pro."
         },
         {
-          "rank": 10,
+          "rank": 13,
           "model_name": "GPT-5.5",
           "vendor": "OpenAI",
           "score": "59.4",
@@ -37952,7 +38222,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "SWE-Bench Pro (default): GPT-5.5 = 59.4%."
         },
         {
-          "rank": 11,
+          "rank": 14,
           "model_name": "MiniMax M3",
           "vendor": "MiniMax",
           "score": "59",
@@ -37971,7 +38241,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "GLM benchmark table benchmark=SWE-bench Pro."
         },
         {
-          "rank": 12,
+          "rank": 15,
           "model_name": "GPT-5.5",
           "vendor": "OpenAI",
           "score": "58.6",
@@ -37980,19 +38250,20 @@ window.BENCHATLAS_DATA = {
           "protocol_badges": [
             "agent harness",
             "multi-run",
+            "model judge",
             "long context",
             "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
-          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
-          "source_report_id": "anthropic_fable_mythos_5_2026_06_09; zai_glm_5_2_2026_06_17",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://z.ai/blog/glm-5.2",
-          "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42",
+          "protocol_note": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning).",
+          "protocol_short": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about...",
+          "protocol_full": "Resolve rate. On SWE Bench Pro, Grok 4.5 averaged 15,954 output tokens per task; the page compares this with Claude Opus 4.8 (max) at 67,020, about 4.2x more. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning). | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. SWE-bench Pro is reported as an average over 5 trials. All SWE-bench variants use the standard configuration, with thinking blocks included in sampling results. | Harness: standard SWE-bench configuration; Reasoning: adaptive thinking at max effort; Runs: avg over 5 trials; Dataset: Harder SWE-bench variant using actively maintained repositories, larger multi-file diffs, and reduced public ground-truth leakage. | SWE-Bench Pro suite is run with OpenHands using a tailored instruction prompt. Settings: temperature=1, top_p=1, max_new_tokens=32k, with a 400K context window. | Harness: OpenHands; Tools enabled: agent tools; Context: 400K; Max tokens: 32K; Temperature: 1; Top p: 1",
+          "source_report_id": "anthropic_fable_mythos_5_2026_06_09; xai_grok_4_5_release_2026_07_08; zai_glm_5_2_2026_06_17",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://x.ai/news/grok-4-5; https://z.ai/blog/glm-5.2",
+          "evidence_location": "anthropic-latest.txt:8411-8453; glm-5.2-D418TmAz.js:42; official release page benchmark figure: SWE Bench Pro",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 12,
+          "rank": 15,
           "model_name": "Kimi K2.6",
           "vendor": "Moonshot Kimi",
           "score": "58.6",
@@ -38015,7 +38286,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Kimi embedded benchmark JSON: SWE-Bench Pro."
         },
         {
-          "rank": 14,
+          "rank": 17,
           "model_name": "GLM-5.1",
           "vendor": "Z.ai",
           "score": "58.4",
@@ -38034,7 +38305,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "GLM benchmark table benchmark=SWE-bench Pro."
         },
         {
-          "rank": 15,
+          "rank": 18,
           "model_name": "GPT-5.4 (xhigh)",
           "vendor": "OpenAI",
           "score": "57.7",
@@ -38057,7 +38328,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Kimi embedded benchmark JSON: SWE-Bench Pro."
         },
         {
-          "rank": 16,
+          "rank": 19,
           "model_name": "DeepSeek-V4-Pro",
           "vendor": "DeepSeek",
           "score": "55.4",
@@ -38076,7 +38347,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "HF evalResults dataset=ScaleAI/SWE-bench_Pro task=SWE_Bench_Pro; value=55.4; HF rank=13; source=Model Card"
         },
         {
-          "rank": 17,
+          "rank": 20,
           "model_name": "Gemini 3.1 Pro",
           "vendor": "Google DeepMind",
           "score": "54.2",
@@ -38097,7 +38368,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 17,
+          "rank": 20,
           "model_name": "Gemini 3.1 Pro (thinking high)",
           "vendor": "Google DeepMind",
           "score": "54.2",
@@ -38120,7 +38391,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Kimi embedded benchmark JSON: SWE-Bench Pro."
         },
         {
-          "rank": 17,
+          "rank": 20,
           "model_name": "Gemini 3.1 Pro Preview",
           "vendor": "Google DeepMind",
           "score": "54.2",
@@ -38138,7 +38409,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "SWE-Bench Pro (default): Gemini 3.1 Pro Preview = 54.2%."
         },
         {
-          "rank": 20,
+          "rank": 23,
           "model_name": "Claude Opus 4.6 (max effort)",
           "vendor": "Anthropic",
           "score": "53.4",
@@ -38161,7 +38432,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Kimi embedded benchmark JSON: SWE-Bench Pro."
         },
         {
-          "rank": 21,
+          "rank": 24,
           "model_name": "Kimi K2.5",
           "vendor": "Moonshot Kimi",
           "score": "50.7",
@@ -38424,6 +38695,93 @@ window.BENCHATLAS_DATA = {
           "source_url": "https://www.kimi.com/blog/kimi-k2-6",
           "evidence_location": "kimi-k2-6.html:embedded_base64_benchmark_data",
           "evidence_quote": "Kimi embedded benchmark JSON: SWE-Bench Verified."
+        }
+      ]
+    },
+    "swe_marathon_pass_at_1": {
+      "rank_group_key": "swe_marathon_pass_at_1",
+      "benchmark_name": "SWE Marathon",
+      "benchmark_variant": "",
+      "domain": "coding",
+      "metric_name": "pass@1",
+      "score_unit": "%",
+      "result_count": 4,
+      "display_result_count": 4,
+      "protocol_badges": [
+        "public leaderboard"
+      ],
+      "rows": [
+        {
+          "rank": 1,
+          "model_name": "Grok 4.5",
+          "vendor": "xAI",
+          "score": "29.0",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Marathon",
+          "evidence_quote": "SWE Marathon: Grok 4.5 29.0%, Opus 4.8 (max) 26.0%, Fable (max) 24.0%, Opus 4.7 (max) 16.0%."
+        },
+        {
+          "rank": 2,
+          "model_name": "Claude Opus 4.8",
+          "vendor": "Anthropic",
+          "score": "26.0",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning).",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max)...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning). | Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Marathon",
+          "evidence_quote": "SWE Marathon: Grok 4.5 29.0%, Opus 4.8 (max) 26.0%, Fable (max) 24.0%, Opus 4.7 (max) 16.0%."
+        },
+        {
+          "rank": 3,
+          "model_name": "Claude Fable 5",
+          "vendor": "Anthropic",
+          "score": "24.0",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning).",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (ma...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning). | Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Marathon",
+          "evidence_quote": "SWE Marathon: Grok 4.5 29.0%, Opus 4.8 (max) 26.0%, Fable (max) 24.0%, Opus 4.7 (max) 16.0%."
+        },
+        {
+          "rank": 4,
+          "model_name": "Claude Opus 4.7",
+          "vendor": "Anthropic",
+          "score": "16.0",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning).",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max)...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning). | Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: SWE Marathon",
+          "evidence_quote": "SWE Marathon: Grok 4.5 29.0%, Opus 4.8 (max) 26.0%, Fable (max) 24.0%, Opus 4.7 (max) 16.0%."
         }
       ]
     },
@@ -39572,8 +39930,8 @@ window.BENCHATLAS_DATA = {
       "domain": "coding",
       "metric_name": "score",
       "score_unit": "%",
-      "result_count": 14,
-      "display_result_count": 14,
+      "result_count": 19,
+      "display_result_count": 16,
       "protocol_badges": [
         "agent harness",
         "internal",
@@ -39729,12 +40087,12 @@ window.BENCHATLAS_DATA = {
             "internal",
             "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
-          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
-          "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
-          "evidence_location": "anthropic-latest.txt:8411-8453",
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning).",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (ma...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Fable (max) (max reasoning). | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
+          "source_report_id": "anthropic_fable_mythos_5_2026_06_09; xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://x.ai/news/grok-4-5",
+          "evidence_location": "anthropic-latest.txt:8411-8453; official release page benchmark figure: Terminal Bench 2.1",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
@@ -39752,16 +40110,34 @@ window.BENCHATLAS_DATA = {
             "internal",
             "public leaderboard"
           ],
-          "protocol_note": "",
-          "protocol_short": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over...",
-          "protocol_full": "Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
-          "source_report_id": "anthropic_fable_mythos_5_2026_06_09",
-          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf",
-          "evidence_location": "anthropic-latest.txt:8411-8453",
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning).",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh)...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports GPT 5.5 (xhigh) (xhigh reasoning). | Unless otherwise noted, Mythos 5 results use adaptive thinking at max effort, default sampling settings (temperature, top_p), and are averaged over 5 trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. Competitor figures are drawn from developers' published system cards or benchmark leaderboards. Fable scores reflect production safeguards, including fallback to Opus 4.8. Terminal-Bench 2.1 switches to mini-SWE-agent, described as more robust to timeouts than Terminus-2. Claude Mythos 5 and Opus 4.8 are averaged over 5 attempts for each of 89 tasks; Fable 5 includes safety refusal fallback behavior. GPT-5.5 is cited with Codex harness in the summary table and also internally reproduced with mini-SWE-agent. | Harness: mini-SWE-agent harness on GKE; Compute: GKE cluster; 1x timeout rate and 3x memory ceiling before pod preemption; Reasoning: high effort for Claude; GPT-5.5 xhigh thinking when internally reproduced; Runs: 5 attempts per 89 tasks, 445 trials for Claude Mythos 5 and Opus 4.8; Dataset: Real-world terminal and command-line coding tasks; Gemini uses highest public leaderboard score.",
+          "source_report_id": "anthropic_fable_mythos_5_2026_06_09; xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf; https://x.ai/news/grok-4-5",
+          "evidence_location": "anthropic-latest.txt:8411-8453; official release page benchmark figure: Terminal Bench 2.1",
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
           "rank": 10,
+          "model_name": "Grok 4.5",
+          "vendor": "xAI",
+          "score": "83.3",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning; xhigh re...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning; xhigh reasoning",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: Terminal Bench 2.1",
+          "evidence_quote": "Terminal Bench 2.1: Fable (max) 84.3%, GPT 5.5 (xhigh) 83.4%, Grok 4.5 83.3%, Opus 4.8 (max) 78.9%, Opus 4.7 (max) 78.9%."
+        },
+        {
+          "rank": 11,
           "model_name": "Claude Fable 5",
           "vendor": "Anthropic",
           "score": "83.1",
@@ -39779,7 +40155,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Terminal-Bench 2.1 (default): Claude Fable 5 = 83.1%."
         },
         {
-          "rank": 11,
+          "rank": 12,
           "model_name": "Claude Opus 4.8",
           "vendor": "Anthropic",
           "score": "82.7",
@@ -39802,25 +40178,44 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 12,
+          "rank": 13,
           "model_name": "Claude Opus 4.8",
           "vendor": "Anthropic",
           "score": "78.9",
           "score_unit": "%",
           "comparability_label": "protocol_variant",
           "protocol_badges": [
-            "agent harness"
+            "agent harness",
+            "public leaderboard"
           ],
-          "protocol_note": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
-          "protocol_short": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows...",
-          "protocol_full": "Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Reasoning: Ultra / 4 agents; Dataset: Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
-          "source_report_id": "openai_gpt_5_6_release_2026_07_09",
-          "source_url": "https://openai.com/index/gpt-5-6/",
-          "evidence_location": "official release page lines 262-267",
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning). | Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max)...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.8 (max) (max reasoning). | Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default. | Reasoning: Ultra / 4 agents; Dataset: Official OpenAI GPT-5.6 release-page comparison table dated 2026-07-09. The table does not state one common reasoning effort for every model; rows remain protocol_variant. Latency and API cost are estimated from production behavior and offline simulation, with latency at fast API speeds and cost at regular API pricing. Ultra coordinates four agents in parallel by default.",
+          "source_report_id": "openai_gpt_5_6_release_2026_07_09; xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://openai.com/index/gpt-5-6/; https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: Terminal Bench 2.1; official release page lines 262-267",
           "evidence_quote": "Terminal-Bench 2.1 (default): Claude Opus 4.8 = 78.9%."
         },
         {
           "rank": 13,
+          "model_name": "Claude Opus 4.7",
+          "vendor": "Anthropic",
+          "score": "78.9",
+          "score_unit": "%",
+          "comparability_label": "protocol_variant",
+          "protocol_badges": [
+            "public leaderboard"
+          ],
+          "protocol_note": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning).",
+          "protocol_short": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max)...",
+          "protocol_full": "Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. Source label reports Opus 4.7 (max) (max reasoning). | Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards. | Reasoning: max reasoning; xhigh reasoning",
+          "source_report_id": "xai_grok_4_5_release_2026_07_08",
+          "source_url": "https://x.ai/news/grok-4-5",
+          "evidence_location": "official release page benchmark figure: Terminal Bench 2.1",
+          "evidence_quote": "Terminal Bench 2.1: Fable (max) 84.3%, GPT 5.5 (xhigh) 83.4%, Grok 4.5 83.3%, Opus 4.8 (max) 78.9%, Opus 4.7 (max) 78.9%."
+        },
+        {
+          "rank": 15,
           "model_name": "Gemini 3.1 Pro",
           "vendor": "Google DeepMind",
           "score": "70.7",
@@ -39843,7 +40238,7 @@ window.BENCHATLAS_DATA = {
           "evidence_quote": "Anthropic Section 8.1 evaluation summary table."
         },
         {
-          "rank": 13,
+          "rank": 15,
           "model_name": "Gemini 3.1 Pro Preview",
           "vendor": "Google DeepMind",
           "score": "70.7",
