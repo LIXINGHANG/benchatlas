@@ -43,6 +43,8 @@ Coverage changes as new official reports are imported. The live site is the sour
 - **Overall ranking**: explore the Reported Performance Index with coverage and confidence signals.
 - **Structured Method notes**: separate setup, reasoning, agent/tools, dataset, aggregation, and source caveats.
 - **Shareable pages**: every model and benchmark has an indexable permalink.
+- **Shareable exploration state**: benchmark, protocol, view, filters, and Matrix models are encoded in the URL.
+- **Lazy benchmark loading**: the homepage loads a compact catalog before fetching benchmark evidence on demand.
 - **Evidence-first data**: each row remains linked to its originating report and evidence location.
 
 ## Overall ranking methodology
@@ -111,7 +113,7 @@ python3 -m http.server 4173
 
 Open `http://127.0.0.1:4173/`.
 
-To regenerate model pages, benchmark pages, ranking pages, and `sitemap.xml` after updating the bundled data:
+To split the homepage data and regenerate model pages, benchmark pages, ranking pages, and `sitemap.xml` after updating the bundled data:
 
 ```bash
 node scripts/generate-seo-pages.js
@@ -124,8 +126,11 @@ node scripts/generate-seo-pages.js
 | `index.html` | Spatial Atlas homepage, Registry, Matrix, and evidence inspector |
 | `app.js` | Legacy detail views, filtering, routing, and ranking logic |
 | `site_data.bundle.js` | Bundled normalized benchmark dataset |
+| `site_data.index.bundle.js` | Compact homepage catalog without benchmark detail rows |
+| `data/benchmarks/` | Per-benchmark JSON loaded on demand by the Spatial Atlas |
 | `data/normalization_rules.json` | Auditable model and benchmark alias rules |
 | `scripts/generate-seo-pages.js` | Generates clean, indexable detail URLs |
+| `scripts/split-site-data.js` | Splits the full bundle into the homepage index and lazy benchmark files |
 | `models/` | Generated model pages |
 | `benchmarks/` | Generated benchmark pages |
 | `ranking/` | Generated overall ranking page |

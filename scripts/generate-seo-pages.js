@@ -4,6 +4,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 
+require("./split-site-data.js");
+
 const root = path.resolve(__dirname, "..");
 const siteUrl = "https://benchatlas.cn";
 

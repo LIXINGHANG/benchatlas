@@ -28,7 +28,7 @@
     ]
   }
   </script>
-  <script src="/site_data.bundle.js?v=normalize-2"></script>
+  <script src="/site_data.index.bundle.js?v=lazy-1"></script>
   <style>
     :root {
       --ink:#17140f; --paper:#eeeae0; --panel:#fffdf8; --line:#c9c1b3; --muted:#736c62;
@@ -80,7 +80,7 @@
         <div class="dataset-status" aria-label="Dataset status"><div class="live-state"><span class="live-dot"></span><span><b>Dataset live</b><small id="headerReports">— source reports</small></span></div></div>
         <div class="search-wrap"><input id="search" placeholder="Search atlas" aria-label="Search benchmark or model" autocomplete="off" aria-controls="searchResults" aria-expanded="false"><kbd>⌘ K</kbd><div class="search-results" id="searchResults" role="listbox"></div></div>
       </header>
-      <div class="toolbar"><span class="toolbar-label">View</span><div class="modes"><button class="seg active" data-mode="map">Landscape</button><button class="seg" data-mode="registry">Registry</button><button class="seg" data-mode="matrix">Matrix</button></div><div class="filters" id="filters"></div><div class="zoom"><button class="seg" id="zoomOut" aria-label="缩小">−</button><button class="seg" id="resetView">100%</button><button class="seg" id="zoomIn" aria-label="放大">＋</button></div></div>
+      <div class="toolbar"><span class="toolbar-label">View</span><div class="modes"><button class="seg active" data-mode="map">Landscape</button><button class="seg" data-mode="registry">Registry</button><button class="seg" data-mode="matrix">Matrix</button></div><div class="filters" id="filters"></div><div class="zoom"><button class="seg" id="shareView" aria-label="Prepare share link" title="Prepare share link">Share</button><button class="seg" id="zoomOut" aria-label="缩小">−</button><button class="seg" id="resetView">100%</button><button class="seg" id="zoomIn" aria-label="放大">＋</button></div></div>
       <div class="view">
         <section class="view-panel active" id="mapPanel"><div class="map-viewport" id="viewport"><div class="world" id="world"><svg id="mapSvg" viewBox="0 0 1800 1100" aria-hidden="true"></svg><div id="clusterLabels"></div><div id="nodes"></div></div><div class="map-meta"><b id="mapCoverage">42 of 410 landmarks shown</b><span>Ordered by reported model coverage</span></div><div class="map-legend"><b>ENCODING</b><span class="legend-dot"></span><span>domain route</span><span>node scale = model coverage</span><span class="legend-dot red"></span><span>selected / safety risk</span></div><div class="mini-map" id="miniMap"><div class="mini-viewport" id="miniViewport"></div></div></div></section>
         <section class="view-panel registry-panel" id="registryPanel"><table class="registry"><thead><tr><th>Benchmark</th><th>Domain</th><th>Models</th><th>Vendors</th><th>Best reported</th><th>Protocol signals</th></tr></thead><tbody id="registryBody"></tbody></table></section>
@@ -91,6 +91,6 @@
     <aside class="inspector open" id="inspector"><div class="inspector-top"><div><span class="eyebrow" id="inspectorDomain">Loading dataset</span><h2 id="inspectorTitle">BenchAtlas</h2><span class="sub" id="inspectorSub">Preparing the landscape…</span></div><button class="close-inspector" id="closeInspector" aria-label="Close details">×</button></div><div class="metrics"><div class="metric"><b id="modelCount">—</b><span>Models</span></div><div class="metric"><b id="vendorCount">—</b><span>Vendors</span></div><div class="metric"><b id="reportCount">—</b><span>Reports</span></div></div><section class="section"><div class="section-head"><h3>Comparable ranking</h3><span id="metricLabel"></span></div><p class="rank-note">Only rows sharing the selected evaluation protocol are ranked together.</p><div class="comparison-picker"><label for="comparisonSelect">Evaluation protocol group</label><select id="comparisonSelect"></select><small id="comparisonSummary">Selecting the preferred documented comparison group.</small></div><div id="ranking"></div><div class="related-reports" id="relatedReports"></div></section><section class="section"><div class="section-head"><h3>Method notes</h3><span id="methodStatus">selected report</span></div><div class="source-summary" id="sourceSummary">Select a reported row to inspect its provenance.</div><div class="variant-picker" id="variantPicker"><label for="variantSelect">Reported source</label><select id="variantSelect"></select></div><div class="method" id="methodNote">Select a benchmark node to inspect its evaluation protocol.</div><div class="badges" id="badges"></div></section><section class="section"><div class="section-head"><h3>Source evidence</h3><span id="sourceLocation"></span></div><p class="evidence-quote" id="evidenceQuote">Every result remains connected to its report and evidence location.</p><a class="source" id="sourceLink" href="#" target="_blank" rel="noreferrer">OPEN PRIMARY SOURCE ↗</a><a class="source secondary" id="benchmarkLink" href="#">OPEN FULL BENCHMARK PAGE →</a></section></aside>
   </div>
   <div class="toast" id="toast"></div>
-  <script src="/spatial-app.js?v=spatial-10"></script>
+  <script src="/spatial-app.js?v=spatial-11"></script>
 </body>
 </html>
