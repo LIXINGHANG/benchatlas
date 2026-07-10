@@ -8,10 +8,41 @@
   <link rel="canonical" href="https://benchatlas.cn/">
   <meta property="og:title" content="BenchAtlas - AI Benchmark Landscape">
   <meta property="og:description" content="Explore reported AI benchmark scores with source evidence and evaluation protocols.">
+  <meta property="og:site_name" content="BenchAtlas">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://benchatlas.cn/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://benchatlas.cn/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BenchAtlas - AI Benchmark Landscape">
+  <meta name="twitter:description" content="Explore reported AI benchmark scores with source evidence and evaluation protocols.">
+  <meta name="twitter:image" content="https://benchatlas.cn/social-preview.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="application/ld+json" id="structuredData">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://benchatlas.cn/#website",
+        "url": "https://benchatlas.cn/",
+        "name": "BenchAtlas",
+        "description": "An evidence-backed atlas of AI benchmark scores, evaluation protocols, and model rankings."
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://benchatlas.cn/#dataset",
+        "name": "BenchAtlas AI Benchmark Dataset",
+        "description": "Reported AI benchmark results extracted from official model cards and technical reports with source evidence and evaluation notes.",
+        "url": "https://benchatlas.cn/",
+        "isAccessibleForFree": true,
+        "license": "https://github.com/LIXINGHANG/benchatlas/blob/main/LICENSE",
+        "creator": { "@type": "Organization", "name": "BenchAtlas" }
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --ink: #17140f;
@@ -662,7 +693,7 @@
       <div class="brand">
         <div class="brand-row">
           <div class="brand-mark">
-            <img class="brand-logo" src="logo.svg" alt="" width="38" height="38">
+            <img class="brand-logo" src="/logo.svg" alt="" width="38" height="38">
             <h1>BenchAtlas</h1>
           </div>
           <span class="count-pill" id="totalCount">0 rows</span>
@@ -739,7 +770,7 @@
     </main>
   </div>
 
-  <script src="site_data.bundle.js?v=d9186ad"></script>
-  <script src="app.js?v=overall-ranking-1"></script>
+  <script src="/site_data.bundle.js?v=d9186ad"></script>
+  <script src="/app.js?v=seo-pages-1"></script>
 </body>
 </html>

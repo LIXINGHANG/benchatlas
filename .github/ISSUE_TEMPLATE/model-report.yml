@@ -1,0 +1,46 @@
+name: New model report
+description: Submit an official model card, technical report, or release page for ingestion.
+title: "[Report] "
+labels: ["data", "new-report"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model name
+      placeholder: e.g. Example Model 2.0
+    validations:
+      required: true
+  - type: input
+    id: vendor
+    attributes:
+      label: Vendor
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+      description: Use a primary vendor or research source.
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Publication date
+      placeholder: YYYY-MM-DD
+  - type: dropdown
+    id: format
+    attributes:
+      label: Source format
+      options:
+        - PDF
+        - HTML
+        - PDF and HTML
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Evaluation notes
+      description: Point out benchmark tables, methodology sections, appendices, or separate evaluation pages.

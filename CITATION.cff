@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If BenchAtlas supports your work, please cite the project using this metadata."
+title: "BenchAtlas: Explore the Landscape of AI Benchmarks"
+type: software
+authors:
+  - family-names: "Li"
+    given-names: "Xinghang"
+repository-code: "https://github.com/LIXINGHANG/benchatlas"
+url: "https://benchatlas.cn/"
+license: MIT
+version: 0.1.0
+date-released: 2026-07-10
+keywords:
+  - AI benchmarks
+  - LLM evaluation
+  - model cards
+  - leaderboards
+abstract: >-
+  BenchAtlas is an evidence-backed atlas of reported AI benchmark scores,
+  evaluation protocols, model-level comparisons, and source locations.

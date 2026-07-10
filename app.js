@@ -4,6 +4,12 @@
   const modelCatalog = data.model_catalog;
   const pages = data.benchmark_pages;
   const modelByName = new Map(modelCatalog.map(model => [model.model_name, model]));
+  const modelSlugIndexes = createSlugIndexes(modelCatalog, model => model.model_name);
+  const benchmarkSlugIndexes = createSlugIndexes(benchmarkCatalog, benchmark => benchmark.rank_group_key);
+  const modelBySlug = modelSlugIndexes.bySlug;
+  const modelSlugByName = modelSlugIndexes.byKey;
+  const benchmarkBySlug = benchmarkSlugIndexes.bySlug;
+  const benchmarkSlugByKey = benchmarkSlugIndexes.byKey;
   const modelRows = new Map(modelCatalog.map(model => [model.model_name, []]));
   const defaultModel = modelCatalog.slice().sort((a, b) => (
     Number(b.benchmark_count) - Number(a.benchmark_count)
@@ -43,6 +49,50 @@
     '"': "&quot;",
     "'": "&#39;"
   }[char]));
+
+  function slugify(value) {
+    return String(value || "")
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "item";
+  }
+
+  function stableHash(value) {
+    let hash = 2166136261;
+    for (let index = 0; index < String(value).length; index += 1) {
+      hash ^= String(value).charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    return (hash >>> 0).toString(36).slice(0, 6);
+  }
+
+  function createSlugIndexes(items, key) {
+    const counts = new Map();
+    items.forEach(item => {
+      const base = slugify(key(item));
+      counts.set(base, (counts.get(base) || 0) + 1);
+    });
+    const bySlug = new Map();
+    const byKey = new Map();
+    items.forEach(item => {
+      const value = key(item);
+      const base = slugify(value);
+      const slug = counts.get(base) > 1 ? `${base}-${stableHash(value)}` : base;
+      bySlug.set(slug, value);
+      byKey.set(value, slug);
+    });
+    return { bySlug, byKey };
+  }
+
+  function modelPath(modelName) {
+    return `/models/${modelSlugByName.get(modelName) || slugify(modelName)}/`;
+  }
+
+  function benchmarkPath(benchmarkKey) {
+    return `/benchmarks/${benchmarkSlugByKey.get(benchmarkKey) || slugify(benchmarkKey)}/`;
+  }
 
   function buildOverallRankings() {
     const observations = new Map();
@@ -135,6 +185,16 @@
         if (pages[benchmarkKey]) return { mode: "benchmarks", key: benchmarkKey };
       }
       if (location.hash === "#overall") return { mode: "overall", key: "overall" };
+      const path = location.pathname.replace(/\/+$/, "") || "/";
+      if (path === "/ranking") return { mode: "overall", key: "overall" };
+      const modelMatch = path.match(/^\/models\/([^/]+)$/);
+      if (modelMatch && modelBySlug.has(modelMatch[1])) {
+        return { mode: "models", key: modelBySlug.get(modelMatch[1]) };
+      }
+      const benchmarkMatch = path.match(/^\/benchmarks\/([^/]+)$/);
+      if (benchmarkMatch && benchmarkBySlug.has(benchmarkMatch[1])) {
+        return { mode: "benchmarks", key: benchmarkBySlug.get(benchmarkMatch[1]) };
+      }
     } catch {
       return null;
     }
@@ -165,11 +225,11 @@
 
   function updateHash() {
     if (state.mode === "overall") {
-      history.replaceState(null, "", "#overall");
+      history.replaceState(null, "", "/ranking/");
       return;
     }
-    const prefix = state.mode === "models" ? "model" : "benchmark";
-    history.replaceState(null, "", `#${prefix}=${encodeURIComponent(state.selected)}`);
+    const path = state.mode === "models" ? modelPath(state.selected) : benchmarkPath(state.selected);
+    history.replaceState(null, "", path);
   }
 
   function configureControls() {
@@ -383,6 +443,44 @@
     el(labelId).textContent = label;
   }
 
+  function updatePageMetadata(title, description) {
+    const url = `https://benchatlas.cn${location.pathname}`;
+    document.title = title;
+    const values = [
+      ['meta[name="description"]', "content", description],
+      ['link[rel="canonical"]', "href", url],
+      ['meta[property="og:title"]', "content", title],
+      ['meta[property="og:description"]', "content", description],
+      ['meta[property="og:url"]', "content", url],
+      ['meta[name="twitter:title"]', "content", title],
+      ['meta[name="twitter:description"]', "content", description]
+    ];
+    values.forEach(([selector, attribute, value]) => {
+      document.querySelector(selector)?.setAttribute(attribute, value);
+    });
+    const structuredData = el("structuredData");
+    if (structuredData) {
+      structuredData.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: title,
+        description,
+        url,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://benchatlas.cn/#website",
+          name: "BenchAtlas",
+          url: "https://benchatlas.cn/"
+        },
+        about: {
+          "@type": "Dataset",
+          "@id": "https://benchatlas.cn/#dataset",
+          name: "BenchAtlas AI Benchmark Dataset"
+        }
+      });
+    }
+  }
+
   function renderPage() {
     if (state.mode === "overall") renderOverallPage();
     else if (state.mode === "models") renderModelPage();
@@ -394,7 +492,10 @@
     const vendorCount = new Set(overallRankings.map(row => row.vendor)).size;
     el("domainLabel").textContent = "Reported Performance Index";
     el("pageTitle").textContent = "Overall Model Ranking";
-    document.title = "Overall Model Ranking - BenchAtlas";
+    updatePageMetadata(
+      "Overall AI Model Ranking | BenchAtlas",
+      "Compare the coverage-adjusted Reported Performance Index for AI models across eligible benchmark groups and domains."
+    );
     setStat("statModels", "statLabelModels", overallRankings.length, "eligible models");
     setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, "benchmark groups");
     setStat("statVendors", "statLabelVendors", vendorCount, plural(vendorCount, "vendor"));
@@ -418,7 +519,10 @@
     const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
     el("domainLabel").textContent = humanize(page.domain || "benchmark");
     el("pageTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
-    document.title = `${page.benchmark_name} - BenchAtlas`;
+    updatePageMetadata(
+      `${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} Results | BenchAtlas`,
+      `Compare ${page.benchmark_name} scores reported for ${new Set(page.rows.map(row => row.model_name)).size} AI models, including evaluation protocols and source evidence.`
+    );
     const modelCount = new Set(page.rows.map(row => row.model_name)).size;
     const vendorCount = new Set(page.rows.map(row => row.vendor)).size;
     const reportCount = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
@@ -453,7 +557,10 @@
 
     el("domainLabel").textContent = model.vendor || "Model";
     el("pageTitle").textContent = model.model_name;
-    document.title = `${model.model_name} - BenchAtlas`;
+    updatePageMetadata(
+      `${model.model_name} Benchmark Results | BenchAtlas`,
+      `${model.model_name} benchmark results from ${model.vendor}: ${benchmarkCount} benchmark groups with source evidence, protocols, and method notes.`
+    );
     setStat("statModels", "statLabelModels", benchmarkCount, plural(benchmarkCount, "benchmark group"));
     setStat("statRows", "statLabelRows", rows.length, plural(rows.length, "reported row"));
     setStat("statVendors", "statLabelVendors", reports.size, plural(reports.size, "report"));
@@ -567,7 +674,7 @@
             <tr>
               <td class="rank">#${esc(row.rank)}</td>
               <td>
-                <div class="model"><button class="entity-link model-jump" data-model="${esc(row.model_name)}">${esc(row.model_name)}</button></div>
+                <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
                 <div class="vendor">${esc(row.vendor)}</div>
               </td>
               <td><div class="score">${scoreCell(row)}</div></td>
@@ -594,7 +701,7 @@
             <tr>
               <td class="rank">#${esc(row.rank)}</td>
               <td>
-                <div class="model"><button class="entity-link benchmark-jump" data-benchmark="${esc(row.benchmark_key)}">${esc(row.benchmark_name)}</button></div>
+                <div class="model"><a class="entity-link benchmark-jump" href="${esc(benchmarkPath(row.benchmark_key))}" data-benchmark="${esc(row.benchmark_key)}">${esc(row.benchmark_name)}</a></div>
                 <div class="vendor">${esc(humanize(row.domain))}${row.benchmark_variant ? ` · ${esc(row.benchmark_variant)}` : ""}<br>${esc(row.metric_name)}</div>
               </td>
               <td><div class="score">${scoreCell(row)}</div></td>
@@ -621,7 +728,7 @@
             <tr>
               <td class="rank">#${esc(row.overall_rank)}</td>
               <td>
-                <div class="model"><button class="entity-link model-jump" data-model="${esc(row.model_name)}">${esc(row.model_name)}</button></div>
+                <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
                 <div class="vendor">${esc(row.vendor)}</div>
               </td>
               <td>
@@ -636,7 +743,7 @@
               </td>
               <td>
                 <div class="method-summary"><b>Coverage adjustment:</b> the domain-balanced score is shrunk toward 50 when fewer benchmark groups are available.</div>
-                <button class="entity-link model-jump" data-model="${esc(row.model_name)}">Open model details</button>
+                <a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">Open model details</a>
               </td>
             </tr>
           `).join("")}
@@ -648,10 +755,16 @@
 
   function attachEntityLinks() {
     el("rankingTable").querySelectorAll(".model-jump").forEach(button => {
-      button.addEventListener("click", () => switchView("models", button.dataset.model));
+      button.addEventListener("click", event => {
+        event.preventDefault();
+        switchView("models", button.dataset.model);
+      });
     });
     el("rankingTable").querySelectorAll(".benchmark-jump").forEach(button => {
-      button.addEventListener("click", () => switchView("benchmarks", button.dataset.benchmark));
+      button.addEventListener("click", event => {
+        event.preventDefault();
+        switchView("benchmarks", button.dataset.benchmark);
+      });
     });
   }
 
@@ -678,8 +791,15 @@
         switchView(next.mode, next.key, false);
       }
     });
+    window.addEventListener("popstate", () => {
+      const next = parseHash();
+      if (next && (next.mode !== state.mode || next.key !== state.selected)) {
+        switchView(next.mode, next.key, false);
+      }
+    });
     configureControls();
     renderList();
+    if (location.hash) updateHash();
   }
 
   init();

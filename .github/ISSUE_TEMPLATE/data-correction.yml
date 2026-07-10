@@ -1,0 +1,37 @@
+name: Data correction
+description: Report an incorrect score, label, protocol note, or evidence location.
+title: "[Data correction] "
+labels: ["data", "correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: BenchAtlas URL
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current data
+      description: Include model, benchmark, metric, score, and protocol text as shown.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected correction
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source URL
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence location
+      description: Provide page, table, figure, footnote, section, and a short supporting quotation.
+    validations:
+      required: true
