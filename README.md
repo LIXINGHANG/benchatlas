@@ -33,6 +33,8 @@ Coverage changes as new official reports are imported. The live site is the sour
 
 ## Features
 
+- **Spatial Atlas**: discover high-coverage benchmarks as domain-clustered, searchable map nodes.
+- **Registry and Matrix**: switch from spatial discovery to dense lookup or model-by-benchmark comparison.
 - **Benchmark view**: compare reported scores, protocols, and source evidence.
 - **Model view**: inspect every benchmark result associated with one model.
 - **Overall ranking**: explore the Reported Performance Index with coverage and confidence signals.
@@ -93,8 +95,9 @@ node scripts/generate-seo-pages.js
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Main BenchAtlas explorer shell |
-| `app.js` | Views, filtering, routing, and ranking logic |
+| `index.html` | Spatial Atlas homepage, Registry, Matrix, and evidence inspector |
+| `app.js` | Legacy detail views, filtering, routing, and ranking logic |
+| `legacy/` | Preserved previous explorer for fallback and comparison |
 | `site_data.bundle.js` | Bundled normalized benchmark dataset |
 | `scripts/generate-seo-pages.js` | Generates clean, indexable detail URLs |
 | `models/` | Generated model pages |

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BenchAtlas - AI Benchmark Landscape</title>
-  <meta name="description" content="Compare reported AI benchmark scores with source evidence, evaluation protocols, and model-specific method notes.">
+  <title>BenchAtlas - Explore the AI Benchmark Landscape</title>
+  <meta name="description" content="Explore reported AI benchmark scores as an interactive landscape with model rankings, evaluation protocols, method notes, and primary source evidence.">
   <link rel="canonical" href="https://benchatlas.cn/">
-  <meta property="og:title" content="BenchAtlas - AI Benchmark Landscape">
-  <meta property="og:description" content="Explore reported AI benchmark scores with source evidence and evaluation protocols.">
+  <meta property="og:title" content="BenchAtlas - Explore the AI Benchmark Landscape">
+  <meta property="og:description" content="Navigate AI benchmarks, compare reported model scores, and inspect the exact evaluation protocols behind every result.">
   <meta property="og:site_name" content="BenchAtlas">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://benchatlas.cn/">
@@ -15,762 +15,157 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BenchAtlas - AI Benchmark Landscape">
-  <meta name="twitter:description" content="Explore reported AI benchmark scores with source evidence and evaluation protocols.">
+  <meta name="twitter:title" content="BenchAtlas - Explore the AI Benchmark Landscape">
+  <meta name="twitter:description" content="Reported scores, evaluation protocols, source evidence, and model rankings in one benchmark atlas.">
   <meta name="twitter:image" content="https://benchatlas.cn/social-preview.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <script type="application/ld+json" id="structuredData">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://benchatlas.cn/#website",
-        "url": "https://benchatlas.cn/",
-        "name": "BenchAtlas",
-        "description": "An evidence-backed atlas of AI benchmark scores, evaluation protocols, and model rankings."
-      },
-      {
-        "@type": "Dataset",
-        "@id": "https://benchatlas.cn/#dataset",
-        "name": "BenchAtlas AI Benchmark Dataset",
-        "description": "Reported AI benchmark results extracted from official model cards and technical reports with source evidence and evaluation notes.",
-        "url": "https://benchatlas.cn/",
-        "isAccessibleForFree": true,
-        "license": "https://github.com/LIXINGHANG/benchatlas/blob/main/LICENSE",
-        "creator": { "@type": "Organization", "name": "BenchAtlas" }
-      }
+      {"@type":"WebSite","@id":"https://benchatlas.cn/#website","url":"https://benchatlas.cn/","name":"BenchAtlas","description":"An evidence-backed atlas of AI benchmark scores, evaluation protocols, and model rankings."},
+      {"@type":"Dataset","@id":"https://benchatlas.cn/#dataset","name":"BenchAtlas AI Benchmark Dataset","url":"https://benchatlas.cn/","isAccessibleForFree":true,"license":"https://github.com/LIXINGHANG/benchatlas/blob/main/LICENSE"}
     ]
   }
   </script>
+  <script src="/site_data.bundle.js?v=d9186ad"></script>
   <style>
     :root {
-      --ink: #17140f;
-      --muted: #6f695f;
-      --line: #ddd7ca;
-      --paper: #f7f3e8;
-      --panel: #fffdf7;
-      --panel-2: #eee7d8;
-      --accent: #0f766e;
-      --accent-2: #b42318;
-      --blue: #27548a;
-      --green: #4f7d35;
-      --shadow: 0 18px 50px rgba(31, 24, 12, 0.12);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--ink);
-      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
-      background:
-        linear-gradient(90deg, rgba(23, 20, 15, 0.045) 1px, transparent 1px) 0 0 / 36px 36px,
-        linear-gradient(rgba(23, 20, 15, 0.04) 1px, transparent 1px) 0 0 / 36px 36px,
-        radial-gradient(circle at 14% 12%, rgba(15, 118, 110, 0.16), transparent 24rem),
-        radial-gradient(circle at 82% 18%, rgba(180, 35, 24, 0.10), transparent 22rem),
-        var(--paper);
-    }
-
-    button, input, select {
-      font: inherit;
-    }
-
-    button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible {
-      outline: 3px solid rgba(15, 118, 110, 0.28);
-      outline-offset: 2px;
-    }
-
-    .shell {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 360px 1fr;
-    }
-
-    aside {
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow: hidden;
-      border-right: 1px solid var(--line);
-      background: rgba(255, 253, 247, 0.82);
-      backdrop-filter: blur(18px);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand {
-      padding: 22px 20px 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .brand-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand-mark {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
-    }
-
-    .brand-logo {
-      width: 38px;
-      height: 38px;
-      flex: 0 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 7px 18px rgba(23, 20, 15, 0.12);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1;
-      letter-spacing: 0;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .subtitle {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-      line-height: 1.5;
-      text-transform: uppercase;
-    }
-
-    .count-pill {
-      border: 1px solid var(--ink);
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .controls {
-      display: grid;
-      gap: 10px;
-      padding: 14px 14px 12px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .view-switch {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: var(--panel-2);
-      padding: 3px;
-      gap: 3px;
-    }
-
-    .view-tab {
-      min-height: 32px;
-      border: 0;
-      border-radius: 4px;
-      background: transparent;
-      color: var(--muted);
-      cursor: pointer;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .view-tab.active {
-      background: var(--panel);
-      color: var(--ink);
-      box-shadow: 0 1px 3px rgba(23, 20, 15, 0.12);
-    }
-
-    .search {
-      width: 100%;
-      height: 42px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      border-radius: 6px;
-      padding: 0 12px;
-      outline: none;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 14px;
-    }
-
-    .search:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
-    }
-
-    .filters {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 8px;
-    }
-
-    .result-meta {
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      line-height: 1.3;
-    }
-
-    select {
-      width: 100%;
-      min-width: 0;
-      height: 36px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: var(--panel);
-      padding: 0 8px;
-      color: var(--ink);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-    }
-
-    .bench-list {
-      overflow: auto;
-      padding: 8px;
-    }
-
-    .bench-button {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 10px;
-      text-align: left;
-      border: 1px solid transparent;
-      border-radius: 6px;
-      background: transparent;
-      color: var(--ink);
-      padding: 10px 10px;
-      cursor: pointer;
-    }
-
-    .bench-button:hover {
-      background: rgba(255, 253, 247, 0.8);
-      border-color: rgba(23, 20, 15, 0.12);
-    }
-
-    .bench-button.active {
-      background: var(--ink);
-      color: var(--panel);
-      border-color: var(--ink);
-    }
-
-    .bench-name {
-      min-width: 0;
-      font-size: 14px;
-      font-weight: 800;
-      line-height: 1.2;
-    }
-
-    .bench-meta {
-      margin-top: 5px;
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      line-height: 1.2;
-    }
-
-    .active .bench-meta { color: rgba(255, 253, 247, 0.72); }
-
-    .overall-rank {
-      color: var(--accent-2);
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    .active .overall-rank { color: #ffb4aa; }
-
-    .bench-button.overall-item {
-      grid-template-columns: 30px minmax(0, 1fr) auto;
-      align-items: start;
-    }
-
-    .bench-score {
-      align-self: start;
-      border-left: 1px solid currentColor;
-      padding-left: 10px;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    main {
-      min-width: 0;
-      padding: 26px 30px 38px;
-    }
-
-    .topbar {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      align-items: end;
-      margin-bottom: 22px;
-    }
-
-    .kicker {
-      color: var(--accent);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin: 7px 0 0;
-      font-size: clamp(34px, 5vw, 72px);
-      line-height: 0.94;
-      letter-spacing: 0;
-      max-width: 980px;
-    }
-
-    .variant {
-      color: var(--muted);
-      font-style: italic;
-      font-weight: 500;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(98px, 1fr));
-      gap: 10px;
-      min-width: min(520px, 100%);
-    }
-
-    .stat {
-      border: 1px solid var(--line);
-      background: rgba(255, 253, 247, 0.74);
-      border-radius: 6px;
-      padding: 11px 12px;
-      box-shadow: 0 1px 0 rgba(23, 20, 15, 0.04);
-    }
-
-    .stat b {
-      display: block;
-      font-size: 22px;
-      line-height: 1;
-    }
-
-    .stat span {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      text-transform: uppercase;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 18px;
-      align-items: start;
-    }
-
-    .ranking-panel, .detail-panel {
-      border: 1px solid var(--line);
-      background: rgba(255, 253, 247, 0.86);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    #rankingTable {
-      overflow-x: auto;
-    }
-
-    .panel-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(238, 231, 216, 0.66);
-    }
-
-    .panel-title {
-      font-size: 15px;
-      font-weight: 900;
-    }
-
-    .panel-note {
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 760px;
-      border-collapse: collapse;
-    }
-
-    th {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      background: var(--panel);
-      color: var(--muted);
-      text-align: left;
-      padding: 10px 12px;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--line);
-    }
-
-    td {
-      padding: 12px;
-      border-bottom: 1px solid rgba(221, 215, 202, 0.75);
-      vertical-align: top;
-      font-size: 14px;
-    }
-
-    tr:last-child td { border-bottom: 0; }
-
-    .rank {
-      width: 50px;
-      color: var(--accent-2);
-      font-size: 18px;
-      font-weight: 900;
-    }
-
-    .model {
-      font-weight: 900;
-      line-height: 1.25;
-    }
-
-    .vendor {
-      margin-top: 4px;
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-    }
-
-    .score {
-      white-space: nowrap;
-      font-size: 24px;
-      font-weight: 900;
-      color: var(--blue);
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      min-height: 22px;
-      border: 1px solid rgba(15, 118, 110, 0.28);
-      border-radius: 999px;
-      padding: 2px 7px;
-      background: rgba(15, 118, 110, 0.08);
-      color: #075e59;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .badge.warn {
-      border-color: rgba(180, 35, 24, 0.24);
-      background: rgba(180, 35, 24, 0.08);
-      color: #8b1d14;
-    }
-
-    .source {
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      line-height: 1.35;
-      max-width: 360px;
-    }
-
-    .source a {
-      color: var(--accent);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .source a:hover { text-decoration: underline; }
-
-    .entity-link {
-      border: 0;
-      background: transparent;
-      color: inherit;
-      cursor: pointer;
-      padding: 0;
-      text-align: left;
-      font: inherit;
-      font-weight: inherit;
-      text-decoration: underline;
-      text-decoration-color: rgba(15, 118, 110, 0.28);
-      text-underline-offset: 3px;
-    }
-
-    .entity-link:hover {
-      color: var(--accent);
-      text-decoration-color: currentColor;
-    }
-
-    .source-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px 10px;
-      margin-bottom: 5px;
-    }
-
-    .evidence-note {
-      margin-top: 7px;
-    }
-
-    .evidence-note summary {
-      width: fit-content;
-      cursor: pointer;
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .evidence-note div {
-      margin-top: 6px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    .method-note {
-      margin-top: 8px;
-      max-width: 360px;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      line-height: 1.45;
-    }
-
-    .method-note summary {
-      width: fit-content;
-      cursor: pointer;
-      color: var(--accent);
-      font-weight: 900;
-    }
-
-    .method-note div {
-      margin-top: 6px;
-      border-left: 2px solid rgba(15, 118, 110, 0.28);
-      padding-left: 8px;
-      color: var(--muted);
-    }
-
-    .method-summary {
-      margin-top: 7px;
-      max-width: 390px;
-      border-left: 2px solid rgba(15, 118, 110, 0.36);
-      padding-left: 8px;
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 11px;
-      line-height: 1.45;
-    }
-
-    .method-summary b {
-      color: var(--accent);
-      font-weight: 900;
-    }
-
-    .detail-panel {
-      position: sticky;
-      top: 18px;
-    }
-
-    .detail-body {
-      padding: 16px;
-      display: grid;
-      gap: 16px;
-    }
-
-    .detail-section h3 {
-      margin: 0 0 8px;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-
-    .detail-section p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .mini-list {
-      display: grid;
-      gap: 8px;
-    }
-
-    .mini-item {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 8px;
-      align-items: baseline;
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-      font-size: 12px;
-    }
-
-    .mini-item b { color: var(--accent-2); }
-    .mini-item span { font-weight: 800; }
-    .mini-item em { color: var(--muted); font-style: normal; }
-
-    .empty {
-      padding: 32px;
-      color: var(--muted);
-      font-family: ui-sans-serif, "Avenir Next", "Gill Sans", Helvetica, sans-serif;
-    }
-
-    @media (max-width: 1480px) {
-      .content-grid { grid-template-columns: 1fr; }
-      .detail-panel { position: relative; top: auto; order: -1; }
-      .detail-body { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 1080px) {
-      .shell { grid-template-columns: 1fr; }
-      aside {
-        position: relative;
-        height: auto;
-        max-height: 56vh;
-      }
-      .topbar { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 680px) {
-      main { padding: 18px 14px 28px; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .detail-body { grid-template-columns: 1fr; }
-      .panel-head { align-items: flex-start; flex-direction: column; }
-      #rankingTable { overflow: visible; }
-      table, tbody { display: block; width: 100%; min-width: 0; }
-      thead { display: none; }
-      tr {
-        display: grid;
-        grid-template-columns: 44px minmax(0, 1fr) auto;
-        gap: 10px 8px;
-        padding: 15px 14px;
-        border-bottom: 1px solid rgba(221, 215, 202, 0.9);
-      }
-      tr:last-child { border-bottom: 0; }
-      td { display: block; padding: 0; border: 0; min-width: 0; }
-      td:nth-child(1) { grid-column: 1; grid-row: 1; }
-      td:nth-child(2) { grid-column: 2; grid-row: 1; }
-      td:nth-child(3) { grid-column: 3; grid-row: 1; }
-      td:nth-child(4), td:nth-child(5) { grid-column: 1 / -1; }
-      td:nth-child(4) { grid-row: 2; }
-      td:nth-child(5) {
-        grid-row: 3;
-        border-top: 1px solid rgba(221, 215, 202, 0.72);
-        padding-top: 10px;
-      }
-      .score { font-size: 21px; }
-      .source, .method-note, .method-summary { max-width: none; }
-      .method-summary { margin-top: 8px; }
-    }
+      --ink:#17140f; --paper:#eeeae0; --panel:#fffdf8; --line:#c9c1b3; --muted:#736c62;
+      --teal:#0f766e; --red:#b42318; --blue:#27548a; --gold:#a96812; --violet:#67528d;
+      --serif:Georgia,Cambria,"Times New Roman",serif;
+      --sans:"Avenir Next","Gill Sans",Helvetica,sans-serif;
+      --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    }
+    *{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;color:var(--ink);font-family:var(--sans);background:var(--paper)}
+    button,input,select{font:inherit} button{color:inherit;cursor:pointer} button:focus-visible,input:focus-visible{outline:3px solid rgba(15,118,110,.28);outline-offset:2px}
+    .app{height:100vh;display:grid;grid-template-columns:68px minmax(620px,1fr) 370px}
+    .rail{z-index:20;padding:14px 0;display:flex;flex-direction:column;align-items:center;gap:14px;border-right:1px solid rgba(255,255,255,.12);background:var(--ink);color:white}
+    .rail img{width:40px;height:40px;border:1px solid rgba(255,255,255,.24);border-radius:7px}.rail button{width:42px;height:42px;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.52);font:800 9px var(--mono)}
+    .rail button.active{background:var(--panel);color:var(--ink)}.rail .spacer{margin-top:auto}.rail .count{font:8px var(--mono);color:rgba(255,255,255,.35);writing-mode:vertical-rl;letter-spacing:1px}
+    .workspace{min-width:0;height:100vh;display:grid;grid-template-rows:84px 52px minmax(0,1fr);background:var(--paper)}
+    .topbar{padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:22px;border-bottom:1px solid var(--line);background:rgba(238,234,224,.96)}
+    .identity span{color:var(--teal);font:8px var(--mono);text-transform:uppercase}.identity h1{margin:4px 0 0;font:800 26px/1 var(--serif)}
+    .search-wrap{position:relative;width:min(390px,42vw)}.search-wrap input{width:100%;height:40px;padding:0 38px 0 12px;border:1px solid #aaa193;border-radius:4px;background:var(--panel);color:var(--ink)}.search-wrap kbd{position:absolute;right:8px;top:10px;padding:3px 5px;border:1px solid var(--line);border-radius:3px;color:var(--muted);font:8px var(--mono)}
+    .toolbar{padding:7px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);background:rgba(255,253,248,.78);overflow:auto}
+    .modes,.filters,.zoom{display:flex;align-items:center;gap:5px}.seg{min-height:34px;padding:0 11px;border:1px solid var(--line);border-radius:4px;background:var(--panel);font-size:9px;font-weight:900;text-transform:uppercase;white-space:nowrap}.seg.active{border-color:var(--ink);background:var(--ink);color:white}.filter{min-height:32px;padding:0 10px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font-size:9px;font-weight:800;white-space:nowrap}.filter.active{border-color:var(--teal);background:#e3f0ed;color:var(--teal)}
+    .view{position:relative;min-height:0;overflow:hidden}.view-panel{display:none;width:100%;height:100%}.view-panel.active{display:block}
+    .map-viewport{position:relative;width:100%;height:100%;overflow:hidden;cursor:grab;background:linear-gradient(90deg,rgba(23,20,15,.055) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(rgba(23,20,15,.055) 1px,transparent 1px) 0 0/48px 48px,var(--paper)}.map-viewport.dragging{cursor:grabbing}
+    .world{position:absolute;left:0;top:0;width:1800px;height:1100px;transform-origin:0 0;will-change:transform}.world svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.connection{fill:none;stroke:rgba(15,118,110,.19);stroke-width:1.5;stroke-dasharray:6 7}.contour{fill:none;stroke:rgba(23,20,15,.1);stroke-width:1}
+    .cluster-label{position:absolute;color:rgba(23,20,15,.26);font:900 13px var(--mono);text-transform:uppercase;letter-spacing:2px;pointer-events:none}.cluster-label::after{content:"";display:block;width:72px;height:2px;margin-top:5px;background:currentColor}
+    .node{position:absolute;width:172px;min-height:68px;padding:10px 11px 9px 15px;border:1px solid #998f81;border-radius:4px;background:rgba(255,253,248,.95);box-shadow:0 8px 22px rgba(39,31,21,.09);text-align:left;transition:transform .15s ease,box-shadow .15s ease,opacity .15s ease}.node:hover{z-index:8;transform:translateY(-3px);box-shadow:0 14px 30px rgba(39,31,21,.17)}.node.selected{z-index:9;border-color:var(--red);box-shadow:0 0 0 2px rgba(180,35,24,.13),0 14px 32px rgba(180,35,24,.14)}.node.dimmed{opacity:.15}.node.hidden{display:none}.node::before{content:"";position:absolute;left:-7px;top:17px;width:11px;height:11px;border:2px solid var(--panel);border-radius:50%;background:var(--node-color,var(--teal));box-shadow:0 0 0 1px var(--node-color,var(--teal))}.node.selected::before{background:var(--red);box-shadow:0 0 0 1px var(--red)}
+    .node b{display:block;max-width:145px;font:800 14px/1.15 var(--serif);overflow-wrap:anywhere}.node small{display:block;margin-top:4px;color:var(--muted);font:7px/1.35 var(--mono);text-transform:uppercase}.node .best{position:absolute;right:9px;bottom:8px;color:var(--blue);font:900 14px var(--mono)}.node .coverage{position:absolute;right:8px;top:7px;padding:2px 4px;border:1px solid var(--line);font:7px var(--mono);background:var(--panel)}
+    .map-legend{position:absolute;z-index:12;left:18px;bottom:18px;max-width:470px;padding:10px 12px;display:flex;align-items:center;gap:12px;border:1px solid #aaa193;background:rgba(255,253,248,.92);font:8px var(--mono);box-shadow:0 6px 18px rgba(23,20,15,.08)}.legend-dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}.legend-dot.red{background:var(--red)}
+    .mini-map{position:absolute;z-index:12;right:18px;bottom:18px;width:150px;height:94px;border:1px solid #aaa193;background:rgba(255,253,248,.9);overflow:hidden}.mini-map span{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--teal)}.mini-viewport{position:absolute;border:1px solid var(--red);background:rgba(180,35,24,.06);pointer-events:none}
+    .registry-panel,.matrix-panel{overflow:auto;background:#f7f4ec}.registry{width:100%;border-collapse:collapse}.registry th{position:sticky;top:0;z-index:2;height:40px;padding:0 14px;border-bottom:1px solid var(--ink);background:var(--panel);text-align:left;color:var(--muted);font:8px var(--mono);text-transform:uppercase}.registry td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:11px}.registry tr{cursor:pointer}.registry tbody tr:hover{background:#fffaf0}.registry b{display:block;font:800 14px var(--serif)}.registry small{color:var(--muted)}.registry .score{color:var(--blue);font:900 16px var(--mono)}
+    .matrix-wrap{padding:18px;min-width:980px}.matrix{width:100%;border-collapse:separate;border-spacing:0;background:var(--panel);border:1px solid var(--line)}.matrix th,.matrix td{width:120px;min-width:120px;height:57px;padding:8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;font-size:10px}.matrix th{position:sticky;top:0;background:var(--panel);font:8px var(--mono)}.matrix th:first-child,.matrix td:first-child{position:sticky;left:0;width:220px;min-width:220px;text-align:left;background:var(--panel)}.matrix th:first-child{z-index:3}.matrix td:first-child b{display:block;font:800 13px var(--serif)}.cell{font:900 14px var(--mono)}.cell.top{background:#c7e4de;color:#174c47}.cell.mid{background:#efe4bd;color:#69490e}.cell.low{background:#ecd4cc;color:#72261e}.cell.empty{color:#aaa297;background:#f1eee7}
+    .inspector{height:100vh;padding:20px 18px 86px;border-left:1px solid var(--line);background:var(--panel);overflow:auto}.inspector-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.inspector .eyebrow{color:var(--teal);font:8px var(--mono);text-transform:uppercase}.inspector h2{margin:5px 0 3px;font:800 27px/1.05 var(--serif)}.inspector .sub{color:var(--muted);font:10px var(--mono)}.close-inspector{display:none;width:34px;height:34px;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+    .metrics{margin:18px 0 0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.metric{padding:13px 7px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric b{display:block;font:800 20px var(--serif)}.metric span{color:var(--muted);font:7px var(--mono);text-transform:uppercase}
+    .section{padding:18px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}.section h3{margin:0;font:800 16px var(--serif)}.section-head span{color:var(--muted);font:8px var(--mono)}.rank-row{min-height:55px;display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:8px;border-top:1px solid #e2ddd3}.rank-row .num{color:var(--red);font:900 11px var(--mono)}.rank-row b{display:block;font:800 13px var(--serif)}.rank-row small{color:var(--muted);font-size:9px}.rank-row .score{color:var(--blue);font:800 17px var(--serif)}.method{margin:0;color:#504a42;font:13px/1.55 var(--serif)}.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}.badge{padding:4px 6px;border:1px solid #8bb7b1;border-radius:999px;color:var(--teal);font:8px var(--mono)}.badge.red{border-color:#d6aaa5;color:var(--red)}.source{display:block;margin-top:10px;color:var(--teal);font-size:10px;font-weight:900;text-decoration:none}.source.secondary{color:var(--ink)}.evidence-quote{padding-left:11px;border-left:3px solid var(--line);color:var(--muted);font:italic 12px/1.5 var(--serif)}
+    .toast{position:fixed;z-index:50;left:88px;bottom:18px;padding:9px 12px;border-radius:4px;background:var(--ink);color:white;font:9px var(--mono);opacity:0;transform:translateY(8px);transition:.2s}.toast.show{opacity:1;transform:none}
+    @media(max-width:1050px){.app{grid-template-columns:60px minmax(0,1fr)}.inspector{position:fixed;z-index:30;top:0;right:0;width:min(370px,92vw);transform:translateX(105%);transition:transform .22s ease;box-shadow:-20px 0 50px rgba(23,20,15,.15)}.inspector.open{transform:none}.close-inspector{display:block}.mini-map{display:none}}
+    @media(max-width:650px){.app{grid-template-columns:50px minmax(0,1fr)}.rail button{width:36px;height:36px}.rail img{width:34px;height:34px}.workspace{grid-template-rows:76px 48px minmax(0,1fr)}.topbar{padding:11px 12px}.identity h1{font-size:20px}.identity span{display:none}.search-wrap{width:155px}.search-wrap kbd{display:none}.toolbar{padding:6px 8px}.filters{display:none}.world{width:1500px}.map-legend{left:10px;bottom:10px;max-width:calc(100% - 20px);flex-wrap:wrap}.toast{left:62px}.node{width:158px}}
   </style>
 </head>
 <body>
-  <div class="shell">
-    <aside>
-      <div class="brand">
-        <div class="brand-row">
-          <div class="brand-mark">
-            <img class="brand-logo" src="/logo.svg" alt="" width="38" height="38">
-            <h1>BenchAtlas</h1>
-          </div>
-          <span class="count-pill" id="totalCount">0 rows</span>
-        </div>
-        <p class="subtitle">Explore the landscape of AI benchmarks</p>
+  <div class="app">
+    <nav class="rail" aria-label="Primary navigation"><img src="/logo.svg" alt="BenchAtlas"><button class="active" title="Benchmark landscape">MAP</button><button title="Model ranking" onclick="location.href='/ranking/'">RANK</button><button title="Legacy explorer" onclick="location.href='/legacy/'">OLD</button><span class="count" id="railCount">LOADING DATA</span><button class="spacer" title="GitHub" onclick="window.open('https://github.com/LIXINGHANG/benchatlas','_blank')">GH</button></nav>
+    <main class="workspace">
+      <header class="topbar"><div class="identity"><span>BenchAtlas / spatial benchmark navigator</span><h1>Explore the benchmark landscape</h1></div><div class="search-wrap"><input id="search" placeholder="Search benchmark or model" autocomplete="off"><kbd>⌘ K</kbd></div></header>
+      <div class="toolbar"><div class="modes"><button class="seg active" data-mode="map">Landscape</button><button class="seg" data-mode="registry">Registry</button><button class="seg" data-mode="matrix">Matrix</button></div><div class="filters" id="filters"></div><div class="zoom"><button class="seg" id="zoomOut" aria-label="缩小">−</button><button class="seg" id="resetView">100%</button><button class="seg" id="zoomIn" aria-label="放大">＋</button></div></div>
+      <div class="view">
+        <section class="view-panel active" id="mapPanel"><div class="map-viewport" id="viewport"><div class="world" id="world"><svg id="mapSvg" viewBox="0 0 1800 1100" aria-hidden="true"></svg><div id="clusterLabels"></div><div id="nodes"></div></div><div class="map-legend"><b>ENCODING</b><span class="legend-dot"></span><span>node = benchmark</span><span>size = model coverage</span><span class="legend-dot red"></span><span>selected</span></div><div class="mini-map" id="miniMap"><div class="mini-viewport" id="miniViewport"></div></div></div></section>
+        <section class="view-panel registry-panel" id="registryPanel"><table class="registry"><thead><tr><th>Benchmark</th><th>Domain</th><th>Models</th><th>Vendors</th><th>Best reported</th><th>Protocol signals</th></tr></thead><tbody id="registryBody"></tbody></table></section>
+        <section class="view-panel matrix-panel" id="matrixPanel"><div class="matrix-wrap"><table class="matrix" id="matrixTable"></table></div></section>
       </div>
-      <div class="controls">
-        <div class="view-switch" role="tablist" aria-label="Explore by">
-          <button class="view-tab active" id="benchmarkViewTab" type="button" role="tab" aria-selected="true">Benchmarks</button>
-          <button class="view-tab" id="modelViewTab" type="button" role="tab" aria-selected="false">Models</button>
-          <button class="view-tab" id="overallViewTab" type="button" role="tab" aria-selected="false">Overall</button>
-        </div>
-        <input class="search" id="search" type="search" placeholder="Search benchmark, domain, model" aria-label="Search benchmarks and models">
-        <div class="filters">
-          <select id="domainFilter" aria-label="Domain filter"></select>
-          <select id="sortMode" aria-label="Sort mode">
-            <option value="coverage">Sort by coverage</option>
-            <option value="name">Sort by name</option>
-            <option value="reports">Sort by reports</option>
-          </select>
-        </div>
-        <div class="result-meta" id="resultMeta" aria-live="polite"></div>
-      </div>
-      <div class="bench-list" id="benchList"></div>
-    </aside>
-
-    <main>
-      <section class="topbar">
-        <div>
-          <div class="kicker" id="domainLabel">Benchmark</div>
-          <h2 id="pageTitle">Loading</h2>
-        </div>
-        <div class="stats">
-          <div class="stat"><b id="statModels">0</b><span id="statLabelModels">models</span></div>
-          <div class="stat"><b id="statRows">0</b><span id="statLabelRows">reported rows</span></div>
-          <div class="stat"><b id="statVendors">0</b><span id="statLabelVendors">vendors</span></div>
-          <div class="stat"><b id="statReports">0</b><span id="statLabelReports">reports</span></div>
-        </div>
-      </section>
-
-      <section class="content-grid">
-        <div class="ranking-panel">
-          <div class="panel-head">
-            <div>
-              <div class="panel-title" id="rankingTitle">Reported Ranking</div>
-              <div class="panel-note" id="rankingNote">Protocol variants are shown, not strict normalized leaderboards.</div>
-            </div>
-            <div class="badges" id="panelBadges"></div>
-          </div>
-          <div id="rankingTable"></div>
-        </div>
-
-        <div class="detail-panel">
-          <div class="panel-head">
-            <div class="panel-title">Context</div>
-            <div class="panel-note" id="metricLabel">metric</div>
-          </div>
-          <div class="detail-body">
-            <div class="detail-section">
-              <h3 id="summaryHeading">Best reported</h3>
-              <div class="mini-list" id="topModels"></div>
-            </div>
-            <div class="detail-section">
-              <h3 id="signalsHeading">Protocol signals</h3>
-              <div class="badges" id="contextBadges"></div>
-            </div>
-            <div class="detail-section">
-              <h3 id="policyHeading">Evidence policy</h3>
-              <p id="policyText">Scores are kept with their original report, evidence location, and evaluation notes. Rows marked protocol variant may use different harnesses or settings, so treat the ranking as reported results rather than a strictly normalized leaderboard.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
+    <aside class="inspector open" id="inspector"><div class="inspector-top"><div><span class="eyebrow" id="inspectorDomain">Loading dataset</span><h2 id="inspectorTitle">BenchAtlas</h2><span class="sub" id="inspectorSub">Preparing the landscape…</span></div><button class="close-inspector" id="closeInspector" aria-label="Close details">×</button></div><div class="metrics"><div class="metric"><b id="modelCount">—</b><span>Models</span></div><div class="metric"><b id="vendorCount">—</b><span>Vendors</span></div><div class="metric"><b id="reportCount">—</b><span>Reports</span></div></div><section class="section"><div class="section-head"><h3>Reported ranking</h3><span id="metricLabel"></span></div><div id="ranking"></div></section><section class="section"><div class="section-head"><h3>Method notes</h3><span>selected row</span></div><p class="method" id="methodNote">Select a benchmark node to inspect its evaluation protocol.</p><div class="badges" id="badges"></div></section><section class="section"><div class="section-head"><h3>Source evidence</h3><span id="sourceLocation"></span></div><p class="evidence-quote" id="evidenceQuote">Every result remains connected to its report and evidence location.</p><a class="source" id="sourceLink" href="#" target="_blank" rel="noreferrer">OPEN PRIMARY SOURCE ↗</a><a class="source secondary" id="benchmarkLink" href="#">OPEN FULL BENCHMARK PAGE →</a></section></aside>
   </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    const data = window.BENCHATLAS_DATA;
+    const catalog = [...data.benchmark_catalog].sort((a,b)=>b.model_count-a.model_count || b.result_count-a.result_count);
+    const pages = data.benchmark_pages;
+    const macroRules = [
+      {id:'code',label:'Code & Agents',color:'#0f766e',center:[290,280],domains:['coding','agent','computer_use','business_simulation','healthcare_agent']},
+      {id:'reason',label:'Reasoning & Knowledge',color:'#27548a',center:[820,230],domains:['reasoning','math','general','general_capability','self_improvement']},
+      {id:'multi',label:'Vision & Multimodal',color:'#a96812',center:[1350,275],domains:['multimodal','vision','video','document']},
+      {id:'science',label:'Science & Expert',color:'#67528d',center:[390,770],domains:['science','health','research','professional','expert_tasks']},
+      {id:'safety',label:'Safety & Security',color:'#b42318',center:[950,760],domains:['safety','security','cybersecurity','agent_safety','bio_safety','computer_use_safety','cyber_safety','health_safety','safety_bias','safety_health','vision_safety']},
+      {id:'language',label:'Language & Context',color:'#4f7d35',center:[1450,760],domains:['language','multilingual','long_context']}
+    ];
+    const getMacro = domain => macroRules.find(rule=>rule.domains.includes(domain)) || macroRules[1];
+    const hash = value => [...value].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,2166136261);
+    const slugify = value => String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'item';
+    const featured = catalog.slice(0,42);
+    const positions = new Map();
+    const state = {scale:.72,x:40,y:18,drag:false,startX:0,startY:0,baseX:0,baseY:0,domain:'all',query:'',selected:null,mode:'map'};
+    const $ = id => document.getElementById(id);
+    const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const formatScore = (score,unit) => score == null || score === '' ? '—' : `${score}${unit==='%'?'%':''}`;
 
-  <script src="/site_data.bundle.js?v=d9186ad"></script>
-  <script src="/app.js?v=seo-pages-1"></script>
+    function positionNodes(){
+      const groups = new Map(macroRules.map(r=>[r.id,[]]));
+      featured.forEach(item=>groups.get(getMacro(item.domain).id).push(item));
+      groups.forEach((items,id)=>{const rule=macroRules.find(r=>r.id===id);items.forEach((item,index)=>{const angle=(Math.PI*2*index/Math.max(items.length,1))+(hash(item.rank_group_key)%100)/180;const ring=85+Math.floor(index/6)*92+(hash(item.benchmark_name)%34);positions.set(item.rank_group_key,{x:rule.center[0]+Math.cos(angle)*ring,y:rule.center[1]+Math.sin(angle)*ring,macro:rule});});});
+    }
+
+    function renderMap(){
+      positionNodes();
+      $('clusterLabels').innerHTML=macroRules.map(rule=>`<div class="cluster-label" style="left:${rule.center[0]-95}px;top:${rule.center[1]-150}px;color:${rule.color}66">${rule.label}</div>`).join('');
+      $('mapSvg').innerHTML=macroRules.map(rule=>`<circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="185"/><circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="125"/>`).join('') + featured.map(item=>{const p=positions.get(item.rank_group_key);return `<path class="connection" d="M${p.macro.center[0]} ${p.macro.center[1]} Q ${(p.x+p.macro.center[0])/2+25} ${(p.y+p.macro.center[1])/2-20} ${p.x} ${p.y}"/>`}).join('');
+      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);return `<button class="node" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" style="left:${p.x-86}px;top:${p.y-34}px;--node-color:${p.macro.color};transform:scale(${Math.min(1.08,.84+item.model_count/80)})"><span class="coverage">${item.model_count}M</span><b>${esc(item.benchmark_name)}</b><small>${esc(item.domain.replaceAll('_',' '))} · ${esc(item.metric_name)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
+      document.querySelectorAll('.node').forEach(node=>node.addEventListener('click',e=>{e.stopPropagation();selectBenchmark(node.dataset.key);}))
+      renderMiniMap(); applyTransform();
+    }
+
+    function renderMiniMap(){
+      $('miniMap').querySelectorAll('span').forEach(n=>n.remove());
+      featured.forEach(item=>{const p=positions.get(item.rank_group_key);const dot=document.createElement('span');dot.style.left=`${p.x/1800*150}px`;dot.style.top=`${p.y/1100*94}px`;dot.style.background=p.macro.color;$('miniMap').appendChild(dot);});
+    }
+
+    function applyTransform(){
+      $('world').style.transform=`translate(${state.x}px,${state.y}px) scale(${state.scale})`;
+      $('resetView').textContent=`${Math.round(state.scale*100)}%`;
+      const vp=$('viewport').getBoundingClientRect();const mini=$('miniViewport');mini.style.left=`${Math.max(0,-state.x/state.scale/1800*150)}px`;mini.style.top=`${Math.max(0,-state.y/state.scale/1100*94)}px`;mini.style.width=`${Math.min(150,vp.width/state.scale/1800*150)}px`;mini.style.height=`${Math.min(94,vp.height/state.scale/1100*94)}px`;
+    }
+
+    function fitView(){const vp=$('viewport').getBoundingClientRect();state.scale=Math.min(.82,Math.max(.42,Math.min(vp.width/1800,vp.height/1100)*1.34));state.x=(vp.width-1800*state.scale)/2;state.y=(vp.height-1100*state.scale)/2;applyTransform();}
+    function zoom(delta,cx=$('viewport').clientWidth/2,cy=$('viewport').clientHeight/2){const old=state.scale;state.scale=Math.max(.35,Math.min(1.35,state.scale+delta));state.x=cx-(cx-state.x)*(state.scale/old);state.y=cy-(cy-state.y)*(state.scale/old);applyTransform();}
+
+    function selectBenchmark(key){
+      const item=catalog.find(x=>x.rank_group_key===key);const page=pages[key];if(!item||!page)return;state.selected=key;
+      document.querySelectorAll('.node').forEach(n=>n.classList.toggle('selected',n.dataset.key===key));
+      $('inspectorDomain').textContent=`Selected landmark / ${item.domain.replaceAll('_',' ')}`;$('inspectorTitle').textContent=item.benchmark_name;$('inspectorSub').textContent=`${item.metric_name} · ${item.score_unit||'score'} · ${item.comparability}`;$('modelCount').textContent=item.model_count;$('vendorCount').textContent=item.vendor_count;$('reportCount').textContent=item.report_count;$('metricLabel').textContent=`${item.metric_name} · ${item.score_unit}`;
+      const rows=page.rows.slice(0,6);$('ranking').innerHTML=rows.map(row=>`<div class="rank-row" data-row="${row.rank}"><span class="num">${String(row.rank).padStart(2,'0')}</span><span><b>${esc(row.model_name)}</b><small>${esc(row.vendor)}</small></span><span class="score">${esc(formatScore(row.score,row.score_unit))}</span></div>`).join('')||'<p class="method">No reported rows.</p>';
+      updateEvidence(rows[0]);$('inspector').classList.add('open');
+      $('benchmarkLink').href=`/benchmarks/${slugify(item.rank_group_key)}/`;
+      document.querySelectorAll('.rank-row').forEach((row,index)=>row.addEventListener('click',()=>updateEvidence(rows[index])));
+      showToast(`${item.benchmark_name} · ${item.model_count} models`);
+    }
+
+    function updateEvidence(row){if(!row)return;$('methodNote').textContent=row.protocol_full||row.protocol_note||'No benchmark-specific method note was reported.';const badgeList=[row.comparability_label,...(row.protocol_badges||[])].filter(Boolean);$('badges').innerHTML=badgeList.map((b,i)=>`<span class="badge ${i===0?'red':''}">${esc(b)}</span>`).join('');$('sourceLocation').textContent=row.evidence_location||'source located';$('evidenceQuote').textContent=row.evidence_quote||'No short evidence quote available.';$('sourceLink').href=row.source_url||'#';}
+
+    function applyFilters(){const q=state.query.toLowerCase();document.querySelectorAll('.node').forEach(node=>{const item=catalog.find(x=>x.rank_group_key===node.dataset.key);const domainOk=state.domain==='all'||node.dataset.domain===state.domain;const queryOk=!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q);node.classList.toggle('hidden',!domainOk);node.classList.toggle('dimmed',domainOk&&!queryOk);});renderRegistry();renderMatrix();}
+
+    function renderFilters(){$('filters').innerHTML=`<button class="filter active" data-domain="all">All</button>`+macroRules.map(r=>`<button class="filter" data-domain="${r.id}">${r.label}</button>`).join('');document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{state.domain=btn.dataset.domain;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===btn));applyFilters();}));}
+    function filteredCatalog(){const q=state.query.toLowerCase();return catalog.filter(item=>(state.domain==='all'||getMacro(item.domain).id===state.domain)&&(!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q)));}
+    function renderRegistry(){$('registryBody').innerHTML=filteredCatalog().slice(0,100).map(item=>`<tr data-key="${esc(item.rank_group_key)}"><td><b>${esc(item.benchmark_name)}</b><small>${esc(item.metric_name)} · ${esc(item.score_unit)}</small></td><td>${esc(item.domain.replaceAll('_',' '))}</td><td>${item.model_count}</td><td>${item.vendor_count}</td><td class="score">${esc(formatScore(item.best_score,item.score_unit))}<small>${esc(item.best_model)}</small></td><td>${esc(item.protocol_badges||'—')}</td></tr>`).join('');document.querySelectorAll('#registryBody tr').forEach(row=>row.addEventListener('click',()=>selectBenchmark(row.dataset.key)));}
+
+    function renderMatrix(){
+      const items=filteredCatalog().slice(0,10);const modelCounts=new Map();items.forEach(item=>(pages[item.rank_group_key]?.rows||[]).forEach(r=>modelCounts.set(r.model_name,(modelCounts.get(r.model_name)||0)+1)));const models=[...modelCounts].sort((a,b)=>b[1]-a[1]).slice(0,7).map(x=>x[0]);
+      $('matrixTable').innerHTML=`<thead><tr><th>Benchmark</th>${models.map(m=>`<th>${esc(m)}</th>`).join('')}</tr></thead><tbody>${items.map(item=>{const rows=pages[item.rank_group_key]?.rows||[];return `<tr><td><b>${esc(item.benchmark_name)}</b><small>${esc(item.metric_name)}</small></td>${models.map(model=>{const r=rows.find(x=>x.model_name===model);if(!r)return'<td class="cell empty">—</td>';const cls=r.rank<=2?'top':r.rank<=5?'mid':'low';return `<td class="cell ${cls}">${esc(formatScore(r.score,r.score_unit))}</td>`}).join('')}</tr>`}).join('')}</tbody>`;
+    }
+
+    function switchMode(mode){state.mode=mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));document.querySelectorAll('.view-panel').forEach(p=>p.classList.remove('active'));$(`${mode}Panel`).classList.add('active');if(mode==='map')setTimeout(fitView,0);}
+    function showToast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('toast').classList.remove('show'),1600);}
+
+    const vp=$('viewport');vp.addEventListener('pointerdown',e=>{if(e.target.closest('.node'))return;state.drag=true;state.startX=e.clientX;state.startY=e.clientY;state.baseX=state.x;state.baseY=state.y;vp.setPointerCapture(e.pointerId);vp.classList.add('dragging')});vp.addEventListener('pointermove',e=>{if(!state.drag)return;state.x=state.baseX+e.clientX-state.startX;state.y=state.baseY+e.clientY-state.startY;applyTransform()});vp.addEventListener('pointerup',()=>{state.drag=false;vp.classList.remove('dragging')});vp.addEventListener('wheel',e=>{e.preventDefault();const r=vp.getBoundingClientRect();zoom(e.deltaY<0?.08:-.08,e.clientX-r.left,e.clientY-r.top)},{passive:false});
+    $('zoomIn').addEventListener('click',()=>zoom(.1));$('zoomOut').addEventListener('click',()=>zoom(-.1));$('resetView').addEventListener('click',fitView);$('closeInspector').addEventListener('click',()=>$('inspector').classList.remove('open'));document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>switchMode(btn.dataset.mode)));$('search').addEventListener('input',e=>{state.query=e.target.value.trim();applyFilters()});document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('search').focus()}});window.addEventListener('resize',()=>state.mode==='map'&&fitView());
+
+    $('railCount').textContent=`${data.summary.rows} ROWS · ${data.summary.models} MODELS · ${data.summary.benchmarks} BENCHMARKS`;
+    renderFilters();renderMap();renderRegistry();renderMatrix();fitView();selectBenchmark(featured[0].rank_group_key);
+    if (window.matchMedia('(max-width:1050px)').matches) $('inspector').classList.remove('open');
+  </script>
 </body>
 </html>

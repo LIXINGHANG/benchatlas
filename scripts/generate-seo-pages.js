@@ -96,6 +96,7 @@ function structuredData({ title, description, url, type }) {
 
 function renderPage(template, page) {
   let html = template;
+  html = html.replace(/\s*<meta name="robots" content="noindex, nofollow">/, "");
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(page.title)}</title>`);
   html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escapeHtml(page.description)}">`);
   html = html.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${escapeHtml(page.url)}">`);
@@ -118,7 +119,7 @@ function writePage(relativePath, html) {
 
 function main() {
   const data = loadData();
-  const template = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const template = fs.readFileSync(path.join(root, "legacy", "index.html"), "utf8");
   const modelSlugs = createSlugIndexes(data.model_catalog, item => item.model_name, "model");
   const benchmarkSlugs = createSlugIndexes(data.benchmark_catalog, item => item.rank_group_key, "benchmark");
 
