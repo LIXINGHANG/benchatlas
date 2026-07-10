@@ -177,9 +177,11 @@
 
   function renderList() {
     const rows = filteredCatalog();
+    const previousSelection = state.selected;
     if (!rows.some(item => itemKey(item) === state.selected)) {
       state.selected = rows[0] ? itemKey(rows[0]) : itemKey(currentCatalog()[0]);
     }
+    if (state.selected !== previousSelection) updateHash();
 
     const noun = state.mode === "models" ? "model" : "benchmark group";
     el("resultMeta").textContent = `${rows.length} ${noun}${rows.length === 1 ? "" : "s"}`;
