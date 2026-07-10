@@ -55,7 +55,9 @@ const data = window.BENCHATLAS_DATA;
 
     function applyTransform(){
       $('world').style.transform=`translate(${state.x}px,${state.y}px) scale(${state.scale})`;
-      $('resetView').textContent=`${Math.round(state.scale*100)}%`;
+      const zoomLabel=`${Math.round(state.scale*100)}%`;
+      $('resetView').textContent=zoomLabel;
+      $('statusZoom').textContent=zoomLabel;
       const vp=$('viewport').getBoundingClientRect();const mini=$('miniViewport');mini.style.left=`${Math.max(0,-state.x/state.scale/1800*150)}px`;mini.style.top=`${Math.max(0,-state.y/state.scale/1100*94)}px`;mini.style.width=`${Math.min(150,vp.width/state.scale/1800*150)}px`;mini.style.height=`${Math.min(94,vp.height/state.scale/1100*94)}px`;
     }
 
@@ -67,6 +69,8 @@ const data = window.BENCHATLAS_DATA;
       document.querySelectorAll('.node').forEach(n=>n.classList.toggle('selected',n.dataset.key===key));
       document.querySelectorAll('.connection').forEach(route=>route.classList.toggle('selected',route.dataset.routeKey===key));
       const macro=getMacro(item.domain);$('inspectorDomain').textContent=`Selected landmark / ${macro.label}`;$('inspectorTitle').textContent=item.benchmark_name;$('inspectorSub').textContent=`${item.domain.replaceAll('_',' ')} · ${item.metric_name} · ${item.score_unit||'score'} · ${item.comparability}`;$('modelCount').textContent=item.model_count;$('vendorCount').textContent=item.vendor_count;$('reportCount').textContent=item.report_count;$('metricLabel').textContent=`${item.metric_name} · ${item.score_unit}`;
+      $('statusDomain').textContent=state.domain==='all'?macro.label:macroRules.find(rule=>rule.id===state.domain)?.label||'All domains';
+      $('statusSelection').textContent=item.benchmark_name;
       const rows=page.rows.slice(0,6);$('ranking').innerHTML=rows.map(row=>`<div class="rank-row" data-row="${row.rank}"><span class="num">${String(row.rank).padStart(2,'0')}</span><span><b>${esc(row.model_name)}</b><small>${esc(row.vendor)}</small></span><span class="score">${esc(formatScore(row.score,row.score_unit))}</span></div>`).join('')||'<p class="method">No reported rows.</p>';
       updateEvidence(rows[0],item);$('inspector').classList.add('open');
       $('benchmarkLink').href=`/benchmarks/${slugify(item.rank_group_key)}/`;
@@ -76,7 +80,7 @@ const data = window.BENCHATLAS_DATA;
 
     function updateEvidence(row,item){if(!row)return;$('methodNote').textContent=row.protocol_full||row.protocol_note||'No benchmark-specific method note was reported.';const badgeList=[row.comparability_label,...(isSafety(item)?['safety layer']:[]),...(row.protocol_badges||[])].filter(Boolean);$('badges').innerHTML=badgeList.map((b,i)=>`<span class="badge ${i===0||b==='safety layer'?'red':''}">${esc(b)}</span>`).join('');$('sourceLocation').textContent=row.evidence_location||'source located';$('evidenceQuote').textContent=row.evidence_quote||'No short evidence quote available.';$('sourceLink').href=row.source_url||'#';}
 
-    function applyFilters(){const q=state.query.toLowerCase();document.querySelectorAll('.node').forEach(node=>{const item=catalog.find(x=>x.rank_group_key===node.dataset.key);const domainOk=state.domain==='all'||node.dataset.domain===state.domain;const safetyOk=!state.safetyOnly||node.dataset.risk==='true';const queryOk=!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q);node.classList.toggle('hidden',!domainOk||!safetyOk);node.classList.toggle('dimmed',domainOk&&safetyOk&&!queryOk);});renderRegistry();renderMatrix();}
+    function applyFilters(){const q=state.query.toLowerCase();document.querySelectorAll('.node').forEach(node=>{const item=catalog.find(x=>x.rank_group_key===node.dataset.key);const domainOk=state.domain==='all'||node.dataset.domain===state.domain;const safetyOk=!state.safetyOnly||node.dataset.risk==='true';const queryOk=!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q);node.classList.toggle('hidden',!domainOk||!safetyOk);node.classList.toggle('dimmed',domainOk&&safetyOk&&!queryOk);});const selectedItem=catalog.find(item=>item.rank_group_key===state.selected);const selectedMacro=selectedItem&&getMacro(selectedItem.domain);const filterMacro=macroRules.find(rule=>rule.id===state.domain);$('statusDomain').textContent=state.safetyOnly?'Safety layer':filterMacro?.label||selectedMacro?.label||'All domains';renderRegistry();renderMatrix();}
 
     function renderFilters(){$('filters').innerHTML=`<button class="filter active" data-domain="all">All</button>`+macroRules.map(r=>`<button class="filter" data-domain="${r.id}">${r.label}</button>`).join('')+`<button class="filter risk-filter" data-layer="safety">Safety layer</button>`;document.querySelectorAll('[data-domain]').forEach(btn=>btn.addEventListener('click',()=>{state.domain=btn.dataset.domain;document.querySelectorAll('[data-domain]').forEach(b=>b.classList.toggle('active',b===btn));applyFilters();}));document.querySelector('[data-layer="safety"]').addEventListener('click',event=>{state.safetyOnly=!state.safetyOnly;event.currentTarget.classList.toggle('active',state.safetyOnly);applyFilters();});}
     function filteredCatalog(){const q=state.query.toLowerCase();return catalog.filter(item=>(state.domain==='all'||getMacro(item.domain).id===state.domain)&&(!state.safetyOnly||isSafety(item))&&(!q||`${item.benchmark_name} ${item.domain} ${item.best_model}`.toLowerCase().includes(q)));}
@@ -93,6 +97,12 @@ const data = window.BENCHATLAS_DATA;
     const vp=$('viewport');vp.addEventListener('pointerdown',e=>{if(e.target.closest('.node'))return;state.drag=true;state.startX=e.clientX;state.startY=e.clientY;state.baseX=state.x;state.baseY=state.y;vp.setPointerCapture(e.pointerId);vp.classList.add('dragging')});vp.addEventListener('pointermove',e=>{if(!state.drag)return;state.x=state.baseX+e.clientX-state.startX;state.y=state.baseY+e.clientY-state.startY;applyTransform()});vp.addEventListener('pointerup',()=>{state.drag=false;vp.classList.remove('dragging')});vp.addEventListener('wheel',e=>{e.preventDefault();const r=vp.getBoundingClientRect();zoom(e.deltaY<0?.08:-.08,e.clientX-r.left,e.clientY-r.top)},{passive:false});
     $('zoomIn').addEventListener('click',()=>zoom(.1));$('zoomOut').addEventListener('click',()=>zoom(-.1));$('resetView').addEventListener('click',fitView);$('closeInspector').addEventListener('click',()=>$('inspector').classList.remove('open'));document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>switchMode(btn.dataset.mode)));$('search').addEventListener('input',e=>{state.query=e.target.value.trim();applyFilters()});document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('search').focus()}});window.addEventListener('resize',()=>state.mode==='map'&&fitView());
 
-$('railCount').textContent=`${data.summary.result_count} ROWS · ${data.summary.model_count} MODELS · ${data.summary.benchmark_group_count} BENCHMARKS`;
+    const formatCount=value=>Number(value||0).toLocaleString('en-US');
+    $('railCount').textContent=`${data.summary.result_count} ROWS · ${data.summary.model_count} MODELS · ${data.summary.benchmark_group_count} BENCHMARKS`;
+    $('headerReports').textContent=`${formatCount(data.summary.report_count)} source reports`;
+    $('headerBenchmarks').textContent=formatCount(data.summary.benchmark_group_count);
+    $('headerProtocols').textContent=formatCount(data.summary.protocol_count);
+    $('statusResults').textContent=`${formatCount(data.summary.result_count)} results`;
+    $('statusModels').textContent=`${formatCount(data.summary.model_count)} models`;
     renderFilters();renderMap();renderRegistry();renderMatrix();fitView();selectBenchmark(featured[0].rank_group_key);
     if (window.matchMedia('(max-width:1050px)').matches) $('inspector').classList.remove('open');
