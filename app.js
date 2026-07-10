@@ -31,6 +31,7 @@
 
   const el = id => document.getElementById(id);
   const fmt = value => Number.isFinite(Number(value)) ? Number(value).toLocaleString("en-US") : value;
+  const plural = (count, singular, pluralForm = `${singular}s`) => Number(count) === 1 ? singular : pluralForm;
   const humanize = value => String(value || "").replace(/_/g, " ").replace(/\b\w/g, char => char.toUpperCase());
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
     "&": "&amp;",
@@ -222,8 +223,8 @@
           <span class="bench-name">${esc(item.model_name)}</span>
           <span class="bench-meta">
             <span>${esc(item.vendor)}</span>
-            <span>${esc(item.benchmark_count)} benchmarks</span>
-            <span>${esc(item.report_count)} reports</span>
+            <span>${esc(item.benchmark_count)} ${plural(item.benchmark_count, "benchmark")}</span>
+            <span>${esc(item.report_count)} ${plural(item.report_count, "report")}</span>
           </span>
         </span>
         <span class="bench-score">${esc(item.result_count)} rows</span>
@@ -255,10 +256,13 @@
     el("domainLabel").textContent = humanize(page.domain || "benchmark");
     el("pageTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
     document.title = `${page.benchmark_name} - BenchAtlas`;
-    setStat("statModels", "statLabelModels", new Set(page.rows.map(row => row.model_name)).size, "models");
-    setStat("statRows", "statLabelRows", page.result_count, "reported rows");
-    setStat("statVendors", "statLabelVendors", new Set(page.rows.map(row => row.vendor)).size, "vendors");
-    setStat("statReports", "statLabelReports", new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size, "reports");
+    const modelCount = new Set(page.rows.map(row => row.model_name)).size;
+    const vendorCount = new Set(page.rows.map(row => row.vendor)).size;
+    const reportCount = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
+    setStat("statModels", "statLabelModels", modelCount, plural(modelCount, "model"));
+    setStat("statRows", "statLabelRows", page.result_count, plural(page.result_count, "reported row"));
+    setStat("statVendors", "statLabelVendors", vendorCount, plural(vendorCount, "vendor"));
+    setStat("statReports", "statLabelReports", reportCount, plural(reportCount, "report"));
     el("metricLabel").textContent = `${page.metric_name} · ${page.score_unit || "score"}`;
     el("rankingTitle").textContent = "Reported Ranking";
     el("rankingNote").textContent = "Protocol variants are shown, not strict normalized leaderboards.";
@@ -287,11 +291,11 @@
     el("domainLabel").textContent = model.vendor || "Model";
     el("pageTitle").textContent = model.model_name;
     document.title = `${model.model_name} - BenchAtlas`;
-    setStat("statModels", "statLabelModels", benchmarkCount, "benchmark groups");
-    setStat("statRows", "statLabelRows", rows.length, "reported rows");
-    setStat("statVendors", "statLabelVendors", reports.size, "reports");
-    setStat("statReports", "statLabelReports", domains.size, "domains");
-    el("metricLabel").textContent = `${benchmarkCount} benchmarks · ${reports.size} reports`;
+    setStat("statModels", "statLabelModels", benchmarkCount, plural(benchmarkCount, "benchmark group"));
+    setStat("statRows", "statLabelRows", rows.length, plural(rows.length, "reported row"));
+    setStat("statVendors", "statLabelVendors", reports.size, plural(reports.size, "report"));
+    setStat("statReports", "statLabelReports", domains.size, plural(domains.size, "domain"));
+    el("metricLabel").textContent = `${benchmarkCount} ${plural(benchmarkCount, "benchmark")} · ${reports.size} ${plural(reports.size, "report")}`;
     el("rankingTitle").textContent = "Reported benchmark results";
     el("rankingNote").textContent = "Each row keeps its benchmark-specific rank, protocol, and source evidence.";
     el("summaryHeading").textContent = "Top domains";
@@ -299,7 +303,10 @@
     el("policyHeading").textContent = "Interpretation";
     el("policyText").textContent = "Ranks are calculated within each benchmark group. Scores from different benchmarks or metrics are not compared with one another. Multiple rows for the same benchmark are preserved when reports or evaluation settings differ.";
     renderBadges(el("panelBadges"), badges, true);
-    renderBadges(el("contextBadges"), [`${reports.size} reports`, `${methodCount} method notes`], false);
+    renderBadges(el("contextBadges"), [
+      `${reports.size} ${plural(reports.size, "report")}`,
+      `${methodCount} ${plural(methodCount, "method note")}`
+    ], false);
     renderDomainSummary(domains, rows.length);
     renderModelRanking(rows);
   }
