@@ -101,7 +101,7 @@
         const rule=macroRules.find(r=>r.id===id);const subgroups=new Map();
         items.forEach(item=>{const subfield=getSubfield(item);if(!subgroups.has(subfield.id))subgroups.set(subfield.id,{...subfield,items:[]});subgroups.get(subfield.id).items.push(item);});
         const entries=[...subgroups.values()].slice(0,4);const slots=subgroupSlots(entries.length);
-        entries.forEach((group,groupIndex)=>{const [offsetX,offsetY]=slots[groupIndex];const anchor={x:rule.center[0]+offsetX,y:rule.center[1]+offsetY};const spacing=entries.length===4?78:92;
+        entries.forEach((group,groupIndex)=>{const [offsetX,offsetY]=slots[groupIndex];const anchor={x:rule.center[0]+offsetX,y:rule.center[1]+offsetY};const spacing=entries.length===4?104:112;
           group.items.forEach((item,index)=>{const jitterX=(hash(item.rank_group_key)%5)-2;const jitterY=(hash(item.benchmark_name)%3)-1;positions.set(item.rank_group_key,{x:anchor.x+jitterX,y:anchor.y+(index-(group.items.length-1)/2)*spacing+jitterY,macro:rule,subfield:group,subfieldAnchor:anchor,layoutSpacing:spacing});});
         });
       });
