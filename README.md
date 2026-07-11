@@ -44,6 +44,7 @@ Coverage changes as new official reports are imported. The live site is the sour
 - **Structured Method notes**: separate setup, reasoning, agent/tools, dataset, aggregation, and source caveats.
 - **Shareable pages**: every model and benchmark has an indexable permalink.
 - **Shareable exploration state**: benchmark, protocol, view, filters, and Matrix models are encoded in the URL.
+- **Model-filtered atlas**: select a model to reveal its benchmark coverage, reported scores, domains, and protocol-specific ranking position.
 - **Lazy benchmark loading**: the homepage loads a compact catalog before fetching benchmark evidence on demand.
 - **Scoped detail bundles**: model, benchmark, and ranking pages load only the rows required for that route.
 - **Evidence-first data**: each row remains linked to its originating report and evidence location.

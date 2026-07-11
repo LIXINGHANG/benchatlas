@@ -26,8 +26,22 @@ fs.mkdirSync(path.join(pageBundleDir, "models"), { recursive: true });
 
 const catalog = data.benchmark_catalog.map(item => {
   const page = data.benchmark_pages[item.rank_group_key];
-  const searchModels = [...new Set((page?.rows || []).map(row => row.model_name).filter(Boolean))];
-  return { ...item, search_models: searchModels };
+  const rows = page?.rows || [];
+  const searchModels = [...new Set(rows.map(row => row.model_name).filter(Boolean))];
+  const preferredByModel = new Map(preferredRows(rows).map(row => [row.model_id || row.model_name, row]));
+  const modelScores = {};
+  for (const row of rows) {
+    const modelKey = row.model_id || row.model_name;
+    if (!modelKey || modelScores[modelKey]) continue;
+    const selected = preferredByModel.get(modelKey) || row;
+    modelScores[modelKey] = {
+      s: selected.score,
+      u: selected.score_unit,
+      g: selected.comparability_group_id,
+      c: selected.comparability_status,
+    };
+  }
+  return { ...item, search_models: searchModels, model_scores: modelScores };
 });
 
 const indexPayload = {
