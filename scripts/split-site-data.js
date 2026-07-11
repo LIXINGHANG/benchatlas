@@ -14,6 +14,32 @@ const sandbox = { window: {} };
 vm.runInNewContext(fs.readFileSync(fullBundlePath, "utf8"), sandbox);
 const data = sandbox.window.BENCHATLAS_DATA;
 
+function normalizedPublisher(value) {
+  const text = String(value || "").toLowerCase();
+  if (text.includes("anthropic")) return "anthropic";
+  if (text.includes("openai")) return "openai";
+  if (text.includes("google") || text.includes("deepmind") || text.includes("gemini")) return "googledeepmind";
+  if (text.includes("qwen")) return "qwen";
+  if (text.includes("deepseek")) return "deepseek";
+  if (text.includes("bytedance") || text.includes("bytedns") || text.includes("seed")) return "bytedanceseed";
+  if (text.includes("moonshot") || text.includes("kimi")) return "moonshotkimi";
+  if (text.includes("z.ai") || text.includes("zai") || text.includes("glm")) return "zai";
+  if (text.includes("x.ai") || text.includes("xai") || text.includes("grok")) return "xai";
+  return text.replace(/[^a-z0-9]/g, "");
+}
+
+function isFirstPartyRow(row) {
+  return normalizedPublisher(row.vendor) === normalizedPublisher(`${row.source_url || ""} ${row.source_report_id || ""}`);
+}
+
+function preferredModelRow(rows) {
+  return [...rows].sort((a, b) => (
+    Number(isFirstPartyRow(b)) - Number(isFirstPartyRow(a))
+    || Number(a.rank || Infinity) - Number(b.rank || Infinity)
+    || String(a.source_report_id || a.source_url || "").localeCompare(String(b.source_report_id || b.source_url || ""))
+  ))[0];
+}
+
 if (!data?.benchmark_pages || !Array.isArray(data.benchmark_catalog)) {
   throw new Error("site_data.bundle.js does not contain the expected BenchAtlas payload");
 }
@@ -74,13 +100,14 @@ function comparisonGroups(rows) {
 function preferredRows(rows) {
   const group = comparisonGroups(rows)[0];
   if (!group) return [];
-  const seen = new Set();
-  return group.rows.filter(row => {
+  const rowsByModel = new Map();
+  for (const row of group.rows) {
     const key = row.model_id || row.model_name;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+    if (!rowsByModel.has(key)) rowsByModel.set(key, []);
+    rowsByModel.get(key).push(row);
+  }
+  const preferred = new Map([...rowsByModel].map(([key, modelRows]) => [key, preferredModelRow(modelRows)]));
+  return group.rows.filter(row => preferred.get(row.model_id || row.model_name) === row);
 }
 
 function buildOverallData() {

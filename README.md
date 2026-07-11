@@ -92,6 +92,7 @@ The homepage map is a balanced landmark view rather than a rendering of every ca
 - Benchmark spelling aliases map to a stable `benchmark_family_id`; dataset subsets, harnesses, metrics, and tool variants remain separate.
 - Every reported row receives a `comparability_group_id` derived from benchmark variant, metric, score direction, harness, tools, timeout, compute, context, sampling, reasoning mode, runs, judge, and dataset notes.
 - Rows with a documented shared setup may rank together. Rows without enough methodology remain source-scoped and are never silently mixed into a strict comparison.
+- When the same model has conflicting scores inside one protocol group, BenchAtlas keeps every source row and uses the model vendor's own official report as the displayed value when available; third-party reports remain selectable as source variants.
 - Harness/tool labels that were previously separate benchmark pages now remain protocol groups inside one canonical benchmark page; real benchmark versions remain separate.
 - The homepage defaults to the largest documented shared-protocol group and lets readers inspect alternative source groups explicitly.
 
