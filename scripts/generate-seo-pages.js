@@ -138,7 +138,7 @@ function main() {
     url: rankingUrl,
     kicker: "Reported Performance Index",
     heading: "Reported Capability Ceiling",
-    dataBundle: "/data/pages/ranking.bundle.js?v=entities-1",
+    dataBundle: "/data/pages/ranking.bundle.js?v=capability-ceiling-2",
     type: "WebPage"
   }));
   urls.push({ url: rankingUrl, priority: "0.9", changefreq: "daily" });
