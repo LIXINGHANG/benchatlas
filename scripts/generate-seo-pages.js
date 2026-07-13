@@ -130,7 +130,10 @@ function main() {
     fs.rmSync(path.join(root, directory), { recursive: true, force: true });
   });
 
-  const urls = [{ url: `${siteUrl}/`, priority: "1.0", changefreq: "daily" }];
+  const urls = [
+    { url: `${siteUrl}/`, priority: "1.0", changefreq: "daily" },
+    { url: `${siteUrl}/guide/`, priority: "0.8", changefreq: "monthly" },
+  ];
   const rankingUrl = `${siteUrl}/ranking/`;
   writePage("ranking", renderPage(template, {
     title: "AI Model Reported Capability Ceiling | BenchAtlas",
