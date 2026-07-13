@@ -89,20 +89,33 @@
     const structuredMethodHtml = row => {const sections=row.method_sections||{};const blocks=Object.entries(methodSectionLabels).flatMap(([key,label])=>{const values=Array.isArray(sections[key])?sections[key].filter(Boolean):[];return values.length?[`<div class="method-block"><b>${esc(label)}</b>${values.map(value=>`<p>${esc(value)}</p>`).join('')}</div>`]:[];});return blocks.join('')||methodHtml(row.protocol_full||row.protocol_note);};
     const sourceLabel = row => {const url=String(row.source_url||'').split(/;\s*/)[0];try{return new URL(url).hostname.replace(/^www\./,'');}catch{return String(row.source_report_id||'reported source').split(/;\s*/)[0].replaceAll('_',' ');}};
 
-    const subgroupSlots = count => ({
-      1:[[0,0]],2:[[-160,0],[160,0]],3:[[-195,0],[0,0],[195,0]],
-      4:[[-155,-105],[155,-105],[-155,110],[155,110]]
-    }[Math.min(4,count)]||[[0,0]]);
+    const protocolBadgeCount=item=>String(item.protocol_badges||'').split(';').map(value=>value.trim()).filter(Boolean).length;
+    const normalizedSignal=(value,max)=>Math.log1p(Number(value)||0)/Math.max(1,Math.log1p(Number(max)||1));
+    const landmarkCoreScore=(item,fieldItems)=>{
+      const maxModels=Math.max(...fieldItems.map(entry=>entry.model_count||0),1);
+      const maxReports=Math.max(...fieldItems.map(entry=>entry.report_count||0),1);
+      const coverage=normalizedSignal(item.model_count,maxModels);
+      const evidence=normalizedSignal(item.report_count,maxReports);
+      const methodology=Math.min(1,protocolBadgeCount(item)/6);
+      return .6*coverage+.25*evidence+.15*methodology;
+    };
+    const nodeFootprint=item=>({width:202,height:Math.min(154,104+Math.max(0,Math.ceil(displayName(item).length/18)-2)*16)});
+    const overlaps=(candidate,placed)=>placed.some(entry=>Math.abs(candidate.x-entry.x)<(candidate.width+entry.width)/2&&Math.abs(candidate.y-entry.y)<(candidate.height+entry.height)/2);
     function positionNodes(){
       positions.clear();
       const groups = new Map(macroRules.map(r=>[r.id,[]]));
       featured.forEach(item=>groups.get(getMacro(item.domain).id).push(item));
+      const globalPlaced=[];
       groups.forEach((items,id)=>{
         const rule=macroRules.find(r=>r.id===id);const subgroups=new Map();
         items.forEach(item=>{const subfield=getSubfield(item);if(!subgroups.has(subfield.id))subgroups.set(subfield.id,{...subfield,items:[]});subgroups.get(subfield.id).items.push(item);});
-        const entries=[...subgroups.values()].slice(0,4);const slots=subgroupSlots(entries.length);
-        entries.forEach((group,groupIndex)=>{const [offsetX,offsetY]=slots[groupIndex];const anchor={x:rule.center[0]+offsetX,y:rule.center[1]+offsetY};const spacing=entries.length===4?104:112;
-          group.items.forEach((item,index)=>{const jitterX=(hash(item.rank_group_key)%5)-2;const jitterY=(hash(item.benchmark_name)%3)-1;positions.set(item.rank_group_key,{x:anchor.x+jitterX,y:anchor.y+(index-(group.items.length-1)/2)*spacing+jitterY,macro:rule,subfield:group,subfieldAnchor:anchor,layoutSpacing:spacing});});
+        const entries=[...subgroups.values()].slice(0,4);const placed=globalPlaced;
+        entries.forEach((group,groupIndex)=>{const baseAngle=-Math.PI/2+groupIndex*(Math.PI*2/entries.length);const anchor={x:rule.center[0]+Math.cos(baseAngle)*64,y:rule.center[1]+Math.sin(baseAngle)*64};const rawLabel={x:rule.center[0]+Math.cos(baseAngle)*252,y:rule.center[1]+Math.sin(baseAngle)*252};const labelAnchor={x:Math.max(92,Math.min(1708,rawLabel.x)),y:Math.max(24,Math.min(1070,rawLabel.y))};
+          group.items.sort((a,b)=>landmarkCoreScore(b,items)-landmarkCoreScore(a,items)).forEach((item,index)=>{const coreScore=landmarkCoreScore(item,items);const footprint=nodeFootprint(item);const semanticRadius=224-coreScore*116;const groupOffset=(index-(group.items.length-1)/2)*.18;const attempts=[0,.14,-.14,.28,-.28,.42,-.42,.56,-.56,.7,-.7];let candidate;
+            for(const radiusOffset of [0,28,56,84,112,140]){for(const angleOffset of attempts){const angle=baseAngle+groupOffset+angleOffset;const radius=Math.min(278,semanticRadius+radiusOffset);const x=Math.max(112,Math.min(1688,rule.center[0]+Math.cos(angle)*radius));const y=Math.max(88,Math.min(1012,rule.center[1]+Math.sin(angle)*radius));const next={x,y,...footprint};if(!overlaps(next,placed)){candidate=next;break;}}if(candidate)break;}
+            if(!candidate){for(let scan=0;scan<24;scan+=1){const angle=baseAngle+scan*Math.PI/12;for(const radius of [150,190,230,270,300]){const next={x:Math.max(112,Math.min(1688,rule.center[0]+Math.cos(angle)*radius)),y:Math.max(88,Math.min(1012,rule.center[1]+Math.sin(angle)*radius)),...footprint};if(!overlaps(next,placed)){candidate=next;break;}}if(candidate)break;}}
+            if(!candidate){const angle=baseAngle+groupOffset;candidate={x:rule.center[0]+Math.cos(angle)*300,y:rule.center[1]+Math.sin(angle)*300,...footprint};}
+            placed.push(candidate);positions.set(item.rank_group_key,{x:candidate.x,y:candidate.y,macro:rule,subfield:group,subfieldAnchor:anchor,subfieldLabelAnchor:labelAnchor,coreScore});});
         });
       });
     }
@@ -121,7 +134,7 @@
     function renderMap(){
       positionNodes();
       buildRelationEdges();
-      const subfieldLabels=[];const seenSubfields=new Set();positions.forEach(p=>{const key=`${p.macro.id}:${p.subfield.id}`;if(seenSubfields.has(key))return;seenSubfields.add(key);const labelY=p.subfieldAnchor.y-((p.subfield.items.length-1)/2)*p.layoutSpacing-64;subfieldLabels.push(`<div class="subfield-label" style="left:${p.subfieldAnchor.x-82}px;top:${labelY}px;color:${p.macro.color}">${esc(p.subfield.label)}</div>`);});
+      const subfieldLabels=[];const seenSubfields=new Set();positions.forEach(p=>{const key=`${p.macro.id}:${p.subfield.id}`;if(seenSubfields.has(key))return;seenSubfields.add(key);subfieldLabels.push(`<div class="subfield-label" style="left:${p.subfieldLabelAnchor.x-82}px;top:${p.subfieldLabelAnchor.y-8}px;color:${p.macro.color}">${esc(p.subfield.label)}</div>`);});
       $('clusterLabels').innerHTML=macroRules.map(rule=>`<div class="cluster-label" style="left:${rule.center[0]-220}px;top:${rule.center[1]-218}px;color:${rule.color}">${rule.label}</div>`).join('')+subfieldLabels.join('');
       const macroById=new Map(macroRules.map(rule=>[rule.id,rule]));
       const routePairs=[['reason','code'],['code','agent'],['multi','language'],['language','expert'],['reason','multi'],['code','language'],['agent','expert'],['code','multi'],['agent','language']];
@@ -132,7 +145,7 @@
       const subfieldRoutes=featured.map(item=>{const p=positions.get(item.rank_group_key);return `<path class="connection subfield-route" data-route-key="${esc(item.rank_group_key)}" style="stroke:${p.macro.color}aa" d="M${p.subfieldAnchor.x} ${p.subfieldAnchor.y} Q ${(p.x+p.subfieldAnchor.x)/2+15} ${(p.y+p.subfieldAnchor.y)/2-10} ${p.x} ${p.y}"/>`}).join('');
       const semanticRoutes=relationEdges.map((edge,index)=>{const from=positions.get(edge.from),to=positions.get(edge.to);const midX=(from.x+to.x)/2,midY=(from.y+to.y)/2+(index%2?18:-18);return `<path class="semantic-edge ${edge.type}" data-from="${esc(edge.from)}" data-to="${esc(edge.to)}" d="M${from.x} ${from.y} Q${midX} ${midY} ${to.x} ${to.y}"/>`;}).join('');
       $('mapSvg').innerHTML=globalRoutes+contours+macroRoutes+subfieldRoutes+semanticRoutes;
-      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" data-tier="${featuredPriority.get(item.rank_group_key)}" style="left:${p.x-90}px;top:${p.y-35}px;--node-color:${p.macro.color};--node-scale:${Math.min(1.08,.84+item.model_count/80)}"><span class="coverage">${item.model_count} models</span><b>${esc(displayName(item))}</b><small>${esc(p.subfield.label)} · ${esc(item.metric_name)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
+      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" data-tier="${featuredPriority.get(item.rank_group_key)}" title="Landmark score ${Math.round(p.coreScore*100)} · closer to center means broader model coverage and stronger source evidence" style="left:${p.x}px;top:${p.y}px;--node-color:${p.macro.color};--node-scale:${Math.min(1.08,.84+item.model_count/80)}"><span class="coverage">${item.model_count} models</span><b>${esc(displayName(item))}</b><small>${esc(p.subfield.label)} · core ${Math.round(p.coreScore*100)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
       document.querySelectorAll('.node').forEach(node=>node.addEventListener('click',e=>{e.stopPropagation();const item=catalog.find(entry=>entry.rank_group_key===node.dataset.key);const score=modelScore(item);selectBenchmark(node.dataset.key,score?.g||'',state.modelId);}))
       renderMiniMap(); applyTransform();
     }
