@@ -791,6 +791,7 @@
 
   <script src="/site_data.index.bundle.js?v=entities-1"></script>
   <script src="__DATA_BUNDLE__"></script>
-  <script src="/app.js?v=entities-1"></script>
+  <script src="/locale.js?v=locale-1"></script>
+  <script src="/app.js?v=entities-2"></script>
 </body>
 </html>

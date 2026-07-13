@@ -1,4 +1,5 @@
 /legacy/* / 301
+/guide/zh/* /zh/guide/:splat 301
 /models/claude-4-7-opus/ /models/claude-opus-4-7/ 301
 /models/opus-4-6-max/ /models/claude-opus-4-6-max-effort/ 301
 /models/gemini-3-1-pro-14u7y1/ /models/gemini-3-1-pro/ 301

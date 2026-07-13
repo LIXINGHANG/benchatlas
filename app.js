@@ -1,5 +1,8 @@
 (() => {
   const data = window.BENCHATLAS_DATA;
+  const i18n = window.BENCHATLAS_I18N || {zh:false,t:(english)=>english,route:path=>path};
+  const t = i18n.t;
+  const localRoute = i18n.route;
   const isScoped = Boolean(data.scope && data.scope !== "full");
   const benchmarkCatalog = data.benchmark_catalog;
   const modelCatalog = data.model_catalog;
@@ -89,11 +92,11 @@
   }
 
   function modelPath(modelName) {
-    return `/models/${modelSlugByName.get(modelName) || slugify(modelName)}/`;
+    return localRoute(`/models/${modelSlugByName.get(modelName) || slugify(modelName)}/`);
   }
 
   function benchmarkPath(benchmarkKey) {
-    return `/benchmarks/${benchmarkSlugByKey.get(benchmarkKey) || slugify(benchmarkKey)}/`;
+    return localRoute(`/benchmarks/${benchmarkSlugByKey.get(benchmarkKey) || slugify(benchmarkKey)}/`);
   }
 
   function isRankingEligible(row) {
@@ -220,7 +223,8 @@
         if (pages[benchmarkKey]) return { mode: "benchmarks", key: benchmarkKey };
       }
       if (location.hash === "#overall") return { mode: "overall", key: "overall" };
-      const path = location.pathname.replace(/\/+$/, "") || "/";
+      const localizedPath = location.pathname.replace(/^\/zh(?=\/|$)/, "") || "/";
+      const path = localizedPath.replace(/\/+$/, "") || "/";
       if (path === "/ranking") return { mode: "overall", key: "overall" };
       const modelMatch = path.match(/^\/models\/([^/]+)$/);
       if (modelMatch && modelBySlug.has(modelMatch[1])) {
@@ -261,7 +265,7 @@
 
   function updateHash() {
     if (state.mode === "overall") {
-      history.replaceState(null, "", "/ranking/");
+      history.replaceState(null, "", localRoute("/ranking/"));
       return;
     }
     const path = state.mode === "models" ? modelPath(state.selected) : benchmarkPath(state.selected);
@@ -279,39 +283,39 @@
     el("overallViewTab").setAttribute("aria-selected", String(isOverall));
 
     el("search").placeholder = isOverall
-      ? "Search ranked model or vendor"
+      ? t("Search ranked model or vendor", "搜索排名模型或厂商")
       : isModels
-      ? "Search model, vendor, domain"
-      : "Search benchmark, domain, model";
-    el("search").setAttribute("aria-label", isOverall ? "Search overall ranking" : isModels ? "Search models" : "Search benchmarks and models");
+      ? t("Search model, vendor, domain", "搜索模型、厂商或领域")
+      : t("Search benchmark, domain, model", "搜索 Benchmark、领域或模型");
+    el("search").setAttribute("aria-label", isOverall ? t("Search overall ranking", "搜索整体排名") : isModels ? t("Search models", "搜索模型") : t("Search benchmarks and models", "搜索 Benchmark 和模型"));
 
     if (isModels || isOverall) {
       const vendorSource = isOverall ? overallRankings : modelCatalog;
       const vendors = ["all", ...Array.from(new Set(vendorSource.map(item => item.vendor))).sort()];
       el("domainFilter").setAttribute("aria-label", "Vendor filter");
       el("domainFilter").innerHTML = vendors.map(vendor => (
-        `<option value="${esc(vendor)}">${vendor === "all" ? "All vendors" : esc(vendor)}</option>`
+        `<option value="${esc(vendor)}">${vendor === "all" ? t("All vendors", "全部厂商") : esc(vendor)}</option>`
       )).join("");
       el("sortMode").innerHTML = isOverall ? `
-        <option value="index">Sort by index</option>
-        <option value="coverage">Sort by coverage</option>
-        <option value="name">Sort by name</option>
+        <option value="index">${t("Sort by index", "按指数排序")}</option>
+        <option value="coverage">${t("Sort by coverage", "按覆盖排序")}</option>
+        <option value="name">${t("Sort by name", "按名称排序")}</option>
       ` : `
-          <option value="coverage">Sort by coverage</option>
-          <option value="name">Sort by name</option>
-          <option value="results">Sort by results</option>
-          <option value="reports">Sort by reports</option>
+          <option value="coverage">${t("Sort by coverage", "按覆盖排序")}</option>
+          <option value="name">${t("Sort by name", "按名称排序")}</option>
+          <option value="results">${t("Sort by results", "按结果数排序")}</option>
+          <option value="reports">${t("Sort by reports", "按报告数排序")}</option>
         `;
     } else {
       const domains = ["all", ...Array.from(new Set(benchmarkCatalog.map(item => item.domain))).sort()];
       el("domainFilter").setAttribute("aria-label", "Domain filter");
       el("domainFilter").innerHTML = domains.map(domain => (
-        `<option value="${esc(domain)}">${domain === "all" ? "All domains" : esc(humanize(domain))}</option>`
+        `<option value="${esc(domain)}">${domain === "all" ? t("All domains", "全部领域") : esc(humanize(domain))}</option>`
       )).join("");
       el("sortMode").innerHTML = `
-        <option value="coverage">Sort by coverage</option>
-        <option value="name">Sort by name</option>
-        <option value="reports">Sort by reports</option>
+        <option value="coverage">${t("Sort by coverage", "按覆盖排序")}</option>
+        <option value="name">${t("Sort by name", "按名称排序")}</option>
+        <option value="reports">${t("Sort by reports", "按报告数排序")}</option>
       `;
     }
     el("domainFilter").value = state.filter;
@@ -537,23 +541,23 @@
   function renderOverallPage() {
     const rows = filteredCatalog();
     const vendorCount = new Set(overallRankings.map(row => row.vendor)).size;
-    el("domainLabel").textContent = "Reported Performance Index";
-    el("pageTitle").textContent = "Reported Capability Ceiling";
+    el("domainLabel").textContent = t("Reported Performance Index", "公开表现指数");
+    el("pageTitle").textContent = t("Reported Capability Ceiling", "公开能力上限");
     updatePageMetadata(
-      "Overall AI Model Ranking | BenchAtlas",
-      "Compare base models by their best publicly reported configuration within each eligible benchmark and shared protocol group."
+      t("Overall AI Model Ranking | BenchAtlas", "AI 模型整体排名 | BenchAtlas"),
+      t("Compare base models by their best publicly reported configuration within each eligible benchmark and shared protocol group.", "按符合条件的 Benchmark 与共享协议分组，比较基础模型的最佳公开配置。")
     );
-    setStat("statModels", "statLabelModels", overallRankings.length, "eligible models");
-    setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, "benchmark groups");
-    setStat("statVendors", "statLabelVendors", vendorCount, plural(vendorCount, "vendor"));
-    setStat("statReports", "statLabelReports", 5, "minimum groups");
+    setStat("statModels", "statLabelModels", overallRankings.length, t("eligible models", "符合条件的模型"));
+    setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, t("benchmark groups", "Benchmark 分组"));
+    setStat("statVendors", "statLabelVendors", vendorCount, t(plural(vendorCount, "vendor"), "厂商"));
+    setStat("statReports", "statLabelReports", 5, t("minimum groups", "最低分组数"));
     el("metricLabel").textContent = "RPI · 0–100";
-    el("rankingTitle").textContent = "Reported Performance Index";
-    el("rankingNote").textContent = "Each base model contributes its best publicly reported configuration within the selected protocol group.";
-    el("summaryHeading").textContent = "Leaders";
-    el("signalsHeading").textContent = "Eligibility";
-    el("policyHeading").textContent = "Methodology";
-    el("policyText").textContent = "For each benchmark, BenchAtlas selects a documented shared-protocol group when available, then keeps the highest-ranked public configuration for each base model. Agent systems, checkpoints, and computational baselines are excluded. Model ranks become 0–100 percentiles, are averaged within each domain, and limited coverage is shrunk toward 50. This is a reported capability ceiling, not a default-product score.";
+    el("rankingTitle").textContent = t("Reported Performance Index", "公开表现指数");
+    el("rankingNote").textContent = t("Each base model contributes its best publicly reported configuration within the selected protocol group.", "每个基础模型在选定协议分组中采用最佳公开配置。");
+    el("summaryHeading").textContent = t("Leaders", "领先模型");
+    el("signalsHeading").textContent = t("Eligibility", "纳入规则");
+    el("policyHeading").textContent = t("Methodology", "计算方法");
+    el("policyText").textContent = t("For each benchmark, BenchAtlas selects a documented shared-protocol group when available, then keeps the highest-ranked public configuration for each base model. Agent systems, checkpoints, and computational baselines are excluded. Model ranks become 0–100 percentiles, are averaged within each domain, and limited coverage is shrunk toward 50. This is a reported capability ceiling, not a default-product score.", "对每个 Benchmark，BenchAtlas 优先选择有文档记录的共享协议分组，再保留每个基础模型排名最高的公开配置。Agent 系统、checkpoint 和计算 baseline 不参与排名。模型名次转为 0–100 百分位，在领域内取平均，并对覆盖不足的模型向 50 收缩。这代表公开能力上限，不是默认产品体验评分。");
     renderBadges(el("panelBadges"), ["best public config", "base models only", "protocol grouped", "domain balanced"], false);
     renderBadges(el("contextBadges"), ["≥5 benchmark groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
     renderOverallLeaders(rows);
@@ -570,25 +574,25 @@
     el("domainLabel").textContent = humanize(page.domain || "benchmark");
     el("pageTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
     updatePageMetadata(
-      `${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} Results | BenchAtlas`,
-      `Compare ${page.benchmark_name} scores reported for ${new Set(page.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size} base models, including evaluation configurations, protocols, and source evidence.`
+      t(`${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} Results | BenchAtlas`, `${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} 结果 | BenchAtlas`),
+      t(`Compare ${page.benchmark_name} scores reported for ${new Set(page.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size} base models, including evaluation configurations, protocols, and source evidence.`, `比较 ${new Set(page.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size} 个基础模型在 ${page.benchmark_name} 上的公开分数，并查看评测配置、协议和来源证据。`)
     );
     const modelCount = new Set(page.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size;
     const vendorCount = new Set(page.rows.filter(isRankingEligible).map(row => row.vendor)).size;
     const reportCount = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
-    setStat("statModels", "statLabelModels", modelCount, plural(modelCount, "model"));
-    setStat("statRows", "statLabelRows", page.result_count, plural(page.result_count, "reported row"));
-    setStat("statVendors", "statLabelVendors", vendorCount, plural(vendorCount, "vendor"));
-    setStat("statReports", "statLabelReports", reportCount, plural(reportCount, "report"));
+    setStat("statModels", "statLabelModels", modelCount, t(plural(modelCount, "model"), "模型"));
+    setStat("statRows", "statLabelRows", page.result_count, t(plural(page.result_count, "reported row"), "报分记录"));
+    setStat("statVendors", "statLabelVendors", vendorCount, t(plural(vendorCount, "vendor"), "厂商"));
+    setStat("statReports", "statLabelReports", reportCount, t(plural(reportCount, "report"), "报告"));
     el("metricLabel").textContent = `${page.metric_name} · ${page.score_unit || "score"}`;
-    el("rankingTitle").textContent = "Comparable Ranking";
+    el("rankingTitle").textContent = t("Comparable Ranking", "可比排名");
     el("rankingNote").textContent = comparisonGroup
-      ? `Showing ${comparisonGroup.model_count} models from the preferred ${comparisonGroup.status === "strict" ? "documented shared-protocol" : "source-scoped"} group: ${comparisonGroup.label}.`
-      : "No comparable rows are available.";
-    el("summaryHeading").textContent = "Best reported";
-    el("signalsHeading").textContent = "Protocol signals";
-    el("policyHeading").textContent = "Evidence policy";
-    el("policyText").textContent = "Only rows sharing the preferred comparability group are ranked together. Other reported protocols remain preserved in the dataset and model pages with source-scoped or shared-protocol labels.";
+      ? t(`Showing ${comparisonGroup.model_count} models from the preferred ${comparisonGroup.status === "strict" ? "documented shared-protocol" : "source-scoped"} group: ${comparisonGroup.label}.`, `当前显示首选${comparisonGroup.status === "strict" ? "文档化共享协议" : "来源限定"}分组中的 ${comparisonGroup.model_count} 个模型：${comparisonGroup.label}。`)
+      : t("No comparable rows are available.", "暂无可比记录。");
+    el("summaryHeading").textContent = t("Best reported", "最佳公开结果");
+    el("signalsHeading").textContent = t("Protocol signals", "协议标签");
+    el("policyHeading").textContent = t("Evidence policy", "证据规则");
+    el("policyText").textContent = t("Only rows sharing the preferred comparability group are ranked together. Other reported protocols remain preserved in the dataset and model pages with source-scoped or shared-protocol labels.", "只有共享首选可比分组的记录才会一起排名。其他协议的公开报分仍保留在数据集和模型页面中，并标记为 source-scoped 或 shared-protocol。");
     renderBadges(el("panelBadges"), [comparisonGroup?.status === "strict" ? "shared protocol" : "source scoped", ...(page.protocol_badges || [])], false);
     renderBadges(el("contextBadges"), page.protocol_badges || [], false);
     renderTopModels(comparableRows);
@@ -610,20 +614,20 @@
     el("domainLabel").textContent = model.vendor || "Model";
     el("pageTitle").textContent = model.model_name;
     updatePageMetadata(
-      `${model.model_name} Benchmark Results | BenchAtlas`,
-      `${model.model_name} benchmark results from ${model.vendor}: ${benchmarkCount} benchmark groups with source evidence, protocols, and method notes.`
+      t(`${model.model_name} Benchmark Results | BenchAtlas`, `${model.model_name} Benchmark 结果 | BenchAtlas`),
+      t(`${model.model_name} benchmark results from ${model.vendor}: ${benchmarkCount} benchmark groups with source evidence, protocols, and method notes.`, `${model.vendor} 的 ${model.model_name}：${benchmarkCount} 个 Benchmark 分组的公开结果、来源证据、评测协议和运行配置。`)
     );
-    setStat("statModels", "statLabelModels", benchmarkCount, plural(benchmarkCount, "benchmark group"));
-    setStat("statRows", "statLabelRows", rows.length, plural(rows.length, "reported row"));
-    setStat("statVendors", "statLabelVendors", reports.size, plural(reports.size, "report"));
-    setStat("statReports", "statLabelReports", domains.size, plural(domains.size, "domain"));
+    setStat("statModels", "statLabelModels", benchmarkCount, t(plural(benchmarkCount, "benchmark group"), "Benchmark 分组"));
+    setStat("statRows", "statLabelRows", rows.length, t(plural(rows.length, "reported row"), "报分记录"));
+    setStat("statVendors", "statLabelVendors", reports.size, t(plural(reports.size, "report"), "报告"));
+    setStat("statReports", "statLabelReports", domains.size, t(plural(domains.size, "domain"), "领域"));
     el("metricLabel").textContent = `${benchmarkCount} ${plural(benchmarkCount, "benchmark")} · ${reports.size} ${plural(reports.size, "report")}`;
-    el("rankingTitle").textContent = "Reported benchmark results";
-    el("rankingNote").textContent = "Each row keeps its benchmark-specific rank, protocol, and source evidence.";
-    el("summaryHeading").textContent = "Top domains";
-    el("signalsHeading").textContent = "Source coverage";
-    el("policyHeading").textContent = "Interpretation";
-    el("policyText").textContent = "Ranks are calculated within each benchmark group. Scores from different benchmarks or metrics are not compared with one another. Multiple rows for the same benchmark are preserved when reports or evaluation settings differ.";
+    el("rankingTitle").textContent = t("Reported benchmark results", "公开 Benchmark 结果");
+    el("rankingNote").textContent = t("Each row keeps its benchmark-specific rank, protocol, and source evidence.", "每条记录保留其 Benchmark 内排名、评测协议和来源证据。");
+    el("summaryHeading").textContent = t("Top domains", "主要领域");
+    el("signalsHeading").textContent = t("Source coverage", "来源覆盖");
+    el("policyHeading").textContent = t("Interpretation", "解读方式");
+    el("policyText").textContent = t("Ranks are calculated within each benchmark group. Scores from different benchmarks or metrics are not compared with one another. Multiple rows for the same benchmark are preserved when reports or evaluation settings differ.", "排名仅在各自 Benchmark 分组内计算，不会直接比较不同 Benchmark 或 metric 的分数。当来源报告或评测设置不同时，同一 Benchmark 的多条记录会全部保留。");
     renderBadges(el("panelBadges"), badges, true);
     renderBadges(el("contextBadges"), [
       `${reports.size} ${plural(reports.size, "report")}`,
@@ -682,12 +686,12 @@
   function protocolCell(row) {
     const comparisonLabel = row.comparability_status === "strict" ? "shared protocol" : "source scoped";
     const sectionLabels = {
-      evaluation_setup: "Evaluation setup",
-      reasoning_configuration: "Reasoning configuration",
-      agent_tool_scaffold: "Agent / tool scaffold",
-      dataset_variant: "Dataset variant",
-      runs_aggregation: "Runs and aggregation",
-      source_caveat: "Source caveat",
+      evaluation_setup: t("Evaluation setup", "评测设置"),
+      reasoning_configuration: t("Reasoning configuration", "推理配置"),
+      agent_tool_scaffold: t("Agent / tool scaffold", "Agent 与工具框架"),
+      dataset_variant: t("Dataset variant", "数据集变体"),
+      runs_aggregation: t("Runs and aggregation", "运行次数与聚合"),
+      source_caveat: t("Source caveat", "来源限制"),
     };
     const methodSections = Object.entries(sectionLabels).flatMap(([key, label]) => {
       const values = Array.isArray(row.method_sections?.[key]) ? row.method_sections[key].filter(Boolean) : [];
@@ -732,7 +736,7 @@
 
   function renderBenchmarkRanking(rows, referenceRows = []) {
     if (!rows.length && !referenceRows.length) {
-      el("rankingTable").innerHTML = `<div class="empty">No scored rows for this benchmark.</div>`;
+      el("rankingTable").innerHTML = `<div class="empty">${t("No scored rows for this benchmark.", "该 Benchmark 暂无可用报分。")}</div>`;
       return;
     }
     let previousScore = null;
@@ -746,7 +750,7 @@
     });
     el("rankingTable").innerHTML = `
       <table>
-        <thead><tr><th>Rank</th><th>Model</th><th>Score</th><th>Protocol</th><th>Source evidence</th></tr></thead>
+        <thead><tr><th>${t("Rank","排名")}</th><th>${t("Model","模型")}</th><th>${t("Score","分数")}</th><th>${t("Protocol","协议")}</th><th>${t("Source evidence","来源证据")}</th></tr></thead>
         <tbody>
           ${rankedRows.map(row => `
             <tr>
@@ -780,12 +784,12 @@
 
   function renderModelRanking(rows) {
     if (!rows.length) {
-      el("rankingTable").innerHTML = `<div class="empty">No benchmark rows found for this model.</div>`;
+      el("rankingTable").innerHTML = `<div class="empty">${t("No benchmark rows found for this model.", "该模型暂无 Benchmark 记录。")}</div>`;
       return;
     }
     el("rankingTable").innerHTML = `
       <table>
-        <thead><tr><th>Rank</th><th>Benchmark</th><th>Score</th><th>Protocol</th><th>Source evidence</th></tr></thead>
+        <thead><tr><th>${t("Rank","排名")}</th><th>Benchmark</th><th>${t("Score","分数")}</th><th>${t("Protocol","协议")}</th><th>${t("Source evidence","来源证据")}</th></tr></thead>
         <tbody>
           ${rows.map(row => `
             <tr>
@@ -807,33 +811,33 @@
 
   function renderOverallRanking(rows) {
     if (!rows.length) {
-      el("rankingTable").innerHTML = `<div class="empty">No eligible models match these filters.</div>`;
+      el("rankingTable").innerHTML = `<div class="empty">${t("No eligible models match these filters.", "没有符合当前筛选条件的模型。")}</div>`;
       return;
     }
     el("rankingTable").innerHTML = `
       <table>
-        <thead><tr><th>Rank</th><th>Base model</th><th>RPI ceiling</th><th>Coverage</th><th>Method</th></tr></thead>
+        <thead><tr><th>${t("Rank","排名")}</th><th>${t("Base model","基础模型")}</th><th>${t("RPI ceiling","RPI 上限")}</th><th>${t("Coverage","覆盖")}</th><th>${t("Method","方法")}</th></tr></thead>
         <tbody>
           ${rows.map(row => `
             <tr>
               <td class="rank">#${esc(row.overall_rank)}</td>
               <td>
                 <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
-                <div class="vendor">${esc(row.vendor)}${row.configuration_count ? ` · ${esc(row.configuration_count)} public ${plural(row.configuration_count, "configuration")}` : ""}</div>
+                <div class="vendor">${esc(row.vendor)}${row.configuration_count ? ` · ${esc(row.configuration_count)} ${t("public configurations","个公开配置")}` : ""}</div>
               </td>
               <td>
                 <div class="score">${esc(row.index_score)}</div>
-                <div class="vendor">Raw domain score ${esc(row.raw_score)}</div>
+                <div class="vendor">${t("Raw domain score","领域原始分")} ${esc(row.raw_score)}</div>
               </td>
               <td>
                 <div class="badges">
-                  <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(row.confidence)} confidence</span>
+                  <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(row.confidence)} ${t("confidence","置信度")}</span>
                 </div>
-                <div class="method-summary">${esc(row.benchmark_count)} benchmark groups · ${esc(row.domain_count)} domains · ${esc(row.report_count)} ${plural(row.report_count, "report")}</div>
+                <div class="method-summary">${esc(row.benchmark_count)} Benchmark 分组 · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
               </td>
               <td>
-                <div class="method-summary"><b>Coverage adjustment:</b> the domain-balanced score is shrunk toward 50 when fewer benchmark groups are available.</div>
-                <a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">Open model details</a>
+                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer benchmark groups are available.","当可用 Benchmark 分组较少时，领域平衡分会向 50 收缩。")}</div>
+                <a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${t("Open model details","打开模型详情")}</a>
               </td>
             </tr>
           `).join("")}

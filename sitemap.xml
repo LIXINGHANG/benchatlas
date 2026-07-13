@@ -13,7 +13,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/guide/zh/</loc>
+    <loc>https://benchatlas.cn/zh/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/guide/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -25,7 +31,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/ranking/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/claude-fable-5/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/claude-fable-5/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -37,7 +55,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/claude-mythos-5/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/claude-mythos-preview/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/claude-mythos-preview/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -49,7 +79,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/claude-opus-4-6/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/claude-opus-4-7/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/claude-opus-4-7/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -61,7 +103,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/claude-opus-4-8/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/claude-sonnet-4-6/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/claude-sonnet-4-6/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -73,7 +127,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/seed2-0-pro/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/seed2-1-pro/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/seed2-1-pro/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -85,7 +151,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/seed2-1-turbo/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/deepseek-v4-pro/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/deepseek-v4-pro/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -97,7 +175,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gemini-3-flash/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/gemini-3-1-pro/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/gemini-3-1-pro/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -109,7 +199,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gemini-3-5-flash/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/minimax-m3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/minimax-m3/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -121,7 +223,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/kimi-k2-5/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/kimi-k2-6/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/kimi-k2-6/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -133,7 +247,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/gpt-5-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -145,7 +271,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/gpt-5-3-codex/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-3-codex/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -157,7 +295,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-4/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/gpt-5-5/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-5/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -169,7 +319,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-5-pro/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/gpt-5-6-luna/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-6-luna/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -181,7 +343,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-6-sol/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/gpt-5-6-terra/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/gpt-5-6-terra/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -193,7 +367,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/qwen3-6-plus/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/qwen3-7-max/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/qwen3-7-max/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -205,7 +391,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/glm-5-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/models/glm-5-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/models/glm-5-2/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -217,7 +415,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/models/grok-4-5/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/terminal-bench-2-1-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -229,7 +439,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-bench-pro-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/gpqa-diamond-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gpqa-diamond-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -241,7 +463,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/humanitys-last-exam-with-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/toolathlon-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/toolathlon-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -253,7 +487,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/osworld-verified-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/benchcad-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/benchcad-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -265,7 +511,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/browsecomp-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/critpt-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/critpt-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -277,7 +535,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/nl2repo-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/deepswe-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/deepswe-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -289,7 +559,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/aime-2026-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/deepswe-v1-1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/deepswe-v1-1-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -301,7 +583,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/imoanswerbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mcp-atlas-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mcp-atlas-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -313,7 +607,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/scicode-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/terminal-bench-2-0-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/terminal-bench-2-0-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -325,7 +631,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/agents-last-exam-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/hmmt-2026-feb-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hmmt-2026-feb-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -337,7 +655,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mcp-mark-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmmu-pro-no-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmmu-pro-no-tools-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -349,7 +679,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/apex-agents-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/gpqa-diamond-accuracy/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gpqa-diamond-accuracy/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -361,7 +703,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-reasoning-no-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/healthbench-length-adjusted-length-adjusted-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/healthbench-length-adjusted-length-adjusted-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -373,7 +727,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/healthbench-consensus-length-adjusted-length-adjusted-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/healthbench-hard-length-adjusted-length-adjusted-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/healthbench-hard-length-adjusted-length-adjusted-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -385,7 +751,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/humanitys-last-exam-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/posttrainbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/posttrainbench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -397,7 +775,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-bench-verified-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/artificial-analysis-intelligence-index-v4-1-index-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/artificial-analysis-intelligence-index-v4-1-index-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -409,7 +799,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gdpval-aa-v2-elo/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/hmmt-feb-2026-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hmmt-feb-2026-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -421,7 +823,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hmmt-nov-2025-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/healthbench-professional-system-card-length-adjusted-length-adjusted-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/healthbench-professional-system-card-length-adjusted-length-adjusted-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -433,7 +847,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mcp-atlas-public-set-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/supergpqa-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/supergpqa-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -445,7 +871,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/artificial-analysis-coding-agent-index-v1-1-index-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/automationbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/automationbench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -457,7 +895,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/computer-use-confirmation-evaluation-financial-transaction-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/computer-use-confirmation-evaluation-general-confirmation-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/computer-use-confirmation-evaluation-general-confirmation-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -469,7 +919,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/computer-use-confirmation-evaluation-high-stakes-communication-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/cybergym-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/cybergym-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -481,7 +943,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dynamic-mental-health-benchmarks-emotional-reliance-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/dynamic-mental-health-benchmarks-mental-health-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dynamic-mental-health-benchmarks-mental-health-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -493,7 +967,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dynamic-mental-health-benchmarks-self-harm-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/exploitbench-api-harness-cap-percent/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/exploitbench-api-harness-cap-percent/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -505,7 +991,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiermath-tier-1-3-v2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/genebench-pro-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/genebench-pro-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -517,7 +1015,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/graphwalks-bfs-1m-f1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/graphwalks-bfs-256k-f1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/graphwalks-bfs-256k-f1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -529,7 +1039,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/image-input-safety-evaluations-extremism-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/image-input-safety-evaluations-harms-erotic-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/image-input-safety-evaluations-harms-erotic-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -541,7 +1063,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/image-input-safety-evaluations-hate-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/image-input-safety-evaluations-self-harm-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/image-input-safety-evaluations-self-harm-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -553,7 +1087,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/management-consulting-tasks-internal-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/production-benchmarks-with-challenging-prompts-extremism-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-extremism-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -565,7 +1111,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-gore-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/production-benchmarks-with-challenging-prompts-hate-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-hate-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -577,7 +1135,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-nonviolent-illicit-behavior-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/production-benchmarks-with-challenging-prompts-self-harm-standard-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-self-harm-standard-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -589,7 +1159,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-sexual-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/production-benchmarks-with-challenging-prompts-sexual-minors-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-sexual-minors-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -601,7 +1183,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/production-benchmarks-with-challenging-prompts-violent-illicit-behavior-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/prompt-injection-robustness-connectors-defender-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/prompt-injection-robustness-connectors-defender-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -613,7 +1207,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gdp-pdf-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/arc-agi-2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/arc-agi-2-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -625,7 +1231,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/arc-agi-3-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/apex-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/apex-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -637,7 +1255,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/bfcl-v4-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/biology-model-refusal-evaluation-benign-not-overrefuse/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/biology-model-refusal-evaluation-benign-not-overrefuse/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -649,7 +1279,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/biology-model-refusal-evaluation-dual-use-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/biology-model-refusal-evaluation-severe-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/biology-model-refusal-evaluation-severe-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -661,7 +1303,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/blueprint-bench-2-normalized-score-normalized-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/claweval-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/claweval-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -673,7 +1327,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/coworkbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/cybersecurity-safety-evaluation-production-data-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/cybersecurity-safety-evaluation-production-data-not-unsafe/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -685,7 +1351,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/cybersecurity-safety-evaluation-synthetic-data-not-unsafe/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/finance-agent-v2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/finance-agent-v2-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -697,7 +1375,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiermath-tier-4-v2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/frontierswe-dominance-as-of-26-6-16-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontierswe-dominance-as-of-26-6-16-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -709,7 +1399,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gdpval-aa-elo/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/global-piqa-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/global-piqa-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -721,7 +1423,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hle-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/hle-with-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hle-with-tools-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -733,7 +1447,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/healthbench-professional-official-paper-scoring-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/humanitys-last-exam-full-set-text-mn-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/humanitys-last-exam-full-set-text-mn-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -745,7 +1471,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ifbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/ifeval-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ifeval-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -757,7 +1495,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/include-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/maxife-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/maxife-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -769,7 +1519,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmlu-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmlu-pro-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmlu-pro-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -781,7 +1543,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmlu-prox-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmlu-redux-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmlu-redux-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -793,7 +1567,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mrcr-v2-8-needle-128k-average-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mrcr-v2-128k-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mrcr-v2-128k-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -805,7 +1591,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/nova-63-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/polymath-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/polymath-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -817,7 +1615,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/programbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/prompt-injection-robustness-search-and-function-calling-defender-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/prompt-injection-robustness-search-and-function-calling-defender-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -829,7 +1639,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/qwenclaw-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/qwensvg-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/qwensvg-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -841,7 +1663,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/qwenworldbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-bench-pro-public-single-attempt-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-bench-pro-public-single-attempt-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -853,7 +1687,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-pro-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/spreadsheetbench-v1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/spreadsheetbench-v1-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -865,7 +1711,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/tool-decathlon-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/wmt24-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/wmt24-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -877,7 +1735,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/agent-startup-bench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/artifacts-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/artifacts-trae-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -889,7 +1759,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/babyvision-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/babyvision-w-python-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/babyvision-w-python-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -901,7 +1783,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/big-finance-bench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/browsecomp-single-agent-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/browsecomp-single-agent-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -913,7 +1807,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/capture-the-flag-challenges-internal-system-card-set-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/charxiv-rq-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-rq-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -925,7 +1831,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-rq-w-python-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/claw-eval-pass-all-3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/claw-eval-pass-all-3/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -937,7 +1855,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/claw-eval-pass-at-3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/claw-eval-multimodal-pass-all-3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/claw-eval-multimodal-pass-all-3/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -949,7 +1879,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-gen-js-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-gen-python-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-gen-python-trae-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -961,7 +1903,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/creativework-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/deepswe-1-0-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/deepswe-1-0-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -973,7 +1927,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/deepsearchqa-accuracy/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/deepsearchqa-f1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/deepsearchqa-f1-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -985,7 +1951,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/doubao-multi-turn-bench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/error-fix-go-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/error-fix-go-trae-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -997,7 +1975,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/error-fix-js-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/error-fix-java-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/error-fix-java-trae-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1009,7 +1999,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/error-fix-python-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/finance-agent-v1-1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/finance-agent-v1-1-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1021,7 +2023,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontierscience-research-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/gdpval-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gdpval-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1033,7 +2047,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gameworld-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/horizonmath-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/horizonmath-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1045,7 +2071,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/humanitys-last-exam-full-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/humanitys-last-exam-no-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/humanitys-last-exam-no-tools-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1057,7 +2095,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/imo-answerbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/image2floorplan-avg-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/image2floorplan-avg-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1069,7 +2119,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/lifescibench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/livecodebench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/livecodebench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1081,7 +2143,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mcp-atlas-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmmu-pro-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmmu-pro-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1093,7 +2167,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmmu-pro-w-python-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mathvision-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mathvision-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1105,7 +2191,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mathvision-w-python-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mobileworld-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mobileworld-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1117,7 +2215,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/nl2repo-bench-open-benchmarks-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/osworld-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/osworld-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1129,7 +2239,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/osworld-2-0-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/office-qa-pro-multimodal-avg-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/office-qa-pro-multimodal-avg-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1141,7 +2263,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/officeqa-pro-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/onemillion-bench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/onemillion-bench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1153,7 +2287,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/presentbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/programbench-open-benchmarks-almost-resolved/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/programbench-open-benchmarks-almost-resolved/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1165,7 +2311,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/programbench-open-benchmarks-average-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/programbench-open-benchmarks-resolved/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/programbench-open-benchmarks-resolved/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1177,7 +2335,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/qwenwebdev-elo/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/repo-env-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/repo-env-trae-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1189,7 +2359,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sec-bench-pro-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-atlas-open-benchmarks-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-atlas-open-benchmarks-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1201,7 +2383,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-marathon-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-multilingual-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-multilingual-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1213,7 +2407,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-pro-bench-open-benchmarks-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-verified-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-verified-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1225,7 +2431,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/seedclawbench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/skillsbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/skillsbench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1237,7 +2455,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/toolathlon-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/v-w-python-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/v-w-python-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1249,7 +2479,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/vitabench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/web-bench-trae-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/web-bench-trae-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1261,7 +2503,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/wildclawbench-avg-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-100/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-100/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1273,7 +2527,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-30/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-50/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-50/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1285,7 +2551,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-70/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-90/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/workspace-bench-100-task-openclaw-setting-pass-at-90/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1297,7 +2575,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/workspace-bench-100-task-openclaw-setting-total/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/xdailybench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/xdailybench-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1309,7 +2599,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/agents-last-exam-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/capture-the-flag-challenges-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/capture-the-flag-challenges-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1321,7 +2623,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/critpt-accuracy/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/cybergym-open-benchmarks-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/cybergym-open-benchmarks-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1333,7 +2647,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dna-sequence-design-for-transcription-factor-binding-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/destructive-actions-evaluation-avoidance-correctness-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/destructive-actions-evaluation-avoidance-correctness-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1345,7 +2671,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/destructive-actions-evaluation-avoidance-only-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/exploitgym-reported-maximum-mixed-2h-6h-caps-intended-exploit-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/exploitgym-reported-maximum-mixed-2h-6h-caps-intended-exploit-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1357,7 +2695,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercs-sub-score-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/frontiercs-sub-score-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercs-sub-score-2/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1369,7 +2719,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercs-sub-score-3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/frontierscience-research-deep-think-comparison-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontierscience-research-deep-think-comparison-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1381,7 +2743,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hard-negative-protein-binding-prediction-pass-at-4/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/imoproof-adv-deep-think-comparison-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/imoproof-adv-deep-think-comparison-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1393,7 +2767,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ipho-2025-deep-think-comparison-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/internal-research-debugging-evaluation-rubric-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/internal-research-debugging-evaluation-rubric-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1405,7 +2791,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/kernelgen-1p-rubric-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/livecodebench-v6-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/livecodebench-v6-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1417,7 +2815,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmmu-pro-with-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/medchembench-internal-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/medchembench-internal-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1429,7 +2839,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/nanogpt-mean-reward/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/ojbench-python-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ojbench-python-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1441,7 +2863,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/openai-mrcr-v2-8-needle-256k-512k-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/openai-mrcr-v2-8-needle-512k-1m-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/openai-mrcr-v2-8-needle-512k-1m-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1453,7 +2887,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/posttrainbench-lite-mean-reward/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/rsi-index-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/rsi-index-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1465,7 +2911,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-marathon-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-bench-multilingual-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-bench-multilingual-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1477,7 +2935,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/seedkernelbench-trae-average-speedup-ratio/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/charxiv-reasoning-with-tools-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-reasoning-with-tools-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1489,7 +2959,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/imo-2025-deep-think-comparison-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mrcr-v2-8-needle-1m-pointwise-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mrcr-v2-8-needle-1m-pointwise-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1501,7 +2983,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-final-valid-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-precision/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-precision/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1513,7 +3007,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/aav-capsid-packaging-prediction-spearman-correlation/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/aethercode-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/aethercode-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1525,7 +3031,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/arcagi2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/atomic-challenges-evasion-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/atomic-challenges-evasion-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1537,7 +3055,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/atomic-challenges-network-attack-simulation-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/atomic-challenges-vulnerability-research-and-exploitation-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/atomic-challenges-vulnerability-research-and-exploitation-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1549,7 +3079,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/blink-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/babyvision-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/babyvision-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1561,7 +3103,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/beyondaime-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/browsecomp-multi-agent-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/browsecomp-multi-agent-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1573,7 +3127,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/browsecomp-with-search-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/browsecomp-agent-swarm-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/browsecomp-agent-swarm-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1585,7 +3151,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-dq-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/charxiv-rq-no-tool-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-rq-no-tool-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1597,7 +3175,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/charxiv-rq-with-tools-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/chartqapro-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/chartqapro-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1609,7 +3199,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/contphy-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/crossvid-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/crossvid-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1621,7 +3223,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dude-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/dynamath-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/dynamath-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1633,7 +3247,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/emma-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/erqa-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/erqa-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1645,7 +3271,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/embspatialbench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/fs-research-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/fs-research-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1657,7 +3295,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercyber-easy-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/frontiercyber-elite-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercyber-elite-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1669,7 +3319,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercyber-hard-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/frontiercyber-medium-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontiercyber-medium-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1681,7 +3343,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/frontierscience-olympiad-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/hle-verified-no-tool-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hle-verified-no-tool-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1693,7 +3367,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/hle-textonly-with-search-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/kina-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/kina-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1705,7 +3391,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/lvbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/livemathematicianbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/livemathematicianbench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1717,7 +3415,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/livesports-3k-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/longvideobench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/longvideobench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1729,7 +3439,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmlongbench-128k-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmmu-pro-no-tool-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmmu-pro-no-tool-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1741,7 +3463,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmmu-pro-with-tools-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmsibench-circular-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmsibench-circular-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1753,7 +3487,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/msqa-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/matharena-apex-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/matharena-apex-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1765,7 +3511,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mathverse-vision-only-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mathvision-no-tool-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mathvision-no-tool-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1777,7 +3535,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mathvision-with-tools-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mathvista-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mathvista-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1789,7 +3559,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/measurebench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/minerva-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/minerva-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1801,7 +3583,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/motionbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/ocrbenchv2-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ocrbenchv2-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1813,7 +3607,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ovbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/ovobench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/ovobench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1825,7 +3631,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realworldqa-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/reprobait-securebio-external-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/reprobait-securebio-external-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1837,7 +3655,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/simplevqa-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/superchem-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/superchem-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1849,7 +3679,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/tomato-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/tvbench-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/tvbench-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1861,7 +3703,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/treebench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/vlmsarebiased-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/vlmsarebiased-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1873,7 +3727,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/videoholmes-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/videomme-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/videomme-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1885,7 +3751,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/videosimpleqa-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/visfactor-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/visfactor-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1897,7 +3775,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/visulogic-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/widesearch-item-f1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/widesearch-item-f1-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1909,7 +3799,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/world-class-bio-securebio-external-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/worldbench-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/worldbench-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1921,7 +3823,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/worldvqa-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/zerobench-main-no-tool-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/zerobench-main-no-tool-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1933,7 +3847,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/zerobench-main-with-tools-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/zerobench-sub-no-tool-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/zerobench-sub-no-tool-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1945,7 +3871,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/zerobench-sub-with-tools-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/agents-last-exam-ultra-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/agents-last-exam-ultra-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1957,7 +3895,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/chi-bench-care-management-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/chi-bench-prior-authorization-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/chi-bench-prior-authorization-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1969,7 +3919,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/chi-bench-utilization-management-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/chi-bench-overall-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/chi-bench-overall-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1981,7 +3943,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/claw-eval-general-pass-all-3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/claw-eval-multi-turn-pass-all-3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/claw-eval-multi-turn-pass-all-3/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1993,7 +3967,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-10-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-11-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-11-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2005,7 +3991,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-12-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-13-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-13-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2017,7 +4015,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-14-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-15-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-15-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2029,7 +4039,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-2-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2041,7 +4063,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-3-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-4-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-4-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2053,7 +4087,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-5-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-6-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-6-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2065,7 +4111,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-7-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/code-arena-frontend-rank-8-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-8-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2077,7 +4135,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/code-arena-frontend-rank-9-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/cyscenariobench-irregular-external-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/cyscenariobench-irregular-external-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2089,7 +4159,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/exploitgym-2-hour-cap-intended-exploit-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/first-person-fairness-harm-overall-harm-overall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/first-person-fairness-harm-overall-harm-overall/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2101,7 +4183,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/gsm8k-accuracy/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/healthbench-professional-length-adjusted-length-adjusted-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/healthbench-professional-length-adjusted-length-adjusted-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2113,7 +4207,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/human-pathogen-capabilities-test-securebio-external-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/mmlu-pro-accuracy/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/mmlu-pro-accuracy/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2125,7 +4231,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/molecular-biology-capabilities-test-securebio-external-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/multi-select-virology-troubleshooting-highest-reported-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/multi-select-virology-troubleshooting-highest-reported-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2137,7 +4255,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/officeqa-pro-full-corpus-dbx-parsed-format-correctness/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/officeqa-pro-full-corpus-pdf-format-correctness/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/officeqa-pro-full-corpus-pdf-format-correctness/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2149,7 +4279,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/officeqa-pro-oracle-corpus-dbx-parsed-format-correctness/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/officeqa-pro-oracle-corpus-pdf-format-correctness/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/officeqa-pro-oracle-corpus-pdf-format-correctness/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2161,7 +4303,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/protocolqa-open-ended-highest-reported-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/realtime-monitor-performance-biology-generation-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realtime-monitor-performance-biology-generation-recall/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2173,7 +4327,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realtime-monitor-performance-biology-overall-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/realtime-monitor-performance-biology-prompt-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realtime-monitor-performance-biology-prompt-recall/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2185,7 +4351,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realtime-monitor-performance-cybersecurity-generation-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/realtime-monitor-performance-cybersecurity-overall-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realtime-monitor-performance-cybersecurity-overall-recall/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2197,7 +4375,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/realtime-monitor-performance-cybersecurity-prompt-recall/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/researchclawbench-overall-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/researchclawbench-overall-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2209,7 +4399,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-baseline-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-1-gain-vs-base/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-1-gain-vs-base/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2221,7 +4423,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-2-gain-vs-base/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-2-gain-vs-base/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2233,7 +4447,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-2-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-3-gain-vs-base/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-3-gain-vs-base/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2245,7 +4471,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-3-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/swe-bench-verified-resolved-resolved/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/swe-bench-verified-resolved-resolved/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2257,7 +4495,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/skillsbench-v1-1-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/tacit-knowledge-and-troubleshooting-refusals-treated-as-successes-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/tacit-knowledge-and-troubleshooting-refusals-treated-as-successes-pass-at-1/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2269,7 +4519,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/troubleshootingbench-highest-reported-pass-at-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/universal-jailbreak-red-team-sol-without-jailbreak-attack-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/universal-jailbreak-red-team-sol-without-jailbreak-attack-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2281,7 +4543,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/universal-jailbreak-red-team-after-mitigations-attack-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/universal-jailbreak-red-team-initial-campaign-attack-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/universal-jailbreak-red-team-initial-campaign-attack-success-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2293,7 +4567,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/universal-jailbreak-red-team-without-blocking-attack-success-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/virology-capabilities-test-securebio-external-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/virology-capabilities-test-securebio-external-score/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2305,7 +4591,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/wildclawbench-avg-cost-average-cost/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/wildclawbench-avg-time-average-time/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/wildclawbench-avg-time-average-time/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2317,7 +4615,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/wildclawbench-overall-score/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/yc-bench-medium-average-final-funds/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/yc-bench-medium-average-final-funds/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2329,7 +4639,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-bf16-in-kernel-compute-match-reference-numerics-latency/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-bf16-in-kernel-compute-match-reference-numerics-mbu/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-bf16-in-kernel-compute-match-reference-numerics-mbu/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2341,7 +4663,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-bf16-in-kernel-compute-match-reference-numerics-vs-fa3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-bf16-in-kernel-compute-match-reference-numerics-vs-pytorch/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-bf16-in-kernel-compute-match-reference-numerics-vs-pytorch/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2353,7 +4687,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-pytorch-baseline-gather-attention-softmax-3-kernels-latency/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-pytorch-baseline-gather-attention-softmax-3-kernels-mbu/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-pytorch-baseline-gather-attention-softmax-3-kernels-mbu/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2365,7 +4711,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-pytorch-baseline-gather-attention-softmax-3-kernels-vs-fa3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-pytorch-baseline-gather-attention-softmax-3-kernels-vs-pytorch/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-pytorch-baseline-gather-attention-softmax-3-kernels-vs-pytorch/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2377,7 +4735,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-tma-block-pointer-loads-hopper-specific-latency/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-tma-block-pointer-loads-hopper-specific-mbu/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-tma-block-pointer-loads-hopper-specific-mbu/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2389,7 +4759,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-tma-block-pointer-loads-hopper-specific-vs-fa3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-tma-block-pointer-loads-hopper-specific-vs-pytorch/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-tma-block-pointer-loads-hopper-specific-vs-pytorch/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2401,7 +4783,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-autotune-warps-pipeline-stages-remove-a-redundant-fp32-cast-in-inner-loop-latency/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-autotune-warps-pipeline-stages-remove-a-redundant-fp32-cast-in-inner-loop-mbu/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-autotune-warps-pipeline-stages-remove-a-redundant-fp32-cast-in-inner-loop-mbu/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2413,7 +4807,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-autotune-warps-pipeline-stages-remove-a-redundant-fp32-cast-in-inner-loop-vs-fa3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-autotune-warps-pipeline-stages-remove-a-redundant-fp32-cast-in-inner-loop-vs-pytorch/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-autotune-warps-pipeline-stages-remove-a-redundant-fp32-cast-in-inner-loop-vs-pytorch/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2425,7 +4831,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-first-fused-version-gather-attention-online-softmax-in-one-triton-kernel-latency/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-first-fused-version-gather-attention-online-softmax-in-one-triton-kernel-mbu/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-first-fused-version-gather-attention-online-softmax-in-one-triton-kernel-mbu/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2437,7 +4855,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-first-fused-version-gather-attention-online-softmax-in-one-triton-kernel-vs-fa3/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/paged-attention-decode-workload-first-fused-version-gather-attention-online-softmax-in-one-triton-kernel-vs-pytorch/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/paged-attention-decode-workload-first-fused-version-gather-attention-online-softmax-in-one-triton-kernel-vs-pytorch/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2449,7 +4879,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-connect-words-basic-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-connect-words-corrected/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-connect-words-corrected/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2461,7 +4903,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-connect-words-false-loss/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-connect-words-no-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-connect-words-no-prompt-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2473,7 +4927,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-connect-words-surface/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-math-path-corrected/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-math-path-corrected/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2485,7 +4951,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-math-path-false-loss/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-math-path-surface/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-math-path-surface/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2497,7 +4975,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-corrected/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-skyscrapers-false-loss/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-false-loss/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2509,7 +4999,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-surface/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-skyscrapers-global-constraint-n-4-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-global-constraint-n-4-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2521,7 +5023,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-global-constraint-n-5-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-skyscrapers-global-constraint-n-6-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-global-constraint-n-6-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2533,7 +5047,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-n-6-basic-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-skyscrapers-n-6-expert-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-n-6-expert-prompt-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2545,7 +5071,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-skyscrapers-n-6-no-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-star-battle-corrected/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-star-battle-corrected/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2557,7 +5095,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-star-battle-false-loss/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-star-battle-surface/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-star-battle-surface/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2569,7 +5119,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-25-givens-basic-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-sudoku-25-givens-expert-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-25-givens-expert-prompt-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2581,7 +5143,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-25-givens-no-prompt-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-sudoku-search-depth-25-givens-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-search-depth-25-givens-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2593,7 +5167,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-search-depth-30-givens-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-sudoku-search-depth-35-givens-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-search-depth-35-givens-pass-rate/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2605,7 +5191,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-sudoku-search-depth-50-givens-pass-rate/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-wordscapes-corrected/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-wordscapes-corrected/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2617,7 +5215,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-wordscapes-false-loss/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/puzzle-zero-shot-wordscapes-surface/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/puzzle-zero-shot-wordscapes-surface/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
