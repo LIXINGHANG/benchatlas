@@ -2,13 +2,13 @@
 
 ## Decision
 
-Add a dedicated, shareable `/guide/` page and expose it as `Guide` in the main-site header. A separate page is preferable to a modal because it does not cover the landscape, has a stable URL, and can be indexed and linked from external discussions.
+Add dedicated, shareable English and Chinese pages at `/guide/` and `/guide/zh/`, and expose the guide as `Guide` in the main-site header. Separate pages are preferable to a modal because they do not cover the landscape, have stable URLs, and can be indexed and linked from external discussions.
 
 ## Content
 
 The guide explains the product through its actual workflows: finding a benchmark, filtering the landscape by base model, selecting a protocol group, reading method notes, opening primary evidence, using the catalog and matrix, and interpreting the Reported Capability Ceiling. It explicitly distinguishes base models, public configurations, and reference entities.
 
-The page uses the existing BenchAtlas visual language: black navigation, paper background, serif headings, monospace labels, compact borders, and the six-domain color system. Current result, model, benchmark, and report counts are loaded from the same index bundle as the main site so the guide does not become stale when data changes.
+Both language versions use one shared stylesheet and the existing BenchAtlas visual language: black navigation, paper background, serif headings, monospace labels, compact borders, and the six-domain color system. Current result, model, benchmark, and report counts are loaded from the same index bundle as the main site so the guide does not become stale when data changes.
 
 ## Verification
 

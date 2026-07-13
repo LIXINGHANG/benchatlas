@@ -133,6 +133,7 @@ function main() {
   const urls = [
     { url: `${siteUrl}/`, priority: "1.0", changefreq: "daily" },
     { url: `${siteUrl}/guide/`, priority: "0.8", changefreq: "monthly" },
+    { url: `${siteUrl}/guide/zh/`, priority: "0.8", changefreq: "monthly" },
   ];
   const rankingUrl = `${siteUrl}/ranking/`;
   writePage("ranking", renderPage(template, {
