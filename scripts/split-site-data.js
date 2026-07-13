@@ -32,10 +32,14 @@ function isFirstPartyRow(row) {
   return normalizedPublisher(row.vendor) === normalizedPublisher(`${row.source_url || ""} ${row.source_report_id || ""}`);
 }
 
+function isRankingEligible(row) {
+  return row.ranking_eligible !== false && !["agent_system", "baseline", "checkpoint"].includes(row.entity_type);
+}
+
 function preferredModelRow(rows) {
   return [...rows].sort((a, b) => (
-    Number(isFirstPartyRow(b)) - Number(isFirstPartyRow(a))
-    || Number(a.rank || Infinity) - Number(b.rank || Infinity)
+    Number(a.rank || Infinity) - Number(b.rank || Infinity)
+    || Number(isFirstPartyRow(b)) - Number(isFirstPartyRow(a))
     || String(a.source_report_id || a.source_url || "").localeCompare(String(b.source_report_id || b.source_url || ""))
   ))[0];
 }
@@ -53,10 +57,10 @@ fs.mkdirSync(path.join(pageBundleDir, "models"), { recursive: true });
 const catalog = data.benchmark_catalog.map(item => {
   const page = data.benchmark_pages[item.rank_group_key];
   const rows = page?.rows || [];
-  const searchModels = [...new Set(rows.map(row => row.model_name).filter(Boolean))];
+  const searchModels = [...new Set(rows.flatMap(row => [row.model_name, row.reported_model_name]).filter(Boolean))];
   const preferredByModel = new Map(preferredRows(rows).map(row => [row.model_id || row.model_name, row]));
   const modelScores = {};
-  for (const row of rows) {
+  for (const row of rows.filter(isRankingEligible)) {
     const modelKey = row.model_id || row.model_name;
     if (!modelKey || modelScores[modelKey]) continue;
     const selected = preferredByModel.get(modelKey) || row;
@@ -65,6 +69,7 @@ const catalog = data.benchmark_catalog.map(item => {
       u: selected.score_unit,
       g: selected.comparability_group_id,
       c: selected.comparability_status,
+      n: selected.model_configuration || "Standard",
     };
   }
   return { ...item, search_models: searchModels, model_scores: modelScores };
@@ -87,7 +92,7 @@ function comparisonGroups(rows) {
     groups.get(id).rows.push(row);
   }
   return [...groups.values()].map(group => {
-    group.modelCount = new Set(group.rows.map(row => row.model_id || row.model_name)).size;
+    group.modelCount = new Set(group.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size;
     group.rows.sort((a, b) => Number(a.rank) - Number(b.rank));
     return group;
   }).sort((a, b) => (
@@ -101,17 +106,17 @@ function preferredRows(rows) {
   const group = comparisonGroups(rows)[0];
   if (!group) return [];
   const rowsByModel = new Map();
-  for (const row of group.rows) {
-    const key = row.model_id || row.model_name;
+  for (const row of group.rows.filter(isRankingEligible)) {
+    const key = row.base_model_id || row.model_id || row.model_name;
     if (!rowsByModel.has(key)) rowsByModel.set(key, []);
     rowsByModel.get(key).push(row);
   }
   const preferred = new Map([...rowsByModel].map(([key, modelRows]) => [key, preferredModelRow(modelRows)]));
-  return group.rows.filter(row => preferred.get(row.model_id || row.model_name) === row);
+  return group.rows.filter(row => isRankingEligible(row) && preferred.get(row.base_model_id || row.model_id || row.model_name) === row);
 }
 
 function buildOverallData() {
-  const modelByName = new Map(data.model_catalog.map(model => [model.model_name, model]));
+  const modelById = new Map(data.model_catalog.map(model => [model.model_id, model]));
   const observations = new Map();
   let benchmarkGroupCount = 0;
   for (const [benchmarkKey, page] of Object.entries(data.benchmark_pages)) {
@@ -125,17 +130,19 @@ function buildOverallData() {
         rank = index + 1;
         previousScore = String(row.score);
       }
-      if (!observations.has(row.model_name)) observations.set(row.model_name, []);
-      observations.get(row.model_name).push({
+      const modelId = row.base_model_id || row.model_id;
+      if (!observations.has(modelId)) observations.set(modelId, []);
+      observations.get(modelId).push({
         benchmark_key: benchmarkKey,
         domain: page.domain,
         percentile: 100 * (rows.length - rank) / (rows.length - 1),
+        configuration: row.model_configuration || "Standard",
       });
     });
   }
 
   const rankings = [];
-  for (const [modelName, rows] of observations) {
+  for (const [modelId, rows] of observations) {
     const domains = new Map();
     for (const row of rows) {
       if (!domains.has(row.domain)) domains.set(row.domain, []);
@@ -145,15 +152,20 @@ function buildOverallData() {
     const domainMeans = [...domains.values()].map(values => values.reduce((sum, value) => sum + value, 0) / values.length);
     const rawScore = domainMeans.reduce((sum, value) => sum + value, 0) / domainMeans.length;
     const indexScore = 50 + (rawScore - 50) * (rows.length / (rows.length + 10));
-    const model = modelByName.get(modelName);
+    const model = modelById.get(modelId);
+    if (!model) continue;
+    const configurations = [...new Set(rows.map(row => row.configuration).filter(Boolean))];
     rankings.push({
-      model_name: modelName,
-      vendor: model?.vendor || "Unknown",
+      model_id: modelId,
+      model_name: model.model_name,
+      vendor: model.vendor || "Unknown",
       index_score: Number(indexScore.toFixed(1)),
       raw_score: Number(rawScore.toFixed(1)),
       benchmark_count: rows.length,
       domain_count: domains.size,
-      report_count: Number(model?.report_count || 0),
+      report_count: Number(model.report_count || 0),
+      configuration_count: configurations.length,
+      configurations,
       confidence: rows.length >= 25 && domains.size >= 5 ? "high" : rows.length >= 10 && domains.size >= 3 ? "medium" : "limited",
     });
   }
@@ -206,7 +218,7 @@ for (const [key, page] of Object.entries(data.benchmark_pages)) {
 for (const model of data.model_catalog) {
   const modelPages = {};
   for (const [key, page] of Object.entries(data.benchmark_pages)) {
-    const rows = page.rows.filter(row => row.model_id === model.model_id);
+    const rows = page.rows.filter(row => isRankingEligible(row) && (row.base_model_id || row.model_id) === model.model_id);
     if (rows.length) modelPages[key] = { ...page, rows };
   }
   writeBundle(

@@ -133,11 +133,11 @@ function main() {
   const urls = [{ url: `${siteUrl}/`, priority: "1.0", changefreq: "daily" }];
   const rankingUrl = `${siteUrl}/ranking/`;
   writePage("ranking", renderPage(template, {
-    title: "Overall AI Model Ranking | BenchAtlas",
-    description: "Compare the coverage-adjusted Reported Performance Index for AI models across eligible benchmark groups and domains.",
+    title: "AI Model Reported Capability Ceiling | BenchAtlas",
+    description: "Compare base models using their best publicly reported configuration within eligible benchmark and protocol groups.",
     url: rankingUrl,
     kicker: "Reported Performance Index",
-    heading: "Overall Model Ranking",
+    heading: "Reported Capability Ceiling",
     dataBundle: "/data/pages/ranking.bundle.js?v=scope-1",
     type: "WebPage"
   }));

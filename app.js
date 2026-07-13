@@ -19,6 +19,7 @@
 
   Object.entries(pages).forEach(([benchmarkKey, page]) => {
     page.rows.forEach(row => {
+      if (!isRankingEligible(row)) return;
       if (!modelRows.has(row.model_name)) modelRows.set(row.model_name, []);
       modelRows.get(row.model_name).push({
         ...row,
@@ -95,6 +96,10 @@
     return `/benchmarks/${benchmarkSlugByKey.get(benchmarkKey) || slugify(benchmarkKey)}/`;
   }
 
+  function isRankingEligible(row) {
+    return row.ranking_eligible !== false && !["agent_system", "baseline", "checkpoint"].includes(row.entity_type);
+  }
+
   function comparisonGroups(rows) {
     const groups = new Map();
     rows.forEach(row => {
@@ -108,7 +113,7 @@
       groups.get(id).rows.push(row);
     });
     return Array.from(groups.values()).map(group => {
-      const models = new Set(group.rows.map(row => row.model_id || row.model_name));
+      const models = new Set(group.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name));
       group.model_count = models.size;
       group.rows.sort((a, b) => Number(a.rank) - Number(b.rank));
       return group;
@@ -123,8 +128,8 @@
     const group = comparisonGroups(rows)[0];
     if (!group) return [];
     const seen = new Set();
-    return group.rows.filter(row => {
-      const key = row.model_id || row.model_name;
+    return group.rows.filter(isRankingEligible).filter(row => {
+      const key = row.base_model_id || row.model_id || row.model_name;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -533,10 +538,10 @@
     const rows = filteredCatalog();
     const vendorCount = new Set(overallRankings.map(row => row.vendor)).size;
     el("domainLabel").textContent = "Reported Performance Index";
-    el("pageTitle").textContent = "Overall Model Ranking";
+    el("pageTitle").textContent = "Reported Capability Ceiling";
     updatePageMetadata(
       "Overall AI Model Ranking | BenchAtlas",
-      "Compare the coverage-adjusted Reported Performance Index for AI models across eligible benchmark groups and domains."
+      "Compare base models by their best publicly reported configuration within each eligible benchmark and shared protocol group."
     );
     setStat("statModels", "statLabelModels", overallRankings.length, "eligible models");
     setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, "benchmark groups");
@@ -544,12 +549,12 @@
     setStat("statReports", "statLabelReports", 5, "minimum groups");
     el("metricLabel").textContent = "RPI · 0–100";
     el("rankingTitle").textContent = "Reported Performance Index";
-    el("rankingNote").textContent = "A coverage-adjusted comparison using the preferred documented protocol group within each benchmark.";
+    el("rankingNote").textContent = "Each base model contributes its best publicly reported configuration within the selected protocol group.";
     el("summaryHeading").textContent = "Leaders";
     el("signalsHeading").textContent = "Eligibility";
     el("policyHeading").textContent = "Methodology";
-    el("policyText").textContent = "For each benchmark, BenchAtlas first selects a documented shared-protocol group when available; source-scoped groups are used only when no strict group exists. Model ranks become 0–100 percentiles, are averaged within each domain, and domains receive equal weight. Limited coverage is shrunk toward 50. This index still reflects published report coverage and is not an absolute capability score.";
-    renderBadges(el("panelBadges"), ["protocol grouped", "domain balanced", "coverage adjusted"], false);
+    el("policyText").textContent = "For each benchmark, BenchAtlas selects a documented shared-protocol group when available, then keeps the highest-ranked public configuration for each base model. Agent systems, checkpoints, and computational baselines are excluded. Model ranks become 0–100 percentiles, are averaged within each domain, and limited coverage is shrunk toward 50. This is a reported capability ceiling, not a default-product score.";
+    renderBadges(el("panelBadges"), ["best public config", "base models only", "protocol grouped", "domain balanced"], false);
     renderBadges(el("contextBadges"), ["≥5 benchmark groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
@@ -560,15 +565,16 @@
     if (!page) return;
     const comparisonGroup = comparisonGroups(page.rows)[0];
     const comparableRows = preferredComparisonRows(page.rows);
+    const referenceRows = comparisonGroup ? comparisonGroup.rows.filter(row => !isRankingEligible(row)) : [];
     const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
     el("domainLabel").textContent = humanize(page.domain || "benchmark");
     el("pageTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
     updatePageMetadata(
       `${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} Results | BenchAtlas`,
-      `Compare ${page.benchmark_name} scores reported for ${new Set(page.rows.map(row => row.model_name)).size} AI models, including evaluation protocols and source evidence.`
+      `Compare ${page.benchmark_name} scores reported for ${new Set(page.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size} base models, including evaluation configurations, protocols, and source evidence.`
     );
-    const modelCount = new Set(page.rows.map(row => row.model_name)).size;
-    const vendorCount = new Set(page.rows.map(row => row.vendor)).size;
+    const modelCount = new Set(page.rows.filter(isRankingEligible).map(row => row.base_model_id || row.model_id || row.model_name)).size;
+    const vendorCount = new Set(page.rows.filter(isRankingEligible).map(row => row.vendor)).size;
     const reportCount = new Set(page.rows.flatMap(row => String(row.source_report_id).split("; "))).size;
     setStat("statModels", "statLabelModels", modelCount, plural(modelCount, "model"));
     setStat("statRows", "statLabelRows", page.result_count, plural(page.result_count, "reported row"));
@@ -586,7 +592,7 @@
     renderBadges(el("panelBadges"), [comparisonGroup?.status === "strict" ? "shared protocol" : "source scoped", ...(page.protocol_badges || [])], false);
     renderBadges(el("contextBadges"), page.protocol_badges || [], false);
     renderTopModels(comparableRows);
-    renderBenchmarkRanking(comparableRows);
+    renderBenchmarkRanking(comparableRows, referenceRows);
   }
 
   function renderModelPage() {
@@ -689,6 +695,8 @@
     }).join("");
     return `
       <div class="badges">
+        ${row.model_configuration ? `<span class="badge">${esc(row.model_configuration)}</span>` : ""}
+        ${!isRankingEligible(row) ? `<span class="badge warn">${esc(humanize(row.entity_type || "reference"))}</span>` : ""}
         <span class="badge ${row.comparability_status === "strict" ? "" : "warn"}">${esc(comparisonLabel)}</span>
         ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
       </div>
@@ -706,6 +714,7 @@
     return `
       <div class="source">
         <div><b>Reported by:</b> ${esc(row.vendor)} · ${esc(row.comparability_status === "strict" ? "shared protocol" : "source scoped")}</div>
+        ${row.reported_model_name && row.reported_model_name !== row.model_name ? `<div><b>Reported entity:</b> ${esc(row.reported_model_name)}</div>` : ""}
         ${row.source_url ? `<div class="source-links">${renderSourceLinks(row.source_url)}</div>` : ""}
         <div>${esc(row.evidence_location)}</div>
         <details class="evidence-note">
@@ -721,8 +730,8 @@
     return `${esc(fmt(row.score))}${row.score_unit === "%" ? "%" : row.score_unit ? ` ${esc(row.score_unit)}` : ""}`;
   }
 
-  function renderBenchmarkRanking(rows) {
-    if (!rows.length) {
+  function renderBenchmarkRanking(rows, referenceRows = []) {
+    if (!rows.length && !referenceRows.length) {
       el("rankingTable").innerHTML = `<div class="empty">No scored rows for this benchmark.</div>`;
       return;
     }
@@ -744,7 +753,19 @@
               <td class="rank">#${esc(row.comparable_rank)}</td>
               <td>
                 <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
-                <div class="vendor">${esc(row.vendor)}</div>
+                <div class="vendor">${esc(row.vendor)} · ${esc(row.model_configuration || "Standard configuration")}</div>
+              </td>
+              <td><div class="score">${scoreCell(row)}</div></td>
+              <td>${protocolCell(row)}</td>
+              <td>${sourceCell(row)}</td>
+            </tr>
+          `).join("")}
+          ${referenceRows.map(row => `
+            <tr class="reference-row">
+              <td class="rank">REF</td>
+              <td>
+                <div class="model">${esc(row.reported_model_name || row.model_name)}</div>
+                <div class="vendor">${esc(row.vendor)} · ${esc(humanize(row.entity_type || "reference"))}</div>
               </td>
               <td><div class="score">${scoreCell(row)}</div></td>
               <td>${protocolCell(row)}</td>
@@ -771,7 +792,7 @@
               <td class="rank">#${esc(row.rank)}</td>
               <td>
                 <div class="model"><a class="entity-link benchmark-jump" href="${esc(benchmarkPath(row.benchmark_key))}" data-benchmark="${esc(row.benchmark_key)}">${esc(row.benchmark_name)}</a></div>
-                <div class="vendor">${esc(humanize(row.domain))}${row.benchmark_variant ? ` · ${esc(row.benchmark_variant)}` : ""}<br>${esc(row.metric_name)}</div>
+                <div class="vendor">${esc(humanize(row.domain))}${row.benchmark_variant ? ` · ${esc(row.benchmark_variant)}` : ""}<br>${esc(row.metric_name)} · ${esc(row.model_configuration || "Standard configuration")}</div>
               </td>
               <td><div class="score">${scoreCell(row)}</div></td>
               <td>${protocolCell(row)}</td>
@@ -791,14 +812,14 @@
     }
     el("rankingTable").innerHTML = `
       <table>
-        <thead><tr><th>Rank</th><th>Model</th><th>RPI</th><th>Coverage</th><th>Method</th></tr></thead>
+        <thead><tr><th>Rank</th><th>Base model</th><th>RPI ceiling</th><th>Coverage</th><th>Method</th></tr></thead>
         <tbody>
           ${rows.map(row => `
             <tr>
               <td class="rank">#${esc(row.overall_rank)}</td>
               <td>
                 <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
-                <div class="vendor">${esc(row.vendor)}</div>
+                <div class="vendor">${esc(row.vendor)}${row.configuration_count ? ` · ${esc(row.configuration_count)} public ${plural(row.configuration_count, "configuration")}` : ""}</div>
               </td>
               <td>
                 <div class="score">${esc(row.index_score)}</div>

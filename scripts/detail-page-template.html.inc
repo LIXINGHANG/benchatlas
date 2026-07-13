@@ -791,6 +791,6 @@
 
   <script src="/site_data.index.bundle.js?v=lazy-1"></script>
   <script src="__DATA_BUNDLE__"></script>
-  <script src="/app.js?v=normalize-4"></script>
+  <script src="/app.js?v=entities-1"></script>
 </body>
 </html>
