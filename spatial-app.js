@@ -5,7 +5,7 @@
     const pageCache = new Map();
     const loadPage = async key => {
       if (pageCache.has(key)) return pageCache.get(key);
-      const request = fetch(`/data/benchmarks/${encodeURIComponent(key)}.json?v=lazy-1`)
+      const request = fetch(`/data/benchmarks/${encodeURIComponent(key)}.json?v=entities-1`)
         .then(response => {
           if (!response.ok) throw new Error(`Benchmark data request failed: ${response.status}`);
           return response.json();
@@ -227,7 +227,7 @@
     function loadRankingData(){
       if(window.BENCHATLAS_DATA?.overall_data)return Promise.resolve(window.BENCHATLAS_DATA.overall_data);
       if(rankingPromise)return rankingPromise;
-      rankingPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/data/pages/ranking.bundle.js?v=scope-1';script.onload=()=>window.BENCHATLAS_DATA?.overall_data?resolve(window.BENCHATLAS_DATA.overall_data):reject(new Error('Ranking data missing'));script.onerror=()=>reject(new Error('Ranking data request failed'));document.head.appendChild(script);});
+      rankingPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/data/pages/ranking.bundle.js?v=entities-1';script.onload=()=>window.BENCHATLAS_DATA?.overall_data?resolve(window.BENCHATLAS_DATA.overall_data):reject(new Error('Ranking data missing'));script.onerror=()=>reject(new Error('Ranking data request failed'));document.head.appendChild(script);});
       return rankingPromise;
     }
     async function renderOverallRanking(){

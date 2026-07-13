@@ -138,7 +138,7 @@ function main() {
     url: rankingUrl,
     kicker: "Reported Performance Index",
     heading: "Reported Capability Ceiling",
-    dataBundle: "/data/pages/ranking.bundle.js?v=scope-1",
+    dataBundle: "/data/pages/ranking.bundle.js?v=entities-1",
     type: "WebPage"
   }));
   urls.push({ url: rankingUrl, priority: "0.9", changefreq: "daily" });
@@ -153,7 +153,7 @@ function main() {
       url,
       kicker: model.vendor || "AI model",
       heading: model.model_name,
-      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=scope-1`,
+      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=entities-1`,
       type: "WebPage"
     }));
     urls.push({ url, priority: "0.8", changefreq: "weekly" });
@@ -170,7 +170,7 @@ function main() {
       url,
       kicker: String(benchmark.domain || "AI benchmark").replace(/_/g, " "),
       heading: `${benchmark.benchmark_name}${variant}`,
-      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=scope-1`,
+      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=entities-1`,
       type: "WebPage"
     }));
     urls.push({ url, priority: "0.7", changefreq: "weekly" });
