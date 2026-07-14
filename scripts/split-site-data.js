@@ -77,6 +77,7 @@ const catalog = data.benchmark_catalog.map(item => {
 
 const indexPayload = {
   summary: data.summary,
+  taxonomy: data.taxonomy,
   model_catalog: data.model_catalog,
   benchmark_catalog: catalog,
 };

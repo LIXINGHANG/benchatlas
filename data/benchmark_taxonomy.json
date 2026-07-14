@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves the public primary domain, subfield, safety layer, and map family.",
+  "fallback_primary_domain": "reason",
+  "primary_domains": [
+    {
+      "id": "reason",
+      "label_en": "Reasoning & Knowledge",
+      "label_zh": "推理与知识",
+      "source_domains": ["reasoning", "math", "general", "general_capability", "safety", "safety_bias"],
+      "default_subfield": "general-reasoning",
+      "subfields": [
+        {"id": "mathematics", "label_en": "Mathematics", "label_zh": "数学", "match_patterns": ["aime", "hmmt", "imo", "math", "olympiad"]},
+        {"id": "knowledge", "label_en": "Knowledge", "label_zh": "知识", "match_patterns": ["gpqa", "mmlu", "supergpqa", "knowledge", "kina", "hle", "humanity"]},
+        {"id": "general-reasoning", "label_en": "General reasoning", "label_zh": "通用推理", "match_patterns": []}
+      ]
+    },
+    {
+      "id": "code",
+      "label_en": "Coding & Software Engineering",
+      "label_zh": "编程与软件工程",
+      "source_domains": ["coding"],
+      "default_subfield": "repository-reasoning",
+      "subfields": [
+        {"id": "software-engineering", "label_en": "Software engineering", "label_zh": "软件工程", "match_patterns": ["swe", "repo", "patch", "issue", "deepswe"]},
+        {"id": "terminal-systems", "label_en": "Terminal & systems", "label_zh": "终端与系统", "match_patterns": ["terminal", "kernel", "cuda", "cyber", "shell"]},
+        {"id": "code-generation", "label_en": "Code generation", "label_zh": "代码生成", "match_patterns": ["code", "program", "scicode", "artificial analysis"]},
+        {"id": "repository-reasoning", "label_en": "Repository reasoning", "label_zh": "代码仓库推理", "match_patterns": []}
+      ]
+    },
+    {
+      "id": "agent",
+      "label_en": "Agents & Computer Use",
+      "label_zh": "智能体与计算机操作",
+      "source_domains": ["agent", "computer_use", "business_simulation", "healthcare_agent", "computer_use_safety", "agent_safety"],
+      "default_subfield": "workflows",
+      "subfields": [
+        {"id": "computer-use", "label_en": "Computer use", "label_zh": "计算机操作", "match_patterns": ["osworld", "computer", "benchcad", "android", "browser"]},
+        {"id": "tools-mcp", "label_en": "Tools & MCP", "label_zh": "工具与 MCP", "match_patterns": ["tool", "mcp", "api", "function"]},
+        {"id": "web-search", "label_en": "Web & search", "label_zh": "Web 与搜索", "match_patterns": ["browse", "search", "web"]},
+        {"id": "workflows", "label_en": "Workflows", "label_zh": "工作流", "match_patterns": []}
+      ]
+    },
+    {
+      "id": "multi",
+      "label_en": "Multimodal & Perception",
+      "label_zh": "多模态与感知",
+      "source_domains": ["multimodal", "multimodal_agent", "vision", "video", "document", "vision_safety"],
+      "default_subfield": "spatial-perception",
+      "subfields": [
+        {"id": "visual-reasoning", "label_en": "Visual reasoning", "label_zh": "视觉推理", "match_patterns": ["mmmu", "vision", "image", "chart", "charxiv", "visual"]},
+        {"id": "video", "label_en": "Video", "label_zh": "视频", "match_patterns": ["video", "tvbench", "crossvid"]},
+        {"id": "documents", "label_en": "Documents", "label_zh": "文档", "match_patterns": ["document", "doc", "pdf", "dude"]},
+        {"id": "spatial-perception", "label_en": "Spatial perception", "label_zh": "空间理解", "match_patterns": []}
+      ]
+    },
+    {
+      "id": "language",
+      "label_en": "Language & Long Context",
+      "label_zh": "语言与长上下文",
+      "source_domains": ["language", "multilingual", "long_context"],
+      "default_subfield": "language-understanding",
+      "subfields": [
+        {"id": "long-context", "label_en": "Long context", "label_zh": "长上下文", "match_patterns": ["long", "context", "needle", "mrcr", "graphwalk", "memory"]},
+        {"id": "multilingual", "label_en": "Multilingual", "label_zh": "多语言", "match_patterns": ["multi", "language", "mmlu-prox", "global"]},
+        {"id": "translation", "label_en": "Translation", "label_zh": "翻译", "match_patterns": ["wmt", "translation", "xcomet"]},
+        {"id": "language-understanding", "label_en": "Language understanding", "label_zh": "语言理解", "match_patterns": []}
+      ]
+    },
+    {
+      "id": "expert",
+      "label_en": "Expert & Frontier Domains",
+      "label_zh": "专业与前沿领域",
+      "source_domains": ["science", "health", "research", "professional", "expert_tasks", "cybersecurity", "security", "self_improvement", "health_safety", "safety_health", "bio_safety", "cyber_safety"],
+      "default_subfield": "professional-work",
+      "subfields": [
+        {"id": "health-biology", "label_en": "Health & biology", "label_zh": "医疗与生物", "match_patterns": ["health", "medical", "bio", "gene", "protein", "virology"]},
+        {"id": "science-research", "label_en": "Science & research", "label_zh": "科学与研究", "match_patterns": ["science", "research", "frontier", "chem", "physics"]},
+        {"id": "cybersecurity", "label_en": "Cybersecurity", "label_zh": "网络安全", "match_patterns": ["cyber", "exploit", "security", "ctf"]},
+        {"id": "professional-work", "label_en": "Professional work", "label_zh": "专业任务", "match_patterns": []}
+      ]
+    }
+  ],
+  "safety_domains": ["safety", "agent_safety", "bio_safety", "computer_use_safety", "cyber_safety", "health_safety", "safety_bias", "safety_health", "vision_safety"],
+  "benchmark_overrides": {
+    "AetherCode": {"source_domain": "coding", "subfield": "code-generation", "confidence": 1.0, "reason": "Coding benchmark"},
+    "ArcAGI2": {"source_domain": "reasoning", "subfield": "general-reasoning", "confidence": 1.0, "reason": "Abstract reasoning benchmark"},
+    "BeyondAIME": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
+    "BrowseComp": {"source_domain": "agent", "subfield": "web-search", "confidence": 1.0, "reason": "Web browsing and search benchmark"},
+    "FrontierScience-Olympiad": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Frontier science benchmark"},
+    "FS - Research": {"source_domain": "research", "subfield": "science-research", "confidence": 1.0, "reason": "Research benchmark"},
+    "HLE-textonly": {"source_domain": "agent", "confidence": 0.9, "reason": "Source report evaluates it in the agent section"},
+    "HLE-Verified": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge and reasoning benchmark"},
+    "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
+    "LiveMathematicianBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
+    "MathArena Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
+    "MMLU": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "General knowledge benchmark; multilingual variants remain separate"},
+    "MSQA": {"source_domain": "multilingual", "subfield": "multilingual", "confidence": 1.0, "reason": "Multilingual question answering benchmark"},
+    "PostTrainBench": {"source_domain": "reasoning", "subfield": "general-reasoning", "confidence": 0.9, "reason": "Post-training reasoning evaluation"},
+    "SuperChem": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Chemistry benchmark"}
+  },
+  "map_families": [
+    {
+      "id": "healthbench",
+      "name_pattern": "^HealthBench(?:\\s|$)",
+      "representative_pattern": "^HealthBench$"
+    }
+  ]
+}

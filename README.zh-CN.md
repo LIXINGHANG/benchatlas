@@ -144,7 +144,7 @@ BenchAtlas 将报告中的原始领域标签映射到六个一级能力区域：
 - 尽可能让每条导入记录关联来源报告和证据位置。
 - 方法信息不完整时标记为来源限定，而不是强行判定可比。
 
-公开的归一化规则位于 [`data/normalization_rules.json`](data/normalization_rules.json)。
+公开的归一化规则位于 [`data/normalization_rules.json`](data/normalization_rules.json)。Benchmark 领域分类使用独立的权威数据源 [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json)，其中定义六个一级领域、二级领域、安全层、Benchmark 人工覆盖项、分类置信度和地图家族合并规则。数据构建会先解析 taxonomy，再生成前端数据；浏览器不再自行推断 Benchmark 分类。
 
 ## 参与贡献
 
@@ -178,6 +178,7 @@ node scripts/generate-seo-pages.js
 
 ```bash
 node scripts/validate-model-entities.js
+node scripts/validate-benchmark-taxonomy.js
 ```
 
 ## 仓库结构
@@ -191,7 +192,8 @@ node scripts/validate-model-entities.js
 | `data/benchmarks/` | 按需加载的 Benchmark 报分与证据 |
 | `data/pages/` | Benchmark、模型和排名页面的路由级数据包 |
 | `data/normalization_rules.json` | 可审计的模型与 Benchmark 归一化规则 |
-| `scripts/` | 数据拆分、页面生成和实体验证脚本 |
+| `data/benchmark_taxonomy.json` | 一级领域、二级领域、安全标记、Benchmark 覆盖项和地图家族的权威分类文件 |
+| `scripts/` | 数据拆分、页面生成、实体验证和 taxonomy 校验脚本 |
 | `benchmarks/`, `models/`, `ranking/` | 自动生成的英文详情页 |
 | `zh/benchmarks/`, `zh/models/`, `zh/ranking/` | 自动生成的中文详情页 |
 

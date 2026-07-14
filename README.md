@@ -144,7 +144,7 @@ Within each region:
 - Attach every imported row to a report and evidence location whenever possible.
 - Mark uncertain or incomplete methodology as source-scoped instead of forcing comparability.
 
-Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json).
+Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the six primary fields, subfields, safety-layer domains, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
 
 ## Contributing
 
@@ -178,6 +178,7 @@ Validate base-model, configuration, and reference-entity separation with:
 
 ```bash
 node scripts/validate-model-entities.js
+node scripts/validate-benchmark-taxonomy.js
 ```
 
 ## Repository structure
@@ -191,7 +192,8 @@ node scripts/validate-model-entities.js
 | `data/benchmarks/` | Per-benchmark rows and evidence loaded on demand |
 | `data/pages/` | Route-scoped benchmark, model, and ranking bundles |
 | `data/normalization_rules.json` | Auditable model and benchmark normalization rules |
-| `scripts/` | Data splitting, page generation, and entity validation |
+| `data/benchmark_taxonomy.json` | Canonical primary fields, subfields, safety flags, benchmark overrides, and map families |
+| `scripts/` | Data splitting, page generation, entity validation, and taxonomy validation |
 | `benchmarks/`, `models/`, `ranking/` | Generated English detail pages |
 | `zh/benchmarks/`, `zh/models/`, `zh/ranking/` | Generated Chinese detail pages |
 
