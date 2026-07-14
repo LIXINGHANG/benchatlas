@@ -864,6 +864,10 @@
 
   function init() {
     el("totalCount").textContent = `${data.summary.result_count} rows`;
+    if (el("headerResults")) el("headerResults").textContent = fmt(data.summary.result_count);
+    if (el("headerModels")) el("headerModels").textContent = fmt(data.summary.model_count);
+    if (el("headerBenchmarks")) el("headerBenchmarks").textContent = fmt(data.summary.benchmark_group_count);
+    if (el("headerReports")) el("headerReports").textContent = `${fmt(data.summary.report_count)} ${plural(data.summary.report_count, "source report")}`;
     el("benchmarkViewTab").addEventListener("click", () => switchView("benchmarks", benchmarkCatalog[0]?.rank_group_key));
     el("modelViewTab").addEventListener("click", () => switchView("models", defaultModel?.model_name));
     el("overallViewTab").addEventListener("click", () => switchView("overall", "overall"));
