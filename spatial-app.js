@@ -81,6 +81,7 @@
       benchcad_score:'BenchCAD · Standard',benchcad_python_tool_score:'BenchCAD · Python Tool',deepswe_score:'DeepSWE · Official Pier',deepswe_v1_1_score:'DeepSWE v1.1'
     };
     const canonicalBase = name => String(name||'').replace(/^GPQA-Diamond$/i,'GPQA Diamond').replace(/^MCP-Atlas$/i,'MCP Atlas').replace(/^Terminal[ -]bench 2\.1$/i,'Terminal-Bench 2.1').replace(/^SWE-bench Verified$/i,'SWE-Bench Verified');
+    const mapDisplayName = item => canonicalBase(item.benchmark_name);
     const displayName = item => {if(displayOverrides[item.rank_group_key])return displayOverrides[item.rank_group_key];const base=canonicalBase(item.benchmark_name);const variant=String(item.benchmark_variant||'').trim();return variant&&!base.toLowerCase().includes(variant.toLowerCase())?`${base} · ${variant}`:base;};
     const numericScore = row => Number.parseFloat(row?.score);
     const normalizedPublisher=value=>{const text=String(value||'').toLowerCase();if(text.includes('anthropic'))return'anthropic';if(text.includes('openai'))return'openai';if(text.includes('google')||text.includes('deepmind')||text.includes('gemini'))return'googledeepmind';if(text.includes('qwen'))return'qwen';if(text.includes('deepseek'))return'deepseek';if(text.includes('bytedance')||text.includes('bytedns')||text.includes('seed'))return'bytedanceseed';if(text.includes('moonshot')||text.includes('kimi'))return'moonshotkimi';if(text.includes('z.ai')||text.includes('zai')||text.includes('glm'))return'zai';if(text.includes('x.ai')||text.includes('xai')||text.includes('grok'))return'xai';return text.replace(/[^a-z0-9]/g,'');};
@@ -111,7 +112,7 @@
       const methodology=Math.min(1,protocolBadgeCount(item)/6);
       return .6*coverage+.25*evidence+.15*methodology;
     };
-    const nodeFootprint=item=>({width:202,height:Math.min(154,104+Math.max(0,Math.ceil(displayName(item).length/18)-2)*16)});
+    const nodeFootprint=item=>({width:202,height:Math.min(154,104+Math.max(0,Math.ceil(mapDisplayName(item).length/18)-2)*16)});
     const overlaps=(candidate,placed)=>placed.some(entry=>Math.abs(candidate.x-entry.x)<(candidate.width+entry.width)/2&&Math.abs(candidate.y-entry.y)<(candidate.height+entry.height)/2);
     function positionNodes(){
       positions.clear();
@@ -157,7 +158,7 @@
       const subfieldRoutes=featured.map(item=>{const p=positions.get(item.rank_group_key);return `<path class="connection subfield-route" data-route-key="${esc(item.rank_group_key)}" style="stroke:${p.macro.color}aa" d="M${p.subfieldAnchor.x} ${p.subfieldAnchor.y} Q ${(p.x+p.subfieldAnchor.x)/2+15} ${(p.y+p.subfieldAnchor.y)/2-10} ${p.x} ${p.y}"/>`}).join('');
       const semanticRoutes=relationEdges.map((edge,index)=>{const from=positions.get(edge.from),to=positions.get(edge.to);const midX=(from.x+to.x)/2,midY=(from.y+to.y)/2+(index%2?18:-18);return `<path class="semantic-edge ${edge.type}" data-from="${esc(edge.from)}" data-to="${esc(edge.to)}" d="M${from.x} ${from.y} Q${midX} ${midY} ${to.x} ${to.y}"/>`;}).join('');
       $('mapSvg').innerHTML=globalRoutes+contours+macroRoutes+subfieldRoutes+semanticRoutes;
-      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" data-tier="${featuredPriority.get(item.rank_group_key)}" title="Landmark score ${Math.round(p.coreScore*100)} · closer to center means broader model coverage and stronger source evidence" style="left:${p.x}px;top:${p.y}px;--node-color:${p.macro.color};--node-scale:${Math.min(1.08,.84+item.model_count/80)}"><span class="coverage">${item.model_count} models</span><b>${esc(displayName(item))}</b><small>${esc(p.subfield.label)} · core ${Math.round(p.coreScore*100)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
+      $('nodes').innerHTML=featured.map(item=>{const p=positions.get(item.rank_group_key);const risk=isSafety(item);return `<button class="node ${risk?'risk':''}" data-key="${esc(item.rank_group_key)}" data-domain="${esc(p.macro.id)}" data-risk="${risk}" data-tier="${featuredPriority.get(item.rank_group_key)}" title="Landmark score ${Math.round(p.coreScore*100)} · closer to center means broader model coverage and stronger source evidence" style="left:${p.x}px;top:${p.y}px;--node-color:${p.macro.color};--node-scale:${Math.min(1.08,.84+item.model_count/80)}"><span class="coverage">${item.model_count} models</span><b>${esc(mapDisplayName(item))}</b><small>${esc(p.subfield.label)} · core ${Math.round(p.coreScore*100)}</small><span class="best">${esc(formatScore(item.best_score,item.score_unit))}</span></button>`}).join('');
       document.querySelectorAll('.node').forEach(node=>node.addEventListener('click',e=>{e.stopPropagation();const item=catalog.find(entry=>entry.rank_group_key===node.dataset.key);const score=modelScore(item);selectBenchmark(node.dataset.key,score?.g||'',state.modelId);}))
       renderMiniMap(); applyTransform();
     }
