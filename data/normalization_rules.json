@@ -46,6 +46,22 @@
     "SWE-bench Verified": "SWE-Bench Verified",
     "HMMT 2026 Feb": "HMMT Feb. 2026"
   },
+  "benchmark_domain_overrides": {
+    "AetherCode": "coding",
+    "ArcAGI2": "reasoning",
+    "BeyondAIME": "reasoning",
+    "BrowseComp": "agent",
+    "FrontierScience-Olympiad": "science",
+    "FS - Research": "research",
+    "HLE-textonly": "agent",
+    "HLE-Verified": "reasoning",
+    "KINA": "reasoning",
+    "LiveMathematicianBench": "reasoning",
+    "MathArena Apex": "reasoning",
+    "MMLU": "reasoning",
+    "MSQA": "multilingual",
+    "SuperChem": "science"
+  },
   "benchmark_group_rules": {
     "terminal_bench_2_0_score": {
       "rank_group_key": "terminal_bench_2_0_score",

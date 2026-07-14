@@ -39,7 +39,7 @@
       return macroRules.find(rule=>rule.id === 'reason');
     };
     const subfieldRules = {
-      reason:[[t('Mathematics','数学'),/aime|hmmt|imo|math|olympiad/i],[t('Knowledge','知识'),/gpqa|mmlu|supergpqa|knowledge|hle|humanity/i],[t('General reasoning','通用推理'),/.*/]],
+      reason:[[t('Mathematics','数学'),/aime|hmmt|imo|math|olympiad/i],[t('Knowledge','知识'),/gpqa|mmlu|supergpqa|knowledge|kina|hle|humanity/i],[t('General reasoning','通用推理'),/.*/]],
       code:[[t('Software engineering','软件工程'),/swe|repo|patch|issue|deepswe/i],[t('Terminal & systems','终端与系统'),/terminal|kernel|cuda|cyber|shell/i],[t('Code generation','代码生成'),/code|program|scicode|artificial analysis/i],[t('Repository reasoning','代码仓库推理'),/.*/]],
       agent:[[t('Computer use','计算机操作'),/osworld|computer|benchcad|android|browser/i],[t('Tools & MCP','工具与 MCP'),/tool|mcp|api|function/i],[t('Web & search','Web 与搜索'),/browse|search|web/i],[t('Workflows','工作流'),/.*/]],
       multi:[[t('Visual reasoning','视觉推理'),/mmmu|vision|image|chart|charxiv|visual/i],[t('Video','视频'),/video|tvbench|crossvid/i],[t('Documents','文档'),/document|doc|pdf|dude/i],[t('Spatial perception','空间理解'),/.*/]],
@@ -47,7 +47,7 @@
       expert:[[t('Health & biology','医疗与生物'),/health|medical|bio|gene|protein|virology/i],[t('Science & research','科学与研究'),/science|research|frontier|chem|physics/i],[t('Cybersecurity','网络安全'),/cyber|exploit|security|ctf/i],[t('Professional work','专业任务'),/.*/]]
     };
     const getSubfield = item => {
-      const macro=getMacro(item.domain);const text=`${item.benchmark_name} ${item.benchmark_family_id||''} ${item.domain}`;
+      const macro=getMacro(item.domain);const text=`${item.benchmark_name} ${item.benchmark_variant||''} ${item.benchmark_family_id||''} ${item.domain}`;
       const match=(subfieldRules[macro.id]||[]).find(([,pattern])=>pattern.test(text));
       return {id:`subfield-${Math.max(0,(subfieldRules[macro.id]||[]).indexOf(match))}`,label:match?.[0]||t('General','通用')};
     };
