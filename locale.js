@@ -45,7 +45,7 @@
     set(".ranking-summary span:nth-child(1) small", "符合条件的基础模型"); set(".ranking-summary span:nth-child(2) small", "可比分组");
     set(".status-primary b", "数据已上线"); set("#statusDomain", "全部领域"); set("#statusSelection", "尚未选择节点");
     set(".inspector .metrics .metric:nth-child(1) span", "模型"); set(".inspector .metrics .metric:nth-child(2) span", "厂商"); set(".inspector .metrics .metric:nth-child(3) span", "报告");
-    set(".inspector .section:nth-of-type(1) h3", "统一报分排名"); set(".rank-note", "每个基础模型显示最佳公开报分；颜色表示不同评测协议，只有同色记录可以直接比较。");
+    set(".inspector .section:nth-of-type(1) h3", "统一报分排名"); set(".rank-note", "每个基础模型显示最佳公开报分；颜色表示不同可比组，只有同色记录可以直接比较。");
     set(".inspector .section:nth-of-type(2) h3", "运行配置说明"); set('label[for="variantSelect"]', "报分来源与协议");
     set(".inspector .section:nth-of-type(3) h3", "原始证据"); set("#sourceLink", "打开原始来源 ↗"); set("#benchmarkLink", "打开完整 Benchmark 页面 →");
     attr("#search", "placeholder", "搜索 Benchmark 或模型"); attr("#search", "aria-label", "搜索 Benchmark 或模型"); attr("#closeInspector", "aria-label", "关闭详情");
