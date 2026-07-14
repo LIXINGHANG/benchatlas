@@ -868,6 +868,9 @@
     if (el("headerModels")) el("headerModels").textContent = fmt(data.summary.model_count);
     if (el("headerBenchmarks")) el("headerBenchmarks").textContent = fmt(data.summary.benchmark_group_count);
     if (el("headerReports")) el("headerReports").textContent = `${fmt(data.summary.report_count)} ${plural(data.summary.report_count, "source report")}`;
+    if (el("railCount")) el("railCount").textContent = `${fmt(data.summary.result_count)} rows · ${fmt(data.summary.model_count)} models`;
+    if (el("statusRows")) el("statusRows").textContent = `${fmt(data.summary.result_count)} results`;
+    if (el("statusEntity")) el("statusEntity").textContent = el("pageTitle")?.textContent || "Evidence profile";
     el("benchmarkViewTab").addEventListener("click", () => switchView("benchmarks", benchmarkCatalog[0]?.rank_group_key));
     el("modelViewTab").addEventListener("click", () => switchView("models", defaultModel?.model_name));
     el("overallViewTab").addEventListener("click", () => switchView("overall", "overall"));

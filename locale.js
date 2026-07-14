@@ -25,8 +25,14 @@
     if (detailSummary) {
       set("#headerReports", `${Number(detailSummary.report_count || 0).toLocaleString("zh-CN")} 份来源报告`);
       set("#totalCount", `${Number(detailSummary.result_count || 0).toLocaleString("zh-CN")} 条记录`);
+      set("#railCount", `${Number(detailSummary.result_count || 0).toLocaleString("zh-CN")} 条记录 · ${Number(detailSummary.model_count || 0).toLocaleString("zh-CN")} 个模型`);
+      set("#statusRows", `${Number(detailSummary.result_count || 0).toLocaleString("zh-CN")} 条结果`);
     }
     set('.site-header .header-link[href="/"]', "地图"); set('.site-header .header-link[href="/guide/"]', "使用指南");
+    set(".detail-toolbar .toolbar-label", "视图");
+    const detailToolbarLinks = document.querySelectorAll(".detail-toolbar .toolbar-link");
+    ["地图", "数据目录", "矩阵", "排名", "模型档案"].forEach((text, index) => { if (detailToolbarLinks[index]) detailToolbarLinks[index].textContent = text; });
+    set(".toolbar-current", "证据目录 · 结果关联原始来源"); set(".detail-status b", "数据已上线");
     set(".live-state b", "数据已上线"); set(".header-stat:nth-child(1) small", "结果"); set(".header-stat:nth-child(2) small", "模型");
     set(".toolbar > .toolbar-label", "视图"); set('[data-mode="map"]', "地图"); set('[data-mode="registry"]', "数据目录"); set('[data-mode="matrix"]', "矩阵"); set('[data-mode="ranking"]', "排名"); set("#shareView", "分享");
     set(".map-legend b", "地图逻辑");
