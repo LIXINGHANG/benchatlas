@@ -24,18 +24,37 @@
       reason:{color:'#27548a',center:[300,270]},code:{color:'#0f766e',center:[900,270]},agent:{color:'#a96812',center:[1520,270]},
       multi:{color:'#67528d',center:[300,800]},language:{color:'#4f7d35',center:[900,800]},expert:{color:'#8b4b36',center:[1520,800]}
     };
-    const macroRules = (data.taxonomy?.primary_domains||[]).map(rule=>({
+    const legacyPrimaryDomains = [
+      {id:'reason',label_en:'Reasoning & Knowledge',label_zh:'推理与知识'},
+      {id:'code',label_en:'Coding & Software Engineering',label_zh:'编程与软件工程'},
+      {id:'agent',label_en:'Agents & Computer Use',label_zh:'智能体与计算机使用'},
+      {id:'multi',label_en:'Multimodal & Perception',label_zh:'多模态与感知'},
+      {id:'language',label_en:'Language & Long Context',label_zh:'语言与长上下文'},
+      {id:'expert',label_en:'Expert & Frontier Domains',label_zh:'专家与前沿领域'}
+    ];
+    const taxonomyPrimaryDomains = data.taxonomy?.primary_domains?.length ? data.taxonomy.primary_domains : legacyPrimaryDomains;
+    const macroRules = taxonomyPrimaryDomains.map(rule=>({
       id:rule.id,label:t(rule.label_en,rule.label_zh),...(macroVisuals[rule.id]||{color:'#52606d',center:[900,540]})
     }));
-    const getMacro = item => macroRules.find(rule=>rule.id===item?.primary_domain)||macroRules.find(rule=>rule.id==='reason')||macroRules[0];
-    const isSafety = item => Boolean(item.is_safety);
+    const legacyDomainGroups = {
+      reason:new Set(['reasoning','math','general','general_capability','safety','safety_bias']),
+      code:new Set(['coding']),
+      agent:new Set(['agent','computer_use','business_simulation','healthcare_agent','computer_use_safety','agent_safety']),
+      multi:new Set(['multimodal','multimodal_agent','vision','video','document','vision_safety']),
+      language:new Set(['language','multilingual','long_context']),
+      expert:new Set(['science','health','research','professional','expert_tasks','cybersecurity','security','self_improvement','health_safety','safety_health','bio_safety','cyber_safety'])
+    };
+    const legacyPrimaryDomain = item => Object.entries(legacyDomainGroups).find(([,domains])=>domains.has(item?.domain))?.[0]||'reason';
+    const getMacro = item => macroRules.find(rule=>rule.id===(item?.primary_domain||legacyPrimaryDomain(item)))||macroRules.find(rule=>rule.id==='reason')||macroRules[0];
+    const legacySafetyDomains = new Set(['safety','safety_bias','computer_use_safety','agent_safety','vision_safety','health_safety','safety_health','bio_safety','cyber_safety']);
+    const isSafety = item => typeof item?.is_safety==='boolean' ? item.is_safety : legacySafetyDomains.has(item?.domain);
     const getSubfield = item => ({
       id:item.subfield||'general',label:t(item.subfield_label_en||'General',item.subfield_label_zh||'通用')
     });
     const hash = value => [...value].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,2166136261);
     const slugify = value => String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'item';
-    const mapFamilyKey = item => item.map_family_id||item.benchmark_family_id||item.rank_group_key;
-    const preferredMapRepresentative = item => Boolean(item.map_representative);
+    const mapFamilyKey = item => item.map_family_id||(/^HealthBench(?:\s|$)/i.test(item.benchmark_name||'')?'healthbench':item.benchmark_family_id)||item.rank_group_key;
+    const preferredMapRepresentative = item => typeof item?.map_representative==='boolean' ? item.map_representative : /^HealthBench$/i.test(item?.benchmark_name||'');
     const mapTierLimits={field:7,detail:9,deep:10};
     const selectDomainFamilies = rule => {const families=new Map();for(const item of catalog){if(getMacro(item).id!==rule.id)continue;const family=mapFamilyKey(item);const current=families.get(family);if(!current||preferredMapRepresentative(item)&&!preferredMapRepresentative(current))families.set(family,item);}return [...families.values()];};
     const selectFieldLandmarks = rule => selectDomainFamilies(rule).slice(0,mapTierLimits.deep);
