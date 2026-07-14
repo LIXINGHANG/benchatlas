@@ -1,71 +1,121 @@
 # BenchAtlas
 
-**Explore the landscape of AI benchmarks with source evidence and evaluation context.**
+**An evidence-first atlas of AI benchmarks, reported model scores, evaluation settings, and capability coverage.**
 
-[Open BenchAtlas](https://benchatlas.cn/) · [Overall model ranking](https://benchatlas.cn/ranking/) · [Report a data issue](https://github.com/LIXINGHANG/benchatlas/issues/new?template=data-correction.yml)
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-![BenchAtlas social preview](social-preview.png)
+[Open BenchAtlas](https://benchatlas.cn/) · [Chinese site](https://benchatlas.cn/zh/) · [Overall ranking](https://benchatlas.cn/ranking/) · [Report a data issue](https://github.com/LIXINGHANG/benchatlas/issues/new?template=data-correction.yml)
 
-BenchAtlas turns official model cards and technical reports into an explorable benchmark atlas. Instead of showing a score without context, every result keeps its source, evidence location, evaluation protocol, and method notes whenever the report provides them.
+![BenchAtlas interface preview](social-preview.png)
 
-## Why BenchAtlas
+BenchAtlas converts official model cards, system cards, release pages, and technical reports into a searchable benchmark dataset. It keeps the reported score together with its source, evidence location, model configuration, evaluation setup, and method notes whenever those details are available.
 
-AI benchmark numbers are often difficult to compare. Two vendors may report the same benchmark with different agent harnesses, context windows, tool access, sampling settings, task subsets, judges, or run counts.
+The goal is not to create another context-free leaderboard. BenchAtlas helps readers understand **what was measured, under which conditions, by whom, and whether two reported scores are actually comparable**.
 
-BenchAtlas is designed to answer four questions:
+## What BenchAtlas answers
 
-1. Which benchmarks appear in each model report?
-2. What scores were reported for each model?
-3. Under what environment and evaluation protocol were those scores produced?
-4. How do models rank when the available reports contain comparable results?
+1. Which benchmarks appear in a model's official report?
+2. Which scores were reported for each base model and configuration?
+3. What harness, tools, reasoning mode, context window, sampling settings, judge, task subset, and run count were used?
+4. Which results share sufficiently similar evaluation settings to compare directly?
+5. What does a model's best publicly reported capability coverage look like across domains?
 
-## Current coverage
+## Current dataset
 
-| Data | Coverage |
+| Data | Current snapshot |
 | --- | ---: |
 | Reported result rows | 1,681 |
-| Normalized models | 58 |
-| Raw model labels | 65 |
-| Benchmark groups | 401 |
+| Base models | 32 |
+| Reported entities and configurations | 58 |
+| Raw model labels preserved | 65 |
+| Normalized benchmark pages | 401 |
 | Source reports | 11 |
-| Protocol records | 386 |
-| Results in documented shared-protocol groups | 695 |
-| Source-scoped results | 986 |
+| Evaluation configuration records | 386 |
+| Rows in documented shared-comparison groups | 695 |
+| Source-scoped rows | 986 |
 
-Coverage changes as new official reports are imported. The live site is the source of truth for current totals.
+The dataset grows as new official reports are imported. The [live site](https://benchatlas.cn/) is the source of truth for current totals.
 
-## Features
+## Core features
 
-- **Spatial Atlas**: discover high-coverage benchmarks as domain-clustered, searchable map nodes.
-- **Catalog and Matrix**: switch from spatial discovery to dense lookup or a selectable model-by-benchmark comparison.
-- **Benchmark view**: compare reported scores, protocols, and source evidence.
-- **Model view**: inspect every benchmark result associated with one model.
-- **Overall ranking**: explore the Reported Performance Index with coverage and confidence signals.
-- **Structured Method notes**: separate setup, reasoning, agent/tools, dataset, aggregation, and source caveats.
-- **Shareable pages**: every model and benchmark has an indexable permalink.
-- **Shareable exploration state**: benchmark, protocol, view, filters, and Matrix models are encoded in the URL.
-- **Model-filtered atlas**: select a model to reveal its benchmark coverage, reported scores, domains, and protocol-specific ranking position.
-- **Lazy benchmark loading**: the homepage loads a compact catalog before fetching benchmark evidence on demand.
-- **Scoped detail bundles**: model, benchmark, and ranking pages load only the rows required for that route.
-- **Evidence-first data**: each row remains linked to its originating report and evidence location.
+### Spatial Atlas
 
-## Overall ranking methodology
+- Explore benchmarks across six stable capability regions.
+- Filter the map by capability field, base model, or safety evaluation.
+- Search for a benchmark or model and open its evidence panel.
+- Use semantic zoom to reveal progressively more benchmarks: 42 landmarks at field level, 54 at detail level, and 60 at deep level.
+- Read map position semantically: broader, better-documented landmarks sit closer to a field center; newer or more specialized benchmarks sit farther out.
 
-The Reported Performance Index (RPI) is a coverage-adjusted summary of published benchmark rankings. It is not an absolute model capability score.
+### Benchmark comparison
 
-1. For each benchmark, select the largest documented shared-protocol group; use a source-scoped group only when no strict group exists.
-2. Within each eligible comparison group, model ranks are converted to a 0–100 percentile.
-3. Benchmark percentiles are averaged within each domain.
-4. Domains receive equal weight so one heavily reported domain does not dominate the result.
-5. Limited benchmark coverage is shrunk toward 50.
-6. A comparison group needs at least three models from two vendors.
-7. A model needs at least five eligible benchmark groups across two domains.
+- See a unified ranking of reported base-model scores for one benchmark.
+- Use **Comparison Group A/B/...** colors to identify evaluation settings that may be compared directly.
+- Keep cross-group scores visible without pretending that different setups are equivalent.
+- Inspect alternative source rows when the same model and benchmark have multiple reported values.
 
-Because the index uses vendor-published reports, it may inherit benchmark-selection and reporting bias. Always inspect the underlying rows before drawing strong conclusions.
+### Evidence and method notes
+
+- Open the originating report or release page for every result.
+- Preserve table, figure, page, line, or section locations when available.
+- Separate method notes into evaluation setup, reasoning configuration, agent/tool scaffold, dataset variant, runs and aggregation, and source caveats.
+
+### Model and ranking views
+
+- Open a model page to inspect its benchmark coverage, configurations, reports, and source-linked scores.
+- Filter the atlas to one model to see where it has and has not reported results.
+- Explore the **Reported Capability Ceiling**, which summarizes each base model using its best publicly reported eligible configurations.
+- Keep agent systems, checkpoints, and baselines separate from base-model ranking entities.
+
+### Catalog and Matrix
+
+- Switch from the visual map to a dense benchmark catalog.
+- Compare selected models in a benchmark-by-model matrix.
+- Treat matrix colors as reported-value context, not as proof that cross-group evaluations are strictly comparable.
+
+## How to use the site
+
+1. Start on the [Spatial Atlas](https://benchatlas.cn/).
+2. Choose a capability field or model from the top filters.
+3. Zoom into a region to reveal additional, more specialized benchmarks.
+4. Select a benchmark node to open its unified reported ranking.
+5. Compare rows with the same **Comparison Group** color.
+6. Select a score to inspect its source, configuration, structured method notes, and evidence location.
+7. Open the primary source before using a number in research, procurement, or model evaluation.
+
+## Comparison groups
+
+A comparison group is not a formal benchmark standard and is not merely a source label. It is BenchAtlas's user-facing representation of rows whose documented evaluation settings are sufficiently aligned for direct comparison.
+
+Grouping considers, where available:
+
+- benchmark version, subset, and metric;
+- score direction and aggregation;
+- agent harness, tools, and external access;
+- context window, timeout, and compute environment;
+- sampling and reasoning configuration;
+- judge model or grading procedure;
+- number of runs and task corrections;
+- source-specific methodology notes.
+
+Rows with a documented shared setup may appear in the same comparison group. Rows without enough methodology remain source-scoped. Different colors indicate different groups; only same-color rows should be treated as directly comparable.
+
+## Reported Capability Ceiling
+
+The overall ranking represents a model's **publicly reported capability ceiling**, not its default product experience, API latency, cost, or an absolute intelligence score.
+
+1. Each benchmark contributes an eligible comparison group with enough cross-vendor coverage.
+2. Model ranks are converted into a 0–100 percentile within that group.
+3. Benchmark percentiles are averaged within capability domains.
+4. Domains receive equal weight so one heavily reported field does not dominate the index.
+5. Limited coverage is shrunk toward 50 and shown with a confidence signal.
+6. Agent systems, checkpoints, baselines, and other non-base-model entities are excluded.
+7. The best eligible publicly reported configuration may represent a model's upper bound rather than its default setting.
+
+Because the index is built from vendor-published reports, it may inherit benchmark-selection and reporting bias. Always inspect the underlying result rows.
 
 ## Map taxonomy
 
-The Spatial Atlas groups report-native domain labels into six stable capability regions:
+BenchAtlas maps report-native domain labels into six capability regions:
 
 1. Reasoning & Knowledge
 2. Coding & Software Engineering
@@ -74,43 +124,43 @@ The Spatial Atlas groups report-native domain labels into six stable capability 
 5. Language & Long Context
 6. Expert & Frontier Domains
 
-Safety is an orthogonal layer rather than a separate capability region. A vision-safety benchmark remains in Multimodal & Perception, for example, while receiving a visible safety marker and participating in the Safety layer filter. Original report-native domain labels remain preserved in the dataset and evidence views.
+Safety is an orthogonal filter rather than a separate capability region. Original report-native labels remain preserved in the dataset and evidence views.
 
-The homepage map is a balanced landmark view rather than a rendering of every catalog row. It selects the seven most-covered benchmarks in each capability region, with no more than two variants from one benchmark family. Within a region, direction groups benchmarks by subfield, while distance from the center represents a landmark core score: model coverage contributes 60%, source/report coverage 25%, and documented protocol signals 15%. Stronger, broader, and better-documented landmarks therefore sit closer to the center; newer or more specialized landmarks sit farther out. Zoom controls expose three information levels: overview shows three core landmarks per region, field view reveals all 42 landmarks, and detail view adds benchmark metadata and semantic relationships. Solid red routes connect variants from the same benchmark family; dashed blue routes connect each landmark to its strongest peer by shared reported models. Subfield routes organize landmarks into task-level neighborhoods such as software engineering, terminal systems, computer use, long context, and health.
+Within each region:
+
+- direction represents a secondary field such as mathematics, software engineering, terminal systems, tools, long context, or health;
+- distance from the center combines model coverage (60%), report coverage (25%), and documented method signals (15%);
+- semantic zoom expands each region from 7 to 9 and then 10 benchmark families;
+- solid red routes connect variants from the same benchmark family;
+- dashed blue routes connect landmarks with strongly overlapping reported-model coverage.
 
 ## Data policy
 
-- Reported numbers are preserved rather than silently normalized.
-- Protocol variants remain visible when evaluation settings differ.
-- Multiple reported results may be retained for the same model and benchmark.
-- Source evidence and short quotations are included for verification.
-- Corrections should cite an official report page, table, figure, footnote, or methodology section.
+- Preserve official reported values rather than silently recalculating them.
+- Keep multiple source rows when reports disagree.
+- Preserve model configurations while mapping them to a stable base model.
+- Separate base models from agent systems, checkpoints, and baselines.
+- Keep benchmark variants separate when their datasets, metrics, harnesses, or task subsets differ materially.
+- Attach every imported row to a report and evidence location whenever possible.
+- Mark uncertain or incomplete methodology as source-scoped instead of forcing comparability.
 
-## Normalization and comparability
-
-- Raw model labels are mapped to stable `model_id` values using the public rules in [`data/normalization_rules.json`](data/normalization_rules.json).
-- Benchmark spelling aliases map to a stable `benchmark_family_id`; dataset subsets, harnesses, metrics, and tool variants remain separate.
-- Every reported row receives a `comparability_group_id` derived from benchmark variant, metric, score direction, harness, tools, timeout, compute, context, sampling, reasoning mode, runs, judge, and dataset notes.
-- Rows with a documented shared setup may rank together. Rows without enough methodology remain source-scoped and are never silently mixed into a strict comparison.
-- When the same model has conflicting scores inside one protocol group, BenchAtlas keeps every source row and uses the model vendor's own official report as the displayed value when available; third-party reports remain selectable as source variants.
-- Harness/tool labels that were previously separate benchmark pages now remain protocol groups inside one canonical benchmark page; real benchmark versions remain separate.
-- The homepage defaults to the largest documented shared-protocol group and lets readers inspect alternative source groups explicitly.
+Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json).
 
 ## Contributing
 
-The most useful contributions are:
+High-value contributions include:
 
-- submitting a newly released official model card;
-- correcting a score, model name, metric, or evidence location;
-- adding missing evaluation protocol details;
-- improving benchmark normalization and comparability rules;
-- improving the explorer and data-review workflow.
+- submitting a newly released official model card or technical report;
+- correcting a score, model label, benchmark name, metric, or evidence location;
+- adding missing evaluation settings or method notes;
+- improving model and benchmark normalization rules;
+- improving extraction, review, validation, or frontend workflows.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), then use one of the issue templates or open a pull request.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), then open an issue or pull request. Data corrections should cite an official report page, table, figure, footnote, or methodology section.
 
 ## Local development
 
-BenchAtlas is a static site with no required build framework.
+BenchAtlas is a static site with no required frontend build framework.
 
 ```bash
 python3 -m http.server 4173
@@ -118,32 +168,34 @@ python3 -m http.server 4173
 
 Open `http://127.0.0.1:4173/`.
 
-To split the homepage data and regenerate model pages, benchmark pages, ranking pages, and `sitemap.xml` after updating the bundled data:
+After updating the bundled dataset, regenerate split data and indexable pages with:
 
 ```bash
 node scripts/generate-seo-pages.js
+```
+
+Validate base-model, configuration, and reference-entity separation with:
+
+```bash
+node scripts/validate-model-entities.js
 ```
 
 ## Repository structure
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Spatial Atlas homepage, Catalog, Matrix, and evidence inspector |
-| `app.js` | Legacy detail views, filtering, routing, and ranking logic |
-| `site_data.bundle.js` | Bundled normalized benchmark dataset |
-| `site_data.index.bundle.js` | Compact homepage catalog without benchmark detail rows |
-| `data/benchmarks/` | Per-benchmark JSON loaded on demand by the Spatial Atlas |
-| `data/pages/` | Route-scoped bundles for benchmark, model, and ranking pages |
-| `data/normalization_rules.json` | Auditable model and benchmark alias rules |
-| `scripts/generate-seo-pages.js` | Generates clean, indexable detail URLs |
-| `scripts/split-site-data.js` | Splits the full bundle into the homepage index and lazy benchmark files |
-| `models/` | Generated model pages |
-| `benchmarks/` | Generated benchmark pages |
-| `ranking/` | Generated overall ranking page |
+| `index.html`, `zh/index.html` | English and Chinese Spatial Atlas applications |
+| `spatial-app.js` | Map, filters, comparison groups, inspector, Matrix, and ranking behavior |
+| `site_data.bundle.js` | Full normalized benchmark dataset |
+| `site_data.index.bundle.js` | Compact homepage catalog |
+| `data/benchmarks/` | Per-benchmark rows and evidence loaded on demand |
+| `data/pages/` | Route-scoped benchmark, model, and ranking bundles |
+| `data/normalization_rules.json` | Auditable model and benchmark normalization rules |
+| `scripts/` | Data splitting, page generation, and entity validation |
+| `benchmarks/`, `models/`, `ranking/` | Generated English detail pages |
+| `zh/benchmarks/`, `zh/models/`, `zh/ranking/` | Generated Chinese detail pages |
 
 ## Citation
-
-If BenchAtlas supports your research or analysis, cite the repository and include the date you accessed the data:
 
 ```text
 BenchAtlas: Explore the landscape of AI benchmarks.
@@ -153,8 +205,4 @@ Accessed YYYY-MM-DD.
 
 ## License
 
-Original source code is released under the [MIT License](LICENSE). Official model reports, quoted excerpts, model names, benchmark names, and other third-party materials remain the property of their respective owners; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## 中文简介
-
-BenchAtlas 将模型厂商发布的 Model Card 和技术报告整理成可检索、可核验的 benchmark 数据库。网站不仅展示分数，还保留运行环境、Agent Harness、工具权限、采样参数、评测次数、裁判模型和原始证据位置。欢迎通过 Issue 提交新报告或指出数据问题。
+Original source code is released under the [MIT License](LICENSE). Official model reports, quoted excerpts, model names, benchmark names, and other third-party materials remain the property of their respective owners. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
