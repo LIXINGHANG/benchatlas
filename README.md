@@ -43,7 +43,7 @@ The dataset grows as new official reports are imported. The [live site](https://
 - Explore benchmarks across seven stable capability regions.
 - Switch between the seven capability fields, including Safety & Alignment, or filter by base model.
 - Search for a benchmark or model and open its evidence panel.
-- Use semantic zoom to reveal progressively more benchmarks: up to 49 landmarks at field level, 63 at detail level, and 70 at deep level.
+- Use semantic zoom to reveal progressively more benchmarks: 21 core landmarks by default, then up to 49 at field level, 63 at detail level, and 70 at deep level.
 - Read map position semantically: broader, better-documented landmarks sit closer to a field center; newer or more specialized benchmarks sit farther out.
 
 ### Benchmark comparison
@@ -131,7 +131,7 @@ Within each region:
 
 - direction represents a secondary field such as mathematics, software engineering, terminal systems, tools, long context, or health;
 - distance from the center combines model coverage (60%), report coverage (25%), and documented method signals (15%);
-- semantic zoom expands each region from 7 to 9 and then 10 benchmark families;
+- semantic zoom starts with 3 core landmarks per region, then expands each region to 7, 9, and 10 benchmark families;
 - solid red routes connect variants from the same benchmark family;
 - dashed blue routes connect landmarks with strongly overlapping reported-model coverage.
 

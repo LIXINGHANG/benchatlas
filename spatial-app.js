@@ -70,7 +70,8 @@
     let featuredPriority=new Map();
     let featuredLod=new Map();
     const mapRepresentativeFor = item => item?(featuredByFamily.get(mapFamilyKey(item))||globalFeaturedByFamily.get(mapFamilyKey(item))||null):null;
-    const lodMinScale={field:.58,detail:.95,deep:1.15};
+    const zoomBreakpoints={field:.9,detail:1.08,deep:1.24};
+    const lodMinScale={field:zoomBreakpoints.field,detail:zoomBreakpoints.detail,deep:zoomBreakpoints.deep};
     const itemMinScale=item=>state?.domain!=='all'?.35:featuredPriority.get(item.rank_group_key)==='core'?.35:lodMinScale[featuredLod.get(item.rank_group_key)]||.58;
     const positions = new Map();
     let relationEdges = [];
@@ -187,7 +188,7 @@
       const subfieldLabels=[];const seenSubfields=new Set();positions.forEach(p=>{const key=`${p.macro.id}:${p.subfield.id}`;if(seenSubfields.has(key))return;seenSubfields.add(key);subfieldLabels.push(`<div class="subfield-label" style="left:${p.subfieldLabelAnchor.x-82}px;top:${p.subfieldLabelAnchor.y-8}px;color:${p.macro.color}">${esc(p.subfield.label)}</div>`);});
       $('clusterLabels').innerHTML=(focused?`<div class="cluster-label focused-title" style="left:676px;top:34px;color:${focusRule.color}">${esc(focusRule.label)}</div><button class="focus-hub-control" id="focusHub" style="left:900px;top:550px;--hub-color:${focusRule.color}" aria-label="${esc(t('Reveal more benchmarks','展开更多 Benchmark'))}" title="${esc(t('Click to reveal more benchmarks','点击展开更多 Benchmark'))}"></button>`:macroRules.map((rule,index)=>`<button class="cluster-label" data-focus-domain="${rule.id}" style="left:${rule.center[0]-220}px;top:${rule.center[1]-218}px;color:${rule.color}" title="${esc(t('Open complete field map','打开完整领域地图'))}">${esc(rule.label)}</button><button class="domain-hub-control" data-focus-domain="${rule.id}" style="left:${rule.center[0]}px;top:${rule.center[1]}px;--hub-color:${rule.color};--hub-delay:${index*.42}s" aria-label="${esc(t(`Open ${rule.label} map`,`打开${rule.label}地图`))}" title="${esc(t('Click to open the complete field map','点击打开该领域完整地图'))}"></button>`).join(''))+subfieldLabels.join('');
       const macroById=new Map(macroRules.map(rule=>[rule.id,rule]));
-      const routePairs=[['reason','code'],['code','agent'],['agent','safety'],['multi','language'],['language','expert'],['reason','multi'],['code','language'],['agent','expert'],['safety','expert'],['code','multi'],['agent','language'],['safety','multi']];
+      const routePairs=[['reason','code'],['code','agent'],['agent','safety'],['multi','language'],['language','expert'],['reason','multi'],['code','language'],['agent','expert'],['safety','expert']];
       const globalRoutes=focused?'':routePairs.map(([fromId,toId],index)=>{const from=macroById.get(fromId),to=macroById.get(toId);const bend=index%2===0?42:-42;const midX=(from.center[0]+to.center[0])/2;const midY=(from.center[1]+to.center[1])/2+bend;return `<path class="global-route" d="M${from.center[0]} ${from.center[1]} Q${midX} ${midY} ${to.center[0]} ${to.center[1]}"/>`;}).join('');
       const contours=focused?`<circle class="contour focus-ring" cx="900" cy="550" r="150"/><circle class="contour focus-ring" cx="900" cy="550" r="300"/><circle class="contour focus-ring" cx="900" cy="550" r="450"/><circle class="route-hub" cx="900" cy="550" r="10" fill="${focusRule.color}"/>`:macroRules.map(rule=>`<circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="190"/><circle class="contour" cx="${rule.center[0]}" cy="${rule.center[1]}" r="125"/><circle class="route-hub" cx="${rule.center[0]}" cy="${rule.center[1]}" r="8" fill="${rule.color}"/>`).join('');
       const subfieldAnchors=new Map();positions.forEach(p=>subfieldAnchors.set(`${p.macro.id}:${p.subfield.id}`,p));
@@ -211,14 +212,14 @@
       document.querySelectorAll('[data-min-scale]').forEach(element=>element.classList.toggle('lod-hidden',state.scale+0.001<Number(element.dataset.minScale||0)));
       const visibleNodes=[...document.querySelectorAll('.node:not(.lod-hidden):not(.hidden)')];
       const focusRule=domainViewRules.find(rule=>rule.id===state.domain);$('mapCoverage').textContent=focusRule?`${visibleNodes.length} / ${featured.length} ${t('benchmark families in this field','个该领域 Benchmark 家族')}`:`${visibleNodes.length} / ${formatCount(data.summary.benchmark_group_count)} ${t('benchmarks shown','个 Benchmark 已显示')}`;
-      const perField=state.scale<.58?3:state.scale<.95?mapTierLimits.field:state.scale<1.15?mapTierLimits.detail:mapTierLimits.deep;
+      const perField=state.scale<zoomBreakpoints.field?3:state.scale<zoomBreakpoints.detail?mapTierLimits.field:state.scale<zoomBreakpoints.deep?mapTierLimits.detail:mapTierLimits.deep;
       $('mapScopeLabel').textContent=focusRule?t('All families · center to frontier','全部家族 · 从核心到前沿'):t(`Top ${perField} per field`,`每个领域前 ${perField} 个`);
     }
 
     function applyTransform(){
       $('world').style.transform=`translate(${state.x}px,${state.y}px) scale(${state.scale})`;
       const zoomLabel=`${Math.round(state.scale*100)}%`;
-      const depth=state.scale<.58?'overview':state.scale<.95?'field':state.scale<1.15?'detail':'deep';const viewport=$('viewport');viewport.classList.remove('zoom-overview','zoom-field','zoom-detail','zoom-deep');viewport.classList.add(`zoom-${depth}`);$('mapDepth').textContent=t(`${depth} level`,depth==='overview'?'概览层':depth==='field'?'领域层':depth==='detail'?'详情层':'深度层');
+      const depth=state.scale<zoomBreakpoints.field?'overview':state.scale<zoomBreakpoints.detail?'field':state.scale<zoomBreakpoints.deep?'detail':'deep';const viewport=$('viewport');viewport.classList.remove('zoom-overview','zoom-field','zoom-detail','zoom-deep');viewport.classList.add(`zoom-${depth}`);$('mapDepth').textContent=t(`${depth} level`,depth==='overview'?'概览层':depth==='field'?'领域层':depth==='detail'?'详情层':'深度层');
       updateSemanticZoom();
       $('resetView').textContent=zoomLabel;
       $('statusZoom').textContent=zoomLabel;
