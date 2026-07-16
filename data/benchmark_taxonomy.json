@@ -1,13 +1,13 @@
 {
-  "schema_version": 2,
-  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves the public capability domain, subfield, cross-domain evaluation purpose, safety and alignment category, and map family.",
+  "schema_version": 3,
+  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves one of seven public capability domains, its subfield, evaluation purpose, and map family.",
   "fallback_primary_domain": "reason",
   "primary_domains": [
     {
       "id": "reason",
       "label_en": "Reasoning & Knowledge",
       "label_zh": "推理与知识",
-      "source_domains": ["reasoning", "math", "general", "general_capability", "safety", "safety_bias"],
+      "source_domains": ["reasoning", "math", "general", "general_capability"],
       "default_subfield": "general-reasoning",
       "subfields": [
         {"id": "mathematics", "label_en": "Mathematics", "label_zh": "数学", "match_patterns": ["aime", "hmmt", "imo", "math", "olympiad"]},
@@ -32,7 +32,7 @@
       "id": "agent",
       "label_en": "Agents & Computer Use",
       "label_zh": "智能体与计算机操作",
-      "source_domains": ["agent", "computer_use", "business_simulation", "healthcare_agent", "computer_use_safety", "agent_safety"],
+      "source_domains": ["agent", "computer_use", "business_simulation", "healthcare_agent"],
       "default_subfield": "workflows",
       "subfields": [
         {"id": "computer-use", "label_en": "Computer use", "label_zh": "计算机操作", "match_patterns": ["osworld", "computer", "benchcad", "android", "browser"]},
@@ -45,7 +45,7 @@
       "id": "multi",
       "label_en": "Multimodal & Perception",
       "label_zh": "多模态与感知",
-      "source_domains": ["multimodal", "multimodal_agent", "vision", "video", "document", "vision_safety"],
+      "source_domains": ["multimodal", "multimodal_agent", "vision", "video", "document"],
       "default_subfield": "spatial-perception",
       "subfields": [
         {"id": "visual-reasoning", "label_en": "Visual reasoning", "label_zh": "视觉推理", "match_patterns": ["mmmu", "vision", "image", "chart", "charxiv", "visual"]},
@@ -71,13 +71,29 @@
       "id": "expert",
       "label_en": "Expert & Frontier Domains",
       "label_zh": "专业与前沿领域",
-      "source_domains": ["science", "health", "research", "professional", "expert_tasks", "cybersecurity", "security", "self_improvement", "health_safety", "safety_health", "bio_safety", "cyber_safety"],
+      "source_domains": ["science", "health", "research", "professional", "expert_tasks", "cybersecurity", "security", "self_improvement"],
       "default_subfield": "professional-work",
       "subfields": [
         {"id": "health-biology", "label_en": "Health & biology", "label_zh": "医疗与生物", "match_patterns": ["health", "medical", "bio", "gene", "protein", "virology"]},
         {"id": "science-research", "label_en": "Science & research", "label_zh": "科学与研究", "match_patterns": ["science", "research", "frontier", "chem", "physics"]},
         {"id": "cybersecurity", "label_en": "Cybersecurity", "label_zh": "网络安全", "match_patterns": ["cyber", "exploit", "security", "ctf"]},
         {"id": "professional-work", "label_en": "Professional work", "label_zh": "专业任务", "match_patterns": []}
+      ]
+    },
+    {
+      "id": "safety",
+      "label_en": "Safety & Alignment",
+      "label_zh": "安全与对齐",
+      "source_domains": ["safety", "agent_safety", "bio_safety", "computer_use_safety", "cyber_safety", "health_safety", "safety_bias", "safety_health", "vision_safety"],
+      "default_subfield": "harmful-content",
+      "subfields": [
+        {"id": "harmful-content", "label_en": "Harmful content & refusal", "label_zh": "有害内容与拒答", "match_patterns": ["production benchmarks with challenging prompts", "image input safety"]},
+        {"id": "jailbreak-robustness", "label_en": "Jailbreak & adversarial robustness", "label_zh": "越狱与对抗鲁棒性", "match_patterns": ["jailbreak", "red-team", "red team"]},
+        {"id": "agent-control", "label_en": "Agent control & action safety", "label_zh": "智能体控制与行动安全", "match_patterns": ["destructive actions", "confirmation evaluation"]},
+        {"id": "misuse-frontier-risk", "label_en": "Misuse & frontier risk", "label_zh": "滥用与前沿风险", "match_patterns": ["biology model refusal", "cybersecurity safety"]},
+        {"id": "fairness-bias-privacy", "label_en": "Fairness, bias & privacy", "label_zh": "公平性、偏见与隐私", "match_patterns": ["fairness", "bias", "privacy"]},
+        {"id": "health-wellbeing", "label_en": "Health, wellbeing & high-stakes safety", "label_zh": "健康福祉与高风险安全", "match_patterns": ["mental health", "healthbench professional"]},
+        {"id": "oversight-monitoring", "label_en": "Oversight, monitoring & alignment", "label_zh": "监督、监控与对齐", "match_patterns": ["monitor", "oversight", "alignment"]}
       ]
     }
   ],
@@ -91,12 +107,12 @@
       "id": "safety_alignment",
       "label_en": "Safety & Alignment",
       "label_zh": "安全与对齐",
-      "description_en": "A cross-domain view of evaluations whose primary purpose is safety, control, misuse prevention, fairness, oversight, or alignment.",
-      "description_zh": "跨能力领域汇总以安全、控制、滥用防范、公平性、监督或对齐为主要目的的评测。"
+      "description_en": "Evaluations whose primary capability is safety, control, misuse prevention, fairness, oversight, or alignment.",
+      "description_zh": "以安全、控制、滥用防范、公平性、监督或对齐为主要能力的评测。"
     }
   ],
   "safety_alignment": {
-    "view_id": "safety_alignment",
+    "view_id": "safety",
     "label_en": "Safety & Alignment",
     "label_zh": "安全与对齐",
     "color": "#b42318",

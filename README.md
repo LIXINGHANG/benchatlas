@@ -40,10 +40,10 @@ The dataset grows as new official reports are imported. The [live site](https://
 
 ### Spatial Atlas
 
-- Explore benchmarks across six stable capability regions.
-- Switch between six capability fields and the cross-domain Safety & Alignment view, or filter by base model.
+- Explore benchmarks across seven stable capability regions.
+- Switch between the seven capability fields, including Safety & Alignment, or filter by base model.
 - Search for a benchmark or model and open its evidence panel.
-- Use semantic zoom to reveal progressively more benchmarks: 42 landmarks at field level, 54 at detail level, and 60 at deep level.
+- Use semantic zoom to reveal progressively more benchmarks: up to 49 landmarks at field level, 63 at detail level, and 70 at deep level.
 - Read map position semantically: broader, better-documented landmarks sit closer to a field center; newer or more specialized benchmarks sit farther out.
 
 ### Benchmark comparison
@@ -115,7 +115,7 @@ Because the index is built from vendor-published reports, it may inherit benchma
 
 ## Map taxonomy
 
-BenchAtlas maps report-native domain labels into six capability regions:
+BenchAtlas maps report-native domain labels into seven capability regions:
 
 1. Reasoning & Knowledge
 2. Coding & Software Engineering
@@ -123,8 +123,9 @@ BenchAtlas maps report-native domain labels into six capability regions:
 4. Multimodal & Perception
 5. Language & Long Context
 6. Expert & Frontier Domains
+7. Safety & Alignment
 
-Safety & Alignment is an orthogonal, first-class map view rather than a seventh mutually exclusive capability region. A benchmark keeps its capability field and may additionally be classified into harmful content, jailbreak robustness, agent control, misuse/frontier risk, fairness/bias/privacy, health/wellbeing, or oversight/monitoring. Original report-native labels remain preserved in the dataset and evidence views.
+Safety & Alignment is a mutually exclusive top-level capability region. Safety benchmarks are further classified into harmful content, jailbreak robustness, agent control, misuse/frontier risk, fairness/bias/privacy, health/wellbeing, or oversight/monitoring. Original report-native labels remain preserved in the dataset and evidence views.
 
 Within each region:
 
@@ -144,7 +145,7 @@ Within each region:
 - Attach every imported row to a report and evidence location whenever possible.
 - Mark uncertain or incomplete methodology as source-scoped instead of forcing comparability.
 
-Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the six primary capability fields, subfields, evaluation purpose, seven Safety & Alignment categories, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
+Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the seven primary capability fields, subfields, evaluation purpose, seven Safety & Alignment categories, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
 
 ## Contributing
 

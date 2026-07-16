@@ -48,6 +48,9 @@ for (const record of patch.review_records || []) {
   if (record.current.evaluation_purpose === "capability" && record.current.safety_category) {
     errors.push(`${record.benchmark_name}: capability record must not have safety_category`);
   }
+  if ((record.current.primary_domain === "safety") !== (record.current.evaluation_purpose === "safety_alignment")) {
+    errors.push(`${record.benchmark_name}: safety primary domain and evaluation purpose must agree`);
+  }
   if (record.changed && !patch.benchmark_overrides[record.benchmark_name]) {
     errors.push(`${record.benchmark_name}: changed record is missing benchmark_overrides entry`);
   }

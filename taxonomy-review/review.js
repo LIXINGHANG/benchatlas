@@ -10,14 +10,13 @@
   const domains = taxonomy.primary_domains;
   const domainById = new Map(domains.map(domain => [domain.id, domain]));
   const safetyTaxonomy = taxonomy.safety_alignment || {view_id:'safety_alignment',label_zh:'安全与对齐',categories:[]};
-  const safetyViewId = safetyTaxonomy.view_id || 'safety_alignment';
   const safetyCategories = safetyTaxonomy.categories || [];
   const safetyCategoryById = new Map(safetyCategories.map(category => [category.id, category]));
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
   const hash = value => [...value].reduce((result, char) => (result * 31 + char.charCodeAt(0)) >>> 0, 2166136261).toString(16);
   const stablePick = values => [...new Set(values.filter(Boolean))].sort((a,b) => values.filter(value => value === b).length - values.filter(value => value === a).length || a.length - b.length || a.localeCompare(b))[0] || '';
-  const colorByDomain = {reason:'#28568c',code:'#087f78',agent:'#ae6a13',multi:'#69518e',language:'#4e7d37',expert:'#914d38',safety_alignment:safetyTaxonomy.color||'#b42318'};
+  const colorByDomain = {reason:'#28568c',code:'#087f78',agent:'#ae6a13',multi:'#69518e',language:'#4e7d37',expert:'#914d38',safety:safetyTaxonomy.color||'#b42318'};
   const catalogFingerprint = hash(catalog.map(item => item.rank_group_key).sort().join('|'));
   const storageKey = `benchatlas-taxonomy-review-v${taxonomy.schema_version}-${catalogFingerprint}`;
   const sourceLabels = {'benchmark_override':'人工覆盖','source_domain+keyword':'来源 + 关键词','source_domain+default':'来源 + 默认','fallback':'Fallback'};
@@ -122,7 +121,13 @@
 
   function storeClassification(benchmark, next) {
     const normalized = {...classification(benchmark),...next};
-    if (normalized.evaluation_purpose !== 'safety_alignment') normalized.safety_category = '';
+    if (normalized.primary_domain === 'safety') {
+      normalized.evaluation_purpose = 'safety_alignment';
+      normalized.safety_category = normalized.subfield;
+    } else {
+      normalized.evaluation_purpose = 'capability';
+      normalized.safety_category = '';
+    }
     const unchanged = Object.keys(benchmark.original).every(key => normalized[key] === benchmark.original[key]);
     if (unchanged) delete state.assignments[benchmark.name];
     else state.assignments[benchmark.name] = normalized;
@@ -140,19 +145,6 @@
     persist();
     renderAll();
     showToast(`${name} → ${subfieldLabel(primaryDomain, subfield)}`);
-  }
-
-  function setSafetyClassification(name, evaluationPurpose, safetyCategory = '') {
-    const benchmark = benchmarkByName.get(name);
-    if (!benchmark || !['capability','safety_alignment'].includes(evaluationPurpose)) return;
-    if (evaluationPurpose === 'safety_alignment' && !safetyCategoryById.has(safetyCategory)) return;
-    snapshot();
-    storeClassification(benchmark,{evaluation_purpose:evaluationPurpose,safety_category:evaluationPurpose === 'safety_alignment' ? safetyCategory : ''});
-    state.selectedName = name;
-    if (evaluationPurpose === 'safety_alignment') state.activeDomain = safetyViewId;
-    persist();
-    renderAll();
-    showToast(evaluationPurpose === 'safety_alignment' ? `${name} → ${safetyCategoryById.get(safetyCategory)?.label_zh}` : `${name} → 能力评测`);
   }
 
   function setReview(name, status, note = reviewFor(name).note || '') {
@@ -196,9 +188,7 @@
       }).join('');
       return `<section class="domain ${state.activeDomain===domain.id?'active':''}" data-drop-domain="${domain.id}" style="--domain-color:${colorByDomain[domain.id]}"><button class="domain-head" data-domain="${domain.id}"><i></i><b>${esc(domain.label_zh)}</b><em>${domainBenchmarks.length}</em></button><div class="subfields">${subfields}</div></section>`;
     }).join('');
-    const safetyBenchmarks = benchmarks.filter(isSafetyBenchmark);
-    const safetyLinks = safetyCategories.map(category => `<button class="subfield-link" data-domain="${safetyViewId}" data-subfield="${category.id}"><span>${esc(category.label_zh)}</span><span>${safetyBenchmarks.filter(item => classification(item).safety_category === category.id).length}</span></button>`).join('');
-    $('domainList').innerHTML = `${capabilityDomains}<div class="cross-domain-label">跨领域视图</div><section class="domain cross-domain ${state.activeDomain===safetyViewId?'active':''}" data-drop-safety="${safetyTaxonomy.default_category}" style="--domain-color:${colorByDomain[safetyViewId]}"><button class="domain-head" data-domain="${safetyViewId}"><i></i><b>${esc(safetyTaxonomy.label_zh)}</b><em>${safetyBenchmarks.length}</em></button><div class="subfields">${safetyLinks}</div></section>`;
+    $('domainList').innerHTML = capabilityDomains;
     document.querySelectorAll('.domain-head').forEach(button => button.addEventListener('click', () => {state.activeDomain=button.dataset.domain;renderAll();}));
     document.querySelectorAll('.subfield-link').forEach(button => button.addEventListener('click', () => {
       state.activeDomain = button.dataset.domain;
@@ -206,7 +196,6 @@
       document.querySelector(`[data-column="${button.dataset.subfield}"]`)?.scrollIntoView({behavior:'smooth',inline:'center'});
     }));
     bindDropTargets(document.querySelectorAll('[data-drop-domain]'), element => ({primary_domain:element.dataset.dropDomain,subfield:defaultSubfield(element.dataset.dropDomain)}));
-    bindSafetyDropTargets(document.querySelectorAll('[data-drop-safety]'), element => element.dataset.dropSafety);
   }
 
   function cardHtml(benchmark) {
@@ -214,24 +203,11 @@
     const changed = isChanged(benchmark);
     const className = changed ? 'changed' : review.status === 'approved' ? 'approved' : review.status === 'needs_review' ? 'needs-review' : '';
     const current = classification(benchmark);
-    const cardDomain = state.activeDomain===safetyViewId ? safetyViewId : current.primary_domain;
+    const cardDomain = current.primary_domain;
     return `<article class="card ${className} ${state.selectedName===benchmark.name?'selected':''}" draggable="true" data-name="${esc(benchmark.name)}" style="--domain-color:${colorByDomain[cardDomain]}"><h3>${esc(benchmark.name)}</h3><div class="card-meta"><span>${benchmark.items.length} group${benchmark.items.length===1?'':'s'}</span><span>${benchmark.modelCount} models</span><strong>${Math.round(benchmark.confidence*100)}%</strong><span>${esc(sourceLabels[benchmark.taxonomySource]||benchmark.taxonomySource)}</span>${isSafetyBenchmark(benchmark)?`<span>${esc(safetyCategoryById.get(current.safety_category)?.label_zh||'安全与对齐')}</span>`:''}</div></article>`;
   }
 
   function renderBoard() {
-    if (state.activeDomain === safetyViewId) {
-      $('boardTitle').textContent = safetyTaxonomy.label_zh;
-      const safetyBenchmarks = benchmarks.filter(isSafetyBenchmark);
-      const visibleTotal = safetyBenchmarks.filter(filtered).length;
-      $('boardMeta').textContent = `${visibleTotal} / ${safetyBenchmarks.length} BENCHMARKS · 跨能力领域 · ${safetyCategories.length} SAFETY CATEGORIES`;
-      $('board').innerHTML = safetyCategories.map(category => {
-        const items = safetyBenchmarks.filter(item => classification(item).safety_category === category.id && filtered(item));
-        return `<section class="column safety-column" data-drop-safety="${category.id}" data-column="${category.id}"><header class="column-head"><b>${esc(category.label_zh)}</b><span>${items.length}</span></header><div class="cards">${items.length?items.map(cardHtml).join(''):'<div class="empty">暂无匹配项</div>'}</div></section>`;
-      }).join('');
-      bindCards();
-      bindSafetyDropTargets(document.querySelectorAll('[data-drop-safety]'), element => element.dataset.dropSafety);
-      return;
-    }
     const domain = domainById.get(state.activeDomain);
     $('boardTitle').textContent = domain.label_zh;
     const domainTotal = benchmarks.filter(item => classification(item).primary_domain === domain.id).length;
@@ -264,14 +240,6 @@
     });
   }
 
-  function bindSafetyDropTargets(elements, categoryFor) {
-    elements.forEach(element => {
-      element.addEventListener('dragover', event => {event.preventDefault();element.classList.add('drop-target');event.dataTransfer.dropEffect='move';});
-      element.addEventListener('dragleave', event => {if(!element.contains(event.relatedTarget))element.classList.remove('drop-target');});
-      element.addEventListener('drop', event => {event.preventDefault();element.classList.remove('drop-target');const name=event.dataTransfer.getData('text/plain')||state.draggedName;setSafetyClassification(name,'safety_alignment',categoryFor(element));});
-    });
-  }
-
   function renderInspector() {
     const benchmark = benchmarkByName.get(state.selectedName);
     if (!benchmark) {
@@ -283,17 +251,14 @@
     const review = reviewFor(benchmark.name);
     const domainOptions = domains.map(domain => `<option value="${domain.id}" ${domain.id===current.primary_domain?'selected':''}>${esc(domain.label_zh)}</option>`).join('');
     const subfieldOptions = currentDomain.subfields.map(subfield => `<option value="${subfield.id}" ${subfield.id===current.subfield?'selected':''}>${esc(subfield.label_zh)}</option>`).join('');
-    const safetyCategoryOptions = safetyCategories.map(category => `<option value="${category.id}" ${category.id===current.safety_category?'selected':''}>${esc(category.label_zh)}</option>`).join('');
     const variants = benchmark.items.map(item => `<div class="variant"><b>${esc(item.metric_name)}${item.benchmark_variant?` · ${esc(item.benchmark_variant)}`:''}</b><code title="${esc(item.rank_group_key)}">${esc(item.rank_group_key)}</code></div>`).join('');
-    $('inspector').innerHTML = `<article><p class="eyebrow">${esc(sourceLabels[benchmark.taxonomySource]||benchmark.taxonomySource)} · confidence ${Math.round(benchmark.confidence*100)}%</p><h2>${esc(benchmark.name)}</h2><p class="variant-count">${benchmark.items.length} rank groups · ${benchmark.modelCount} models · ${benchmark.reportCount} reports${isSafetyBenchmark(benchmark)?' · SAFETY & ALIGNMENT':''}</p><div class="original"><div><span>原能力领域</span><b>${esc(domainById.get(benchmark.original.primary_domain)?.label_zh)} / ${esc(subfieldLabel(benchmark.original.primary_domain,benchmark.original.subfield))}</b></div><div><span>原评测目的</span><b>${benchmark.original.evaluation_purpose==='safety_alignment'?esc(safetyCategoryById.get(benchmark.original.safety_category)?.label_zh||'安全与对齐'):'能力评测'}</b></div></div><div class="field"><label for="inspectorDomain">能力领域</label><select id="inspectorDomain">${domainOptions}</select></div><div class="field"><label for="inspectorSubfield">二级领域</label><select id="inspectorSubfield">${subfieldOptions}</select></div><button class="apply" id="applyClassification">应用能力分类</button><div class="field purpose-field"><label for="inspectorPurpose">评测目的（与能力领域并行）</label><select id="inspectorPurpose"><option value="capability" ${current.evaluation_purpose==='capability'?'selected':''}>能力评测</option><option value="safety_alignment" ${current.evaluation_purpose==='safety_alignment'?'selected':''}>安全与对齐</option></select></div><div class="field" id="safetyCategoryField" ${current.evaluation_purpose==='safety_alignment'?'':'hidden'}><label for="inspectorSafetyCategory">安全与对齐子类</label><select id="inspectorSafetyCategory">${safetyCategoryOptions}</select></div><button class="apply safety-apply" id="applySafetyClassification">应用评测目的</button><div class="field"><label>审核状态</label><div class="review-buttons">${Object.entries(statusLabels).map(([status,label])=>`<button data-status="${status}" class="${review.status===status?'active':''}">${label}</button>`).join('')}</div></div><div class="field"><label for="reviewNote">审核备注</label><textarea id="reviewNote" placeholder="分类依据、需要复核的问题或修改理由">${esc(review.note||'')}</textarea></div>${benchmark.reason?`<div class="field"><label>现有分类理由</label><div>${esc(benchmark.reason)}</div></div>`:''}<div class="variant-list"><h3>关联分组</h3>${variants}</div></article>`;
+    $('inspector').innerHTML = `<article><p class="eyebrow">${esc(sourceLabels[benchmark.taxonomySource]||benchmark.taxonomySource)} · confidence ${Math.round(benchmark.confidence*100)}%</p><h2>${esc(benchmark.name)}</h2><p class="variant-count">${benchmark.items.length} rank groups · ${benchmark.modelCount} models · ${benchmark.reportCount} reports${isSafetyBenchmark(benchmark)?' · SAFETY & ALIGNMENT':''}</p><div class="original"><div><span>原能力领域</span><b>${esc(domainById.get(benchmark.original.primary_domain)?.label_zh)} / ${esc(subfieldLabel(benchmark.original.primary_domain,benchmark.original.subfield))}</b></div><div><span>分类语义</span><b>${benchmark.original.primary_domain==='safety'?'安全与对齐能力':'通用能力'}</b></div></div><div class="field"><label for="inspectorDomain">能力领域</label><select id="inspectorDomain">${domainOptions}</select></div><div class="field"><label for="inspectorSubfield">二级领域</label><select id="inspectorSubfield">${subfieldOptions}</select></div><button class="apply" id="applyClassification">应用能力分类</button><div class="field"><label>审核状态</label><div class="review-buttons">${Object.entries(statusLabels).map(([status,label])=>`<button data-status="${status}" class="${review.status===status?'active':''}">${label}</button>`).join('')}</div></div><div class="field"><label for="reviewNote">审核备注</label><textarea id="reviewNote" placeholder="分类依据、需要复核的问题或修改理由">${esc(review.note||'')}</textarea></div>${benchmark.reason?`<div class="field"><label>现有分类理由</label><div>${esc(benchmark.reason)}</div></div>`:''}<div class="variant-list"><h3>关联分组</h3>${variants}</div></article>`;
     $('inspectorDomain').addEventListener('change', event => {
       const domain = domainById.get(event.target.value);
       $('inspectorSubfield').innerHTML = domain.subfields.map(subfield => `<option value="${subfield.id}">${esc(subfield.label_zh)}</option>`).join('');
       $('inspectorSubfield').value = domain.default_subfield;
     });
     $('applyClassification').addEventListener('click', () => moveBenchmark(benchmark.name,$('inspectorDomain').value,$('inspectorSubfield').value));
-    $('inspectorPurpose').addEventListener('change', event => {$('safetyCategoryField').hidden=event.target.value!=='safety_alignment';});
-    $('applySafetyClassification').addEventListener('click', () => setSafetyClassification(benchmark.name,$('inspectorPurpose').value,$('inspectorSafetyCategory').value||safetyTaxonomy.default_category));
     document.querySelectorAll('.review-buttons button').forEach(button => button.addEventListener('click', () => setReview(benchmark.name,button.dataset.status,$('reviewNote').value.trim())));
     $('reviewNote').addEventListener('change', event => {
       const currentReview = reviewFor(benchmark.name);

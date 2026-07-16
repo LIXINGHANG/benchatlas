@@ -19,6 +19,7 @@ if (!catalog.length) errors.push("Benchmark catalog is empty");
 if (!domains.has(taxonomy.fallback_primary_domain)) errors.push("Fallback primary domain is not defined");
 if (!purposes.has("capability") || !purposes.has("safety_alignment")) errors.push("Capability and safety_alignment evaluation purposes must be defined");
 if (!safetyCategories.size) errors.push("Safety & Alignment categories are not defined");
+if (!domains.has("safety")) errors.push("Safety & Alignment must be a primary capability domain");
 
 for (const item of catalog) {
   const domain = domains.get(item.primary_domain);
@@ -48,6 +49,12 @@ for (const item of catalog) {
   }
   if (!item.is_safety && item.safety_category) {
     errors.push(`${item.rank_group_key}: capability benchmark has safety category ${item.safety_category}`);
+  }
+  if (item.is_safety && item.primary_domain !== "safety") {
+    errors.push(`${item.rank_group_key}: safety benchmark must use the safety primary domain`);
+  }
+  if (!item.is_safety && item.primary_domain === "safety") {
+    errors.push(`${item.rank_group_key}: non-safety benchmark cannot use the safety primary domain`);
   }
 }
 
