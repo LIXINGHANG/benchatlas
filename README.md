@@ -41,7 +41,7 @@ The dataset grows as new official reports are imported. The [live site](https://
 ### Spatial Atlas
 
 - Explore benchmarks across six stable capability regions.
-- Filter the map by capability field, base model, or safety evaluation.
+- Switch between six capability fields and the cross-domain Safety & Alignment view, or filter by base model.
 - Search for a benchmark or model and open its evidence panel.
 - Use semantic zoom to reveal progressively more benchmarks: 42 landmarks at field level, 54 at detail level, and 60 at deep level.
 - Read map position semantically: broader, better-documented landmarks sit closer to a field center; newer or more specialized benchmarks sit farther out.
@@ -124,7 +124,7 @@ BenchAtlas maps report-native domain labels into six capability regions:
 5. Language & Long Context
 6. Expert & Frontier Domains
 
-Safety is an orthogonal filter rather than a separate capability region. Original report-native labels remain preserved in the dataset and evidence views.
+Safety & Alignment is an orthogonal, first-class map view rather than a seventh mutually exclusive capability region. A benchmark keeps its capability field and may additionally be classified into harmful content, jailbreak robustness, agent control, misuse/frontier risk, fairness/bias/privacy, health/wellbeing, or oversight/monitoring. Original report-native labels remain preserved in the dataset and evidence views.
 
 Within each region:
 
@@ -144,7 +144,7 @@ Within each region:
 - Attach every imported row to a report and evidence location whenever possible.
 - Mark uncertain or incomplete methodology as source-scoped instead of forcing comparability.
 
-Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the six primary fields, subfields, safety-layer domains, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
+Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the six primary capability fields, subfields, evaluation purpose, seven Safety & Alignment categories, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
 
 ## Contributing
 
@@ -192,7 +192,7 @@ node scripts/validate-benchmark-taxonomy.js
 | `data/benchmarks/` | Per-benchmark rows and evidence loaded on demand |
 | `data/pages/` | Route-scoped benchmark, model, and ranking bundles |
 | `data/normalization_rules.json` | Auditable model and benchmark normalization rules |
-| `data/benchmark_taxonomy.json` | Canonical primary fields, subfields, safety flags, benchmark overrides, and map families |
+| `data/benchmark_taxonomy.json` | Canonical capability fields, evaluation purposes, Safety & Alignment categories, benchmark overrides, and map families |
 | `scripts/` | Data splitting, page generation, entity validation, and taxonomy validation |
 | `benchmarks/`, `models/`, `ranking/` | Generated English detail pages |
 | `zh/benchmarks/`, `zh/models/`, `zh/ranking/` | Generated Chinese detail pages |

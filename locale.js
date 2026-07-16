@@ -53,8 +53,9 @@
     set("#rankingTitle", "公开排名"); set("#rankingNote", "页面保留不同协议变体，不将它们强制归一化为同一排行榜。");
     set(".detail-panel .panel-title", "背景信息"); set("#summaryHeading", "最佳公开结果"); set("#signalsHeading", "协议标签"); set("#policyHeading", "证据规则");
     set("#policyText", "每条分数都保留原始报告、证据位置和评测说明。标记为 protocol variant 的记录可能使用不同 harness 或配置，应视为公开报分，而非严格归一化排行榜。");
-    set('label[for="domainSelect"]', "领域"); set('label[for="modelSelect"]', "模型"); set(".safety-toggle span", "安全评测");
+    set('label[for="domainSelect"]', "视图"); set('label[for="modelSelect"]', "模型");
     const domainAll = document.querySelector('#domainSelect option[value="all"]'); if (domainAll) domainAll.textContent = "全部 Benchmark 领域";
+    const domainGroups = document.querySelectorAll('#domainSelect optgroup'); if (domainGroups[0]) domainGroups[0].label = "能力领域"; if (domainGroups[1]) domainGroups[1].label = "跨领域视图";
     const modelAll = document.querySelector('#modelSelect option[value=""]'); if (modelAll) modelAll.textContent = "全部模型";
     set("#statLabelModels", "模型"); set("#statLabelRows", "报分记录"); set("#statLabelVendors", "厂商"); set("#statLabelReports", "报告");
     const sortOptions = document.querySelectorAll("#sortMode option"); ["按覆盖排序", "按名称排序", "按报告排序"].forEach((text, i) => { if (sortOptions[i]) sortOptions[i].textContent = text; });

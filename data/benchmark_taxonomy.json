@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves the public primary domain, subfield, safety layer, and map family.",
+  "schema_version": 2,
+  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves the public capability domain, subfield, cross-domain evaluation purpose, safety and alignment category, and map family.",
   "fallback_primary_domain": "reason",
   "primary_domains": [
     {
@@ -81,6 +81,79 @@
       ]
     }
   ],
+  "evaluation_purposes": [
+    {
+      "id": "capability",
+      "label_en": "Capability",
+      "label_zh": "能力评测"
+    },
+    {
+      "id": "safety_alignment",
+      "label_en": "Safety & Alignment",
+      "label_zh": "安全与对齐",
+      "description_en": "A cross-domain view of evaluations whose primary purpose is safety, control, misuse prevention, fairness, oversight, or alignment.",
+      "description_zh": "跨能力领域汇总以安全、控制、滥用防范、公平性、监督或对齐为主要目的的评测。"
+    }
+  ],
+  "safety_alignment": {
+    "view_id": "safety_alignment",
+    "label_en": "Safety & Alignment",
+    "label_zh": "安全与对齐",
+    "color": "#b42318",
+    "source_domains": ["safety", "agent_safety", "bio_safety", "computer_use_safety", "cyber_safety", "health_safety", "safety_bias", "safety_health", "vision_safety"],
+    "default_category": "harmful-content",
+    "categories": [
+      {
+        "id": "harmful-content",
+        "label_en": "Harmful content & refusal",
+        "label_zh": "有害内容与拒答",
+        "source_domains": ["safety", "vision_safety"],
+        "match_patterns": ["production benchmarks with challenging prompts", "image input safety"]
+      },
+      {
+        "id": "jailbreak-robustness",
+        "label_en": "Jailbreak & adversarial robustness",
+        "label_zh": "越狱与对抗鲁棒性",
+        "source_domains": [],
+        "match_patterns": ["jailbreak", "red-team", "red team"]
+      },
+      {
+        "id": "agent-control",
+        "label_en": "Agent control & action safety",
+        "label_zh": "智能体控制与行动安全",
+        "source_domains": ["agent_safety", "computer_use_safety"],
+        "match_patterns": ["destructive actions", "confirmation evaluation"]
+      },
+      {
+        "id": "misuse-frontier-risk",
+        "label_en": "Misuse & frontier risk",
+        "label_zh": "滥用与前沿风险",
+        "source_domains": ["bio_safety", "cyber_safety"],
+        "match_patterns": ["biology model refusal", "cybersecurity safety"]
+      },
+      {
+        "id": "fairness-bias-privacy",
+        "label_en": "Fairness, bias & privacy",
+        "label_zh": "公平性、偏见与隐私",
+        "source_domains": ["safety_bias"],
+        "match_patterns": ["fairness", "bias", "privacy"]
+      },
+      {
+        "id": "health-wellbeing",
+        "label_en": "Health, wellbeing & high-stakes safety",
+        "label_zh": "健康福祉与高风险安全",
+        "source_domains": ["health_safety", "safety_health"],
+        "match_patterns": ["mental health", "healthbench professional"]
+      },
+      {
+        "id": "oversight-monitoring",
+        "label_en": "Oversight, monitoring & alignment",
+        "label_zh": "监督、监控与对齐",
+        "source_domains": [],
+        "match_patterns": ["monitor", "oversight", "alignment"]
+      }
+    ]
+  },
   "safety_domains": ["safety", "agent_safety", "bio_safety", "computer_use_safety", "cyber_safety", "health_safety", "safety_bias", "safety_health", "vision_safety"],
   "benchmark_overrides": {
     "AetherCode": {"source_domain": "coding", "subfield": "code-generation", "confidence": 1.0, "reason": "Coding benchmark"},
@@ -91,6 +164,7 @@
     "FS - Research": {"source_domain": "research", "subfield": "science-research", "confidence": 1.0, "reason": "Research benchmark"},
     "HLE-textonly": {"source_domain": "agent", "confidence": 0.9, "reason": "Source report evaluates it in the agent section"},
     "HLE-Verified": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge and reasoning benchmark"},
+    "HealthBench Professional": {"source_domain": "health", "subfield": "health-biology", "evaluation_purpose": "capability", "confidence": 1.0, "reason": "Professional healthcare capability benchmark; placement in a safety report section does not change its primary evaluation purpose"},
     "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
     "LiveMathematicianBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MathArena Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
