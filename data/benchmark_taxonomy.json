@@ -1,6 +1,6 @@
 {
-  "schema_version": 3,
-  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves one of seven public capability domains, its subfield, evaluation purpose, and map family.",
+  "schema_version": 4,
+  "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves one of seven public capability domains, its subfield, evaluation purpose, benchmark type, secondary tags, and map family.",
   "fallback_primary_domain": "reason",
   "primary_domains": [
     {
@@ -64,6 +64,7 @@
         {"id": "long-context", "label_en": "Long context", "label_zh": "长上下文", "match_patterns": ["long", "context", "needle", "mrcr", "graphwalk", "memory"]},
         {"id": "multilingual", "label_en": "Multilingual", "label_zh": "多语言", "match_patterns": ["multi", "language", "mmlu-prox", "global"]},
         {"id": "translation", "label_en": "Translation", "label_zh": "翻译", "match_patterns": ["wmt", "translation", "xcomet"]},
+        {"id": "instruction-following", "label_en": "Instruction following", "label_zh": "指令遵循", "match_patterns": ["ifbench", "ifeval", "instruction following"]},
         {"id": "language-understanding", "label_en": "Language understanding", "label_zh": "语言理解", "match_patterns": []}
       ]
     },
@@ -110,6 +111,27 @@
       "description_en": "Evaluations whose primary capability is safety, control, misuse prevention, fairness, oversight, or alignment.",
       "description_zh": "以安全、控制、滥用防范、公平性、监督或对齐为主要能力的评测。"
     }
+  ],
+  "benchmark_types": [
+    {
+      "id": "atomic",
+      "label_en": "Atomic benchmark",
+      "label_zh": "单项 Benchmark",
+      "description_en": "A single evaluation target that may participate in capability maps and aggregate model rankings.",
+      "description_zh": "面向单一评测目标，可参与能力地图与模型整体排名。"
+    },
+    {
+      "id": "composite_index",
+      "label_en": "Composite index",
+      "label_zh": "综合指数",
+      "description_en": "An index composed from multiple underlying evaluations; retained in the registry but excluded from capability maps and aggregate rankings to avoid double counting.",
+      "description_zh": "由多项底层评测合成；保留在数据目录中，但不进入能力地图和整体排名，以避免重复计权。"
+    }
+  ],
+  "secondary_tags": [
+    {"id": "visual-reasoning", "label_en": "Visual reasoning", "label_zh": "视觉推理"},
+    {"id": "knowledge-reasoning", "label_en": "Knowledge reasoning", "label_zh": "知识推理"},
+    {"id": "ai-research-automation", "label_en": "AI R&D automation", "label_zh": "AI 研发自动化"}
   ],
   "safety_alignment": {
     "view_id": "safety",
@@ -173,21 +195,33 @@
   "safety_domains": ["safety", "agent_safety", "bio_safety", "computer_use_safety", "cyber_safety", "health_safety", "safety_bias", "safety_health", "vision_safety"],
   "benchmark_overrides": {
     "AetherCode": {"source_domain": "coding", "subfield": "code-generation", "confidence": 1.0, "reason": "Coding benchmark"},
-    "ArcAGI2": {"source_domain": "reasoning", "subfield": "general-reasoning", "confidence": 1.0, "reason": "Abstract reasoning benchmark"},
+    "Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Frontier mathematics benchmark"},
+    "ARC-AGI-2": {"source_domain": "reasoning", "subfield": "general-reasoning", "secondary_tags": ["visual-reasoning"], "confidence": 1.0, "reason": "Abstract and fluid reasoning benchmark using visual grids"},
+    "ARC-AGI-3": {"source_domain": "reasoning", "subfield": "general-reasoning", "secondary_tags": ["visual-reasoning"], "confidence": 1.0, "reason": "Abstract and fluid reasoning benchmark using visual environments"},
+    "Artificial Analysis Intelligence Index v4.1": {"source_domain": "general_capability", "subfield": "general-reasoning", "benchmark_type": "composite_index", "map_excluded": true, "ranking_excluded": true, "confidence": 1.0, "reason": "Composite index built from multiple underlying capability evaluations; excluded from map and aggregate ranking to prevent double counting"},
     "BeyondAIME": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "BrowseComp": {"source_domain": "agent", "subfield": "web-search", "confidence": 1.0, "reason": "Web browsing and search benchmark"},
+    "CritPt": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Original research-level physics problems across multiple physics subfields"},
+    "First-person fairness": {"source_domain": "safety_bias", "safety_category": "fairness-bias-privacy", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Fairness and bias evaluation based on first-person identity cues"},
     "FrontierScience-Olympiad": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Frontier science benchmark"},
     "FS - Research": {"source_domain": "research", "subfield": "science-research", "confidence": 1.0, "reason": "Research benchmark"},
+    "GPQA Diamond": {"source_domain": "science", "subfield": "science-research", "secondary_tags": ["knowledge-reasoning"], "confidence": 1.0, "reason": "Graduate-level physics, chemistry, and biology knowledge reasoning"},
     "HLE-textonly": {"source_domain": "agent", "confidence": 0.9, "reason": "Source report evaluates it in the agent section"},
     "HLE-Verified": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge and reasoning benchmark"},
     "HealthBench Professional": {"source_domain": "health", "subfield": "health-biology", "evaluation_purpose": "capability", "confidence": 1.0, "reason": "Professional healthcare capability benchmark; placement in a safety report section does not change its primary evaluation purpose"},
+    "IFBench": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction-constraint following and out-of-domain generalization"},
+    "IFEval": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction following for length, keywords, format, and structure"},
     "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
     "LiveMathematicianBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MathArena Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MMLU": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "General knowledge benchmark; multilingual variants remain separate"},
+    "MRCR-v2": {"source_domain": "long_context", "subfield": "long-context", "confidence": 1.0, "reason": "Long-context retrieval and coreference evaluation using the 128K 8-needle protocol"},
     "MSQA": {"source_domain": "multilingual", "subfield": "multilingual", "confidence": 1.0, "reason": "Multilingual question answering benchmark"},
-    "PostTrainBench": {"source_domain": "reasoning", "subfield": "general-reasoning", "confidence": 0.9, "reason": "Post-training reasoning evaluation"},
-    "SuperChem": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Chemistry benchmark"}
+    "PostTrainBench": {"source_domain": "agent", "subfield": "workflows", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Long-horizon CLI agent workflow for autonomous model post-training and research automation"},
+    "Production Benchmarks with Challenging Prompts": {"source_domain": "safety", "safety_category": "harmful-content", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Harmful-content safety evaluation using not_unsafe across multiple risk categories"},
+    "Realtime Monitor Performance": {"source_domain": "safety", "safety_category": "oversight-monitoring", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Safety monitor recall for biological and cybersecurity risk; evaluates a safeguard stack rather than base-model capability"},
+    "SuperChem": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Chemistry benchmark"},
+    "Universal Jailbreak Red-Team": {"source_domain": "safety", "safety_category": "jailbreak-robustness", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Universal jailbreak attack success and mitigation evaluation"}
   },
   "map_families": [
     {

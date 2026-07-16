@@ -127,6 +127,8 @@ BenchAtlas 将报告中的原始领域标签映射到七个一级能力区域：
 
 “安全与对齐”是与其他六类互斥的一级能力领域。安全 Benchmark 会继续细分为有害内容、越狱鲁棒性、Agent 控制、滥用与前沿风险、公平偏见与隐私、健康福祉、监督监控与对齐之一。报告原始领域标签仍保留在数据和证据页面中。
 
+Benchmark 还具有类型和可选副标签。单项 Benchmark 可以进入能力地图和模型整体排名；综合指数仍可在数据目录中搜索，但不会进入这两个视图，避免其底层评测被重复计权。视觉推理、知识推理、AI 研发自动化等跨领域属性通过副标签保留，不改变主分类。
+
 在每个领域内：
 
 - 方向表示数学、软件工程、终端系统、工具、长上下文、医疗等二级领域；
@@ -145,7 +147,7 @@ BenchAtlas 将报告中的原始领域标签映射到七个一级能力区域：
 - 尽可能让每条导入记录关联来源报告和证据位置。
 - 方法信息不完整时标记为来源限定，而不是强行判定可比。
 
-公开的归一化规则位于 [`data/normalization_rules.json`](data/normalization_rules.json)。Benchmark 领域分类使用独立的权威数据源 [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json)，其中定义七个能力领域、二级领域、评测目的、七个“安全与对齐”子类、Benchmark 人工覆盖项、分类置信度和地图家族合并规则。数据构建会先解析 taxonomy，再生成前端数据；浏览器不再自行推断 Benchmark 分类。
+公开的归一化规则位于 [`data/normalization_rules.json`](data/normalization_rules.json)。Benchmark 领域分类使用独立的权威数据源 [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json)，其中定义七个能力领域、二级领域、评测目的、Benchmark 类型、副标签、七个“安全与对齐”子类、Benchmark 人工覆盖项、分类置信度和地图家族合并规则。数据构建会先解析 taxonomy，再生成前端数据；浏览器不再自行推断 Benchmark 分类。
 
 ## 参与贡献
 
@@ -193,7 +195,7 @@ node scripts/validate-benchmark-taxonomy.js
 | `data/benchmarks/` | 按需加载的 Benchmark 报分与证据 |
 | `data/pages/` | Benchmark、模型和排名页面的路由级数据包 |
 | `data/normalization_rules.json` | 可审计的模型与 Benchmark 归一化规则 |
-| `data/benchmark_taxonomy.json` | 能力领域、评测目的、安全与对齐子类、Benchmark 覆盖项和地图家族的权威分类文件 |
+| `data/benchmark_taxonomy.json` | 能力领域、Benchmark 类型、副标签、评测目的、安全与对齐子类、Benchmark 覆盖项和地图家族的权威分类文件 |
 | `scripts/` | 数据拆分、页面生成、实体验证和 taxonomy 校验脚本 |
 | `benchmarks/`, `models/`, `ranking/` | 自动生成的英文详情页 |
 | `zh/benchmarks/`, `zh/models/`, `zh/ranking/` | 自动生成的中文详情页 |

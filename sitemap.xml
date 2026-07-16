@@ -781,6 +781,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benchatlas.cn/benchmarks/arc-agi-2-score/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://benchatlas.cn/zh/benchmarks/arc-agi-2-score/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://benchatlas.cn/benchmarks/artificial-analysis-intelligence-index-v4-1-index-score/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -1208,18 +1220,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/zh/benchmarks/gdp-pdf-score/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/arc-agi-2-score/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/arc-agi-2-score/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3020,18 +3020,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/zh/benchmarks/aethercode-score/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/arcagi2-score/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/arcagi2-score/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

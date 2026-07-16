@@ -127,6 +127,8 @@ BenchAtlas maps report-native domain labels into seven capability regions:
 
 Safety & Alignment is a mutually exclusive top-level capability region. Safety benchmarks are further classified into harmful content, jailbreak robustness, agent control, misuse/frontier risk, fairness/bias/privacy, health/wellbeing, or oversight/monitoring. Original report-native labels remain preserved in the dataset and evidence views.
 
+Benchmarks also have a type and optional secondary tags. Atomic benchmarks may participate in the capability map and aggregate model ranking. Composite indices remain searchable in the Registry but are excluded from both surfaces to avoid counting their underlying evaluations twice. Secondary tags preserve cross-cutting signals such as visual reasoning, knowledge reasoning, or AI R&D automation without changing the primary field.
+
 Within each region:
 
 - direction represents a secondary field such as mathematics, software engineering, terminal systems, tools, long context, or health;
@@ -145,7 +147,7 @@ Within each region:
 - Attach every imported row to a report and evidence location whenever possible.
 - Mark uncertain or incomplete methodology as source-scoped instead of forcing comparability.
 
-Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the seven primary capability fields, subfields, evaluation purpose, seven Safety & Alignment categories, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
+Normalization rules are public in [`data/normalization_rules.json`](data/normalization_rules.json). Benchmark field classification has a separate canonical source in [`data/benchmark_taxonomy.json`](data/benchmark_taxonomy.json). It defines the seven primary capability fields, subfields, evaluation purpose, benchmark types, secondary tags, seven Safety & Alignment categories, explicit benchmark overrides, classification confidence, and map-family collapsing rules. The data build resolves this taxonomy before the frontend is generated; the browser does not independently infer benchmark categories.
 
 ## Contributing
 
@@ -193,7 +195,7 @@ node scripts/validate-benchmark-taxonomy.js
 | `data/benchmarks/` | Per-benchmark rows and evidence loaded on demand |
 | `data/pages/` | Route-scoped benchmark, model, and ranking bundles |
 | `data/normalization_rules.json` | Auditable model and benchmark normalization rules |
-| `data/benchmark_taxonomy.json` | Canonical capability fields, evaluation purposes, Safety & Alignment categories, benchmark overrides, and map families |
+| `data/benchmark_taxonomy.json` | Canonical capability fields, benchmark types, secondary tags, evaluation purposes, Safety & Alignment categories, benchmark overrides, and map families |
 | `scripts/` | Data splitting, page generation, entity validation, and taxonomy validation |
 | `benchmarks/`, `models/`, `ranking/` | Generated English detail pages |
 | `zh/benchmarks/`, `zh/models/`, `zh/ranking/` | Generated Chinese detail pages |

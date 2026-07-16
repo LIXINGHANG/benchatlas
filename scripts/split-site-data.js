@@ -121,6 +121,7 @@ function buildOverallData() {
   const observations = new Map();
   let benchmarkGroupCount = 0;
   for (const [benchmarkKey, page] of Object.entries(data.benchmark_pages)) {
+    if (page.ranking_excluded || page.benchmark_type === "composite_index") continue;
     const rows = preferredRows(page.rows);
     if (rows.length < 3 || new Set(rows.map(row => row.vendor)).size < 2) continue;
     benchmarkGroupCount += 1;

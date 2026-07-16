@@ -12,12 +12,15 @@ vm.runInNewContext(fs.readFileSync(path.join(root, "site_data.index.bundle.js"),
 const catalog = sandbox.window.BENCHATLAS_DATA?.benchmark_catalog || [];
 const domains = new Map(taxonomy.primary_domains.map(domain => [domain.id, domain]));
 const purposes = new Map((taxonomy.evaluation_purposes || []).map(purpose => [purpose.id, purpose]));
+const benchmarkTypes = new Map((taxonomy.benchmark_types || []).map(type => [type.id, type]));
+const secondaryTags = new Map((taxonomy.secondary_tags || []).map(tag => [tag.id, tag]));
 const safetyCategories = new Map((taxonomy.safety_alignment?.categories || []).map(category => [category.id, category]));
 const errors = [];
 
 if (!catalog.length) errors.push("Benchmark catalog is empty");
 if (!domains.has(taxonomy.fallback_primary_domain)) errors.push("Fallback primary domain is not defined");
 if (!purposes.has("capability") || !purposes.has("safety_alignment")) errors.push("Capability and safety_alignment evaluation purposes must be defined");
+if (!benchmarkTypes.has("atomic") || !benchmarkTypes.has("composite_index")) errors.push("Atomic and composite_index benchmark types must be defined");
 if (!safetyCategories.size) errors.push("Safety & Alignment categories are not defined");
 if (!domains.has("safety")) errors.push("Safety & Alignment must be a primary capability domain");
 
@@ -37,6 +40,18 @@ for (const item of catalog) {
   }
   if (!purposes.has(item.evaluation_purpose)) {
     errors.push(`${item.rank_group_key}: unknown evaluation purpose ${item.evaluation_purpose}`);
+  }
+  if (!benchmarkTypes.has(item.benchmark_type)) {
+    errors.push(`${item.rank_group_key}: unknown benchmark type ${item.benchmark_type}`);
+  }
+  for (const tag of item.secondary_tags || []) {
+    if (!secondaryTags.has(tag)) errors.push(`${item.rank_group_key}: unknown secondary tag ${tag}`);
+  }
+  if (typeof item.map_excluded !== "boolean" || typeof item.ranking_excluded !== "boolean") {
+    errors.push(`${item.rank_group_key}: map_excluded and ranking_excluded must be boolean`);
+  }
+  if (item.benchmark_type === "composite_index" && (!item.map_excluded || !item.ranking_excluded)) {
+    errors.push(`${item.rank_group_key}: composite index must be excluded from maps and aggregate rankings`);
   }
   if (typeof item.is_safety !== "boolean") {
     errors.push(`${item.rank_group_key}: is_safety must be boolean`);

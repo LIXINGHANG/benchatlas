@@ -144,6 +144,7 @@
     let benchmarkGroupCount = 0;
 
     Object.entries(pages).forEach(([benchmarkKey, page]) => {
+      if (page.ranking_excluded || page.benchmark_type === "composite_index") return;
       const uniqueRows = preferredComparisonRows(page.rows);
 
       const vendorCount = new Set(uniqueRows.map(row => row.vendor)).size;

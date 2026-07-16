@@ -37,6 +37,7 @@
     "GLM-5.2 (Max)": {"base_model_name": "GLM-5.2", "entity_type": "configuration", "configuration": "Max", "ranking_eligible": true}
   },
   "benchmark_aliases": {
+    "ArcAGI2": "ARC-AGI-2",
     "GPQA-Diamond": "GPQA Diamond",
     "MCP-Atlas": "MCP Atlas",
     "MCPMark": "MCP-Mark",
@@ -47,6 +48,12 @@
     "HMMT 2026 Feb": "HMMT Feb. 2026"
   },
   "benchmark_group_rules": {
+    "arcagi2_score": {
+      "rank_group_key": "arc_agi_2_score",
+      "display_name": "ARC-AGI-2",
+      "variant": "",
+      "comparison_variant": ""
+    },
     "terminal_bench_2_0_score": {
       "rank_group_key": "terminal_bench_2_0_score",
       "display_name": "Terminal-Bench 2.0",
