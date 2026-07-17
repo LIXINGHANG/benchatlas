@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves one of seven public capability domains, its subfield, evaluation purpose, benchmark type, secondary tags, and map family.",
   "fallback_primary_domain": "reason",
   "primary_domains": [
@@ -12,6 +12,7 @@
       "subfields": [
         {"id": "mathematics", "label_en": "Mathematics", "label_zh": "数学", "match_patterns": ["aime", "hmmt", "imo", "math", "olympiad"]},
         {"id": "knowledge", "label_en": "Knowledge", "label_zh": "知识", "match_patterns": ["gpqa", "mmlu", "supergpqa", "knowledge", "kina", "hle", "humanity"]},
+        {"id": "abstract-logic", "label_en": "Abstract & logical reasoning", "label_zh": "抽象与逻辑推理", "match_patterns": ["puzzle_zero_shot", "logic puzzle"]},
         {"id": "general-reasoning", "label_en": "General reasoning", "label_zh": "通用推理", "match_patterns": []}
       ]
     },
@@ -51,6 +52,7 @@
         {"id": "visual-reasoning", "label_en": "Visual reasoning", "label_zh": "视觉推理", "match_patterns": ["mmmu", "vision", "image", "chart", "charxiv", "visual"]},
         {"id": "video", "label_en": "Video", "label_zh": "视频", "match_patterns": ["video", "tvbench", "crossvid"]},
         {"id": "documents", "label_en": "Documents", "label_zh": "文档", "match_patterns": ["document", "doc", "pdf", "dude"]},
+        {"id": "document-generation", "label_en": "Document generation", "label_zh": "文档生成", "match_patterns": ["presentbench", "slide generation", "presentation generation"]},
         {"id": "spatial-perception", "label_en": "Spatial perception", "label_zh": "空间理解", "match_patterns": []}
       ]
     },
@@ -65,6 +67,7 @@
         {"id": "multilingual", "label_en": "Multilingual", "label_zh": "多语言", "match_patterns": ["multi", "language", "mmlu-prox", "global"]},
         {"id": "translation", "label_en": "Translation", "label_zh": "翻译", "match_patterns": ["wmt", "translation", "xcomet"]},
         {"id": "instruction-following", "label_en": "Instruction following", "label_zh": "指令遵循", "match_patterns": ["ifbench", "ifeval", "instruction following"]},
+        {"id": "instruction-dialogue", "label_en": "Instruction following & multi-turn dialogue", "label_zh": "指令遵循与多轮对话", "match_patterns": ["multi-turn", "multi turn", "dialogue"]},
         {"id": "language-understanding", "label_en": "Language understanding", "label_zh": "语言理解", "match_patterns": []}
       ]
     },
@@ -131,7 +134,9 @@
   "secondary_tags": [
     {"id": "visual-reasoning", "label_en": "Visual reasoning", "label_zh": "视觉推理"},
     {"id": "knowledge-reasoning", "label_en": "Knowledge reasoning", "label_zh": "知识推理"},
-    {"id": "ai-research-automation", "label_en": "AI R&D automation", "label_zh": "AI 研发自动化"}
+    {"id": "ai-research-automation", "label_en": "AI R&D automation", "label_zh": "AI 研发自动化"},
+    {"id": "multimodal", "label_en": "Multimodal", "label_zh": "多模态"},
+    {"id": "spatial-understanding", "label_en": "Spatial understanding", "label_zh": "空间理解"}
   ],
   "safety_alignment": {
     "view_id": "safety",
@@ -212,20 +217,24 @@
     "ARC-AGI-3": {"source_domain": "reasoning", "subfield": "general-reasoning", "secondary_tags": ["visual-reasoning"], "confidence": 1.0, "reason": "Abstract and fluid reasoning benchmark using visual environments"},
     "Artificial Analysis Intelligence Index v4.1": {"source_domain": "general_capability", "subfield": "general-reasoning", "benchmark_type": "composite_index", "map_excluded": true, "ranking_excluded": true, "confidence": 1.0, "reason": "Composite index built from multiple underlying capability evaluations; excluded from map and aggregate ranking to prevent double counting"},
     "BeyondAIME": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
+    "BenchCAD": {"source_domain": "multimodal", "subfield": "spatial-perception", "confidence": 1.0, "reason": "Spatial CAD understanding and generation benchmark; tool use is part of the evaluation protocol rather than the primary capability domain"},
+    "BFCL-v4": {"source_domain": "agent", "subfield": "tools-mcp", "confidence": 1.0, "reason": "Function and tool-calling benchmark"},
     "BrowseComp": {"source_domain": "agent", "subfield": "web-search", "confidence": 1.0, "reason": "Web browsing and search benchmark"},
     "CritPt": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Original research-level physics problems across multiple physics subfields"},
     "First-person fairness": {"source_domain": "safety_bias", "safety_category": "fairness-bias-privacy", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Fairness and bias evaluation based on first-person identity cues"},
     "FrontierScience-Olympiad": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Frontier science benchmark"},
     "FS - Research": {"source_domain": "research", "subfield": "science-research", "confidence": 1.0, "reason": "Research benchmark"},
     "GPQA Diamond": {"source_domain": "science", "subfield": "science-research", "secondary_tags": ["knowledge-reasoning"], "confidence": 1.0, "reason": "Graduate-level physics, chemistry, and biology knowledge reasoning"},
-    "HLE-textonly": {"source_domain": "agent", "confidence": 0.9, "reason": "Source report evaluates it in the agent section"},
+    "HLE-textonly": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Text-only expert knowledge benchmark; search remains an evaluation protocol attribute"},
     "HLE-Verified": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge and reasoning benchmark"},
     "HealthBench Professional": {"source_domain": "health", "subfield": "health-biology", "evaluation_purpose": "capability", "confidence": 1.0, "reason": "Professional healthcare capability benchmark; placement in a safety report section does not change its primary evaluation purpose"},
     "IFBench": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction-constraint following and out-of-domain generalization"},
     "IFEval": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction following for length, keywords, format, and structure"},
     "IMOAnswerBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Olympiad-level mathematical reasoning benchmark with 400 verifiable short-answer problems"},
+    "Image2FloorPlan": {"source_domain": "agent", "subfield": "workflows", "secondary_tags": ["multimodal", "spatial-understanding"], "confidence": 1.0, "reason": "Multimodal spatial workflow evaluated through an agent harness"},
     "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
     "Kimi Code Bench 2.0": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Internal coding-agent benchmark reported in the Kimi K3 release"},
+    "Doubao Multi-Turn Bench": {"source_domain": "language", "subfield": "instruction-dialogue", "confidence": 1.0, "reason": "Multi-turn instruction following and dialogue benchmark"},
     "LiveMathematicianBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MathArena Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MMLU": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "General knowledge benchmark; multilingual variants remain separate"},
@@ -233,6 +242,8 @@
     "MLS Bench Lite": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Machine-learning software engineering benchmark"},
     "MSQA": {"source_domain": "multilingual", "subfield": "multilingual", "confidence": 1.0, "reason": "Multilingual question answering benchmark"},
     "PostTrainBench": {"source_domain": "agent", "subfield": "workflows", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Long-horizon CLI agent workflow for autonomous model post-training and research automation"},
+    "PresentBench": {"source_domain": "multimodal", "subfield": "document-generation", "confidence": 1.0, "reason": "Fine-grained rubric-based slide generation benchmark; no required office-tool operation is documented in the imported source"},
+    "puzzle_zero_shot": {"source_domain": "reasoning", "subfield": "abstract-logic", "confidence": 1.0, "reason": "Logic-puzzle and abstract constraint reasoning evaluation"},
     "AA-Briefcase": {"source_domain": "agent", "subfield": "workflows", "confidence": 1.0, "reason": "Knowledge-work agent benchmark cited from Artificial Analysis"},
     "AutomationBench": {"source_domain": "agent", "subfield": "workflows", "confidence": 1.0, "reason": "Agent automation benchmark using the official public task setup"},
     "DECK-Bench": {"source_domain": "agent", "subfield": "workflows", "confidence": 1.0, "reason": "Slide-deck knowledge-work agent benchmark"},

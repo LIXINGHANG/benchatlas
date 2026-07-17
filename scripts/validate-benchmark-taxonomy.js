@@ -6,6 +6,7 @@ const vm = require("node:vm");
 
 const root = path.resolve(__dirname, "..");
 const taxonomy = JSON.parse(fs.readFileSync(path.join(root, "data", "benchmark_taxonomy.json"), "utf8"));
+const normalization = JSON.parse(fs.readFileSync(path.join(root, "data", "normalization_rules.json"), "utf8"));
 const sandbox = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(root, "site_data.index.bundle.js"), "utf8"), sandbox);
 
@@ -18,6 +19,7 @@ const safetyCategories = new Map((taxonomy.safety_alignment?.categories || []).m
 const benchmarkExclusions = new Map(
   Object.entries(taxonomy.benchmark_exclusions || {}).map(([name, exclusion]) => [name.toLowerCase(), exclusion])
 );
+const benchmarkAliases = new Map(Object.entries(normalization.benchmark_aliases || {}));
 const errors = [];
 
 if (!catalog.length) errors.push("Benchmark catalog is empty");
@@ -28,6 +30,9 @@ if (!safetyCategories.size) errors.push("Safety & Alignment categories are not d
 if (!domains.has("safety")) errors.push("Safety & Alignment must be a primary capability domain");
 
 for (const item of catalog) {
+  if (benchmarkAliases.has(item.benchmark_name)) {
+    errors.push(`${item.rank_group_key}: unresolved benchmark alias ${item.benchmark_name} -> ${benchmarkAliases.get(item.benchmark_name)}`);
+  }
   const exclusion = benchmarkExclusions.get(item.benchmark_name.toLowerCase());
   if (exclusion) {
     errors.push(`${item.rank_group_key}: excluded ${exclusion.entity_type || "non-benchmark"} re-entered the benchmark catalog (${item.benchmark_name})`);

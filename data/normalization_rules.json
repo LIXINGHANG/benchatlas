@@ -50,7 +50,13 @@
     "Program Bench": "ProgramBench",
     "PostTrain Bench": "PostTrainBench",
     "Automation Bench": "AutomationBench",
-    "Office QA Pro": "OfficeQA-Pro"
+    "Office QA Pro": "OfficeQA-Pro",
+    "OfficeQA Pro": "OfficeQA-Pro",
+    "Office QA Pro [Multimodal]": "OfficeQA-Pro [Multimodal]",
+    "Agents’ Last Exam": "Agents' Last Exam",
+    "ClawEval": "Claw Eval",
+    "Claw-Eval": "Claw Eval",
+    "Claw-Eval [Multimodal]": "Claw Eval [Multimodal]"
   },
   "benchmark_group_rules": {
     "arcagi2_score": {
