@@ -6,7 +6,8 @@
     "Gemini-3.1-Pro": {"display_name": "Gemini 3.1 Pro", "vendor": "Google DeepMind"},
     "Gemini-3.5 Flash": {"display_name": "Gemini 3.5 Flash", "vendor": "Google DeepMind"},
     "MiniMax-M3": {"display_name": "MiniMax M3", "vendor": "MiniMax"},
-    "Kimi-K2.6": {"display_name": "Kimi K2.6", "vendor": "Moonshot Kimi"}
+    "Kimi-K2.6": {"display_name": "Kimi K2.6", "vendor": "Moonshot Kimi"},
+    "Kimi-K3": {"display_name": "Kimi K3", "vendor": "Moonshot Kimi"}
   },
   "model_entities": {
     "Claude Code CLI + Opus 4.6": {"base_model_name": "Claude Opus 4.6", "entity_type": "agent_system", "configuration": "Claude Code CLI", "ranking_eligible": false},
@@ -45,7 +46,11 @@
     "Terminal-bench 2.1": "Terminal-Bench 2.1",
     "Terminal Bench 2.0-Terminus": "Terminal-Bench 2.0",
     "SWE-bench Verified": "SWE-Bench Verified",
-    "HMMT 2026 Feb": "HMMT Feb. 2026"
+    "HMMT 2026 Feb": "HMMT Feb. 2026",
+    "Program Bench": "ProgramBench",
+    "PostTrain Bench": "PostTrainBench",
+    "Automation Bench": "AutomationBench",
+    "Office QA Pro": "OfficeQA-Pro"
   },
   "benchmark_group_rules": {
     "arcagi2_score": {
