@@ -136,7 +136,8 @@
     {"id": "knowledge-reasoning", "label_en": "Knowledge reasoning", "label_zh": "知识推理"},
     {"id": "ai-research-automation", "label_en": "AI R&D automation", "label_zh": "AI 研发自动化"},
     {"id": "multimodal", "label_en": "Multimodal", "label_zh": "多模态"},
-    {"id": "spatial-understanding", "label_en": "Spatial understanding", "label_zh": "空间理解"}
+    {"id": "spatial-understanding", "label_en": "Spatial understanding", "label_zh": "空间理解"},
+    {"id": "long-context", "label_en": "Long context", "label_zh": "长上下文"}
   ],
   "safety_alignment": {
     "view_id": "safety",
@@ -235,9 +236,13 @@
     "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
     "Kimi Code Bench 2.0": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Internal coding-agent benchmark reported in the Kimi K3 release"},
     "Doubao Multi-Turn Bench": {"source_domain": "language", "subfield": "instruction-dialogue", "confidence": 1.0, "reason": "Multi-turn instruction following and dialogue benchmark"},
+    "DUDE": {"source_domain": "multimodal", "subfield": "documents", "confidence": 1.0, "reason": "Document understanding benchmark"},
+    "EmbSpatialBench": {"source_domain": "multimodal", "subfield": "spatial-perception", "confidence": 1.0, "reason": "Embodied spatial understanding benchmark"},
+    "ERQA": {"source_domain": "multimodal", "subfield": "spatial-perception", "confidence": 1.0, "reason": "Spatial reasoning benchmark"},
     "LiveMathematicianBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MathArena Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MMLU": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "General knowledge benchmark; multilingual variants remain separate"},
+    "MMLongBench-128K": {"source_domain": "multimodal", "subfield": "documents", "secondary_tags": ["long-context"], "confidence": 1.0, "reason": "Long-context multimodal document understanding benchmark"},
     "MRCR-v2": {"source_domain": "long_context", "subfield": "long-context", "confidence": 1.0, "reason": "Long-context retrieval and coreference evaluation using the 128K 8-needle protocol"},
     "MLS Bench Lite": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Machine-learning software engineering benchmark"},
     "MSQA": {"source_domain": "multilingual", "subfield": "multilingual", "confidence": 1.0, "reason": "Multilingual question answering benchmark"},
