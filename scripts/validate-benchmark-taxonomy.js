@@ -15,6 +15,9 @@ const purposes = new Map((taxonomy.evaluation_purposes || []).map(purpose => [pu
 const benchmarkTypes = new Map((taxonomy.benchmark_types || []).map(type => [type.id, type]));
 const secondaryTags = new Map((taxonomy.secondary_tags || []).map(tag => [tag.id, tag]));
 const safetyCategories = new Map((taxonomy.safety_alignment?.categories || []).map(category => [category.id, category]));
+const benchmarkExclusions = new Map(
+  Object.entries(taxonomy.benchmark_exclusions || {}).map(([name, exclusion]) => [name.toLowerCase(), exclusion])
+);
 const errors = [];
 
 if (!catalog.length) errors.push("Benchmark catalog is empty");
@@ -25,6 +28,11 @@ if (!safetyCategories.size) errors.push("Safety & Alignment categories are not d
 if (!domains.has("safety")) errors.push("Safety & Alignment must be a primary capability domain");
 
 for (const item of catalog) {
+  const exclusion = benchmarkExclusions.get(item.benchmark_name.toLowerCase());
+  if (exclusion) {
+    errors.push(`${item.rank_group_key}: excluded ${exclusion.entity_type || "non-benchmark"} re-entered the benchmark catalog (${item.benchmark_name})`);
+    continue;
+  }
   const domain = domains.get(item.primary_domain);
   if (!domain) {
     errors.push(`${item.rank_group_key}: unknown primary domain ${item.primary_domain}`);

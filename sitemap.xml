@@ -3169,30 +3169,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://benchatlas.cn/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-final-valid-recall/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-final-valid-recall/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-precision/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/dirtyfilter-validation-pre-training-corpus-cleaning-precision/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://benchatlas.cn/benchmarks/aav-capsid-packaging-prediction-spearman-correlation/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -4568,90 +4544,6 @@
   </url>
   <url>
     <loc>https://benchatlas.cn/zh/benchmarks/researchclawbench-overall-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-baseline-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-baseline-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-1-gain-vs-base/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-1-gain-vs-base/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-1-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-1-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-2-gain-vs-base/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-2-gain-vs-base/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-2-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-2-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-3-gain-vs-base/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-3-gain-vs-base/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/benchmarks/sft-optimization-independent-evaluation-iter-3-score/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://benchatlas.cn/zh/benchmarks/sft-optimization-independent-evaluation-iter-3-score/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

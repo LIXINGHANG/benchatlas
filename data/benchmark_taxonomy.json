@@ -193,6 +193,18 @@
     ]
   },
   "safety_domains": ["safety", "agent_safety", "bio_safety", "computer_use_safety", "cyber_safety", "health_safety", "safety_bias", "safety_health", "vision_safety"],
+  "benchmark_exclusions": {
+    "dirtyfilter validation": {
+      "entity_type": "experiment",
+      "reason_en": "Internal pre-training corpus-cleaning rule-iteration experiment from the Seed2.1 model card, not a released reusable benchmark.",
+      "reason_zh": "Seed2.1 模型卡中的内部预训练语料清洗规则迭代实验，并非正式发布、可复用的 Benchmark。"
+    },
+    "SFT optimization independent evaluation": {
+      "entity_type": "workload",
+      "reason_en": "Autonomous SFT optimization trace across a baseline and three champion checkpoints, not an independent benchmark.",
+      "reason_zh": "基线与三轮 champion checkpoint 的自主 SFT 优化轨迹，并非独立 Benchmark。"
+    }
+  },
   "benchmark_overrides": {
     "AetherCode": {"source_domain": "coding", "subfield": "code-generation", "confidence": 1.0, "reason": "Coding benchmark"},
     "Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Frontier mathematics benchmark"},
