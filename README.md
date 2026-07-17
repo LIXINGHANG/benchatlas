@@ -110,6 +110,7 @@ The overall ranking represents a model's **publicly reported capability ceiling*
 5. Limited coverage is shrunk toward 50 and shown with a confidence signal.
 6. Agent systems, checkpoints, baselines, and other non-base-model entities are excluded.
 7. The best eligible publicly reported configuration may represent a model's upper bound rather than its default setting.
+8. Multiple metrics, subsets, or configurations from the same benchmark family count once per model; the best eligible percentile within that family represents the public capability ceiling.
 
 Because the index is built from vendor-published reports, it may inherit benchmark-selection and reporting bias. Always inspect the underlying result rows.
 
@@ -131,7 +132,7 @@ Benchmarks also have a type and optional secondary tags. Atomic benchmarks may p
 
 Within each region:
 
-- direction represents a secondary field such as mathematics, software engineering, terminal systems, tools, long context, or health;
+- direction represents a secondary field such as mathematics, software engineering, terminal systems, tools, long context, health, or AI R&D and self-improvement;
 - distance from the center combines model coverage (60%), report coverage (25%), and documented method signals (15%);
 - semantic zoom starts with 3 core landmarks per region, then expands each region to 7, 9, and 10 benchmark families;
 - solid red routes connect variants from the same benchmark family;

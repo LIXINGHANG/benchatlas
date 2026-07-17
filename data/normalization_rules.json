@@ -56,7 +56,10 @@
     "Agents’ Last Exam": "Agents' Last Exam",
     "ClawEval": "Claw Eval",
     "Claw-Eval": "Claw Eval",
-    "Claw-Eval [Multimodal]": "Claw Eval [Multimodal]"
+    "Claw-Eval [Multimodal]": "Claw Eval [Multimodal]",
+    "MRCR v2 (8-needle)": "MRCR v2",
+    "MRCR-v2": "MRCR v2",
+    "OpenAI MRCR v2": "MRCR v2"
   },
   "benchmark_group_rules": {
     "arcagi2_score": {

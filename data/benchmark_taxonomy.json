@@ -1,5 +1,5 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves one of seven public capability domains, its subfield, evaluation purpose, benchmark type, secondary tags, and map family.",
   "fallback_primary_domain": "reason",
   "primary_domains": [
@@ -81,6 +81,7 @@
         {"id": "health-biology", "label_en": "Health & biology", "label_zh": "医疗与生物", "match_patterns": ["health", "medical", "bio", "gene", "protein", "virology"]},
         {"id": "science-research", "label_en": "Science & research", "label_zh": "科学与研究", "match_patterns": ["science", "research", "frontier", "chem", "physics"]},
         {"id": "cybersecurity", "label_en": "Cybersecurity", "label_zh": "网络安全", "match_patterns": ["cyber", "exploit", "security", "ctf"]},
+        {"id": "ai-research-self-improvement", "label_en": "AI R&D & self-improvement", "label_zh": "AI 研发与自我改进", "match_patterns": ["kernelgen", "nanogpt", "posttrainbench lite", "research debugging", "rsi index", "self-improvement"]},
         {"id": "professional-work", "label_en": "Professional work", "label_zh": "专业任务", "match_patterns": []}
       ]
     },
@@ -137,7 +138,8 @@
     {"id": "ai-research-automation", "label_en": "AI R&D automation", "label_zh": "AI 研发自动化"},
     {"id": "multimodal", "label_en": "Multimodal", "label_zh": "多模态"},
     {"id": "spatial-understanding", "label_en": "Spatial understanding", "label_zh": "空间理解"},
-    {"id": "long-context", "label_en": "Long context", "label_zh": "长上下文"}
+    {"id": "long-context", "label_en": "Long context", "label_zh": "长上下文"},
+    {"id": "multilingual", "label_en": "Multilingual", "label_zh": "多语言"}
   ],
   "safety_alignment": {
     "view_id": "safety",
@@ -229,9 +231,12 @@
     "HLE-textonly": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Text-only expert knowledge benchmark; search remains an evaluation protocol attribute"},
     "HLE-Verified": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge and reasoning benchmark"},
     "HealthBench Professional": {"source_domain": "health", "subfield": "health-biology", "evaluation_purpose": "capability", "confidence": 1.0, "reason": "Professional healthcare capability benchmark; placement in a safety report section does not change its primary evaluation purpose"},
+    "HorizonMath": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Research-level mathematical discovery benchmark with automatic verification"},
     "IFBench": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction-constraint following and out-of-domain generalization"},
     "IFEval": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction following for length, keywords, format, and structure"},
     "IMOAnswerBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Olympiad-level mathematical reasoning benchmark with 400 verifiable short-answer problems"},
+    "IMO 2025": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "International Mathematical Olympiad evaluation"},
+    "IMOProof-Adv": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Advanced olympiad proof benchmark"},
     "Image2FloorPlan": {"source_domain": "agent", "subfield": "workflows", "secondary_tags": ["multimodal", "spatial-understanding"], "confidence": 1.0, "reason": "Multimodal spatial workflow evaluated through an agent harness"},
     "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
     "Kimi Code Bench 2.0": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Internal coding-agent benchmark reported in the Kimi K3 release"},
@@ -243,7 +248,8 @@
     "MathArena Apex": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
     "MMLU": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "General knowledge benchmark; multilingual variants remain separate"},
     "MMLongBench-128K": {"source_domain": "multimodal", "subfield": "documents", "secondary_tags": ["long-context"], "confidence": 1.0, "reason": "Long-context multimodal document understanding benchmark"},
-    "MRCR-v2": {"source_domain": "long_context", "subfield": "long-context", "confidence": 1.0, "reason": "Long-context retrieval and coreference evaluation using the 128K 8-needle protocol"},
+    "MAXIFE": {"source_domain": "language", "subfield": "instruction-following", "secondary_tags": ["multilingual"], "confidence": 1.0, "reason": "Multilingual and cross-lingual instruction-following evaluation across 23 languages"},
+    "MRCR v2": {"source_domain": "long_context", "subfield": "long-context", "confidence": 1.0, "reason": "Long-context retrieval and coreference benchmark; context length and needle count remain evaluation variants"},
     "MLS Bench Lite": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Machine-learning software engineering benchmark"},
     "MSQA": {"source_domain": "multilingual", "subfield": "multilingual", "confidence": 1.0, "reason": "Multilingual question answering benchmark"},
     "PostTrainBench": {"source_domain": "agent", "subfield": "workflows", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Long-horizon CLI agent workflow for autonomous model post-training and research automation"},
@@ -263,14 +269,32 @@
     "ZeroBench_main w/ python": {"source_domain": "vision", "subfield": "visual-reasoning", "confidence": 1.0, "reason": "Vision benchmark with Python tool use"},
     "Production Benchmarks with Challenging Prompts": {"source_domain": "safety", "safety_category": "harmful-content", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Harmful-content safety evaluation using not_unsafe across multiple risk categories"},
     "Realtime Monitor Performance": {"source_domain": "safety", "safety_category": "oversight-monitoring", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Safety monitor recall for biological and cybersecurity risk; evaluates a safeguard stack rather than base-model capability"},
+    "AAV Capsid Packaging Prediction": {"source_domain": "health", "subfield": "health-biology", "confidence": 1.0, "reason": "Biological engineering evaluation for AAV capsid packaging prediction"},
+    "DNA Sequence Design for Transcription Factor Binding": {"source_domain": "health", "subfield": "health-biology", "confidence": 1.0, "reason": "Biological sequence-design evaluation for transcription-factor binding"},
+    "LifeSciBench": {"source_domain": "health", "subfield": "health-biology", "confidence": 1.0, "reason": "Life-sciences research benchmark"},
+    "MedChemBench": {"source_domain": "health", "subfield": "health-biology", "confidence": 1.0, "reason": "Medicinal-chemistry benchmark at the intersection of chemistry and biomedicine"},
+    "FrontierCyber": {"source_domain": "cybersecurity", "subfield": "cybersecurity", "confidence": 1.0, "reason": "Frontier cybersecurity capability benchmark"},
+    "Internal Research Debugging Evaluation": {"source_domain": "self_improvement", "subfield": "ai-research-self-improvement", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Realistic AI research debugging and self-improvement evaluation"},
+    "KernelGen 1P": {"source_domain": "self_improvement", "subfield": "ai-research-self-improvement", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "AI research and kernel-generation self-improvement evaluation"},
+    "NanoGPT": {"source_domain": "self_improvement", "subfield": "ai-research-self-improvement", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Autonomous model-training optimization evaluation"},
+    "PostTrainBench Lite": {"source_domain": "self_improvement", "subfield": "ai-research-self-improvement", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Lightweight autonomous post-training and AI research evaluation"},
+    "RSI Index": {"source_domain": "self_improvement", "subfield": "ai-research-self-improvement", "secondary_tags": ["ai-research-automation"], "confidence": 1.0, "reason": "Recursive self-improvement capability index reported as an evaluation"},
     "SuperChem": {"source_domain": "science", "subfield": "science-research", "confidence": 1.0, "reason": "Chemistry benchmark"},
+    "WMT24++": {"source_domain": "language", "subfield": "translation", "secondary_tags": ["multilingual"], "confidence": 1.0, "reason": "Machine-translation benchmark covering 55 languages and dialects"},
     "Universal Jailbreak Red-Team": {"source_domain": "safety", "safety_category": "jailbreak-robustness", "evaluation_purpose": "safety_alignment", "confidence": 1.0, "reason": "Universal jailbreak attack success and mitigation evaluation"}
   },
   "map_families": [
     {
       "id": "healthbench",
       "name_pattern": "^HealthBench(?:\\s|$)",
-      "representative_pattern": "^HealthBench$"
+      "representative_pattern": "^HealthBench$",
+      "benchmark_family_id": "healthbench"
+    },
+    {
+      "id": "mrcr-v2",
+      "name_pattern": "^MRCR v2$",
+      "representative_rank_group_key": "mrcr_v2_8_needle_128k_average_score",
+      "benchmark_family_id": "mrcr-v2"
     }
   ]
 }

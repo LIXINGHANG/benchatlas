@@ -119,12 +119,13 @@ function preferredRows(rows) {
 function buildOverallData() {
   const modelById = new Map(data.model_catalog.map(model => [model.model_id, model]));
   const observations = new Map();
-  let benchmarkGroupCount = 0;
+  const benchmarkFamilies = new Set();
   for (const [benchmarkKey, page] of Object.entries(data.benchmark_pages)) {
     if (page.ranking_excluded || page.benchmark_type === "composite_index") continue;
     const rows = preferredRows(page.rows);
     if (rows.length < 3 || new Set(rows.map(row => row.vendor)).size < 2) continue;
-    benchmarkGroupCount += 1;
+    const benchmarkFamilyId = page.benchmark_family_id || benchmarkKey;
+    benchmarkFamilies.add(benchmarkFamilyId);
     let previousScore = null;
     let rank = 0;
     rows.forEach((row, index) => {
@@ -136,7 +137,8 @@ function buildOverallData() {
       if (!observations.has(modelId)) observations.set(modelId, []);
       observations.get(modelId).push({
         benchmark_key: benchmarkKey,
-        domain: page.domain,
+        benchmark_family_id: benchmarkFamilyId,
+        domain: page.primary_domain || page.domain,
         percentile: 100 * (rows.length - rank) / (rows.length - 1),
         configuration: row.model_configuration || "Standard",
       });
@@ -145,30 +147,36 @@ function buildOverallData() {
 
   const rankings = [];
   for (const [modelId, rows] of observations) {
-    const domains = new Map();
+    const bestByFamily = new Map();
     for (const row of rows) {
+      const current = bestByFamily.get(row.benchmark_family_id);
+      if (!current || row.percentile > current.percentile) bestByFamily.set(row.benchmark_family_id, row);
+    }
+    const familyRows = [...bestByFamily.values()];
+    const domains = new Map();
+    for (const row of familyRows) {
       if (!domains.has(row.domain)) domains.set(row.domain, []);
       domains.get(row.domain).push(row.percentile);
     }
-    if (rows.length < 5 || domains.size < 2) continue;
+    if (familyRows.length < 5 || domains.size < 2) continue;
     const domainMeans = [...domains.values()].map(values => values.reduce((sum, value) => sum + value, 0) / values.length);
     const rawScore = domainMeans.reduce((sum, value) => sum + value, 0) / domainMeans.length;
-    const indexScore = 50 + (rawScore - 50) * (rows.length / (rows.length + 10));
+    const indexScore = 50 + (rawScore - 50) * (familyRows.length / (familyRows.length + 10));
     const model = modelById.get(modelId);
     if (!model) continue;
-    const configurations = [...new Set(rows.map(row => row.configuration).filter(Boolean))];
+    const configurations = [...new Set(familyRows.map(row => row.configuration).filter(Boolean))];
     rankings.push({
       model_id: modelId,
       model_name: model.model_name,
       vendor: model.vendor || "Unknown",
       index_score: Number(indexScore.toFixed(1)),
       raw_score: Number(rawScore.toFixed(1)),
-      benchmark_count: rows.length,
+      benchmark_count: familyRows.length,
       domain_count: domains.size,
       report_count: Number(model.report_count || 0),
       configuration_count: configurations.length,
       configurations,
-      confidence: rows.length >= 25 && domains.size >= 5 ? "high" : rows.length >= 10 && domains.size >= 3 ? "medium" : "limited",
+      confidence: familyRows.length >= 25 && domains.size >= 5 ? "high" : familyRows.length >= 10 && domains.size >= 3 ? "medium" : "limited",
     });
   }
   rankings.sort((a, b) => b.index_score - a.index_score || b.benchmark_count - a.benchmark_count);
@@ -181,7 +189,7 @@ function buildOverallData() {
     }
     row.overall_rank = rank;
   });
-  return { rankings, benchmarkGroupCount };
+  return { rankings, benchmarkGroupCount: benchmarkFamilies.size };
 }
 
 function writeBundle(destination, payload, merge = false) {

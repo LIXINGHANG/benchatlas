@@ -141,7 +141,7 @@
 
   function buildOverallRankings() {
     const observations = new Map();
-    let benchmarkGroupCount = 0;
+    const benchmarkFamilies = new Set();
 
     Object.entries(pages).forEach(([benchmarkKey, page]) => {
       if (page.ranking_excluded || page.benchmark_type === "composite_index") return;
@@ -149,7 +149,8 @@
 
       const vendorCount = new Set(uniqueRows.map(row => row.vendor)).size;
       if (uniqueRows.length < 3 || vendorCount < 2) return;
-      benchmarkGroupCount += 1;
+      const benchmarkFamilyId = page.benchmark_family_id || benchmarkKey;
+      benchmarkFamilies.add(benchmarkFamilyId);
 
       let previousScore = null;
       let competitionRank = 0;
@@ -162,7 +163,8 @@
         if (!observations.has(row.model_name)) observations.set(row.model_name, []);
         observations.get(row.model_name).push({
           benchmark_key: benchmarkKey,
-          domain: page.domain,
+          benchmark_family_id: benchmarkFamilyId,
+          domain: page.primary_domain || page.domain,
           percentile
         });
       });
@@ -170,30 +172,36 @@
 
     const rankings = [];
     observations.forEach((rows, modelName) => {
-      const domainScores = new Map();
+      const bestByFamily = new Map();
       rows.forEach(row => {
+        const current = bestByFamily.get(row.benchmark_family_id);
+        if (!current || row.percentile > current.percentile) bestByFamily.set(row.benchmark_family_id, row);
+      });
+      const familyRows = Array.from(bestByFamily.values());
+      const domainScores = new Map();
+      familyRows.forEach(row => {
         if (!domainScores.has(row.domain)) domainScores.set(row.domain, []);
         domainScores.get(row.domain).push(row.percentile);
       });
-      if (rows.length < 5 || domainScores.size < 2) return;
+      if (familyRows.length < 5 || domainScores.size < 2) return;
 
       const domainMeans = Array.from(domainScores.values()).map(values => (
         values.reduce((sum, value) => sum + value, 0) / values.length
       ));
       const rawScore = domainMeans.reduce((sum, value) => sum + value, 0) / domainMeans.length;
-      const coverageWeight = rows.length / (rows.length + 10);
+      const coverageWeight = familyRows.length / (familyRows.length + 10);
       const indexScore = 50 + (rawScore - 50) * coverageWeight;
       const model = modelByName.get(modelName);
-      const confidence = rows.length >= 25 && domainScores.size >= 5
+      const confidence = familyRows.length >= 25 && domainScores.size >= 5
         ? "high"
-        : rows.length >= 10 && domainScores.size >= 3 ? "medium" : "limited";
+        : familyRows.length >= 10 && domainScores.size >= 3 ? "medium" : "limited";
 
       rankings.push({
         model_name: modelName,
         vendor: model?.vendor || "Unknown",
         index_score: Number(indexScore.toFixed(1)),
         raw_score: Number(rawScore.toFixed(1)),
-        benchmark_count: rows.length,
+        benchmark_count: familyRows.length,
         domain_count: domainScores.size,
         report_count: Number(model?.report_count || 0),
         confidence
@@ -210,7 +218,7 @@
       }
       row.overall_rank = rank;
     });
-    return { rankings, benchmarkGroupCount };
+    return { rankings, benchmarkGroupCount: benchmarkFamilies.size };
   }
 
   function parseHash() {
