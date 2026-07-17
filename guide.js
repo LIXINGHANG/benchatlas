@@ -4,7 +4,7 @@
   const values = {
     guideResults: summary.result_count,
     guideModels: summary.model_count,
-    guideBenchmarks: summary.benchmark_group_count,
+    guideBenchmarks: summary.map_benchmark_group_count || summary.benchmark_group_count,
     guideReports: summary.report_count,
   };
   Object.entries(values).forEach(([id, value]) => {
