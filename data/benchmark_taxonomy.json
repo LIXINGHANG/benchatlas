@@ -211,6 +211,7 @@
     "HealthBench Professional": {"source_domain": "health", "subfield": "health-biology", "evaluation_purpose": "capability", "confidence": 1.0, "reason": "Professional healthcare capability benchmark; placement in a safety report section does not change its primary evaluation purpose"},
     "IFBench": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction-constraint following and out-of-domain generalization"},
     "IFEval": {"source_domain": "language", "subfield": "instruction-following", "confidence": 1.0, "reason": "Verifiable instruction following for length, keywords, format, and structure"},
+    "IMOAnswerBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Olympiad-level mathematical reasoning benchmark with 400 verifiable short-answer problems"},
     "KINA": {"source_domain": "reasoning", "subfield": "knowledge", "confidence": 1.0, "reason": "Knowledge benchmark"},
     "Kimi Code Bench 2.0": {"source_domain": "coding", "subfield": "software-engineering", "confidence": 1.0, "reason": "Internal coding-agent benchmark reported in the Kimi K3 release"},
     "LiveMathematicianBench": {"source_domain": "reasoning", "subfield": "mathematics", "confidence": 1.0, "reason": "Mathematics benchmark"},
