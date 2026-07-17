@@ -133,6 +133,11 @@
     };
     const nodeFootprint=item=>{const expanded=featuredLod.get(item.rank_group_key)!=='field';return {width:expanded?116:202,height:expanded?64:Math.min(154,104+Math.max(0,Math.ceil(mapDisplayName(item).length/18)-2)*14)};};
     const overlaps=(candidate,placed)=>placed.some(entry=>Math.abs(candidate.x-entry.x)<(candidate.width+entry.width)/2&&Math.abs(candidate.y-entry.y)<(candidate.height+entry.height)/2);
+    const overlapArea=(candidate,placed)=>placed.reduce((total,entry)=>{
+      const overlapX=(candidate.width+entry.width)/2-Math.abs(candidate.x-entry.x);
+      const overlapY=(candidate.height+entry.height)/2-Math.abs(candidate.y-entry.y);
+      return total+(overlapX>0&&overlapY>0?overlapX*overlapY:0);
+    },0);
     function positionGlobalNodes(){
       positions.clear();
       const groups = new Map(macroRules.map(r=>[r.id,[]]));
@@ -143,8 +148,12 @@
       ['field','detail','deep'].forEach(lod=>groups.forEach((items,id)=>{
         const rule=macroRules.find(r=>r.id===id);const entries=fieldGroups.get(id).entries;
         entries.forEach((group,groupIndex)=>{const baseAngle=-Math.PI/2+groupIndex*(Math.PI*2/entries.length);const anchor={x:rule.center[0]+Math.cos(baseAngle)*64,y:rule.center[1]+Math.sin(baseAngle)*64};const rawLabel={x:rule.center[0]+Math.cos(baseAngle)*252,y:rule.center[1]+Math.sin(baseAngle)*252};const labelAnchor={x:Math.max(92,Math.min(1708,rawLabel.x)),y:Math.max(24,Math.min(1070,rawLabel.y))};const tierItems=group.items.filter(item=>featuredLod.get(item.rank_group_key)===lod).sort((a,b)=>landmarkCoreScore(b,items)-landmarkCoreScore(a,items));
-          tierItems.forEach((item,index)=>{const coreScore=landmarkCoreScore(item,items);const footprint=nodeFootprint(item);const semanticRadius=224-coreScore*116;const groupOffset=(index-(tierItems.length-1)/2)*.2;const attempts=[0,.14,-.14,.28,-.28,.42,-.42,.56,-.56,.7,-.7,.86,-.86,1.02,-1.02];let candidate;
-            for(const radiusOffset of [0,28,56,84,112,140,180,220]){for(const angleOffset of attempts){const angle=baseAngle+groupOffset+angleOffset;const radius=Math.min(370,semanticRadius+radiusOffset);const x=Math.max(96,Math.min(1704,rule.center[0]+Math.cos(angle)*radius));const y=Math.max(72,Math.min(1028,rule.center[1]+Math.sin(angle)*radius));const next={x,y,...footprint};if(!overlaps(next,globalPlaced)){candidate=next;break;}}if(candidate)break;}
+          tierItems.forEach((item,index)=>{const coreScore=landmarkCoreScore(item,items);const footprint=nodeFootprint(item);const semanticRadius=224-coreScore*116;const groupOffset=(index-(tierItems.length-1)/2)*.2;const attempts=[0,.14,-.14,.28,-.28,.42,-.42,.56,-.56,.7,-.7,.86,-.86,1.02,-1.02,1.2,-1.2,1.4,-1.4];const isLandmark=lod==='field';let candidate;
+            if(isLandmark){
+              const radii=[Math.min(180,semanticRadius),Math.min(180,semanticRadius+24),Math.max(112,semanticRadius-24),180,150,120];
+              for(const radius of radii){for(const angleOffset of attempts){const angle=baseAngle+groupOffset+angleOffset;const next={x:rule.center[0]+Math.cos(angle)*radius,y:rule.center[1]+Math.sin(angle)*radius,...footprint};if(!overlaps(next,globalPlaced)){candidate=next;break;}}if(candidate)break;}
+              if(!candidate){const constrained=[];radii.forEach(radius=>attempts.forEach(angleOffset=>{const angle=baseAngle+groupOffset+angleOffset;constrained.push({x:rule.center[0]+Math.cos(angle)*radius,y:rule.center[1]+Math.sin(angle)*radius,...footprint});}));candidate=constrained.sort((a,b)=>overlapArea(a,globalPlaced)-overlapArea(b,globalPlaced))[0];}
+            }else for(const radiusOffset of [0,28,56,84,112,140,180,220]){for(const angleOffset of attempts){const angle=baseAngle+groupOffset+angleOffset;const radius=Math.min(370,semanticRadius+radiusOffset);const x=Math.max(96,Math.min(1704,rule.center[0]+Math.cos(angle)*radius));const y=Math.max(72,Math.min(1028,rule.center[1]+Math.sin(angle)*radius));const next={x,y,...footprint};if(!overlaps(next,globalPlaced)){candidate=next;break;}}if(candidate)break;}
             if(!candidate){for(let scan=0;scan<48;scan+=1){const angle=baseAngle+scan*Math.PI/24;for(const radius of [150,190,230,270,310,350,390]){const next={x:Math.max(96,Math.min(1704,rule.center[0]+Math.cos(angle)*radius)),y:Math.max(72,Math.min(1028,rule.center[1]+Math.sin(angle)*radius)),...footprint};if(!overlaps(next,globalPlaced)){candidate=next;break;}}if(candidate)break;}}
             if(!candidate){outer:for(let y=72;y<=1028;y+=footprint.height+10){for(let x=96;x<=1704;x+=footprint.width+10){const next={x,y,...footprint};if(!overlaps(next,globalPlaced)){candidate=next;break outer;}}}}
             if(!candidate){const fallbackAngle=baseAngle+(index+1)*.17*(index%2?1:-1);const fallbackRadius=300+(index%3)*34;candidate={x:Math.max(96,Math.min(1704,rule.center[0]+Math.cos(fallbackAngle)*fallbackRadius)),y:Math.max(72,Math.min(1028,rule.center[1]+Math.sin(fallbackAngle)*fallbackRadius)),...footprint};}
