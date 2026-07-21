@@ -418,7 +418,7 @@
       if (state.selected !== previousSelection) updateHash();
     }
 
-    const noun = state.mode === "overall" ? "ranked model" : state.mode === "models" ? "model" : "benchmark group";
+    const noun = state.mode === "overall" ? "ranked model" : state.mode === "models" ? "model" : "benchmark result group";
     el("resultMeta").textContent = `${rows.length} ${noun}${rows.length === 1 ? "" : "s"}`;
     el("benchList").innerHTML = rows.map(item => (
       state.mode === "overall" ? renderOverallListItem(item) : state.mode === "models" ? renderModelListItem(item) : renderBenchmarkListItem(item)
@@ -557,7 +557,7 @@
       t("Compare base models by their best publicly reported configuration within each eligible benchmark and shared protocol group.", "按符合条件的 Benchmark 与共享协议分组，比较基础模型的最佳公开配置。")
     );
     setStat("statModels", "statLabelModels", overallRankings.length, t("eligible models", "符合条件的模型"));
-    setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, t("benchmark groups", "Benchmark 分组"));
+    setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, t("benchmark result groups", "Benchmark 结果分组"));
     setStat("statVendors", "statLabelVendors", vendorCount, t(plural(vendorCount, "vendor"), "厂商"));
     setStat("statReports", "statLabelReports", 5, t("minimum groups", "最低分组数"));
     el("metricLabel").textContent = "RPI · 0–100";
@@ -568,7 +568,7 @@
     el("policyHeading").textContent = t("Methodology", "计算方法");
     el("policyText").textContent = t("For each benchmark, BenchAtlas selects a documented shared-protocol group when available, then keeps the highest-ranked public configuration for each base model. Agent systems, checkpoints, and computational baselines are excluded. Model ranks become 0–100 percentiles, are averaged within each domain, and limited coverage is shrunk toward 50. This is a reported capability ceiling, not a default-product score.", "对每个 Benchmark，BenchAtlas 优先选择有文档记录的共享协议分组，再保留每个基础模型排名最高的公开配置。Agent 系统、checkpoint 和计算 baseline 不参与排名。模型名次转为 0–100 百分位，在领域内取平均，并对覆盖不足的模型向 50 收缩。这代表公开能力上限，不是默认产品体验评分。");
     renderBadges(el("panelBadges"), ["best public config", "base models only", "protocol grouped", "domain balanced"], false);
-    renderBadges(el("contextBadges"), ["≥5 benchmark groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
+    renderBadges(el("contextBadges"), ["≥5 benchmark result groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
   }
@@ -624,9 +624,9 @@
     el("pageTitle").textContent = model.model_name;
     updatePageMetadata(
       t(`${model.model_name} Benchmark Results | BenchAtlas`, `${model.model_name} Benchmark 结果 | BenchAtlas`),
-      t(`${model.model_name} benchmark results from ${model.vendor}: ${benchmarkCount} benchmark groups with source evidence, protocols, and method notes.`, `${model.vendor} 的 ${model.model_name}：${benchmarkCount} 个 Benchmark 分组的公开结果、来源证据、评测协议和运行配置。`)
+      t(`${model.model_name} benchmark results from ${model.vendor}: ${benchmarkCount} benchmark result groups with source evidence, protocols, and method notes.`, `${model.vendor} 的 ${model.model_name}：${benchmarkCount} 个 Benchmark 结果分组的公开结果、来源证据、评测协议和运行配置。`)
     );
-    setStat("statModels", "statLabelModels", benchmarkCount, t(plural(benchmarkCount, "benchmark group"), "Benchmark 分组"));
+    setStat("statModels", "statLabelModels", benchmarkCount, t(plural(benchmarkCount, "benchmark result group"), "Benchmark 结果分组"));
     setStat("statRows", "statLabelRows", rows.length, t(plural(rows.length, "reported row"), "报分记录"));
     setStat("statVendors", "statLabelVendors", reports.size, t(plural(reports.size, "report"), "报告"));
     setStat("statReports", "statLabelReports", domains.size, t(plural(domains.size, "domain"), "领域"));
@@ -636,7 +636,7 @@
     el("summaryHeading").textContent = t("Top domains", "主要领域");
     el("signalsHeading").textContent = t("Source coverage", "来源覆盖");
     el("policyHeading").textContent = t("Interpretation", "解读方式");
-    el("policyText").textContent = t("Ranks are calculated within each benchmark group. Scores from different benchmarks or metrics are not compared with one another. Multiple rows for the same benchmark are preserved when reports or evaluation settings differ.", "排名仅在各自 Benchmark 分组内计算，不会直接比较不同 Benchmark 或 metric 的分数。当来源报告或评测设置不同时，同一 Benchmark 的多条记录会全部保留。");
+    el("policyText").textContent = t("Ranks are calculated within comparable setup groups inside each benchmark result group. Scores from different benchmarks, metrics, or evaluation setups are not directly compared.", "排名只在每个 Benchmark 结果分组内部的可比设置组中计算；不同 Benchmark、metric 或评测设置的分数不会直接比较。");
     renderBadges(el("panelBadges"), badges, true);
     renderBadges(el("contextBadges"), [
       `${reports.size} ${plural(reports.size, "report")}`,
@@ -866,10 +866,10 @@
                 <div class="badges">
                   <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(row.confidence)} ${t("confidence","置信度")}</span>
                 </div>
-                <div class="method-summary">${esc(row.benchmark_count)} Benchmark 分组 · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
+                <div class="method-summary">${esc(row.benchmark_count)} Benchmark 结果分组 · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
               </td>
               <td>
-                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer benchmark groups are available.","当可用 Benchmark 分组较少时，领域平衡分会向 50 收缩。")}</div>
+                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer benchmark result groups are available.","当可用 Benchmark 结果分组较少时，领域平衡分会向 50 收缩。")}</div>
                 <a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${t("Open model details","打开模型详情")}</a>
               </td>
             </tr>
@@ -896,13 +896,16 @@
   }
 
   function init() {
-    el("totalCount").textContent = `${data.summary.result_count} rows`;
-    if (el("headerResults")) el("headerResults").textContent = fmt(data.summary.result_count);
+    el("totalCount").textContent = `${data.summary.reported_result_count || data.summary.result_count} rows`;
+    if (el("headerResults")) el("headerResults").textContent = fmt(data.summary.reported_result_count || data.summary.result_count);
     if (el("headerModels")) el("headerModels").textContent = fmt(data.summary.model_count);
-    if (el("headerBenchmarks")) el("headerBenchmarks").textContent = fmt(data.summary.benchmark_group_count);
+    if (el("headerBenchmarks")) el("headerBenchmarks").textContent = fmt(data.summary.benchmark_family_count);
+    if (el("headerResultsLabel")) el("headerResultsLabel").textContent = t("Reported results", "公开报分");
+    if (el("headerModelsLabel")) el("headerModelsLabel").textContent = t("Base models", "基础模型");
+    if (el("headerBenchmarksLabel")) el("headerBenchmarksLabel").textContent = t("Benchmark families", "Benchmark family");
     if (el("headerReports")) el("headerReports").textContent = `${fmt(data.summary.report_count)} ${plural(data.summary.report_count, "source report")}`;
-    if (el("railCount")) el("railCount").textContent = `${fmt(data.summary.result_count)} rows · ${fmt(data.summary.model_count)} models`;
-    if (el("statusRows")) el("statusRows").textContent = `${fmt(data.summary.result_count)} results`;
+    if (el("railCount")) el("railCount").textContent = `${fmt(data.summary.reported_result_count || data.summary.result_count)} results · ${fmt(data.summary.benchmark_result_group_count || data.summary.benchmark_group_count)} groups`;
+    if (el("statusRows")) el("statusRows").textContent = `${fmt(data.summary.reported_result_count || data.summary.result_count)} results`;
     if (el("statusEntity")) el("statusEntity").textContent = el("pageTitle")?.textContent || "Evidence profile";
     el("benchmarkViewTab").addEventListener("click", () => switchView("benchmarks", benchmarkCatalog[0]?.rank_group_key));
     el("modelViewTab").addEventListener("click", () => switchView("models", defaultModel?.model_name));

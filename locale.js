@@ -20,7 +20,7 @@
     if (!zh) return;
     set(".brandline", "空间化 Benchmark 导航"); set(".identity h1", "Benchmark 全景地图");
     set(".site-context small", "有来源证据的 Benchmark 图谱"); set(".site-context b", "模型、评测协议与原始证据");
-    set(".site-live b", "数据已上线"); set(".site-metric:nth-child(2) small", "结果"); set(".site-metric:nth-child(3) small", "模型"); set(".site-metric:nth-child(4) small", "Benchmark");
+    set(".site-live b", "数据已上线"); set(".site-metric:nth-child(2) small", "公开报分"); set(".site-metric:nth-child(3) small", "基础模型"); set(".site-metric:nth-child(4) small", "Benchmark family");
     const detailSummary = window.BENCHATLAS_DATA?.summary;
     if (detailSummary) {
       set("#headerReports", `${Number(detailSummary.report_count || 0).toLocaleString("zh-CN")} 份来源报告`);
@@ -33,7 +33,7 @@
     const detailToolbarLinks = document.querySelectorAll(".detail-toolbar .toolbar-link");
     ["地图", "数据目录", "矩阵", "排名", "模型档案"].forEach((text, index) => { if (detailToolbarLinks[index]) detailToolbarLinks[index].textContent = text; });
     set(".toolbar-current", "证据目录 · 结果关联原始来源"); set(".detail-status b", "数据已上线");
-    set(".live-state b", "数据已上线"); set(".header-stat:nth-child(1) small", "结果"); set(".header-stat:nth-child(2) small", "模型");
+    set(".live-state b", "数据已上线"); set(".header-stat:nth-child(1) small", "公开报分"); set(".header-stat:nth-child(2) small", "基础模型"); set(".header-stat:nth-child(3) small", "Benchmark family");
     set(".toolbar > .toolbar-label", "视图"); set('[data-mode="map"]', "地图"); set('[data-mode="registry"]', "数据目录"); set('[data-mode="matrix"]', "矩阵"); set('[data-mode="ranking"]', "排名"); set("#shareView", "分享");
     set(".map-legend b", "地图逻辑");
     const legend = document.querySelectorAll(".map-legend span:not(.legend-center):not(.legend-line):not(.legend-dot)");

@@ -1,5 +1,5 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "description": "Canonical BenchAtlas taxonomy. Extraction supplies a provisional source domain; this file resolves one of seven public capability domains, its subfield, evaluation purpose, benchmark type, secondary tags, and map family.",
   "fallback_primary_domain": "reason",
   "primary_domains": [
@@ -295,6 +295,18 @@
       "name_pattern": "^MRCR v2$",
       "representative_rank_group_key": "mrcr_v2_8_needle_128k_average_score",
       "benchmark_family_id": "mrcr-v2"
+    },
+    {
+      "id": "claw-eval",
+      "name_pattern": "^Claw Eval(?: \\[Multimodal\\])?$",
+      "representative_pattern": "^Claw Eval$",
+      "benchmark_family_id": "claw-eval"
+    },
+    {
+      "id": "officeqa-pro",
+      "name_pattern": "^OfficeQA-Pro(?: \\[Multimodal\\])?$",
+      "representative_pattern": "^OfficeQA-Pro$",
+      "benchmark_family_id": "officeqa-pro"
     }
   ]
 }

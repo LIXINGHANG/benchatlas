@@ -147,15 +147,26 @@ for (const model of data.model_catalog) {
     .join("; ");
 }
 
-data.summary.map_benchmark_group_count = new Set(
-  data.benchmark_catalog.filter(item => !item.map_excluded).map(item => item.map_family_id || item.rank_group_key)
+const mapEligibleCatalog = data.benchmark_catalog.filter(item => !item.map_excluded);
+const resultRows = Object.values(data.benchmark_pages).flatMap(page => page.rows || []);
+data.summary.reported_result_count = resultRows.length;
+data.summary.benchmark_result_group_count = data.benchmark_catalog.length;
+data.summary.benchmark_family_count = new Set(
+  mapEligibleCatalog.map(item => item.map_family_id || item.benchmark_family_id || item.rank_group_key)
 ).size;
+data.summary.comparable_setup_group_count = new Set(
+  resultRows.map(row => row.comparability_group_id).filter(Boolean)
+).size;
+data.summary.protocol_record_count = data.summary.protocol_count || data.summary.protocol_record_count || 0;
+data.summary.map_eligible_result_group_count = mapEligibleCatalog.length;
+data.summary.map_benchmark_group_count = mapEligibleCatalog.length;
 data.summary.ranking_benchmark_group_count = new Set(
   data.benchmark_catalog.filter(item => !item.ranking_excluded).map(item => item.benchmark_family_id || item.rank_group_key)
 ).size;
 
 fs.writeFileSync(bundlePath, `window.BENCHATLAS_DATA = ${JSON.stringify(data, null, 2)};\n`, "utf8");
 console.log(
-  `Synced taxonomy v${taxonomy.schema_version} to ${data.benchmark_catalog.length} benchmark groups · `
-  + `${data.summary.map_benchmark_group_count} map families · ${data.summary.ranking_benchmark_group_count} ranking families.`
+  `Synced taxonomy v${taxonomy.schema_version} · ${data.summary.reported_result_count} results · `
+  + `${data.summary.benchmark_family_count} families · ${data.summary.benchmark_result_group_count} result groups · `
+  + `${data.summary.comparable_setup_group_count} comparable setup groups.`
 );

@@ -194,14 +194,14 @@ function main() {
   data.model_catalog.forEach(model => {
     const slug = modelSlugs.byKey.get(model.model_name);
     const url = `${siteUrl}/models/${slug}/`;
-    const description = `${model.model_name} benchmark results from ${model.vendor}: ${model.benchmark_count} benchmark groups with source evidence, protocols, and method notes.`;
+    const description = `${model.model_name} benchmark results from ${model.vendor}: ${model.benchmark_count} benchmark result groups with source evidence, protocols, and method notes.`;
     writePage(path.join("models", slug), renderPage(template, {
       title: `${model.model_name} Benchmark Results | BenchAtlas`,
       description,
       url,
       kicker: model.vendor || "AI model",
       heading: model.model_name,
-      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=provenance-1`,
+      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=hierarchy-1`,
       type: "WebPage",
       lang: "en",
       alternateUrl: `${siteUrl}/zh/models/${slug}/`
@@ -210,11 +210,11 @@ function main() {
     const zhUrl = `${siteUrl}/zh/models/${slug}/`;
     writePage(path.join("zh", "models", slug), renderPage(template, {
       title: `${model.model_name} Benchmark 结果 | BenchAtlas`,
-      description: `${model.vendor} 的 ${model.model_name}：${model.benchmark_count} 个 Benchmark 分组的公开结果、来源证据、评测协议和运行配置。`,
+      description: `${model.vendor} 的 ${model.model_name}：${model.benchmark_count} 个 Benchmark 结果分组的公开结果、来源证据、评测协议和运行配置。`,
       url: zhUrl,
       kicker: model.vendor || "AI 模型",
       heading: model.model_name,
-      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=provenance-1`,
+      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=hierarchy-1`,
       type: "WebPage",
       lang: "zh-CN",
       alternateUrl: url
@@ -233,7 +233,7 @@ function main() {
       url,
       kicker: String(benchmark.domain || "AI benchmark").replace(/_/g, " "),
       heading: `${benchmark.benchmark_name}${variant}`,
-      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=provenance-1`,
+      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=hierarchy-1`,
       type: "WebPage",
       lang: "en",
       alternateUrl: `${siteUrl}/zh/benchmarks/${slug}/`
@@ -246,7 +246,7 @@ function main() {
       url: zhUrl,
       kicker: String(benchmark.domain || "AI benchmark").replace(/_/g, " "),
       heading: `${benchmark.benchmark_name}${variant}`,
-      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=provenance-1`,
+      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=hierarchy-1`,
       type: "WebPage",
       lang: "zh-CN",
       alternateUrl: url
