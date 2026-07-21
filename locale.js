@@ -1,9 +1,79 @@
 (() => {
   const zh = document.documentElement.lang.toLowerCase().startsWith("zh");
   const t = (english, chinese) => zh ? chinese : english;
+  const zhLabels = {
+    "high confidence": "高置信度",
+    "medium confidence": "中置信度",
+    "limited confidence": "有限置信度",
+    "high": "高",
+    "medium": "中",
+    "limited": "有限",
+    "best public config": "最佳公开配置",
+    "base models only": "仅基础模型",
+    "protocol grouped": "按可比组区分",
+    "protocol aware": "区分评测配置",
+    "protocol details sparse": "评测配置说明较少",
+    "domain balanced": "领域平衡",
+    "shared protocol": "共享评测配置",
+    "source scoped": "来源限定",
+    "agent harness": "Agent 框架",
+    "model judge": "模型评审",
+    "restricted env": "受限环境",
+    "long context": "长上下文",
+    "multi-run": "多次运行",
+    "public leaderboard": "公开排行榜",
+    "internal": "内部评测",
+    "tools": "工具调用",
+    "safety layer": "安全评测",
+    "standard": "标准配置",
+    "standard configuration": "标准配置",
+    "model": "模型",
+    "reference": "参考项",
+    "baseline": "基线",
+    "checkpoint": "Checkpoint",
+    "agent system": "Agent 系统",
+    "reasoning": "推理",
+    "math": "数学",
+    "science": "科学",
+    "research": "科研",
+    "coding": "编程",
+    "agent": "智能体",
+    "computer use": "计算机操作",
+    "language": "语言",
+    "multilingual": "多语言",
+    "multimodal": "多模态",
+    "vision": "视觉",
+    "video": "视频",
+    "document": "文档",
+    "health": "医疗健康",
+    "professional": "专业任务",
+    "expert tasks": "专家任务",
+    "cybersecurity": "网络安全",
+    "security": "安全",
+    "safety": "安全与对齐",
+    "general capability": "综合能力",
+    "self improvement": "自我改进",
+    "business simulation": "商业模拟",
+    "healthcare agent": "医疗智能体",
+    "agent safety": "智能体安全",
+    "bio safety": "生物安全",
+    "computer use safety": "计算机操作安全",
+    "cyber safety": "网络安全",
+    "health safety": "医疗安全",
+    "safety bias": "公平性与偏见",
+    "vision safety": "视觉安全"
+  };
+  const label = value => {
+    const text = String(value ?? "");
+    if (!zh || !text) return text;
+    return text.split(";").map(part => {
+      const trimmed = part.trim();
+      return zhLabels[trimmed.toLowerCase()] || trimmed;
+    }).join("；");
+  };
   const route = pathname => zh ? `/zh${pathname === "/" ? "/" : pathname}` : pathname;
   const counterpart = pathname => zh ? (pathname.replace(/^\/zh(?=\/|$)/, "") || "/") : `/zh${pathname === "/" ? "/" : pathname}`;
-  window.BENCHATLAS_I18N = { zh, t, route, counterpart };
+  window.BENCHATLAS_I18N = { zh, t, label, route, counterpart };
 
   const set = (selector, text) => { const node = document.querySelector(selector); if (node) node.textContent = text; };
   const attr = (selector, name, value) => { const node = document.querySelector(selector); if (node) node.setAttribute(name, value); };
@@ -24,9 +94,11 @@
     const detailSummary = window.BENCHATLAS_DATA?.summary;
     if (detailSummary) {
       set("#headerReports", `${Number(detailSummary.report_count || 0).toLocaleString("zh-CN")} 份来源报告`);
-      set("#totalCount", `${Number(detailSummary.result_count || 0).toLocaleString("zh-CN")} 条记录`);
-      set("#railCount", `${Number(detailSummary.result_count || 0).toLocaleString("zh-CN")} 条记录 · ${Number(detailSummary.model_count || 0).toLocaleString("zh-CN")} 个模型`);
-      set("#statusRows", `${Number(detailSummary.result_count || 0).toLocaleString("zh-CN")} 条结果`);
+      const resultCount = Number(detailSummary.reported_result_count || detailSummary.result_count || 0).toLocaleString("zh-CN");
+      const groupCount = Number(detailSummary.benchmark_result_group_count || detailSummary.benchmark_group_count || 0).toLocaleString("zh-CN");
+      set("#totalCount", `${resultCount} 条报分`);
+      set("#railCount", `${resultCount} 条报分 · ${groupCount} 个结果分组`);
+      set("#statusRows", `${resultCount} 条报分`);
     }
     set('.site-header .header-link[href="/"]', "地图"); set('.site-header .header-link[href="/guide/"]', "使用指南");
     set(".detail-toolbar .toolbar-label", "视图");
@@ -49,7 +121,8 @@
     set(".inspector .section:nth-of-type(2) h3", "运行配置说明"); set('label[for="variantSelect"]', "报分来源与协议");
     set(".inspector .section:nth-of-type(3) h3", "原始证据"); set("#sourceLink", "打开原始来源 ↗"); set("#benchmarkLink", "打开完整 Benchmark 页面 →");
     attr("#search", "placeholder", "搜索 Benchmark 或模型"); attr("#search", "aria-label", "搜索 Benchmark 或模型"); attr("#closeInspector", "aria-label", "关闭详情");
-    set(".brand h1", "数据目录"); set(".brand .subtitle", "浏览 Benchmark 与模型证据"); set("#modelViewTab", "模型"); set("#overallViewTab", "整体排名");
+    set(".brand h1", "数据目录"); set(".brand .subtitle", "浏览 Benchmark 与模型证据"); set("#benchmarkViewTab", "Benchmark"); set("#modelViewTab", "模型"); set("#overallViewTab", "整体排名");
+    attr(".view-switch", "aria-label", "浏览维度");
     set("#rankingTitle", "公开排名"); set("#rankingNote", "页面保留不同协议变体，不将它们强制归一化为同一排行榜。");
     set(".detail-panel .panel-title", "背景信息"); set("#summaryHeading", "最佳公开结果"); set("#signalsHeading", "协议标签"); set("#policyHeading", "证据规则");
     set("#policyText", "每条分数都保留原始报告、证据位置和评测说明。标记为 protocol variant 的记录可能使用不同 harness 或配置，应视为公开报分，而非严格归一化排行榜。");
@@ -58,7 +131,6 @@
     const domainGroups = document.querySelectorAll('#domainSelect optgroup'); if (domainGroups[0]) domainGroups[0].label = "能力领域"; if (domainGroups[1]) domainGroups[1].label = "跨领域视图";
     const modelAll = document.querySelector('#modelSelect option[value=""]'); if (modelAll) modelAll.textContent = "全部模型";
     set("#statLabelModels", "模型"); set("#statLabelRows", "报分记录"); set("#statLabelVendors", "厂商"); set("#statLabelReports", "报告");
-    const sortOptions = document.querySelectorAll("#sortMode option"); ["按覆盖排序", "按名称排序", "按报告排序"].forEach((text, i) => { if (sortOptions[i]) sortOptions[i].textContent = text; });
     document.querySelectorAll('a[href^="/"]').forEach(link => {
       if (!link.hasAttribute("data-locale-switch") && !link.getAttribute("href").startsWith("/zh/")) link.href = route(link.getAttribute("href"));
     });

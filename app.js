@@ -1,7 +1,8 @@
 (() => {
   const data = window.BENCHATLAS_DATA;
-  const i18n = window.BENCHATLAS_I18N || {zh:false,t:(english)=>english,route:path=>path};
+  const i18n = window.BENCHATLAS_I18N || {zh:false,t:(english)=>english,label:value=>value,route:path=>path};
   const t = i18n.t;
+  const uiLabel = i18n.label || (value => value);
   const localRoute = i18n.route;
   const isScoped = Boolean(data.scope && data.scope !== "full");
   const benchmarkCatalog = data.benchmark_catalog;
@@ -290,6 +291,10 @@
     el("benchmarkViewTab").setAttribute("aria-selected", String(!isModels && !isOverall));
     el("modelViewTab").setAttribute("aria-selected", String(isModels));
     el("overallViewTab").setAttribute("aria-selected", String(isOverall));
+    document.querySelector(".view-switch")?.setAttribute("aria-label", t("Explore by", "浏览维度"));
+    el("benchmarkViewTab").textContent = "Benchmark";
+    el("modelViewTab").textContent = t("Models", "模型");
+    el("overallViewTab").textContent = t("Overall ranking", "整体排名");
 
     el("search").placeholder = isOverall
       ? t("Search ranked model or vendor", "搜索排名模型或厂商")
@@ -301,7 +306,7 @@
     if (isModels || isOverall) {
       const vendorSource = isOverall ? overallRankings : modelCatalog;
       const vendors = ["all", ...Array.from(new Set(vendorSource.map(item => item.vendor))).sort()];
-      el("domainFilter").setAttribute("aria-label", "Vendor filter");
+      el("domainFilter").setAttribute("aria-label", t("Vendor filter", "厂商筛选"));
       el("domainFilter").innerHTML = vendors.map(vendor => (
         `<option value="${esc(vendor)}">${vendor === "all" ? t("All vendors", "全部厂商") : esc(vendor)}</option>`
       )).join("");
@@ -317,9 +322,9 @@
         `;
     } else {
       const domains = ["all", ...Array.from(new Set(benchmarkCatalog.map(item => item.domain))).sort()];
-      el("domainFilter").setAttribute("aria-label", "Domain filter");
+      el("domainFilter").setAttribute("aria-label", t("Domain filter", "领域筛选"));
       el("domainFilter").innerHTML = domains.map(domain => (
-        `<option value="${esc(domain)}">${domain === "all" ? t("All domains", "全部领域") : esc(humanize(domain))}</option>`
+        `<option value="${esc(domain)}">${domain === "all" ? t("All domains", "全部领域") : esc(uiLabel(humanize(domain)))}</option>`
       )).join("");
       el("sortMode").innerHTML = `
         <option value="coverage">${t("Sort by coverage", "按覆盖排序")}</option>
@@ -329,6 +334,7 @@
     }
     el("domainFilter").value = state.filter;
     el("sortMode").value = state.sort;
+    el("sortMode").setAttribute("aria-label", t("Sort mode", "排序方式"));
   }
 
   function switchView(mode, key, writeHash = true) {
@@ -418,11 +424,11 @@
       if (state.selected !== previousSelection) updateHash();
     }
 
-    const noun = state.mode === "overall" ? "ranked model" : state.mode === "models" ? "model" : "benchmark result group";
-    el("resultMeta").textContent = `${rows.length} ${noun}${rows.length === 1 ? "" : "s"}`;
+    const noun = state.mode === "overall" ? t(plural(rows.length, "ranked model"), "个排名模型") : state.mode === "models" ? t(plural(rows.length, "model"), "个模型") : t(plural(rows.length, "benchmark result group"), "个 Benchmark 结果分组");
+    el("resultMeta").textContent = `${rows.length} ${noun}`;
     el("benchList").innerHTML = rows.map(item => (
       state.mode === "overall" ? renderOverallListItem(item) : state.mode === "models" ? renderModelListItem(item) : renderBenchmarkListItem(item)
-    )).join("") || `<div class="empty">No matching ${state.mode === "benchmarks" ? "benchmarks" : "models"}.</div>`;
+    )).join("") || `<div class="empty">${t(`No matching ${state.mode === "benchmarks" ? "benchmarks" : "models"}.`, state.mode === "benchmarks" ? "没有匹配的 Benchmark。" : "没有匹配的模型。")}</div>`;
 
     el("benchList").querySelectorAll("button[data-key]").forEach(button => {
       button.addEventListener("click", () => {
@@ -447,8 +453,8 @@
         <span>
           <span class="bench-name">${esc(item.benchmark_name)}</span>
           <span class="bench-meta">
-            <span>${esc(humanize(item.domain))}</span>
-            <span>${esc(item.model_count)} models</span>
+            <span>${esc(uiLabel(humanize(item.domain)))}</span>
+            <span>${esc(item.model_count)} ${t(plural(item.model_count, "model"), "个模型")}</span>
             <span>${esc(item.metric_name)}</span>
           </span>
         </span>
@@ -464,11 +470,11 @@
           <span class="bench-name">${esc(item.model_name)}</span>
           <span class="bench-meta">
             <span>${esc(item.vendor)}</span>
-            <span>${esc(item.benchmark_count)} ${plural(item.benchmark_count, "benchmark")}</span>
-            <span>${esc(item.report_count)} ${plural(item.report_count, "report")}</span>
+            <span>${esc(item.benchmark_count)} ${t(plural(item.benchmark_count, "benchmark result group"), "个 Benchmark 结果分组")}</span>
+            <span>${esc(item.report_count)} ${t(plural(item.report_count, "report"), "份报告")}</span>
           </span>
         </span>
-        <span class="bench-score">${esc(modelDisplayRowCount(item.model_name))} rows</span>
+        <span class="bench-score">${esc(modelDisplayRowCount(item.model_name))} ${t("rows", "条报分")}</span>
       </button>
     `;
   }
@@ -481,9 +487,9 @@
           <span class="bench-name">${esc(item.model_name)}</span>
           <span class="bench-meta">
             <span>${esc(item.vendor)}</span>
-            <span>${esc(item.benchmark_count)} groups</span>
-            <span>${esc(item.domain_count)} domains</span>
-            <span>${esc(humanize(item.confidence))} confidence</span>
+            <span>${esc(item.benchmark_count)} ${t("result groups", "个结果分组")}</span>
+            <span>${esc(item.domain_count)} ${t("domains", "个领域")}</span>
+            <span>${esc(uiLabel(`${item.confidence} confidence`))}</span>
           </span>
         </span>
         <span class="bench-score">${esc(item.index_score)}</span>
@@ -494,8 +500,8 @@
   function renderBadges(target, badges, includeWarning = false) {
     const all = includeWarning ? ["protocol aware", ...badges] : badges;
     target.innerHTML = all.length
-      ? all.map((badge, index) => `<span class="badge ${index === 0 && includeWarning ? "warn" : ""}">${esc(badge)}</span>`).join("")
-      : `<span class="badge warn">protocol details sparse</span>`;
+      ? all.map((badge, index) => `<span class="badge ${index === 0 && includeWarning ? "warn" : ""}">${esc(uiLabel(badge))}</span>`).join("")
+      : `<span class="badge warn">${esc(uiLabel("protocol details sparse"))}</span>`;
   }
 
   function setStat(id, labelId, value, label) {
@@ -568,7 +574,7 @@
     el("policyHeading").textContent = t("Methodology", "计算方法");
     el("policyText").textContent = t("For each benchmark, BenchAtlas selects a documented shared-protocol group when available, then keeps the highest-ranked public configuration for each base model. Agent systems, checkpoints, and computational baselines are excluded. Model ranks become 0–100 percentiles, are averaged within each domain, and limited coverage is shrunk toward 50. This is a reported capability ceiling, not a default-product score.", "对每个 Benchmark，BenchAtlas 优先选择有文档记录的共享协议分组，再保留每个基础模型排名最高的公开配置。Agent 系统、checkpoint 和计算 baseline 不参与排名。模型名次转为 0–100 百分位，在领域内取平均，并对覆盖不足的模型向 50 收缩。这代表公开能力上限，不是默认产品体验评分。");
     renderBadges(el("panelBadges"), ["best public config", "base models only", "protocol grouped", "domain balanced"], false);
-    renderBadges(el("contextBadges"), ["≥5 benchmark result groups", "≥2 domains", "≥3 models/group", "≥2 vendors/group"], false);
+    renderBadges(el("contextBadges"), [t("≥5 benchmark result groups", "≥5 个 Benchmark 结果分组"), t("≥2 domains", "≥2 个领域"), t("≥3 models/group", "每组 ≥3 个模型"), t("≥2 vendors/group", "每组 ≥2 个厂商")], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
   }
@@ -580,7 +586,7 @@
     const comparableRows = preferredComparisonRows(page.rows);
     const referenceRows = comparisonGroup ? comparisonGroup.rows.filter(row => !isRankingEligible(row)) : [];
     const variant = page.benchmark_variant ? ` <span class="variant">${esc(page.benchmark_variant)}</span>` : "";
-    el("domainLabel").textContent = humanize(page.domain || "benchmark");
+    el("domainLabel").textContent = uiLabel(humanize(page.domain || "benchmark"));
     el("pageTitle").innerHTML = `${esc(page.benchmark_name)}${variant}`;
     updatePageMetadata(
       t(`${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} Results | BenchAtlas`, `${page.benchmark_name}${page.benchmark_variant ? ` (${page.benchmark_variant})` : ""} 结果 | BenchAtlas`),
@@ -630,7 +636,7 @@
     setStat("statRows", "statLabelRows", rows.length, t(plural(rows.length, "reported row"), "报分记录"));
     setStat("statVendors", "statLabelVendors", reports.size, t(plural(reports.size, "report"), "报告"));
     setStat("statReports", "statLabelReports", domains.size, t(plural(domains.size, "domain"), "领域"));
-    el("metricLabel").textContent = `${benchmarkCount} ${plural(benchmarkCount, "benchmark")} · ${reports.size} ${plural(reports.size, "report")}`;
+    el("metricLabel").textContent = `${benchmarkCount} ${t(plural(benchmarkCount, "benchmark result group"), "个 Benchmark 结果分组")} · ${reports.size} ${t(plural(reports.size, "report"), "份报告")}`;
     el("rankingTitle").textContent = t("Reported benchmark results", "公开 Benchmark 结果");
     el("rankingNote").textContent = t("Each row keeps its benchmark-specific rank, protocol, and source evidence.", "每条记录保留其 Benchmark 内排名、评测协议和来源证据。");
     el("summaryHeading").textContent = t("Top domains", "主要领域");
@@ -669,7 +675,7 @@
     el("topModels").innerHTML = rows.map(([domain, count]) => `
       <div class="mini-item">
         <b>${count}</b>
-        <span>${esc(humanize(domain))}</span>
+        <span>${esc(uiLabel(humanize(domain)))}</span>
         <em>${Math.round((count / Math.max(total, 1)) * 100)}%</em>
       </div>
     `).join("");
@@ -682,7 +688,7 @@
         <span>${esc(row.model_name)}</span>
         <em>${esc(row.index_score)}</em>
       </div>
-    `).join("") || `<div class="empty">No eligible models match these filters.</div>`;
+    `).join("") || `<div class="empty">${t("No eligible models match these filters.", "没有符合当前筛选条件的模型。")}</div>`;
   }
 
   function sourceReports(row) {
@@ -723,15 +729,15 @@
     }).join("");
     return `
       <div class="badges">
-        ${row.model_configuration ? `<span class="badge">${esc(row.model_configuration)}</span>` : ""}
-        ${!isRankingEligible(row) ? `<span class="badge warn">${esc(humanize(row.entity_type || "reference"))}</span>` : ""}
-        <span class="badge ${row.comparability_status === "strict" ? "" : "warn"}">${esc(comparisonLabel)}</span>
-        ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(badge)}</span>`).join("")}
+        ${row.model_configuration ? `<span class="badge">${esc(uiLabel(row.model_configuration))}</span>` : ""}
+        ${!isRankingEligible(row) ? `<span class="badge warn">${esc(uiLabel(humanize(row.entity_type || "reference")))}</span>` : ""}
+        <span class="badge ${row.comparability_status === "strict" ? "" : "warn"}">${esc(uiLabel(comparisonLabel))}</span>
+        ${(row.protocol_badges || []).map(badge => `<span class="badge">${esc(uiLabel(badge))}</span>`).join("")}
       </div>
-      ${!methodSections && row.protocol_short ? `<div class="method-summary"><b>Method notes:</b> ${esc(row.protocol_short)}</div>` : ""}
+      ${!methodSections && row.protocol_short ? `<div class="method-summary"><b>${t("Method notes", "运行配置说明")}:</b> ${esc(row.protocol_short)}</div>` : ""}
       ${methodSections || row.protocol_full ? `
         <details class="method-note">
-          <summary>Show structured method notes</summary>
+          <summary>${t("Show structured method notes", "展开结构化运行配置")}</summary>
           <div>${methodSections || esc(row.protocol_full)}</div>
         </details>
       ` : ""}
@@ -790,7 +796,7 @@
               <td class="rank">#${esc(row.comparable_rank)}</td>
               <td>
                 <div class="model"><a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${esc(row.model_name)}</a></div>
-                <div class="vendor">${esc(row.vendor)} · ${esc(row.model_configuration || "Standard configuration")}</div>
+                <div class="vendor">${esc(row.vendor)} · ${esc(uiLabel(row.model_configuration || t("Standard configuration", "标准配置")))}</div>
               </td>
               <td><div class="score">${scoreCell(row)}</div></td>
               <td>${protocolCell(row)}</td>
@@ -829,7 +835,7 @@
               <td class="rank">#${esc(row.rank)}</td>
               <td>
                 <div class="model"><a class="entity-link benchmark-jump" href="${esc(benchmarkPath(row.benchmark_key))}" data-benchmark="${esc(row.benchmark_key)}">${esc(row.benchmark_name)}</a></div>
-                <div class="vendor">${esc(humanize(row.domain))}${row.benchmark_variant ? ` · ${esc(row.benchmark_variant)}` : ""}<br>${esc(row.metric_name)} · ${esc(row.model_configuration || "Standard configuration")}</div>
+                <div class="vendor">${esc(uiLabel(humanize(row.domain)))}${row.benchmark_variant ? ` · ${esc(row.benchmark_variant)}` : ""}<br>${esc(row.metric_name)} · ${esc(uiLabel(row.model_configuration || t("Standard configuration", "标准配置")))}</div>
               </td>
               <td><div class="score">${scoreCell(row)}</div></td>
               <td>${protocolCell(row)}</td>
@@ -864,9 +870,9 @@
               </td>
               <td>
                 <div class="badges">
-                  <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(row.confidence)} ${t("confidence","置信度")}</span>
+                  <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(uiLabel(`${row.confidence} confidence`))}</span>
                 </div>
-                <div class="method-summary">${esc(row.benchmark_count)} Benchmark 结果分组 · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
+                <div class="method-summary">${esc(row.benchmark_count)} ${t("Benchmark result groups", "个 Benchmark 结果分组")} · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
               </td>
               <td>
                 <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer benchmark result groups are available.","当可用 Benchmark 结果分组较少时，领域平衡分会向 50 收缩。")}</div>
@@ -896,17 +902,17 @@
   }
 
   function init() {
-    el("totalCount").textContent = `${data.summary.reported_result_count || data.summary.result_count} rows`;
+    el("totalCount").textContent = `${data.summary.reported_result_count || data.summary.result_count} ${t("rows", "条报分")}`;
     if (el("headerResults")) el("headerResults").textContent = fmt(data.summary.reported_result_count || data.summary.result_count);
     if (el("headerModels")) el("headerModels").textContent = fmt(data.summary.model_count);
     if (el("headerBenchmarks")) el("headerBenchmarks").textContent = fmt(data.summary.benchmark_family_count);
     if (el("headerResultsLabel")) el("headerResultsLabel").textContent = t("Reported results", "公开报分");
     if (el("headerModelsLabel")) el("headerModelsLabel").textContent = t("Base models", "基础模型");
     if (el("headerBenchmarksLabel")) el("headerBenchmarksLabel").textContent = t("Benchmark families", "Benchmark family");
-    if (el("headerReports")) el("headerReports").textContent = `${fmt(data.summary.report_count)} ${plural(data.summary.report_count, "source report")}`;
-    if (el("railCount")) el("railCount").textContent = `${fmt(data.summary.reported_result_count || data.summary.result_count)} results · ${fmt(data.summary.benchmark_result_group_count || data.summary.benchmark_group_count)} groups`;
-    if (el("statusRows")) el("statusRows").textContent = `${fmt(data.summary.reported_result_count || data.summary.result_count)} results`;
-    if (el("statusEntity")) el("statusEntity").textContent = el("pageTitle")?.textContent || "Evidence profile";
+    if (el("headerReports")) el("headerReports").textContent = `${fmt(data.summary.report_count)} ${t(plural(data.summary.report_count, "source report"), "份来源报告")}`;
+    if (el("railCount")) el("railCount").textContent = `${fmt(data.summary.reported_result_count || data.summary.result_count)} ${t("results", "条报分")} · ${fmt(data.summary.benchmark_result_group_count || data.summary.benchmark_group_count)} ${t("groups", "个结果分组")}`;
+    if (el("statusRows")) el("statusRows").textContent = `${fmt(data.summary.reported_result_count || data.summary.result_count)} ${t("results", "条报分")}`;
+    if (el("statusEntity")) el("statusEntity").textContent = el("pageTitle")?.textContent || t("Evidence profile", "证据档案");
     el("benchmarkViewTab").addEventListener("click", () => switchView("benchmarks", benchmarkCatalog[0]?.rank_group_key));
     el("modelViewTab").addEventListener("click", () => switchView("models", defaultModel?.model_name));
     el("overallViewTab").addEventListener("click", () => switchView("overall", "overall"));
