@@ -685,10 +685,25 @@
     `).join("") || `<div class="empty">No eligible models match these filters.</div>`;
   }
 
-  function renderSourceLinks(sourceUrls) {
-    const urls = String(sourceUrls || "").split("; ").filter(Boolean);
-    return urls.map((url, index) => (
-      `<a href="${esc(url)}" target="_blank" rel="noreferrer">Open source${urls.length > 1 ? ` ${index + 1}` : ""} ↗</a>`
+  function sourceReports(row) {
+    if (Array.isArray(row.source_reports) && row.source_reports.length) return row.source_reports;
+    const ids = String(row.source_report_id || "").split("; ").filter(Boolean);
+    const titles = String(row.source_report_title || "").split("; ").filter(Boolean);
+    const publishers = String(row.source_publisher || "").split("; ").filter(Boolean);
+    const urls = String(row.source_url || "").split("; ").filter(Boolean);
+    const count = Math.max(ids.length, titles.length, urls.length, 1);
+    return Array.from({ length: count }, (_, index) => ({
+      report_id: ids[index] || ids[0] || "",
+      report_title: titles[index] || titles[0] || ids[index] || ids[0] || t("Reported source", "报分来源"),
+      source_publisher: publishers[index] || publishers[0] || t("Unknown publisher", "发布方未知"),
+      source_url: urls[index] || urls[0] || "",
+    }));
+  }
+
+  function renderSourceLinks(reports) {
+    const linked = reports.filter(report => report.source_url);
+    return linked.map((report, index) => (
+      `<a href="${esc(report.source_url)}" target="_blank" rel="noreferrer">${esc(t("Primary source", "原始来源"))}${linked.length > 1 ? ` ${index + 1}` : ""} ↗</a>`
     )).join("");
   }
 
@@ -724,16 +739,25 @@
   }
 
   function sourceCell(row) {
+    const reports = sourceReports(row);
+    const reportTitles = [...new Set(reports.map(report => report.report_title).filter(Boolean))];
+    const publishers = [...new Set(reports.map(report => report.source_publisher).filter(Boolean))];
+    const comparisonLabel = row.comparability_status === "strict"
+      ? t("shared comparison setup", "共享可比配置")
+      : t("source-scoped setup", "来源限定配置");
     return `
       <div class="source">
-        <div><b>Reported by:</b> ${esc(row.vendor)} · ${esc(row.comparability_status === "strict" ? "shared protocol" : "source scoped")}</div>
-        ${row.reported_model_name && row.reported_model_name !== row.model_name ? `<div><b>Reported entity:</b> ${esc(row.reported_model_name)}</div>` : ""}
-        ${row.source_url ? `<div class="source-links">${renderSourceLinks(row.source_url)}</div>` : ""}
+        <div><b>${esc(t("Model vendor", "模型厂商"))}:</b> ${esc(row.vendor)}</div>
+        <div><b>${esc(t("Score reported in", "报分报告"))}:</b> ${esc(reportTitles.join("; "))}</div>
+        <div><b>${esc(t("Source publisher", "报告发布方"))}:</b> ${esc(publishers.join("; "))}</div>
+        <div><b>${esc(t("Comparison status", "可比状态"))}:</b> ${esc(comparisonLabel)}</div>
+        ${row.reported_model_name && row.reported_model_name !== row.model_name ? `<div><b>${esc(t("Reported entity", "报告中的实体"))}:</b> ${esc(row.reported_model_name)}</div>` : ""}
+        ${reports.some(report => report.source_url) ? `<div class="source-links">${renderSourceLinks(reports)}</div>` : ""}
         <div>${esc(row.evidence_location)}</div>
         <details class="evidence-note">
-          <summary>Evidence details</summary>
-          <div><b>Report:</b> ${esc(row.source_report_id)}</div>
-          ${row.evidence_quote ? `<div><b>Quote:</b> ${esc(row.evidence_quote)}</div>` : ""}
+          <summary>${esc(t("Evidence details", "证据详情"))}</summary>
+          <div><b>${esc(t("Report ID", "报告 ID"))}:</b> ${esc(row.source_report_id)}</div>
+          ${row.evidence_quote ? `<div><b>${esc(t("Quote", "摘录"))}:</b> ${esc(row.evidence_quote)}</div>` : ""}
         </details>
       </div>
     `;

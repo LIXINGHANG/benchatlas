@@ -29,7 +29,10 @@ function normalizedPublisher(value) {
 }
 
 function isFirstPartyRow(row) {
-  return normalizedPublisher(row.vendor) === normalizedPublisher(`${row.source_url || ""} ${row.source_report_id || ""}`);
+  const publishers = Array.isArray(row.source_reports)
+    ? row.source_reports.map(report => report.source_publisher)
+    : String(row.source_publisher || "").split("; ");
+  return publishers.some(publisher => normalizedPublisher(row.vendor) === normalizedPublisher(publisher));
 }
 
 function isRankingEligible(row) {
@@ -79,6 +82,7 @@ const indexPayload = {
   summary: data.summary,
   taxonomy: data.taxonomy,
   model_catalog: data.model_catalog,
+  report_catalog: data.report_catalog || [],
   benchmark_catalog: catalog,
 };
 
