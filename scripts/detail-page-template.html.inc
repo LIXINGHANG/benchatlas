@@ -1087,9 +1087,9 @@
   </footer>
   </div>
 
-  <script src="/site_data.index.bundle.js?v=entities-1"></script>
+  <script src="/site_data.index.bundle.js?v=provenance-1"></script>
   <script src="__DATA_BUNDLE__"></script>
   <script src="/locale.js?v=locale-4"></script>
-  <script src="/app.js?v=detail-shell-3"></script>
+  <script src="/app.js?v=detail-shell-4"></script>
 </body>
 </html>

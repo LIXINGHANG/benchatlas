@@ -201,7 +201,7 @@ function main() {
       url,
       kicker: model.vendor || "AI model",
       heading: model.model_name,
-      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=entities-1`,
+      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=provenance-1`,
       type: "WebPage",
       lang: "en",
       alternateUrl: `${siteUrl}/zh/models/${slug}/`
@@ -214,7 +214,7 @@ function main() {
       url: zhUrl,
       kicker: model.vendor || "AI 模型",
       heading: model.model_name,
-      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=entities-1`,
+      dataBundle: `/data/pages/models/${model.model_id}.bundle.js?v=provenance-1`,
       type: "WebPage",
       lang: "zh-CN",
       alternateUrl: url
@@ -233,7 +233,7 @@ function main() {
       url,
       kicker: String(benchmark.domain || "AI benchmark").replace(/_/g, " "),
       heading: `${benchmark.benchmark_name}${variant}`,
-      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=entities-1`,
+      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=provenance-1`,
       type: "WebPage",
       lang: "en",
       alternateUrl: `${siteUrl}/zh/benchmarks/${slug}/`
@@ -246,7 +246,7 @@ function main() {
       url: zhUrl,
       kicker: String(benchmark.domain || "AI benchmark").replace(/_/g, " "),
       heading: `${benchmark.benchmark_name}${variant}`,
-      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=entities-1`,
+      dataBundle: `/data/pages/benchmarks/${benchmark.rank_group_key}.bundle.js?v=provenance-1`,
       type: "WebPage",
       lang: "zh-CN",
       alternateUrl: url
