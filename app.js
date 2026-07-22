@@ -208,10 +208,7 @@
       });
       if (familyRows.length < 5 || domainScores.size < 2) return;
 
-      const domainMeans = Array.from(domainScores.values()).map(values => (
-        values.reduce((sum, value) => sum + value, 0) / values.length
-      ));
-      const rawScore = domainMeans.reduce((sum, value) => sum + value, 0) / domainMeans.length;
+      const rawScore = familyRows.reduce((sum, row) => sum + row.percentile, 0) / familyRows.length;
       const coverageWeight = familyRows.length / (familyRows.length + 10);
       const indexScore = 50 + (rawScore - 50) * coverageWeight;
       const model = modelByName.get(modelName);
@@ -591,7 +588,7 @@
     el("pageTitle").textContent = t("Overall Base-Model Ranking", "基础模型整体排名");
     updatePageMetadata(
       t("Overall AI Model Ranking | BenchAtlas", "AI 模型整体排名 | BenchAtlas"),
-      t("Compare base models by their average normalized rank across eligible public leaderboards, balanced across capability fields and adjusted for coverage.", "按模型在有效公开榜单中的平均归一化名次比较，并对能力领域和覆盖数量进行校正。")
+      t("Compare base models by their average normalized rank across eligible public leaderboards, deduplicated by Benchmark family and adjusted for coverage.", "按模型在有效公开榜单中的平均归一化名次比较，并按 Benchmark family 去重和覆盖数量校正。")
     );
     setStat("statModels", "statLabelModels", overallRankings.length, t("eligible models", "符合条件的模型"));
     setStat("statRows", "statLabelRows", overallData.benchmarkFamilyCount || overallData.benchmarkGroupCount, t("eligible benchmark families", "有效 Benchmark family"));
@@ -603,8 +600,8 @@
     el("summaryHeading").textContent = t("Leaders", "领先模型");
     el("signalsHeading").textContent = t("Eligibility", "纳入规则");
     el("policyHeading").textContent = t("Methodology", "计算方法");
-    el("policyText").textContent = t("Every eligible comparison group contributes a 0–100 normalized rank percentile. Multiple appearances within the same Benchmark family are averaged, the seven capability fields are weighted equally, and limited family coverage is shrunk toward 50. Independent report count and field coverage determine confidence. Agent systems, checkpoints, baselines, and composite indexes are excluded.", "每个有效可比组都会贡献一个 0–100 的归一化排名百分位。同一 Benchmark family 的多次出现先取平均，七个能力领域等权，再按 family 覆盖数量向 50 收缩。独立报告数和领域覆盖决定置信度。Agent system、checkpoint、baseline 和综合指数不参与总榜。");
-    renderBadges(el("panelBadges"), ["all eligible groups", "family deduplicated", "domain balanced", "coverage adjusted"], false);
+    el("policyText").textContent = t("Every eligible comparison group contributes a 0–100 normalized rank percentile. Multiple appearances within the same Benchmark family are averaged, then all observed Benchmark-family scores are averaged directly. Limited family coverage is shrunk toward 50. Independent report count and field coverage determine confidence. Agent systems, checkpoints, baselines, and composite indexes are excluded.", "每个有效可比组都会贡献一个 0–100 的归一化排名百分位。同一 Benchmark family 的多次出现先取平均，然后直接平均该模型全部已观察到的 Benchmark family 分数。family 覆盖较少时向 50 收缩。独立报告数和领域覆盖决定置信度。Agent system、checkpoint、baseline 和综合指数不参与总榜。");
+    renderBadges(el("panelBadges"), ["all eligible groups", "family deduplicated", "all families averaged", "coverage adjusted"], false);
     renderBadges(el("contextBadges"), [t("≥5 benchmark families", "≥5 个 Benchmark family"), t("≥2 domains", "≥2 个领域"), t("≥3 models/group", "每组 ≥3 个模型"), t("≥2 vendors/group", "每组 ≥2 个厂商")], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
@@ -897,7 +894,7 @@
               </td>
               <td>
                 <div class="score">${esc(row.index_score)}</div>
-                <div class="vendor">${t("Raw domain score","领域原始分")} ${esc(row.raw_score)}</div>
+                <div class="vendor">${t("Raw family average","Family 原始均分")} ${esc(row.raw_score)}</div>
               </td>
               <td>
                 <div class="badges">
@@ -906,7 +903,7 @@
                 <div class="method-summary">${esc(row.benchmark_count)} ${t("Benchmark families", "个 Benchmark family")} · ${esc(row.leaderboard_count || row.benchmark_count)} ${t("leaderboard appearances", "次榜单出现")} · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
               </td>
               <td>
-                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer Benchmark families are available.","当可用 Benchmark family 较少时，领域平衡分会向 50 收缩。")}</div>
+                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the all-family average is shrunk toward 50 when fewer Benchmark families are available.","当可用 Benchmark family 较少时，全部 family 均分会向 50 收缩。")}</div>
                 <a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${t("Open model details","打开模型详情")}</a>
               </td>
             </tr>

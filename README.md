@@ -106,7 +106,7 @@ The overall ranking summarizes a model's **average normalized rank across eligib
 1. Every comparison group with at least three base models and two vendors contributes to the calculation.
 2. Model ranks are converted into a 0–100 percentile within that group.
 3. Multiple appearances within the same Benchmark family are averaged before aggregation, so aliases, metrics, variants, and repeated reports do not each receive a full independent weight.
-4. Family percentiles are averaged within each capability field, then the seven fields receive equal weight.
+4. All observed Benchmark-family percentiles are averaged directly; capability fields do not change the score weight.
 5. Limited family coverage is shrunk toward 50. Family count, field coverage, and independent report count determine the confidence label.
 6. Agent systems, checkpoints, baselines, and other non-base-model entities are excluded.
 7. When one comparison group contains multiple configurations of the same base model, the highest-ranked eligible public configuration represents that model in that group.

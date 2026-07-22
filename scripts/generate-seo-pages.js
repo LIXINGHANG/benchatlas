@@ -167,11 +167,11 @@ function main() {
   const rankingUrl = `${siteUrl}/ranking/`;
   writePage("ranking", renderPage(template, {
     title: "AI Model Reported Average Percentile | BenchAtlas",
-    description: "Compare base models by normalized rank across eligible public leaderboards, balanced across capability fields and adjusted for coverage.",
+    description: "Compare base models by normalized rank across eligible public leaderboards, deduplicated by Benchmark family and adjusted for coverage.",
     url: rankingUrl,
     kicker: "Reported Average Percentile",
     heading: "Overall Base-Model Ranking",
-    dataBundle: "/data/pages/ranking.bundle.js?v=reported-percentile-1",
+    dataBundle: "/data/pages/ranking.bundle.js?v=reported-percentile-2",
     type: "WebPage",
     lang: "en",
     alternateUrl: `${siteUrl}/zh/ranking/`
@@ -180,11 +180,11 @@ function main() {
   const zhRankingUrl = `${siteUrl}/zh/ranking/`;
   writePage(path.join("zh", "ranking"), renderPage(template, {
     title: "AI 模型公开榜单平均百分位 | BenchAtlas",
-    description: "按模型在有效公开榜单中的归一化名次比较，并对 Benchmark family、能力领域和覆盖数量进行校正。",
+    description: "按模型在有效公开榜单中的归一化名次比较，并按 Benchmark family 去重和覆盖数量校正。",
     url: zhRankingUrl,
     kicker: "公开榜单平均百分位",
     heading: "基础模型整体排名",
-    dataBundle: "/data/pages/ranking.bundle.js?v=reported-percentile-1",
+    dataBundle: "/data/pages/ranking.bundle.js?v=reported-percentile-2",
     type: "WebPage",
     lang: "zh-CN",
     alternateUrl: rankingUrl

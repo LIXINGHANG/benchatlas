@@ -190,8 +190,7 @@ function buildOverallData() {
       domains.get(row.domain).push(row.percentile);
     }
     if (familyRows.length < 5 || domains.size < 2) continue;
-    const domainMeans = [...domains.values()].map(values => values.reduce((sum, value) => sum + value, 0) / values.length);
-    const rawScore = domainMeans.reduce((sum, value) => sum + value, 0) / domainMeans.length;
+    const rawScore = familyRows.reduce((sum, row) => sum + row.percentile, 0) / familyRows.length;
     const indexScore = 50 + (rawScore - 50) * (familyRows.length / (familyRows.length + 10));
     const model = modelById.get(modelId);
     if (!model) continue;
