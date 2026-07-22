@@ -140,45 +140,67 @@
     });
   }
 
+  function rankingComparisonGroups(rows) {
+    return comparisonGroups(rows).map(group => {
+      const seen = new Set();
+      const selectedRows = group.rows.filter(isRankingEligible).filter(row => {
+        const key = row.base_model_id || row.model_id || row.model_name;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+      return {
+        ...group,
+        rows: selectedRows,
+        vendor_count: new Set(selectedRows.map(row => row.vendor)).size
+      };
+    }).filter(group => group.rows.length >= 3 && group.vendor_count >= 2);
+  }
+
   function buildOverallRankings() {
     const observations = new Map();
     const benchmarkFamilies = new Set();
+    let validComparisonGroupCount = 0;
 
     Object.entries(pages).forEach(([benchmarkKey, page]) => {
       if (page.ranking_excluded || page.benchmark_type === "composite_index") return;
-      const uniqueRows = preferredComparisonRows(page.rows);
-
-      const vendorCount = new Set(uniqueRows.map(row => row.vendor)).size;
-      if (uniqueRows.length < 3 || vendorCount < 2) return;
       const benchmarkFamilyId = page.benchmark_family_id || benchmarkKey;
-      benchmarkFamilies.add(benchmarkFamilyId);
-
-      let previousScore = null;
-      let competitionRank = 0;
-      uniqueRows.forEach((row, index) => {
-        if (previousScore === null || String(row.score) !== previousScore) {
-          competitionRank = index + 1;
-          previousScore = String(row.score);
-        }
-        const percentile = 100 * (uniqueRows.length - competitionRank) / (uniqueRows.length - 1);
-        if (!observations.has(row.model_name)) observations.set(row.model_name, []);
-        observations.get(row.model_name).push({
-          benchmark_key: benchmarkKey,
-          benchmark_family_id: benchmarkFamilyId,
-          domain: page.primary_domain || page.domain,
-          percentile
+      rankingComparisonGroups(page.rows).forEach(group => {
+        benchmarkFamilies.add(benchmarkFamilyId);
+        validComparisonGroupCount += 1;
+        let previousScore = null;
+        let competitionRank = 0;
+        group.rows.forEach((row, index) => {
+          if (previousScore === null || String(row.score) !== previousScore) {
+            competitionRank = index + 1;
+            previousScore = String(row.score);
+          }
+          const percentile = 100 * (group.rows.length - competitionRank) / (group.rows.length - 1);
+          if (!observations.has(row.model_name)) observations.set(row.model_name, []);
+          observations.get(row.model_name).push({
+            benchmark_key: benchmarkKey,
+            benchmark_family_id: benchmarkFamilyId,
+            domain: page.primary_domain || page.domain,
+            percentile,
+            configuration: row.model_configuration || "Standard",
+            source_report_id: row.source_report_id || row.source_url || "unknown"
+          });
         });
       });
     });
 
     const rankings = [];
     observations.forEach((rows, modelName) => {
-      const bestByFamily = new Map();
+      const rowsByFamily = new Map();
       rows.forEach(row => {
-        const current = bestByFamily.get(row.benchmark_family_id);
-        if (!current || row.percentile > current.percentile) bestByFamily.set(row.benchmark_family_id, row);
+        if (!rowsByFamily.has(row.benchmark_family_id)) rowsByFamily.set(row.benchmark_family_id, []);
+        rowsByFamily.get(row.benchmark_family_id).push(row);
       });
-      const familyRows = Array.from(bestByFamily.values());
+      const familyRows = Array.from(rowsByFamily, ([benchmarkFamilyId, familyObservations]) => ({
+        benchmark_family_id: benchmarkFamilyId,
+        domain: familyObservations[0].domain,
+        percentile: familyObservations.reduce((sum, row) => sum + row.percentile, 0) / familyObservations.length
+      }));
       const domainScores = new Map();
       familyRows.forEach(row => {
         if (!domainScores.has(row.domain)) domainScores.set(row.domain, []);
@@ -193,9 +215,11 @@
       const coverageWeight = familyRows.length / (familyRows.length + 10);
       const indexScore = 50 + (rawScore - 50) * coverageWeight;
       const model = modelByName.get(modelName);
-      const confidence = familyRows.length >= 25 && domainScores.size >= 5
+      const reportCount = new Set(rows.map(row => row.source_report_id).filter(Boolean)).size;
+      const configurations = new Set(rows.map(row => row.configuration).filter(Boolean));
+      const confidence = familyRows.length >= 25 && domainScores.size >= 5 && reportCount >= 3
         ? "high"
-        : familyRows.length >= 10 && domainScores.size >= 3 ? "medium" : "limited";
+        : familyRows.length >= 10 && domainScores.size >= 3 && reportCount >= 2 ? "medium" : "provisional";
 
       rankings.push({
         model_name: modelName,
@@ -203,8 +227,10 @@
         index_score: Number(indexScore.toFixed(1)),
         raw_score: Number(rawScore.toFixed(1)),
         benchmark_count: familyRows.length,
+        leaderboard_count: rows.length,
         domain_count: domainScores.size,
-        report_count: Number(model?.report_count || 0),
+        report_count: reportCount,
+        configuration_count: configurations.size,
         confidence
       });
     });
@@ -219,7 +245,12 @@
       }
       row.overall_rank = rank;
     });
-    return { rankings, benchmarkGroupCount: benchmarkFamilies.size };
+    return {
+      rankings,
+      benchmarkGroupCount: benchmarkFamilies.size,
+      benchmarkFamilyCount: benchmarkFamilies.size,
+      comparisonGroupCount: validComparisonGroupCount
+    };
   }
 
   function parseHash() {
@@ -556,25 +587,25 @@
   function renderOverallPage() {
     const rows = filteredCatalog();
     const vendorCount = new Set(overallRankings.map(row => row.vendor)).size;
-    el("domainLabel").textContent = t("Reported Performance Index", "公开表现指数");
-    el("pageTitle").textContent = t("Reported Capability Ceiling", "公开能力上限");
+    el("domainLabel").textContent = t("Reported Average Percentile", "公开榜单平均百分位");
+    el("pageTitle").textContent = t("Overall Base-Model Ranking", "基础模型整体排名");
     updatePageMetadata(
       t("Overall AI Model Ranking | BenchAtlas", "AI 模型整体排名 | BenchAtlas"),
-      t("Compare base models by their best publicly reported configuration within each eligible benchmark and shared protocol group.", "按符合条件的 Benchmark 与共享协议分组，比较基础模型的最佳公开配置。")
+      t("Compare base models by their average normalized rank across eligible public leaderboards, balanced across capability fields and adjusted for coverage.", "按模型在有效公开榜单中的平均归一化名次比较，并对能力领域和覆盖数量进行校正。")
     );
     setStat("statModels", "statLabelModels", overallRankings.length, t("eligible models", "符合条件的模型"));
-    setStat("statRows", "statLabelRows", overallData.benchmarkGroupCount, t("benchmark result groups", "Benchmark 结果分组"));
+    setStat("statRows", "statLabelRows", overallData.benchmarkFamilyCount || overallData.benchmarkGroupCount, t("eligible benchmark families", "有效 Benchmark family"));
     setStat("statVendors", "statLabelVendors", vendorCount, t(plural(vendorCount, "vendor"), "厂商"));
-    setStat("statReports", "statLabelReports", 5, t("minimum groups", "最低分组数"));
-    el("metricLabel").textContent = "RPI · 0–100";
-    el("rankingTitle").textContent = t("Reported Performance Index", "公开表现指数");
-    el("rankingNote").textContent = t("Each base model contributes its best publicly reported configuration within the selected protocol group.", "每个基础模型在选定协议分组中采用最佳公开配置。");
+    setStat("statReports", "statLabelReports", overallData.comparisonGroupCount, t("eligible comparison groups", "有效可比组"));
+    el("metricLabel").textContent = "RAP · 0–100";
+    el("rankingTitle").textContent = t("Reported Average Percentile", "公开榜单平均百分位");
+    el("rankingNote").textContent = t("Every eligible leaderboard appearance contributes a normalized rank percentile; repeated appearances within one Benchmark family are averaged.", "每次有效榜单出现都会贡献一个归一化排名百分位；同一 Benchmark family 内的多次出现先取平均。");
     el("summaryHeading").textContent = t("Leaders", "领先模型");
     el("signalsHeading").textContent = t("Eligibility", "纳入规则");
     el("policyHeading").textContent = t("Methodology", "计算方法");
-    el("policyText").textContent = t("For each benchmark, BenchAtlas selects a documented shared-protocol group when available, then keeps the highest-ranked public configuration for each base model. Agent systems, checkpoints, and computational baselines are excluded. Model ranks become 0–100 percentiles, are averaged within each domain, and limited coverage is shrunk toward 50. This is a reported capability ceiling, not a default-product score.", "对每个 Benchmark，BenchAtlas 优先选择有文档记录的共享协议分组，再保留每个基础模型排名最高的公开配置。Agent 系统、checkpoint 和计算 baseline 不参与排名。模型名次转为 0–100 百分位，在领域内取平均，并对覆盖不足的模型向 50 收缩。这代表公开能力上限，不是默认产品体验评分。");
-    renderBadges(el("panelBadges"), ["best public config", "base models only", "protocol grouped", "domain balanced"], false);
-    renderBadges(el("contextBadges"), [t("≥5 benchmark result groups", "≥5 个 Benchmark 结果分组"), t("≥2 domains", "≥2 个领域"), t("≥3 models/group", "每组 ≥3 个模型"), t("≥2 vendors/group", "每组 ≥2 个厂商")], false);
+    el("policyText").textContent = t("Every eligible comparison group contributes a 0–100 normalized rank percentile. Multiple appearances within the same Benchmark family are averaged, the seven capability fields are weighted equally, and limited family coverage is shrunk toward 50. Independent report count and field coverage determine confidence. Agent systems, checkpoints, baselines, and composite indexes are excluded.", "每个有效可比组都会贡献一个 0–100 的归一化排名百分位。同一 Benchmark family 的多次出现先取平均，七个能力领域等权，再按 family 覆盖数量向 50 收缩。独立报告数和领域覆盖决定置信度。Agent system、checkpoint、baseline 和综合指数不参与总榜。");
+    renderBadges(el("panelBadges"), ["all eligible groups", "family deduplicated", "domain balanced", "coverage adjusted"], false);
+    renderBadges(el("contextBadges"), [t("≥5 benchmark families", "≥5 个 Benchmark family"), t("≥2 domains", "≥2 个领域"), t("≥3 models/group", "每组 ≥3 个模型"), t("≥2 vendors/group", "每组 ≥2 个厂商")], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
   }
@@ -855,7 +886,7 @@
     }
     el("rankingTable").innerHTML = `
       <table>
-        <thead><tr><th>${t("Rank","排名")}</th><th>${t("Base model","基础模型")}</th><th>${t("RPI ceiling","RPI 上限")}</th><th>${t("Coverage","覆盖")}</th><th>${t("Method","方法")}</th></tr></thead>
+        <thead><tr><th>${t("Rank","排名")}</th><th>${t("Base model","基础模型")}</th><th>${t("RAP score","平均排名分")}</th><th>${t("Coverage","覆盖")}</th><th>${t("Method","方法")}</th></tr></thead>
         <tbody>
           ${rows.map(row => `
             <tr>
@@ -870,12 +901,12 @@
               </td>
               <td>
                 <div class="badges">
-                  <span class="badge ${row.confidence === "limited" ? "warn" : ""}">${esc(uiLabel(`${row.confidence} confidence`))}</span>
+                  <span class="badge ${row.confidence === "provisional" ? "warn" : ""}">${esc(uiLabel(`${row.confidence} confidence`))}</span>
                 </div>
-                <div class="method-summary">${esc(row.benchmark_count)} ${t("Benchmark result groups", "个 Benchmark 结果分组")} · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
+                <div class="method-summary">${esc(row.benchmark_count)} ${t("Benchmark families", "个 Benchmark family")} · ${esc(row.leaderboard_count || row.benchmark_count)} ${t("leaderboard appearances", "次榜单出现")} · ${esc(row.domain_count)} ${t("domains","个领域")} · ${esc(row.report_count)} ${t(plural(row.report_count, "report"),"份报告")}</div>
               </td>
               <td>
-                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer benchmark result groups are available.","当可用 Benchmark 结果分组较少时，领域平衡分会向 50 收缩。")}</div>
+                <div class="method-summary"><b>${t("Coverage adjustment:","覆盖校正：")}</b> ${t("the domain-balanced score is shrunk toward 50 when fewer Benchmark families are available.","当可用 Benchmark family 较少时，领域平衡分会向 50 收缩。")}</div>
                 <a class="entity-link model-jump" href="${esc(modelPath(row.model_name))}" data-model="${esc(row.model_name)}">${t("Open model details","打开模型详情")}</a>
               </td>
             </tr>

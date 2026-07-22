@@ -120,43 +120,70 @@ function preferredRows(rows) {
   return group.rows.filter(row => isRankingEligible(row) && preferred.get(row.base_model_id || row.model_id || row.model_name) === row);
 }
 
+function rankingGroups(rows) {
+  return comparisonGroups(rows).map(group => {
+    const rowsByModel = new Map();
+    for (const row of group.rows.filter(isRankingEligible)) {
+      const key = row.base_model_id || row.model_id || row.model_name;
+      if (!rowsByModel.has(key)) rowsByModel.set(key, []);
+      rowsByModel.get(key).push(row);
+    }
+    const selectedRows = [...rowsByModel.values()]
+      .map(preferredModelRow)
+      .sort((a, b) => Number(a.rank || Infinity) - Number(b.rank || Infinity));
+    return {
+      ...group,
+      rows: selectedRows,
+      vendorCount: new Set(selectedRows.map(row => row.vendor)).size,
+    };
+  }).filter(group => group.rows.length >= 3 && group.vendorCount >= 2);
+}
+
 function buildOverallData() {
   const modelById = new Map(data.model_catalog.map(model => [model.model_id, model]));
   const observations = new Map();
   const benchmarkFamilies = new Set();
+  let validComparisonGroupCount = 0;
   for (const [benchmarkKey, page] of Object.entries(data.benchmark_pages)) {
     if (page.ranking_excluded || page.benchmark_type === "composite_index") continue;
-    const rows = preferredRows(page.rows);
-    if (rows.length < 3 || new Set(rows.map(row => row.vendor)).size < 2) continue;
     const benchmarkFamilyId = page.benchmark_family_id || benchmarkKey;
-    benchmarkFamilies.add(benchmarkFamilyId);
-    let previousScore = null;
-    let rank = 0;
-    rows.forEach((row, index) => {
-      if (previousScore === null || String(row.score) !== previousScore) {
-        rank = index + 1;
-        previousScore = String(row.score);
-      }
-      const modelId = row.base_model_id || row.model_id;
-      if (!observations.has(modelId)) observations.set(modelId, []);
-      observations.get(modelId).push({
-        benchmark_key: benchmarkKey,
-        benchmark_family_id: benchmarkFamilyId,
-        domain: page.primary_domain || page.domain,
-        percentile: 100 * (rows.length - rank) / (rows.length - 1),
-        configuration: row.model_configuration || "Standard",
+    for (const group of rankingGroups(page.rows)) {
+      benchmarkFamilies.add(benchmarkFamilyId);
+      validComparisonGroupCount += 1;
+      let previousScore = null;
+      let rank = 0;
+      group.rows.forEach((row, index) => {
+        if (previousScore === null || String(row.score) !== previousScore) {
+          rank = index + 1;
+          previousScore = String(row.score);
+        }
+        const modelId = row.base_model_id || row.model_id;
+        if (!observations.has(modelId)) observations.set(modelId, []);
+        observations.get(modelId).push({
+          benchmark_key: benchmarkKey,
+          benchmark_family_id: benchmarkFamilyId,
+          comparability_group_id: row.comparability_group_id,
+          domain: page.primary_domain || page.domain,
+          percentile: 100 * (group.rows.length - rank) / (group.rows.length - 1),
+          configuration: row.model_configuration || "Standard",
+          source_report_id: row.source_report_id || row.source_url || "unknown",
+        });
       });
-    });
+    }
   }
 
   const rankings = [];
   for (const [modelId, rows] of observations) {
-    const bestByFamily = new Map();
+    const rowsByFamily = new Map();
     for (const row of rows) {
-      const current = bestByFamily.get(row.benchmark_family_id);
-      if (!current || row.percentile > current.percentile) bestByFamily.set(row.benchmark_family_id, row);
+      if (!rowsByFamily.has(row.benchmark_family_id)) rowsByFamily.set(row.benchmark_family_id, []);
+      rowsByFamily.get(row.benchmark_family_id).push(row);
     }
-    const familyRows = [...bestByFamily.values()];
+    const familyRows = [...rowsByFamily].map(([benchmarkFamilyId, familyObservations]) => ({
+      benchmark_family_id: benchmarkFamilyId,
+      domain: familyObservations[0].domain,
+      percentile: familyObservations.reduce((sum, row) => sum + row.percentile, 0) / familyObservations.length,
+    }));
     const domains = new Map();
     for (const row of familyRows) {
       if (!domains.has(row.domain)) domains.set(row.domain, []);
@@ -168,7 +195,11 @@ function buildOverallData() {
     const indexScore = 50 + (rawScore - 50) * (familyRows.length / (familyRows.length + 10));
     const model = modelById.get(modelId);
     if (!model) continue;
-    const configurations = [...new Set(familyRows.map(row => row.configuration).filter(Boolean))];
+    const configurations = [...new Set(rows.map(row => row.configuration).filter(Boolean))];
+    const reportCount = new Set(rows.map(row => row.source_report_id).filter(Boolean)).size;
+    const confidence = familyRows.length >= 25 && domains.size >= 5 && reportCount >= 3
+      ? "high"
+      : familyRows.length >= 10 && domains.size >= 3 && reportCount >= 2 ? "medium" : "provisional";
     rankings.push({
       model_id: modelId,
       model_name: model.model_name,
@@ -176,11 +207,12 @@ function buildOverallData() {
       index_score: Number(indexScore.toFixed(1)),
       raw_score: Number(rawScore.toFixed(1)),
       benchmark_count: familyRows.length,
+      leaderboard_count: rows.length,
       domain_count: domains.size,
-      report_count: Number(model.report_count || 0),
+      report_count: reportCount,
       configuration_count: configurations.length,
       configurations,
-      confidence: familyRows.length >= 25 && domains.size >= 5 ? "high" : familyRows.length >= 10 && domains.size >= 3 ? "medium" : "limited",
+      confidence,
     });
   }
   rankings.sort((a, b) => b.index_score - a.index_score || b.benchmark_count - a.benchmark_count);
@@ -193,7 +225,12 @@ function buildOverallData() {
     }
     row.overall_rank = rank;
   });
-  return { rankings, benchmarkGroupCount: benchmarkFamilies.size };
+  return {
+    rankings,
+    benchmarkGroupCount: benchmarkFamilies.size,
+    benchmarkFamilyCount: benchmarkFamilies.size,
+    comparisonGroupCount: validComparisonGroupCount,
+  };
 }
 
 function writeBundle(destination, payload, merge = false) {

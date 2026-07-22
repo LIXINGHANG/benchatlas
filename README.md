@@ -18,7 +18,7 @@ The goal is not to create another context-free leaderboard. BenchAtlas helps rea
 2. Which scores were reported for each base model and configuration?
 3. What harness, tools, reasoning mode, context window, sampling settings, judge, task subset, and run count were used?
 4. Which results share sufficiently similar evaluation settings to compare directly?
-5. What does a model's best publicly reported capability coverage look like across domains?
+5. What is a model's average relative position across capability fields and public leaderboards?
 
 ## Current dataset
 
@@ -63,7 +63,7 @@ The dataset grows as new official reports are imported. The [live site](https://
 
 - Open a model page to inspect its benchmark coverage, configurations, reports, and source-linked scores.
 - Filter the atlas to one model to see where it has and has not reported results.
-- Explore the **Reported Capability Ceiling**, which summarizes each base model using its best publicly reported eligible configurations.
+- Explore the **Reported Average Percentile**, which summarizes normalized leaderboard ranks across eligible reported comparison groups.
 - Keep agent systems, checkpoints, and baselines separate from base-model ranking entities.
 
 ### Catalog and Matrix
@@ -99,20 +99,19 @@ Grouping considers, where available:
 
 Rows with a documented shared setup may appear in the same comparison group. Rows without enough methodology remain source-scoped. Different colors indicate different groups; only same-color rows should be treated as directly comparable.
 
-## Reported Capability Ceiling
+## Reported Average Percentile
 
-The overall ranking represents a model's **publicly reported capability ceiling**, not its default product experience, API latency, cost, or an absolute intelligence score.
+The overall ranking summarizes a model's **average normalized rank across eligible publicly reported leaderboards**. It is not a default-product score, API latency or cost measure, or an absolute intelligence score.
 
-1. Each benchmark contributes an eligible comparison group with enough cross-vendor coverage.
+1. Every comparison group with at least three base models and two vendors contributes to the calculation.
 2. Model ranks are converted into a 0–100 percentile within that group.
-3. Benchmark percentiles are averaged within capability domains.
-4. Domains receive equal weight so one heavily reported field does not dominate the index.
-5. Limited coverage is shrunk toward 50 and shown with a confidence signal.
+3. Multiple appearances within the same Benchmark family are averaged before aggregation, so aliases, metrics, variants, and repeated reports do not each receive a full independent weight.
+4. Family percentiles are averaged within each capability field, then the seven fields receive equal weight.
+5. Limited family coverage is shrunk toward 50. Family count, field coverage, and independent report count determine the confidence label.
 6. Agent systems, checkpoints, baselines, and other non-base-model entities are excluded.
-7. The best eligible publicly reported configuration may represent a model's upper bound rather than its default setting.
-8. Multiple metrics, subsets, or configurations from the same benchmark family count once per model; the best eligible percentile within that family represents the public capability ceiling.
+7. When one comparison group contains multiple configurations of the same base model, the highest-ranked eligible public configuration represents that model in that group.
 
-Because the index is built from vendor-published reports, it may inherit benchmark-selection and reporting bias. Always inspect the underlying result rows.
+Because the index is built from vendor-published reports, it can inherit benchmark-selection, reporting, and source-composition bias. A higher score means stronger average placement in the currently observed leaderboards, not proof that one model is universally stronger. Always inspect the underlying result rows and confidence label.
 
 ## Map taxonomy
 

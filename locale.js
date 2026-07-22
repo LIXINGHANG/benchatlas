@@ -5,15 +5,20 @@
     "high confidence": "高置信度",
     "medium confidence": "中置信度",
     "limited confidence": "有限置信度",
+    "provisional confidence": "暂定置信度",
     "high": "高",
     "medium": "中",
     "limited": "有限",
+    "provisional": "暂定",
     "best public config": "最佳公开配置",
     "base models only": "仅基础模型",
     "protocol grouped": "按可比组区分",
     "protocol aware": "区分评测配置",
     "protocol details sparse": "评测配置说明较少",
     "domain balanced": "领域平衡",
+    "all eligible groups": "全部有效可比组",
+    "family deduplicated": "Benchmark family 去重",
+    "coverage adjusted": "覆盖校正",
     "shared protocol": "共享评测配置",
     "source scoped": "来源限定",
     "agent harness": "Agent 框架",
@@ -112,9 +117,9 @@
     ["越近表示证据越充分", "同一系列", "共享模型", "二级领域方向", "当前选择"].forEach((text, i) => { if (legend[i]) legend[i].textContent = text; });
     const headers = document.querySelectorAll("#registryPanel th");
     ["Benchmark", "领域", "模型", "厂商", "最佳公开分数", "协议标签"].forEach((text, i) => { if (headers[i]) headers[i].textContent = text; });
-    set(".matrix-note > span b", "可比矩阵"); set(".ranking-kicker", "公开能力上限"); set(".ranking-hero h2", "基础模型整体排名");
-    set(".ranking-hero p", "每个 Benchmark 与共享协议分组采用最佳公开配置；Agent 系统、checkpoint 和 baseline 不参与排名。");
-    set(".ranking-summary span:nth-child(1) small", "符合条件的基础模型"); set(".ranking-summary span:nth-child(2) small", "可比分组");
+    set(".matrix-note > span b", "可比矩阵"); set(".ranking-kicker", "公开榜单平均百分位"); set(".ranking-hero h2", "基础模型整体排名");
+    set(".ranking-hero p", "汇总模型在全部有效公开榜单中的归一化名次；按 Benchmark family 去重、七个能力领域等权，并按覆盖数量校正。");
+    set(".ranking-summary span:nth-child(1) small", "符合条件的基础模型"); set(".ranking-summary span:nth-child(2) small", "有效 Benchmark family");
     set(".status-primary b", "数据已上线"); set("#statusDomain", "全部领域"); set("#statusSelection", "尚未选择节点");
     set(".inspector .metrics .metric:nth-child(1) span", "模型"); set(".inspector .metrics .metric:nth-child(2) span", "厂商"); set(".inspector .metrics .metric:nth-child(3) span", "报告");
     set(".inspector .section:nth-of-type(1) h3", "统一报分排名"); set(".rank-note", "每个基础模型显示最佳公开报分；颜色表示不同可比组，只有同色记录可以直接比较。");
