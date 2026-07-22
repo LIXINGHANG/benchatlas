@@ -16,7 +16,7 @@
     "protocol aware": "区分评测配置",
     "protocol details sparse": "评测配置说明较少",
     "all families averaged": "全部 Family 平均",
-    "all eligible groups": "全部有效可比组",
+    "all reported groups": "全部已报分可比组",
     "family deduplicated": "Benchmark family 去重",
     "coverage adjusted": "覆盖校正",
     "shared protocol": "共享评测配置",
@@ -118,8 +118,8 @@
     const headers = document.querySelectorAll("#registryPanel th");
     ["Benchmark", "领域", "模型", "厂商", "最佳公开分数", "协议标签"].forEach((text, i) => { if (headers[i]) headers[i].textContent = text; });
     set(".matrix-note > span b", "可比矩阵"); set(".ranking-kicker", "公开榜单平均百分位"); set(".ranking-hero h2", "基础模型整体排名");
-    set(".ranking-hero p", "汇总模型在全部有效公开榜单中的归一化名次；按 Benchmark family 去重、直接平均全部 family，并按覆盖数量校正。");
-    set(".ranking-summary span:nth-child(1) small", "符合条件的基础模型"); set(".ranking-summary span:nth-child(2) small", "有效 Benchmark family");
+    set(".ranking-hero p", "汇总全部基础模型公开报分的归一化名次；按 Benchmark family 去重、直接平均全部 family，并按覆盖数量校正。");
+    set(".ranking-summary span:nth-child(1) small", "入榜基础模型"); set(".ranking-summary span:nth-child(2) small", "已报分 Benchmark family");
     set(".status-primary b", "数据已上线"); set("#statusDomain", "全部领域"); set("#statusSelection", "尚未选择节点");
     set(".inspector .metrics .metric:nth-child(1) span", "模型"); set(".inspector .metrics .metric:nth-child(2) span", "厂商"); set(".inspector .metrics .metric:nth-child(3) span", "报告");
     set(".inspector .section:nth-of-type(1) h3", "统一报分排名"); set(".rank-note", "每个基础模型显示最佳公开报分；颜色表示不同可比组，只有同色记录可以直接比较。");

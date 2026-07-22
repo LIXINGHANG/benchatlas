@@ -154,7 +154,7 @@
         rows: selectedRows,
         vendor_count: new Set(selectedRows.map(row => row.vendor)).size
       };
-    }).filter(group => group.rows.length >= 3 && group.vendor_count >= 2);
+    }).filter(group => group.rows.length > 0);
   }
 
   function buildOverallRankings() {
@@ -175,7 +175,9 @@
             competitionRank = index + 1;
             previousScore = String(row.score);
           }
-          const percentile = 100 * (group.rows.length - competitionRank) / (group.rows.length - 1);
+          const percentile = group.rows.length === 1
+            ? 50
+            : 100 * (group.rows.length - competitionRank) / (group.rows.length - 1);
           if (!observations.has(row.model_name)) observations.set(row.model_name, []);
           observations.get(row.model_name).push({
             benchmark_key: benchmarkKey,
@@ -206,8 +208,6 @@
         if (!domainScores.has(row.domain)) domainScores.set(row.domain, []);
         domainScores.get(row.domain).push(row.percentile);
       });
-      if (familyRows.length < 5 || domainScores.size < 2) return;
-
       const rawScore = familyRows.reduce((sum, row) => sum + row.percentile, 0) / familyRows.length;
       const coverageWeight = familyRows.length / (familyRows.length + 10);
       const indexScore = 50 + (rawScore - 50) * coverageWeight;
@@ -588,21 +588,21 @@
     el("pageTitle").textContent = t("Overall Base-Model Ranking", "基础模型整体排名");
     updatePageMetadata(
       t("Overall AI Model Ranking | BenchAtlas", "AI 模型整体排名 | BenchAtlas"),
-      t("Compare base models by their average normalized rank across eligible public leaderboards, deduplicated by Benchmark family and adjusted for coverage.", "按模型在有效公开榜单中的平均归一化名次比较，并按 Benchmark family 去重和覆盖数量校正。")
+      t("Compare every reported base model by its average normalized rank, deduplicated by Benchmark family and adjusted for coverage.", "将所有具有公开报分的基础模型纳入比较，并按 Benchmark family 去重和覆盖数量校正。")
     );
-    setStat("statModels", "statLabelModels", overallRankings.length, t("eligible models", "符合条件的模型"));
-    setStat("statRows", "statLabelRows", overallData.benchmarkFamilyCount || overallData.benchmarkGroupCount, t("eligible benchmark families", "有效 Benchmark family"));
+    setStat("statModels", "statLabelModels", overallRankings.length, t("ranked base models", "入榜基础模型"));
+    setStat("statRows", "statLabelRows", overallData.benchmarkFamilyCount || overallData.benchmarkGroupCount, t("reported benchmark families", "已报分 Benchmark family"));
     setStat("statVendors", "statLabelVendors", vendorCount, t(plural(vendorCount, "vendor"), "厂商"));
-    setStat("statReports", "statLabelReports", overallData.comparisonGroupCount, t("eligible comparison groups", "有效可比组"));
+    setStat("statReports", "statLabelReports", overallData.comparisonGroupCount, t("reported comparison groups", "已报分可比组"));
     el("metricLabel").textContent = "RAP · 0–100";
     el("rankingTitle").textContent = t("Reported Average Percentile", "公开榜单平均百分位");
-    el("rankingNote").textContent = t("Every eligible leaderboard appearance contributes a normalized rank percentile; repeated appearances within one Benchmark family are averaged.", "每次有效榜单出现都会贡献一个归一化排名百分位；同一 Benchmark family 内的多次出现先取平均。");
+    el("rankingNote").textContent = t("Every reported base-model appearance contributes a normalized rank percentile; a single-model group contributes a neutral 50. Repeated appearances within one Benchmark family are averaged.", "每次基础模型公开报分都会贡献一个归一化排名百分位；只有一个模型的组记为中性 50。同一 Benchmark family 内的多次出现先取平均。");
     el("summaryHeading").textContent = t("Leaders", "领先模型");
-    el("signalsHeading").textContent = t("Eligibility", "纳入规则");
+    el("signalsHeading").textContent = t("Scope", "纳入范围");
     el("policyHeading").textContent = t("Methodology", "计算方法");
-    el("policyText").textContent = t("Every eligible comparison group contributes a 0–100 normalized rank percentile. Multiple appearances within the same Benchmark family are averaged, then all observed Benchmark-family scores are averaged directly. Limited family coverage is shrunk toward 50. Independent report count and field coverage determine confidence. Agent systems, checkpoints, baselines, and composite indexes are excluded.", "每个有效可比组都会贡献一个 0–100 的归一化排名百分位。同一 Benchmark family 的多次出现先取平均，然后直接平均该模型全部已观察到的 Benchmark family 分数。family 覆盖较少时向 50 收缩。独立报告数和领域覆盖决定置信度。Agent system、checkpoint、baseline 和综合指数不参与总榜。");
-    renderBadges(el("panelBadges"), ["all eligible groups", "family deduplicated", "all families averaged", "coverage adjusted"], false);
-    renderBadges(el("contextBadges"), [t("≥5 benchmark families", "≥5 个 Benchmark family"), t("≥2 domains", "≥2 个领域"), t("≥3 models/group", "每组 ≥3 个模型"), t("≥2 vendors/group", "每组 ≥2 个厂商")], false);
+    el("policyText").textContent = t("Every reported comparison group containing a base model contributes a 0–100 normalized rank percentile; a single-model group contributes a neutral 50 because no relative rank exists. Multiple appearances within the same Benchmark family are averaged, then all observed family scores are averaged directly. Limited family coverage is shrunk toward 50. Independent report count and field coverage determine confidence. Agent systems, checkpoints, baselines, and composite indexes remain excluded.", "每个包含基础模型公开报分的可比组都会参与计算；只有一个模型时因无法形成相对名次，记为中性 50。同一 Benchmark family 的多次出现先取平均，然后直接平均全部已观察到的 family 分数。family 覆盖较少时向 50 收缩。独立报告数和领域覆盖决定置信度。Agent system、checkpoint、baseline 和综合指数仍不参与总榜。");
+    renderBadges(el("panelBadges"), ["all reported groups", "family deduplicated", "all families averaged", "coverage adjusted"], false);
+    renderBadges(el("contextBadges"), [t("all reported base models", "全部已报分基础模型"), t("single-model group = 50", "单模型组 = 50"), t("no vendor minimum", "不限厂商数量"), t("no coverage minimum", "不限覆盖数量")], false);
     renderOverallLeaders(rows);
     renderOverallRanking(rows);
   }

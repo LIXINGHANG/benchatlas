@@ -63,7 +63,7 @@ The dataset grows as new official reports are imported. The [live site](https://
 
 - Open a model page to inspect its benchmark coverage, configurations, reports, and source-linked scores.
 - Filter the atlas to one model to see where it has and has not reported results.
-- Explore the **Reported Average Percentile**, which summarizes normalized leaderboard ranks across eligible reported comparison groups.
+- Explore the **Reported Average Percentile**, which summarizes normalized leaderboard ranks across all reported base-model comparison groups.
 - Keep agent systems, checkpoints, and baselines separate from base-model ranking entities.
 
 ### Catalog and Matrix
@@ -101,15 +101,15 @@ Rows with a documented shared setup may appear in the same comparison group. Row
 
 ## Reported Average Percentile
 
-The overall ranking summarizes a model's **average normalized rank across eligible publicly reported leaderboards**. It is not a default-product score, API latency or cost measure, or an absolute intelligence score.
+The overall ranking summarizes every reported base model's **average normalized rank across public comparison groups**. It is not a default-product score, API latency or cost measure, or an absolute intelligence score.
 
-1. Every comparison group with at least three base models and two vendors contributes to the calculation.
+1. Every reported comparison group containing at least one base model contributes. A single-model group receives a neutral percentile of 50 because it has no relative ranking.
 2. Model ranks are converted into a 0–100 percentile within that group.
 3. Multiple appearances within the same Benchmark family are averaged before aggregation, so aliases, metrics, variants, and repeated reports do not each receive a full independent weight.
 4. All observed Benchmark-family percentiles are averaged directly; capability fields do not change the score weight.
-5. Limited family coverage is shrunk toward 50. Family count, field coverage, and independent report count determine the confidence label.
+5. There is no minimum family, field, model-count, or vendor-count threshold. Limited family coverage is shrunk toward 50; family count, field coverage, and independent report count determine the confidence label.
 6. Agent systems, checkpoints, baselines, and other non-base-model entities are excluded.
-7. When one comparison group contains multiple configurations of the same base model, the highest-ranked eligible public configuration represents that model in that group.
+7. When one comparison group contains multiple configurations of the same base model, the highest-ranked reported public configuration represents that model in that group.
 
 Because the index is built from vendor-published reports, it can inherit benchmark-selection, reporting, and source-composition bias. A higher score means stronger average placement in the currently observed leaderboards, not proof that one model is universally stronger. Always inspect the underlying result rows and confidence label.
 

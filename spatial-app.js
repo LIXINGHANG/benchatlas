@@ -308,7 +308,7 @@
     function loadRankingData(){
       if(window.BENCHATLAS_DATA?.overall_data)return Promise.resolve(window.BENCHATLAS_DATA.overall_data);
       if(rankingPromise)return rankingPromise;
-      rankingPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/data/pages/ranking.bundle.js?v=reported-percentile-2';script.onload=()=>window.BENCHATLAS_DATA?.overall_data?resolve(window.BENCHATLAS_DATA.overall_data):reject(new Error('Ranking data missing'));script.onerror=()=>reject(new Error('Ranking data request failed'));document.head.appendChild(script);});
+      rankingPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/data/pages/ranking.bundle.js?v=reported-percentile-3';script.onload=()=>window.BENCHATLAS_DATA?.overall_data?resolve(window.BENCHATLAS_DATA.overall_data):reject(new Error('Ranking data missing'));script.onerror=()=>reject(new Error('Ranking data request failed'));document.head.appendChild(script);});
       return rankingPromise;
     }
     async function renderOverallRanking(){

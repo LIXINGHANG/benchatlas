@@ -136,7 +136,7 @@ function rankingGroups(rows) {
       rows: selectedRows,
       vendorCount: new Set(selectedRows.map(row => row.vendor)).size,
     };
-  }).filter(group => group.rows.length >= 3 && group.vendorCount >= 2);
+  }).filter(group => group.rows.length > 0);
 }
 
 function buildOverallData() {
@@ -164,7 +164,9 @@ function buildOverallData() {
           benchmark_family_id: benchmarkFamilyId,
           comparability_group_id: row.comparability_group_id,
           domain: page.primary_domain || page.domain,
-          percentile: 100 * (group.rows.length - rank) / (group.rows.length - 1),
+          percentile: group.rows.length === 1
+            ? 50
+            : 100 * (group.rows.length - rank) / (group.rows.length - 1),
           configuration: row.model_configuration || "Standard",
           source_report_id: row.source_report_id || row.source_url || "unknown",
         });
@@ -189,7 +191,6 @@ function buildOverallData() {
       if (!domains.has(row.domain)) domains.set(row.domain, []);
       domains.get(row.domain).push(row.percentile);
     }
-    if (familyRows.length < 5 || domains.size < 2) continue;
     const rawScore = familyRows.reduce((sum, row) => sum + row.percentile, 0) / familyRows.length;
     const indexScore = 50 + (rawScore - 50) * (familyRows.length / (familyRows.length + 10));
     const model = modelById.get(modelId);
